@@ -29,9 +29,9 @@ namespace SimpleSDK_Demo
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.comboTipo = new System.Windows.Forms.ComboBox();
@@ -82,24 +82,24 @@ namespace SimpleSDK_Demo
             this.umedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridEliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textRutaCertificado = new System.Windows.Forms.TextBox();
-            this.botonBuscarCertificado = new System.Windows.Forms.Button();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.textPathCAF = new System.Windows.Forms.TextBox();
-            this.textPassword = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textTotal = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textIVA = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textNeto = new System.Windows.Forms.TextBox();
-            this.botonBuscarCAF = new System.Windows.Forms.Button();
-            this.botonGenerar = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.textRUTCertificado = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textPassword = new System.Windows.Forms.TextBox();
+            this.botonBuscarCertificado = new System.Windows.Forms.Button();
+            this.textRutaCertificado = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.botonBuscarCAF = new System.Windows.Forms.Button();
+            this.textPathCAF = new System.Windows.Forms.TextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textNeto = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textIVA = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textTotal = new System.Windows.Forms.TextBox();
+            this.botonGenerar = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCasoPrueba)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).BeginInit();
@@ -579,8 +579,8 @@ namespace SimpleSDK_Demo
             // gridCantidadProducto
             // 
             this.gridCantidadProducto.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle4.Format = "N1";
-            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Format = "N1";
+            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle1;
             this.gridCantidadProducto.HeaderText = "Cantidad";
             this.gridCantidadProducto.Name = "gridCantidadProducto";
             this.gridCantidadProducto.ReadOnly = true;
@@ -589,8 +589,8 @@ namespace SimpleSDK_Demo
             // gridPrecio
             // 
             this.gridPrecio.DataPropertyName = "Precio";
-            dataGridViewCellStyle5.Format = "N0";
-            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Format = "N0";
+            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridPrecio.HeaderText = "Precio";
             this.gridPrecio.Name = "gridPrecio";
             this.gridPrecio.ReadOnly = true;
@@ -599,8 +599,8 @@ namespace SimpleSDK_Demo
             // gridTotal
             // 
             this.gridTotal.DataPropertyName = "Total";
-            dataGridViewCellStyle6.Format = "N0";
-            this.gridTotal.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Format = "N0";
+            this.gridTotal.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridTotal.HeaderText = "Total";
             this.gridTotal.Name = "gridTotal";
             this.gridTotal.ReadOnly = true;
@@ -645,12 +645,46 @@ namespace SimpleSDK_Demo
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Certificado Digital";
             // 
-            // textRutaCertificado
+            // label21
             // 
-            this.textRutaCertificado.Location = new System.Drawing.Point(45, 28);
-            this.textRutaCertificado.Name = "textRutaCertificado";
-            this.textRutaCertificado.Size = new System.Drawing.Size(244, 20);
-            this.textRutaCertificado.TabIndex = 0;
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(329, 32);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(33, 13);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "RUT:";
+            // 
+            // textRUTCertificado
+            // 
+            this.textRUTCertificado.Location = new System.Drawing.Point(368, 29);
+            this.textRUTCertificado.Name = "textRUTCertificado";
+            this.textRUTCertificado.Size = new System.Drawing.Size(78, 20);
+            this.textRUTCertificado.TabIndex = 5;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 32);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(33, 13);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Ruta:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(452, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Password:";
+            // 
+            // textPassword
+            // 
+            this.textPassword.Location = new System.Drawing.Point(514, 28);
+            this.textPassword.Name = "textPassword";
+            this.textPassword.Size = new System.Drawing.Size(87, 20);
+            this.textPassword.TabIndex = 2;
             // 
             // botonBuscarCertificado
             // 
@@ -661,6 +695,13 @@ namespace SimpleSDK_Demo
             this.botonBuscarCertificado.TabIndex = 1;
             this.botonBuscarCertificado.UseVisualStyleBackColor = true;
             this.botonBuscarCertificado.Click += new System.EventHandler(this.botonBuscarCertificado_Click);
+            // 
+            // textRutaCertificado
+            // 
+            this.textRutaCertificado.Location = new System.Drawing.Point(45, 28);
+            this.textRutaCertificado.Name = "textRutaCertificado";
+            this.textRutaCertificado.Size = new System.Drawing.Size(244, 20);
+            this.textRutaCertificado.TabIndex = 0;
             // 
             // groupBox7
             // 
@@ -673,37 +714,22 @@ namespace SimpleSDK_Demo
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Archivo CAF";
             // 
+            // botonBuscarCAF
+            // 
+            this.botonBuscarCAF.Image = global::SimpleSDK_Demo.Properties.Resources.View;
+            this.botonBuscarCAF.Location = new System.Drawing.Point(215, 26);
+            this.botonBuscarCAF.Name = "botonBuscarCAF";
+            this.botonBuscarCAF.Size = new System.Drawing.Size(28, 23);
+            this.botonBuscarCAF.TabIndex = 1;
+            this.botonBuscarCAF.UseVisualStyleBackColor = true;
+            this.botonBuscarCAF.Click += new System.EventHandler(this.botonBuscarCAF_Click);
+            // 
             // textPathCAF
             // 
             this.textPathCAF.Location = new System.Drawing.Point(9, 28);
             this.textPathCAF.Name = "textPathCAF";
             this.textPathCAF.Size = new System.Drawing.Size(200, 20);
             this.textPathCAF.TabIndex = 0;
-            // 
-            // textPassword
-            // 
-            this.textPassword.Location = new System.Drawing.Point(514, 28);
-            this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(87, 20);
-            this.textPassword.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(452, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Password:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 32);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(33, 13);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Ruta:";
             // 
             // groupBox8
             // 
@@ -719,42 +745,6 @@ namespace SimpleSDK_Demo
             this.groupBox8.TabIndex = 25;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Totales";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(231, 31);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(34, 13);
-            this.label18.TabIndex = 29;
-            this.label18.Text = "Total:";
-            // 
-            // textTotal
-            // 
-            this.textTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textTotal.Location = new System.Drawing.Point(271, 28);
-            this.textTotal.Name = "textTotal";
-            this.textTotal.ReadOnly = true;
-            this.textTotal.Size = new System.Drawing.Size(74, 20);
-            this.textTotal.TabIndex = 28;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(125, 31);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(27, 13);
-            this.label19.TabIndex = 31;
-            this.label19.Text = "IVA:";
-            // 
-            // textIVA
-            // 
-            this.textIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textIVA.Location = new System.Drawing.Point(158, 28);
-            this.textIVA.Name = "textIVA";
-            this.textIVA.ReadOnly = true;
-            this.textIVA.Size = new System.Drawing.Size(67, 20);
-            this.textIVA.TabIndex = 30;
             // 
             // label20
             // 
@@ -774,15 +764,41 @@ namespace SimpleSDK_Demo
             this.textNeto.Size = new System.Drawing.Size(67, 20);
             this.textNeto.TabIndex = 32;
             // 
-            // botonBuscarCAF
+            // label19
             // 
-            this.botonBuscarCAF.Image = global::SimpleSDK_Demo.Properties.Resources.View;
-            this.botonBuscarCAF.Location = new System.Drawing.Point(215, 26);
-            this.botonBuscarCAF.Name = "botonBuscarCAF";
-            this.botonBuscarCAF.Size = new System.Drawing.Size(28, 23);
-            this.botonBuscarCAF.TabIndex = 1;
-            this.botonBuscarCAF.UseVisualStyleBackColor = true;
-            this.botonBuscarCAF.Click += new System.EventHandler(this.botonBuscarCAF_Click);
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(125, 31);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(27, 13);
+            this.label19.TabIndex = 31;
+            this.label19.Text = "IVA:";
+            // 
+            // textIVA
+            // 
+            this.textIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textIVA.Location = new System.Drawing.Point(158, 28);
+            this.textIVA.Name = "textIVA";
+            this.textIVA.ReadOnly = true;
+            this.textIVA.Size = new System.Drawing.Size(67, 20);
+            this.textIVA.TabIndex = 30;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(231, 31);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(34, 13);
+            this.label18.TabIndex = 29;
+            this.label18.Text = "Total:";
+            // 
+            // textTotal
+            // 
+            this.textTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textTotal.Location = new System.Drawing.Point(271, 28);
+            this.textTotal.Name = "textTotal";
+            this.textTotal.ReadOnly = true;
+            this.textTotal.Size = new System.Drawing.Size(74, 20);
+            this.textTotal.TabIndex = 28;
             // 
             // botonGenerar
             // 
@@ -796,22 +812,6 @@ namespace SimpleSDK_Demo
             this.botonGenerar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.botonGenerar.UseVisualStyleBackColor = true;
             this.botonGenerar.Click += new System.EventHandler(this.botonGenerar_Click);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(329, 32);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(33, 13);
-            this.label21.TabIndex = 6;
-            this.label21.Text = "RUT:";
-            // 
-            // textRUTCertificado
-            // 
-            this.textRUTCertificado.Location = new System.Drawing.Point(368, 29);
-            this.textRUTCertificado.Name = "textRUTCertificado";
-            this.textRUTCertificado.Size = new System.Drawing.Size(78, 20);
-            this.textRUTCertificado.TabIndex = 5;
             // 
             // GenerarDocumentoElectronico
             // 
@@ -827,6 +827,7 @@ namespace SimpleSDK_Demo
             this.Controls.Add(this.botonGenerar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "GenerarDocumentoElectronico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generar Documento Electrónico";
