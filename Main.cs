@@ -190,9 +190,86 @@ namespace SimpleSDK_Demo
 
         }
 
-        private void botonFacturaCompra_Click(object sender, EventArgs e)
+        private async void botonFacturaCompra_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+            openFileDialog.Title = "Seleccione CAF para generar DTE Factura de Compra";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string pathCAF = openFileDialog.FileName;
+                var emisor = new SimpleSDK.Models.DTE.Emisor()
+                {
+                    Rut = handler.Configuracion.Empresa.RutEmpresa,
+                    DireccionOrigen = handler.Configuracion.Empresa.Direccion,
+                    ComunaOrigen = handler.Configuracion.Empresa.Comuna,
+                    CiudadOrigen = handler.Configuracion.Empresa.Comuna,
+                    RazonSocial = handler.Configuracion.Empresa.RazonSocial,
+                    Giro = handler.Configuracion.Empresa.Giro,
+                    CorreoElectronico = "test@simple-api.cl",
+                    Telefono = new List<string>() { "123123123" },
+                    ActividadEconomica = handler.Configuracion.Empresa.CodigosActividades.Select(x=>x.Codigo).ToList()
+                };
 
+                var receptor = new SimpleSDK.Models.DTE.Receptor()
+                {
+                    Rut = "17096073-4",
+                    RazonSocial = "GONZALO BUSTAMANTE BAÑADOS",
+                    Direccion = "DIRECCION 123",
+                    Comuna = "COMUNA DE CHILE",
+                    Giro = "GIRO DEL RECEPTOR"
+                };
+
+                long folio = 1; //Valor debe ser cambiado por el que corresponda
+                                 //Creación del objeto
+                var dte = new SimpleSDK.Models.DTE.DTE(emisor, receptor, folio, TipoDTE.DTEType.FacturaCompraElectronica);
+
+                //Asignación de detalles
+                List<ItemBoleta> items = new List<ItemBoleta>()
+            {
+                new ItemBoleta(){
+                    Afecto = true,
+                    Cantidad = 1,
+                    Nombre = "ITEM DE PRUEBA",
+                    Precio = 5000
+                },
+                new ItemBoleta(){
+                    Afecto = false,
+                    Cantidad = 1,
+                    Nombre = "EXENTO DE PRUEBA",
+                    Precio = 2500
+                }
+            };
+                dte.Documento.Detalles = handler.ItemboletaADetalle(items);
+
+                dte.CalcularTotales();
+
+                dte.Certificado.Ruta = handler.Configuracion.Certificado.Ruta;
+                dte.Certificado.Rut = handler.Configuracion.Certificado.Rut;
+                dte.Certificado.Password = handler.Configuracion.Certificado.Password;
+
+                try
+                {
+                    var result = await dte.GenerarXMLAsync(pathCAF, handler.Configuracion.APIKey);
+                    if (result.Item1)
+                    {
+                        var pathDTE = System.IO.Path.Combine(AppContext.BaseDirectory, $"DTE_46_{emisor.Rut}_{folio}.xml");
+                        System.IO.File.WriteAllText(pathDTE, result.Item2, Encoding.GetEncoding("ISO-8859-1"));
+                        MessageBox.Show($"Documento generado exitosamente y guardado en {pathDTE}", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(result.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            
         }
 
         private void botonGenerarNotaCredito_Click(object sender, EventArgs e)

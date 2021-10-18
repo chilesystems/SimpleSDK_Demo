@@ -48,27 +48,6 @@ namespace SimpleSDK_Demo
 
         }
 
-        //private void HandleType()
-        //{
-        //    if (radioAnula.Checked)
-        //    {
-        //        gridResultados.DataSource = Clone();
-        //        gridResultados.ReadOnly = true;
-        //    }
-        //    else if (radioModificaMontos.Checked)
-        //    {
-        //        gridResultados.DataSource = Clone();
-        //        gridResultados.ReadOnly = false;
-        //    }
-        //    else if (radioModificaTextos.Checked)
-        //    {
-        //        gridResultados.DataSource = Clone(); 
-        //        gridResultados.ReadOnly = true;
-        //    };
-        //    gridResultados.DataSource = Clone();
-        //    calculoTotales();
-        //}
-
         private List<ItemBoleta> Clone()
         {
             itemsTemporal = new List<ItemBoleta>();
