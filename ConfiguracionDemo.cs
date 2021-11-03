@@ -94,6 +94,7 @@ namespace SimpleSDK_Demo
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
+                openFileDialog.Filter = "Certificado Digital (*.pfx)|*.pfx";
                 var result = openFileDialog.ShowDialog();
                 if (result == DialogResult.OK)
                 {

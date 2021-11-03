@@ -48,16 +48,16 @@ namespace SimpleSDK_Demo
             this.botonGenerarNotaCredito = new System.Windows.Forms.Button();
             this.botonGenerarRCOF = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.botonGenerarSobreEnvio = new System.Windows.Forms.Button();
             this.botonGenerarDocumento = new System.Windows.Forms.Button();
-            this.radioEnvioDTE = new System.Windows.Forms.RadioButton();
-            this.radioEnvioBoleta = new System.Windows.Forms.RadioButton();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.botonConfiguracion = new System.Windows.Forms.Button();
-            this.radioRVD = new System.Windows.Forms.RadioButton();
+            this.comboTipoEnvio = new System.Windows.Forms.ComboBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -65,6 +65,7 @@ namespace SimpleSDK_Demo
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // radioCertificacion
@@ -91,11 +92,11 @@ namespace SimpleSDK_Demo
             // 
             // botonEnviarSii
             // 
-            this.botonEnviarSii.Location = new System.Drawing.Point(6, 19);
+            this.botonEnviarSii.Location = new System.Drawing.Point(6, 51);
             this.botonEnviarSii.Name = "botonEnviarSii";
             this.botonEnviarSii.Size = new System.Drawing.Size(171, 23);
             this.botonEnviarSii.TabIndex = 3;
-            this.botonEnviarSii.Text = "Enviar al SII";
+            this.botonEnviarSii.Text = "Enviar un archivo al SII";
             this.botonEnviarSii.UseVisualStyleBackColor = true;
             this.botonEnviarSii.Click += new System.EventHandler(this.botonEnviarSii_Click);
             // 
@@ -126,9 +127,11 @@ namespace SimpleSDK_Demo
             this.botonLibroGuias.TabIndex = 18;
             this.botonLibroGuias.Text = "Libro de Guías";
             this.botonLibroGuias.UseVisualStyleBackColor = true;
+            this.botonLibroGuias.Click += new System.EventHandler(this.botonLibroGuias_ClickAsync);
             // 
             // botonSetExportacion2
             // 
+            this.botonSetExportacion2.Enabled = false;
             this.botonSetExportacion2.Location = new System.Drawing.Point(6, 105);
             this.botonSetExportacion2.Name = "botonSetExportacion2";
             this.botonSetExportacion2.Size = new System.Drawing.Size(178, 23);
@@ -157,6 +160,7 @@ namespace SimpleSDK_Demo
             // 
             // botonSetExportacion
             // 
+            this.botonSetExportacion.Enabled = false;
             this.botonSetExportacion.Location = new System.Drawing.Point(6, 77);
             this.botonSetExportacion.Name = "botonSetExportacion";
             this.botonSetExportacion.Size = new System.Drawing.Size(178, 23);
@@ -169,8 +173,7 @@ namespace SimpleSDK_Demo
             this.groupBox5.Controls.Add(this.botonConsultarEstadoEnvio);
             this.groupBox5.Controls.Add(this.botonValidador);
             this.groupBox5.Controls.Add(this.botonConsultarEstadoDTE);
-            this.groupBox5.Enabled = false;
-            this.groupBox5.Location = new System.Drawing.Point(397, 12);
+            this.groupBox5.Location = new System.Drawing.Point(397, 38);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(163, 107);
             this.groupBox5.TabIndex = 25;
@@ -179,6 +182,7 @@ namespace SimpleSDK_Demo
             // 
             // botonConsultarEstadoEnvio
             // 
+            this.botonConsultarEstadoEnvio.Enabled = false;
             this.botonConsultarEstadoEnvio.Location = new System.Drawing.Point(6, 48);
             this.botonConsultarEstadoEnvio.Name = "botonConsultarEstadoEnvio";
             this.botonConsultarEstadoEnvio.Size = new System.Drawing.Size(151, 23);
@@ -188,6 +192,7 @@ namespace SimpleSDK_Demo
             // 
             // botonValidador
             // 
+            this.botonValidador.Enabled = false;
             this.botonValidador.Location = new System.Drawing.Point(6, 77);
             this.botonValidador.Name = "botonValidador";
             this.botonValidador.Size = new System.Drawing.Size(151, 23);
@@ -203,6 +208,7 @@ namespace SimpleSDK_Demo
             this.botonConsultarEstadoDTE.TabIndex = 1;
             this.botonConsultarEstadoDTE.Text = "Consultar Estado DTE";
             this.botonConsultarEstadoDTE.UseVisualStyleBackColor = true;
+            this.botonConsultarEstadoDTE.Click += new System.EventHandler(this.botonConsultarEstadoDTE_Click);
             // 
             // botonTimbre
             // 
@@ -234,7 +240,7 @@ namespace SimpleSDK_Demo
             // 
             // botonGenerarRCOF
             // 
-            this.botonGenerarRCOF.Location = new System.Drawing.Point(6, 77);
+            this.botonGenerarRCOF.Location = new System.Drawing.Point(6, 106);
             this.botonGenerarRCOF.Name = "botonGenerarRCOF";
             this.botonGenerarRCOF.Size = new System.Drawing.Size(171, 23);
             this.botonGenerarRCOF.TabIndex = 2;
@@ -244,15 +250,26 @@ namespace SimpleSDK_Demo
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.botonGenerarSobreEnvio);
             this.groupBox1.Controls.Add(this.botonGenerarNotaCredito);
             this.groupBox1.Controls.Add(this.botonGenerarRCOF);
             this.groupBox1.Controls.Add(this.botonGenerarDocumento);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(183, 107);
+            this.groupBox1.Size = new System.Drawing.Size(183, 143);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Básicos";
+            this.groupBox1.Text = "Generación de Documentos";
+            // 
+            // botonGenerarSobreEnvio
+            // 
+            this.botonGenerarSobreEnvio.Location = new System.Drawing.Point(6, 77);
+            this.botonGenerarSobreEnvio.Name = "botonGenerarSobreEnvio";
+            this.botonGenerarSobreEnvio.Size = new System.Drawing.Size(171, 23);
+            this.botonGenerarSobreEnvio.TabIndex = 4;
+            this.botonGenerarSobreEnvio.Text = "Generar Sobre Envio";
+            this.botonGenerarSobreEnvio.UseVisualStyleBackColor = true;
+            this.botonGenerarSobreEnvio.Click += new System.EventHandler(this.botonGenerarSobreEnvio_Click);
             // 
             // botonGenerarDocumento
             // 
@@ -264,28 +281,6 @@ namespace SimpleSDK_Demo
             this.botonGenerarDocumento.UseVisualStyleBackColor = true;
             this.botonGenerarDocumento.Click += new System.EventHandler(this.botonGenerarDocumento_Click);
             // 
-            // radioEnvioDTE
-            // 
-            this.radioEnvioDTE.AutoSize = true;
-            this.radioEnvioDTE.Checked = true;
-            this.radioEnvioDTE.Location = new System.Drawing.Point(6, 51);
-            this.radioEnvioDTE.Name = "radioEnvioDTE";
-            this.radioEnvioDTE.Size = new System.Drawing.Size(52, 17);
-            this.radioEnvioDTE.TabIndex = 16;
-            this.radioEnvioDTE.TabStop = true;
-            this.radioEnvioDTE.Text = "DTEs";
-            this.radioEnvioDTE.UseVisualStyleBackColor = true;
-            // 
-            // radioEnvioBoleta
-            // 
-            this.radioEnvioBoleta.AutoSize = true;
-            this.radioEnvioBoleta.Location = new System.Drawing.Point(64, 51);
-            this.radioEnvioBoleta.Name = "radioEnvioBoleta";
-            this.radioEnvioBoleta.Size = new System.Drawing.Size(60, 17);
-            this.radioEnvioBoleta.TabIndex = 17;
-            this.radioEnvioBoleta.Text = "Boletas";
-            this.radioEnvioBoleta.UseVisualStyleBackColor = true;
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.botonFacturaCompra);
@@ -293,7 +288,7 @@ namespace SimpleSDK_Demo
             this.groupBox6.Controls.Add(this.botonCesion);
             this.groupBox6.Controls.Add(this.botonLibroGuias);
             this.groupBox6.Controls.Add(this.botonSetExportacion2);
-            this.groupBox6.Location = new System.Drawing.Point(201, 12);
+            this.groupBox6.Location = new System.Drawing.Point(201, 38);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(190, 168);
             this.groupBox6.TabIndex = 29;
@@ -305,7 +300,7 @@ namespace SimpleSDK_Demo
             this.groupBox7.Controls.Add(this.botonIntercambio);
             this.groupBox7.Controls.Add(this.botonAceptacion);
             this.groupBox7.Enabled = false;
-            this.groupBox7.Location = new System.Drawing.Point(397, 125);
+            this.groupBox7.Location = new System.Drawing.Point(397, 151);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(163, 80);
             this.groupBox7.TabIndex = 30;
@@ -317,7 +312,7 @@ namespace SimpleSDK_Demo
             this.groupBox3.Controls.Add(this.botonTimbre);
             this.groupBox3.Controls.Add(this.botonMuestraImpresa);
             this.groupBox3.Enabled = false;
-            this.groupBox3.Location = new System.Drawing.Point(397, 211);
+            this.groupBox3.Location = new System.Drawing.Point(397, 237);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(163, 82);
             this.groupBox3.TabIndex = 31;
@@ -328,7 +323,7 @@ namespace SimpleSDK_Demo
             // 
             this.groupBox4.Controls.Add(this.radioCertificacion);
             this.groupBox4.Controls.Add(this.radioProduccion);
-            this.groupBox4.Location = new System.Drawing.Point(12, 125);
+            this.groupBox4.Location = new System.Drawing.Point(12, 187);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(183, 44);
             this.groupBox4.TabIndex = 32;
@@ -337,52 +332,61 @@ namespace SimpleSDK_Demo
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioRVD);
+            this.groupBox2.Controls.Add(this.comboTipoEnvio);
             this.groupBox2.Controls.Add(this.botonEnviarSii);
-            this.groupBox2.Controls.Add(this.radioEnvioBoleta);
-            this.groupBox2.Controls.Add(this.radioEnvioDTE);
-            this.groupBox2.Location = new System.Drawing.Point(12, 175);
+            this.groupBox2.Location = new System.Drawing.Point(12, 237);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(183, 80);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Enviar al SII";
             // 
-            // botonConfiguracion
+            // comboTipoEnvio
             // 
-            this.botonConfiguracion.Image = global::SimpleSDK_Demo.Properties.Resources.ConfiguracionEdit16;
-            this.botonConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botonConfiguracion.Location = new System.Drawing.Point(18, 264);
-            this.botonConfiguracion.Name = "botonConfiguracion";
-            this.botonConfiguracion.Size = new System.Drawing.Size(171, 23);
-            this.botonConfiguracion.TabIndex = 26;
-            this.botonConfiguracion.Text = "Configuración";
-            this.botonConfiguracion.UseVisualStyleBackColor = true;
-            this.botonConfiguracion.Click += new System.EventHandler(this.botonConfiguracion_Click);
+            this.comboTipoEnvio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboTipoEnvio.FormattingEnabled = true;
+            this.comboTipoEnvio.Items.AddRange(new object[] {
+            "EnvioDTE",
+            "EnvioBoleta",
+            "RVD",
+            "Libro"});
+            this.comboTipoEnvio.Location = new System.Drawing.Point(6, 24);
+            this.comboTipoEnvio.Name = "comboTipoEnvio";
+            this.comboTipoEnvio.Size = new System.Drawing.Size(171, 21);
+            this.comboTipoEnvio.TabIndex = 4;
             // 
-            // radioRVD
+            // menuStrip1
             // 
-            this.radioRVD.AutoSize = true;
-            this.radioRVD.Location = new System.Drawing.Point(130, 51);
-            this.radioRVD.Name = "radioRVD";
-            this.radioRVD.Size = new System.Drawing.Size(48, 17);
-            this.radioRVD.TabIndex = 18;
-            this.radioRVD.Text = "RVD";
-            this.radioRVD.UseVisualStyleBackColor = true;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.configuraciónToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(574, 24);
+            this.menuStrip1.TabIndex = 34;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // configuraciónToolStripMenuItem
+            // 
+            this.configuraciónToolStripMenuItem.Image = global::SimpleSDK_Demo.Properties.Resources.ConfiguracionEdit16;
+            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.configuraciónToolStripMenuItem.Text = "Configuración";
+            this.configuraciónToolStripMenuItem.Click += new System.EventHandler(this.configuraciónToolStripMenuItem_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 299);
+            this.ClientSize = new System.Drawing.Size(574, 324);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.botonConfiguracion);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario Principal";
@@ -395,14 +399,14 @@ namespace SimpleSDK_Demo
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button botonConfiguracion;
         private System.Windows.Forms.RadioButton radioCertificacion;
         private System.Windows.Forms.RadioButton radioProduccion;
         private System.Windows.Forms.Button botonEnviarSii;
@@ -426,11 +430,12 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioEnvioDTE;
-        private System.Windows.Forms.RadioButton radioEnvioBoleta;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioRVD;
+        private System.Windows.Forms.ComboBox comboTipoEnvio;
+        private System.Windows.Forms.Button botonGenerarSobreEnvio;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem configuraciónToolStripMenuItem;
     }
 }
 

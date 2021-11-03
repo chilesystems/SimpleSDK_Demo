@@ -25,6 +25,7 @@ namespace SimpleSDK_Demo
         private void Main_Load(object sender, EventArgs e)
         {
             handler.Configuracion.LeerArchivo();
+            comboTipoEnvio.SelectedIndex = 0;
         }
 
         private void botonGenerarDocumento_Click(object sender, EventArgs e)
@@ -44,6 +45,7 @@ namespace SimpleSDK_Demo
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Multiselect = false;
             openFileDialog.Title = "Seleccione DTE para ser cedido";
+            openFileDialog.Filter = "Archivos DTE (*.xml)|*.xml";
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -112,82 +114,38 @@ namespace SimpleSDK_Demo
              * Solamente las boletas deben enviarse mediante otro XML denominado "EnvioBoleta", que cumple con exactamente
              * la misma función que el EnvioDTE. En este caso, soporta un máximo de 500 DTEs de boleta a la vez. Recomendamos 
              * que no sean más de 100.   
+             * Otros archivos que se pueden enviar al SII son el RVD y LCV (Libros), para ello se usan los mismos endpoints que para EnvioDTE.
              */
 
             /*************Generación del sobre*************/
 
-            var envioSII = new SimpleSDK.Models.Envios.SobreEnvio();
-
-            /*Estos valores se deben cambiar por los que correspondan*/
-            envioSII.Caratula.RutEmisor = handler.Configuracion.Empresa.RutEmpresa;
-            envioSII.Caratula.RutReceptor = "60803000-K"; //Si es al SII, debe ir "60803000-K". Si es al cliente, el rut del cliente
-            envioSII.Caratula.FechaResolucion = handler.Configuracion.Empresa.FechaResolucion;
-            envioSII.Caratula.NumeroResolucion = handler.Configuracion.Empresa.NumeroResolucion;
+            var envioSII = new SimpleSDK.Models.Envios.EnvioSII();
+            envioSII.Ambiente = radioCertificacion.Checked ? Ambiente.AmbienteEnum.Certificacion : Ambiente.AmbienteEnum.Produccion;
 
             /*Datos del certificado*/
             envioSII.Certificado.Ruta = handler.Configuracion.Certificado.Ruta;
             envioSII.Certificado.Rut = handler.Configuracion.Certificado.Rut;
             envioSII.Certificado.Password = handler.Configuracion.Certificado.Password;
 
-            if (!radioRVD.Checked)
+            if (comboTipoEnvio.SelectedIndex == 0) envioSII.Tipo = TipoEnvio.EnvioType.EnvioDTE;
+            else if (comboTipoEnvio.SelectedIndex == 1) envioSII.Tipo = TipoEnvio.EnvioType.EnvioBoleta;
+            else if (comboTipoEnvio.SelectedIndex == 2) envioSII.Tipo = TipoEnvio.EnvioType.RVD;
+            else if (comboTipoEnvio.SelectedIndex == 3) envioSII.Tipo = TipoEnvio.EnvioType.LVC;
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = false;
+            openFileDialog.Title = $"Seleccione archivo para ser enviado al SII";
+            openFileDialog.Filter = $"Archivo XML (*.xml)|*.xml";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.Multiselect = true;
-                openFileDialog.Title = "Seleccione DTEs para ser enviados al SII";
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                string pathFile = openFileDialog.FileName;
+                var result = await envioSII.EnviarSIIAsync(pathFile, handler.Configuracion.APIKey);
+                if (result.Item1)
                 {
-                    string[] pathFiles = openFileDialog.FileNames;
-                    var result = await envioSII.GenerarXMLAsync(pathFiles, handler.Configuracion.APIKey);
-
-                    string pathEnvio = string.Empty;
-                    if (result.Item1)
-                    {
-                        pathEnvio = Path.Combine(AppContext.BaseDirectory, $"EnvioDTE_{envioSII.Caratula.RutEmisor}_{pathFiles.Count()}_dtes_{DateTime.Now.Ticks}.xml");
-                        File.WriteAllText(pathEnvio, result.Item2, Encoding.GetEncoding("ISO-8859-1"));
-                        MessageBox.Show($"Documento EnvioDTE generado exitosamente y guardado en {pathEnvio}", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show(result.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    /* Una vez teniendo el archivo del sobre, se debe enviar al SII.
-                     * Si es un EnvioDTE, irá al maullin en caso de ser de certificación, o al palena en caso de producción
-                     * Si es un EnvioBoleta, irá al pangal en caso de ser de certificación, o al rahue en caso de producción                 * 
-                     */
-
-                    var resultEnvio = await envioSII.EnviarSIIAsync(pathEnvio, handler.Configuracion.APIKey);
-                    if (resultEnvio.Item1)
-                    {
-                        ResultadoOperacion formulario = new ResultadoOperacion(resultEnvio.Item2.ResponseXml);
-                        formulario.ShowDialog();
-                    }
+                    ResultadoOperacion formulario = new ResultadoOperacion(result.Item2.ResponseXml);
+                    formulario.ShowDialog();
                 }
             }
-            else //Si se trata de un RVD (ex-RCOF)
-            {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.Multiselect = false;
-                openFileDialog.Title = "Seleccione RCOF para ser enviado al SII";
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    /* El archivo de RVD se envía a los mismos servidores que los EnvioDTE. */
-                    string pathFile = openFileDialog.FileName;
-                    var result = await envioSII.EnviarSIIAsync(pathFile, handler.Configuracion.APIKey);
-                    if (result.Item1)
-                    {
-                        ResultadoOperacion formulario = new ResultadoOperacion(result.Item2.ResponseXml);
-                        formulario.ShowDialog();
-                    }
-                }
-            }
-
-
-            /*************Envío al SII********************/
-
         }
 
         private async void botonFacturaCompra_Click(object sender, EventArgs e)
@@ -195,6 +153,7 @@ namespace SimpleSDK_Demo
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Multiselect = false;
             openFileDialog.Title = "Seleccione CAF para generar DTE Factura de Compra";
+            openFileDialog.Filter = "Archivos DTE (*.xml)|*.xml";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string pathCAF = openFileDialog.FileName;
@@ -282,6 +241,122 @@ namespace SimpleSDK_Demo
         {
             GenerarRVD formulario = new GenerarRVD();
             formulario.Show();
+        }
+
+        private async void botonLibroGuias_ClickAsync(object sender, EventArgs e)
+        {
+            var libro = new SimpleSDK.Models.LCV.LibroGuia();
+            libro.Id = $"ID_{DateTime.Now.Ticks}";
+
+            libro.Caratula = new SimpleSDK.Models.LCV.Caratula()
+            {
+                RutEmisor = handler.Configuracion.Empresa.RutEmpresa,
+                RutEnvia = handler.Configuracion.Certificado.Rut,
+                PeriodoTributario = DateTime.Now.Year + "-" + DateTime.Now.Month.ToString("D2"),
+                FechaResolucion = handler.Configuracion.Empresa.FechaResolucion,
+                NumeroResolucion = handler.Configuracion.Empresa.NumeroResolucion,
+                TipoLibro = TipoLibro.TipoLibroEnum.Especial,
+                TipoEnvio = TipoEnvioLibro.TipoEnvioLibroEnum.Total,
+                FolioNotificacion = 1
+            };
+
+            //Los datos se deben llenar según corresponda.
+
+            libro.ResumenPeriodo = new SimpleSDK.Models.LCV.ResumenPeriodo()
+            {
+                TotalesGuiasDeVentas = 1,
+                MontoTotalVentasGuia = 20000,
+                TotalesGuiasAnuladas = 0, //Dato opcional. No hay un indicador en el DTE para establecer que está anulado. Se debe entregar según datos del propio desarrollador,
+                TotalesFoliosAnulados = 0, //Dato opcional. No hay un indicador en el DTE para establecer que su folio está anulado. Se debe entregar según datos del propio desarrollador,               
+
+                //El traslado es opcional. Se repite hasta 6 veces, según los códigos de NO venta (2, 3, 4, 5, 6, 7).
+                Traslados = new List<SimpleSDK.Models.LCV.TotalTraslado>()
+                {
+                    new SimpleSDK.Models.LCV.TotalTraslado
+                    {
+                        TipoTraslado = TipoTraslado.TipoTrasladoEnum.TrasladosInternos,
+                        CantidadGuia = 1,
+                        MontoGuia = 0
+                    }
+                }
+            };
+
+            libro.Detalles = new List<SimpleSDK.Models.LCV.Detalle>();
+            libro.Detalles.Add(new SimpleSDK.Models.LCV.Detalle()
+            {
+                MontoTotal = 20000,
+                Folio = 50,
+                TipoOperacion = TipoTraslado.TipoTrasladoEnum.OperacionConstituyeVenta,
+            });
+
+            libro.Certificado = new SimpleSDK.Models.Extras.CertificadoDigital()
+            {
+                Password = handler.Configuracion.Certificado.Password,
+                Rut = handler.Configuracion.Certificado.Rut,
+                Ruta = handler.Configuracion.Certificado.Ruta
+            };
+
+            var result = await libro.GenerarXMLAsync(handler.Configuracion.APIKey);
+            var pathLibro = System.IO.Path.Combine(AppContext.BaseDirectory, $"LibroGuias_{libro.Caratula.RutEmisor}.xml");
+            if (result.Item1)
+            {                
+                System.IO.File.WriteAllText(pathLibro, result.Item2, Encoding.GetEncoding("ISO-8859-1"));
+                MessageBox.Show($"Libro de Guias generado exitosamente y guardado en {pathLibro}", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(result.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConfiguracionDemo formulario = new ConfiguracionDemo();
+            formulario.Show();
+        }
+
+        private async void botonGenerarSobreEnvio_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = true;
+            openFileDialog.Title = "Seleccione DTEs para enviar al SII";
+            openFileDialog.Filter = "Archivos DTE (*.xml)|*.xml";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var envioSII = new SimpleSDK.Models.Envios.SobreEnvio();
+
+                envioSII.Certificado.Ruta = handler.Configuracion.Certificado.Ruta;
+                envioSII.Certificado.Rut = handler.Configuracion.Certificado.Rut;
+                envioSII.Certificado.Password = handler.Configuracion.Certificado.Password;
+
+                /*Estos valores se deben cambiar por los que correspondan*/
+                envioSII.Caratula.RutEmisor = handler.Configuracion.Empresa.RutEmpresa;
+                envioSII.Caratula.RutReceptor = "60803000-K"; //Si es al SII, debe ir "60803000-K". Si es al cliente, el rut del cliente
+                envioSII.Caratula.FechaResolucion = handler.Configuracion.Empresa.FechaResolucion;
+                envioSII.Caratula.NumeroResolucion = handler.Configuracion.Empresa.NumeroResolucion;
+
+                string[] pathFiles = openFileDialog.FileNames;
+                var result = await envioSII.GenerarXMLAsync(pathFiles, handler.Configuracion.APIKey);
+
+                string pathEnvio = string.Empty;
+                if (result.Item1)
+                {
+                    pathEnvio = Path.Combine(AppContext.BaseDirectory, $"EnvioSII_{envioSII.Caratula.RutEmisor}_{pathFiles.Count()}_dtes_{DateTime.Now.Ticks}.xml");
+                    File.WriteAllText(pathEnvio, result.Item2, Encoding.GetEncoding("ISO-8859-1"));
+                    MessageBox.Show($"Documento EnvioDTE generado exitosamente y guardado en {pathEnvio}", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(result.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void botonConsultarEstadoDTE_Click(object sender, EventArgs e)
+        {
+            ConsultaEstadoDTE formulario = new ConsultaEstadoDTE();
+            formulario.ShowDialog();
         }
     }
 }

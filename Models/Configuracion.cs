@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SimpleSDK.Models.Extras;
 using System;
 using System.Collections.Generic;
 using System.IO;

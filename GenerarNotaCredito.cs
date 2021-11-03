@@ -216,6 +216,7 @@ namespace SimpleSDK_Demo
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
+                openFileDialog.Filter = "Archivo CAF (*.xml)|*.xml";
                 var result = openFileDialog.ShowDialog();
                 if (result == DialogResult.OK)
                 {
@@ -229,6 +230,7 @@ namespace SimpleSDK_Demo
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
+                openFileDialog.Filter = "Certificado Digital (*.pfx)|*.pfx";
                 var result = openFileDialog.ShowDialog();
                 if (result == DialogResult.OK)
                 {
@@ -241,6 +243,7 @@ namespace SimpleSDK_Demo
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
+                openFileDialog.Filter = "Archivos DTE (*.xml)|*.xml";
                 var result = openFileDialog.ShowDialog();
                 if (result == DialogResult.OK)
                 {
