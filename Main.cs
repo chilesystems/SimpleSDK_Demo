@@ -367,5 +367,16 @@ namespace SimpleSDK_Demo
             Validador formulario = new Validador();
             formulario.ShowDialog();
         }
+
+        private void botonTimbre_Click(object sender, EventArgs e)
+        {
+            MuestraTimbre formulario = new MuestraTimbre();
+            formulario.ShowDialog();
+        }
+
+        private void botonMuestraImpresa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -45,21 +45,7 @@ namespace SimpleSDK_Demo
 
                 var validador = new SimpleSDK.Models.Extras.Validador();
                 validador.FilePath = txtFilePath.Text;
-                switch (comboTipo.SelectedIndex)
-                {
-                    case 0: validador.Tipo = SimpleSDK.Enum.TipoEnvio.ValidacionType.DTE;
-                        break;
-                    case 1: validador.Tipo = SimpleSDK.Enum.TipoEnvio.ValidacionType.EnvioDTE;
-                        break;
-                    case 2: validador.Tipo = SimpleSDK.Enum.TipoEnvio.ValidacionType.EnvioBoleta;
-                        break;
-                    case 3: validador.Tipo = SimpleSDK.Enum.TipoEnvio.ValidacionType.LibroGuias;
-                        break;
-                    case 4: validador.Tipo = SimpleSDK.Enum.TipoEnvio.ValidacionType.RVD;
-                        break;
-                    case 5: validador.Tipo = SimpleSDK.Enum.TipoEnvio.ValidacionType.LCV;
-                        break;
-                }
+
 
                 var result = await validador.ConsultarAlSII(handler.Configuracion.APIKey);
                 textResultado.Text = result;

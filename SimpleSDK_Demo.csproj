@@ -111,6 +111,12 @@
     <Compile Include="Models\Configuracion.cs" />
     <Compile Include="Models\Empresa.cs" />
     <Compile Include="Models\ItemBoleta.cs" />
+    <Compile Include="MuestraTimbre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuestraTimbre.Designer.cs">
+      <DependentUpon>MuestraTimbre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultadoOperacion.cs">
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MuestraTimbre.resx">
+      <DependentUpon>MuestraTimbre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

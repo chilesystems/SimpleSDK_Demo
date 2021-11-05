@@ -36,7 +36,6 @@ namespace SimpleSDK_Demo
             this.botonMuestraImpresa = new System.Windows.Forms.Button();
             this.botonLibroGuias = new System.Windows.Forms.Button();
             this.botonSetExportacion2 = new System.Windows.Forms.Button();
-            this.botonIntercambio = new System.Windows.Forms.Button();
             this.botonCesion = new System.Windows.Forms.Button();
             this.botonSetExportacion = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -44,14 +43,12 @@ namespace SimpleSDK_Demo
             this.botonValidador = new System.Windows.Forms.Button();
             this.botonConsultarEstadoDTE = new System.Windows.Forms.Button();
             this.botonTimbre = new System.Windows.Forms.Button();
-            this.botonAceptacion = new System.Windows.Forms.Button();
             this.botonGenerarNotaCredito = new System.Windows.Forms.Button();
             this.botonGenerarRCOF = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.botonGenerarSobreEnvio = new System.Windows.Forms.Button();
             this.botonGenerarDocumento = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -61,7 +58,6 @@ namespace SimpleSDK_Demo
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -118,6 +114,7 @@ namespace SimpleSDK_Demo
             this.botonMuestraImpresa.TabIndex = 19;
             this.botonMuestraImpresa.Text = "Muestra Impresa";
             this.botonMuestraImpresa.UseVisualStyleBackColor = true;
+            this.botonMuestraImpresa.Click += new System.EventHandler(this.botonMuestraImpresa_Click);
             // 
             // botonLibroGuias
             // 
@@ -138,15 +135,6 @@ namespace SimpleSDK_Demo
             this.botonSetExportacion2.TabIndex = 20;
             this.botonSetExportacion2.Text = "SET de Exportación (2)";
             this.botonSetExportacion2.UseVisualStyleBackColor = true;
-            // 
-            // botonIntercambio
-            // 
-            this.botonIntercambio.Location = new System.Drawing.Point(6, 21);
-            this.botonIntercambio.Name = "botonIntercambio";
-            this.botonIntercambio.Size = new System.Drawing.Size(151, 23);
-            this.botonIntercambio.TabIndex = 18;
-            this.botonIntercambio.Text = "Intercambio";
-            this.botonIntercambio.UseVisualStyleBackColor = true;
             // 
             // botonCesion
             // 
@@ -218,15 +206,7 @@ namespace SimpleSDK_Demo
             this.botonTimbre.TabIndex = 12;
             this.botonTimbre.Text = "Imagen del Timbre";
             this.botonTimbre.UseVisualStyleBackColor = true;
-            // 
-            // botonAceptacion
-            // 
-            this.botonAceptacion.Location = new System.Drawing.Point(6, 49);
-            this.botonAceptacion.Name = "botonAceptacion";
-            this.botonAceptacion.Size = new System.Drawing.Size(151, 23);
-            this.botonAceptacion.TabIndex = 3;
-            this.botonAceptacion.Text = "Enviar Aceptación/Reclamo";
-            this.botonAceptacion.UseVisualStyleBackColor = true;
+            this.botonTimbre.Click += new System.EventHandler(this.botonTimbre_Click);
             // 
             // botonGenerarNotaCredito
             // 
@@ -295,24 +275,11 @@ namespace SimpleSDK_Demo
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Otros DTE";
             // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.botonIntercambio);
-            this.groupBox7.Controls.Add(this.botonAceptacion);
-            this.groupBox7.Enabled = false;
-            this.groupBox7.Location = new System.Drawing.Point(397, 151);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(163, 80);
-            this.groupBox7.TabIndex = 30;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Documentos Recibidos";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.botonTimbre);
             this.groupBox3.Controls.Add(this.botonMuestraImpresa);
-            this.groupBox3.Enabled = false;
-            this.groupBox3.Location = new System.Drawing.Point(397, 237);
+            this.groupBox3.Location = new System.Drawing.Point(397, 151);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(163, 82);
             this.groupBox3.TabIndex = 31;
@@ -381,7 +348,6 @@ namespace SimpleSDK_Demo
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox1);
@@ -394,7 +360,6 @@ namespace SimpleSDK_Demo
             this.groupBox5.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -414,21 +379,18 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.Button botonMuestraImpresa;
         private System.Windows.Forms.Button botonLibroGuias;
         private System.Windows.Forms.Button botonSetExportacion2;
-        private System.Windows.Forms.Button botonIntercambio;
         private System.Windows.Forms.Button botonCesion;
         private System.Windows.Forms.Button botonSetExportacion;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button botonConsultarEstadoEnvio;
         private System.Windows.Forms.Button botonValidador;
         private System.Windows.Forms.Button botonTimbre;
-        private System.Windows.Forms.Button botonAceptacion;
         private System.Windows.Forms.Button botonConsultarEstadoDTE;
         private System.Windows.Forms.Button botonGenerarNotaCredito;
         private System.Windows.Forms.Button botonGenerarRCOF;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button botonGenerarDocumento;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox2;
