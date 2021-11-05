@@ -182,23 +182,23 @@ namespace SimpleSDK_Demo
             // 
             // botonConsultarEstadoEnvio
             // 
-            this.botonConsultarEstadoEnvio.Enabled = false;
             this.botonConsultarEstadoEnvio.Location = new System.Drawing.Point(6, 48);
             this.botonConsultarEstadoEnvio.Name = "botonConsultarEstadoEnvio";
             this.botonConsultarEstadoEnvio.Size = new System.Drawing.Size(151, 23);
             this.botonConsultarEstadoEnvio.TabIndex = 18;
             this.botonConsultarEstadoEnvio.Text = "Consultar Estado Envío";
             this.botonConsultarEstadoEnvio.UseVisualStyleBackColor = true;
+            this.botonConsultarEstadoEnvio.Click += new System.EventHandler(this.botonConsultarEstadoEnvio_Click);
             // 
             // botonValidador
             // 
-            this.botonValidador.Enabled = false;
             this.botonValidador.Location = new System.Drawing.Point(6, 77);
             this.botonValidador.Name = "botonValidador";
             this.botonValidador.Size = new System.Drawing.Size(151, 23);
             this.botonValidador.TabIndex = 17;
             this.botonValidador.Text = "Validador";
             this.botonValidador.UseVisualStyleBackColor = true;
+            this.botonValidador.Click += new System.EventHandler(this.botonValidador_Click);
             // 
             // botonConsultarEstadoDTE
             // 

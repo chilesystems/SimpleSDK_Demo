@@ -28,10 +28,18 @@ namespace SimpleSDK_Demo
                 XDocument doc = XDocument.Parse(texto);
                 textRespuesta.Text = doc.ToString();
             }
-            catch 
-            {                
-                dynamic parsedJson = JsonConvert.DeserializeObject(texto);
-                textRespuesta.Text = JsonConvert.SerializeObject(parsedJson, Formatting.Indented);
+            catch
+            {
+                try 
+                {
+                    dynamic parsedJson = JsonConvert.DeserializeObject(texto);
+                    textRespuesta.Text = JsonConvert.SerializeObject(parsedJson, Formatting.Indented);
+                }
+                catch 
+                {
+                    textRespuesta.Text = texto;
+                }
+      
             }
         }
     }

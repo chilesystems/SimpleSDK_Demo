@@ -76,6 +76,12 @@
     <Compile Include="ConsultaEstadoDTE.Designer.cs">
       <DependentUpon>ConsultaEstadoDTE.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaEstadoTrackID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaEstadoTrackID.Designer.cs">
+      <DependentUpon>ConsultaEstadoTrackID.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenerarNotaCredito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,11 +119,20 @@
     <Compile Include="ResultadoOperacion.Designer.cs">
       <DependentUpon>ResultadoOperacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Validador.Designer.cs">
+      <DependentUpon>Validador.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ConfiguracionDemo.resx">
       <DependentUpon>ConfiguracionDemo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaEstadoDTE.resx">
       <DependentUpon>ConsultaEstadoDTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaEstadoTrackID.resx">
+      <DependentUpon>ConsultaEstadoTrackID.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenerarNotaCredito.resx">
       <DependentUpon>GenerarNotaCredito.cs</DependentUpon>
@@ -143,6 +158,9 @@
     </Compile>
     <EmbeddedResource Include="ResultadoOperacion.resx">
       <DependentUpon>ResultadoOperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Validador.resx">
+      <DependentUpon>Validador.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

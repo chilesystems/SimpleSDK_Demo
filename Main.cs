@@ -140,11 +140,8 @@ namespace SimpleSDK_Demo
             {
                 string pathFile = openFileDialog.FileName;
                 var result = await envioSII.EnviarSIIAsync(pathFile, handler.Configuracion.APIKey);
-                if (result.Item1)
-                {
-                    ResultadoOperacion formulario = new ResultadoOperacion(result.Item2.ResponseXml);
-                    formulario.ShowDialog();
-                }
+                ResultadoOperacion formulario = new ResultadoOperacion(result.Item2.ResponseXml);
+                formulario.ShowDialog();
             }
         }
 
@@ -356,6 +353,18 @@ namespace SimpleSDK_Demo
         private void botonConsultarEstadoDTE_Click(object sender, EventArgs e)
         {
             ConsultaEstadoDTE formulario = new ConsultaEstadoDTE();
+            formulario.ShowDialog();
+        }
+
+        private void botonConsultarEstadoEnvio_Click(object sender, EventArgs e)
+        {
+            ConsultaEstadoTrackID formulario = new ConsultaEstadoTrackID();
+            formulario.ShowDialog();
+        }
+
+        private void botonValidador_Click(object sender, EventArgs e)
+        {
+            Validador formulario = new Validador();
             formulario.ShowDialog();
         }
     }
