@@ -29,6 +29,8 @@ namespace SimpleSDK_Demo
         private void botonBuscar_Click(object sender, EventArgs e)
         {
             var openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Seleccione un archivo a validar";
+            openFileDialog.Filter = "Archivo XML (*.xml)|*.xml";
             var result = openFileDialog.ShowDialog();
             if (result == DialogResult.OK && File.Exists(openFileDialog.FileName))
             {
@@ -54,6 +56,16 @@ namespace SimpleSDK_Demo
             {
                 textResultado.Text = "ERROR: " + ex.ToString();
             }
+
+        }
+
+        private void txtFilePath_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }

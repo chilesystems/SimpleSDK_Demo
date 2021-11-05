@@ -26,6 +26,8 @@ namespace SimpleSDK_Demo
         private async void botonCargarDTE_Click(object sender, EventArgs e)
         {
             var openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Seleccione un DTE";
+            openFileDialog.Filter = "Archivo DTE (*.xml)|*.xml";
             var result = openFileDialog.ShowDialog();
             if (result == DialogResult.OK && File.Exists(openFileDialog.FileName))
             {

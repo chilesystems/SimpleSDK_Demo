@@ -37,8 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFilePath = new System.Windows.Forms.TextBox();
-            this.botonBuscar = new System.Windows.Forms.Button();
             this.botonValidar = new System.Windows.Forms.Button();
+            this.botonBuscar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,6 +127,7 @@
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ruta:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtFilePath
             // 
@@ -134,6 +135,17 @@
             this.txtFilePath.Name = "txtFilePath";
             this.txtFilePath.Size = new System.Drawing.Size(262, 20);
             this.txtFilePath.TabIndex = 0;
+            this.txtFilePath.TextChanged += new System.EventHandler(this.txtFilePath_TextChanged);
+            // 
+            // botonValidar
+            // 
+            this.botonValidar.Location = new System.Drawing.Point(295, 54);
+            this.botonValidar.Name = "botonValidar";
+            this.botonValidar.Size = new System.Drawing.Size(75, 23);
+            this.botonValidar.TabIndex = 6;
+            this.botonValidar.Text = "Validar";
+            this.botonValidar.UseVisualStyleBackColor = true;
+            this.botonValidar.Click += new System.EventHandler(this.botonValidar_Click);
             // 
             // botonBuscar
             // 
@@ -145,16 +157,6 @@
             this.botonBuscar.TabIndex = 2;
             this.botonBuscar.UseVisualStyleBackColor = true;
             this.botonBuscar.Click += new System.EventHandler(this.botonBuscar_Click);
-            // 
-            // botonValidar
-            // 
-            this.botonValidar.Location = new System.Drawing.Point(295, 54);
-            this.botonValidar.Name = "botonValidar";
-            this.botonValidar.Size = new System.Drawing.Size(75, 23);
-            this.botonValidar.TabIndex = 6;
-            this.botonValidar.Text = "Validar";
-            this.botonValidar.UseVisualStyleBackColor = true;
-            this.botonValidar.Click += new System.EventHandler(this.botonValidar_Click);
             // 
             // Validador
             // 

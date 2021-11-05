@@ -376,7 +376,8 @@ namespace SimpleSDK_Demo
 
         private void botonMuestraImpresa_Click(object sender, EventArgs e)
         {
-
+            MuestraImpresa formulario = new MuestraImpresa();
+            formulario.ShowDialog();
         }
     }
 }
