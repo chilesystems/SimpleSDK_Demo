@@ -37,7 +37,7 @@ namespace SimpleSDK_Demo
             {
                 var consulta = new SimpleSDK.Models.Estados.ConsultaTrackID(rutEmpresa)
                 {
-                    Ambiente = radioCertificacion.Checked ? Ambiente.AmbienteEnum.Certificacion : Ambiente.AmbienteEnum.Certificacion,
+                    Ambiente = radioCertificacion.Checked ? Ambiente.AmbienteEnum.Certificacion : Ambiente.AmbienteEnum.Produccion,
                     ServidorBoletaREST = checkServidorBoleta.Checked,
                     Certificado = handler.Configuracion.Certificado,
                     TrackId = trackId
