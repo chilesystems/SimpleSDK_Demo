@@ -47,7 +47,7 @@ namespace SimpleSDK_Demo
 
                 var validador = new SimpleSDK.Models.Extras.Validador();
                 validador.FilePath = txtFilePath.Text;
-
+                validador.Tipo = (SimpleSDK.Enum.TipoEnvio.ValidacionType)comboTipo.SelectedIndex + 1;
 
                 var result = await validador.ConsultarAlSII(handler.Configuracion.APIKey);
                 textResultado.Text = result;
