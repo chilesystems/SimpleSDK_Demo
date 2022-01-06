@@ -115,6 +115,7 @@ namespace SimpleSDK_Demo
             if (checkSetPruebas.Checked)
             {
                 //Para facturas electrónicas debes agregar aquí el n° de atención CASO {N°Atencion}-{NumeroCaso}
+
                 string casoPrueba = "CASO 123456-" + numericCasoPrueba.Value.ToString("N0");
                 //Para boletas electrónicas no se requiere agregar el número de atención. 
                 //string casoPrueba = "CASO-" + numericCasoPrueba.Value.ToString("N0");
