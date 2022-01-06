@@ -49,7 +49,7 @@ namespace SimpleSDK_Demo
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                /*La cesión se debe realizar a partir de un DTE existente mono
+                /*La cesión se debe realizar a partir de un DTE existente
                  Para ello, se carga el correspondiente XML.*/
                 string pathDTECedido = openFileDialog.FileName;
 
