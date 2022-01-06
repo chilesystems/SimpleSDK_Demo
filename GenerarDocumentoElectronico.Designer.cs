@@ -162,6 +162,7 @@ namespace SimpleSDK_Demo
             this.checkSetPruebas.TabIndex = 14;
             this.checkSetPruebas.Text = "¿Set de Pruebas?";
             this.checkSetPruebas.UseVisualStyleBackColor = true;
+            this.checkSetPruebas.CheckedChanged += new System.EventHandler(this.checkSetPruebas_CheckedChanged);
             // 
             // labelCasoPrueba
             // 

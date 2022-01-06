@@ -217,5 +217,10 @@ namespace SimpleSDK_Demo
                 }
             }
         }
+
+        private void checkSetPruebas_CheckedChanged(object sender, EventArgs e)
+        {
+            labelCasoPrueba.Enabled = numericCasoPrueba.Enabled = checkSetPruebas.Checked;
+        }
     }
 }

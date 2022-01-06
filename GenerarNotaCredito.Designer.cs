@@ -29,9 +29,9 @@ namespace SimpleSDK_Demo
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.botonCargarDTE = new System.Windows.Forms.Button();
             this.textDTEPath = new System.Windows.Forms.TextBox();
@@ -466,8 +466,8 @@ namespace SimpleSDK_Demo
             // gridCantidadProducto
             // 
             this.gridCantidadProducto.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle4.Format = "N1";
-            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Format = "N1";
+            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle1;
             this.gridCantidadProducto.HeaderText = "Cantidad";
             this.gridCantidadProducto.Name = "gridCantidadProducto";
             this.gridCantidadProducto.Width = 55;
@@ -475,8 +475,8 @@ namespace SimpleSDK_Demo
             // gridPrecio
             // 
             this.gridPrecio.DataPropertyName = "Precio";
-            dataGridViewCellStyle5.Format = "N0";
-            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Format = "N0";
+            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridPrecio.HeaderText = "Precio";
             this.gridPrecio.Name = "gridPrecio";
             this.gridPrecio.Width = 65;
@@ -484,8 +484,8 @@ namespace SimpleSDK_Demo
             // gridTotal
             // 
             this.gridTotal.DataPropertyName = "Total";
-            dataGridViewCellStyle6.Format = "N0";
-            this.gridTotal.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Format = "N0";
+            this.gridTotal.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridTotal.HeaderText = "Total";
             this.gridTotal.Name = "gridTotal";
             this.gridTotal.Width = 70;
