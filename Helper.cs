@@ -88,7 +88,7 @@ namespace SimpleSDK_Demo
             {
                 referencia = new Referencia()
                 {
-                    FechaDocumentoReferencia = fechaDocReferencia.Value,
+                    FechaDocumentoReferencia = fechaDocReferencia.HasValue ? fechaDocReferencia.Value : default,
                     FolioReferencia = folioReferencia.ToString(),
                     Numero = 1,
                     RazonReferencia = casoPrueba,
