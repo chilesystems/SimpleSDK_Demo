@@ -140,8 +140,17 @@ namespace SimpleSDK_Demo
             {
                 string pathFile = openFileDialog.FileName;
                 var result = await envioSII.EnviarSIIAsync(pathFile, handler.Configuracion.APIKey);
-                ResultadoOperacion formulario = new ResultadoOperacion(result.Item2.ResponseXml);
-                formulario.ShowDialog();
+                if (envioSII.Tipo == TipoEnvio.EnvioType.EnvioBoleta)
+                {
+                    ResultadoOperacion formulario = new ResultadoOperacion(result.Item2.ToString());
+                    formulario.ShowDialog();
+                }
+                else
+                {
+                    ResultadoOperacion formulario = new ResultadoOperacion(result.Item2.ResponseXml);
+                    formulario.ShowDialog();
+                }
+               
             }
         }
 
