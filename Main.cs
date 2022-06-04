@@ -388,5 +388,11 @@ namespace SimpleSDK_Demo
             MuestraImpresa formulario = new MuestraImpresa();
             formulario.ShowDialog();
         }
+
+        private void RegistroComprasButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new ConsultarRegistroCompras();
+            formulario.ShowDialog();
+        }
     }
 }

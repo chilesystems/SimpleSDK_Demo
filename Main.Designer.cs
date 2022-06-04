@@ -24,8 +24,8 @@ namespace SimpleSDK_Demo
         #region Código generado por el Diseñador de Windows Forms
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -55,6 +55,9 @@ namespace SimpleSDK_Demo
             this.comboTipoEnvio = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RegistroComprasVentasGroupBox = new System.Windows.Forms.GroupBox();
+            this.RegistroComprasButton = new System.Windows.Forms.Button();
+            this.RegistroVentasButton = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -62,16 +65,17 @@ namespace SimpleSDK_Demo
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.RegistroComprasVentasGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // radioCertificacion
             // 
             this.radioCertificacion.AutoSize = true;
             this.radioCertificacion.Checked = true;
-            this.radioCertificacion.Location = new System.Drawing.Point(8, 23);
-            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioCertificacion.Location = new System.Drawing.Point(9, 29);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioCertificacion.Name = "radioCertificacion";
-            this.radioCertificacion.Size = new System.Drawing.Size(101, 20);
+            this.radioCertificacion.Size = new System.Drawing.Size(121, 24);
             this.radioCertificacion.TabIndex = 14;
             this.radioCertificacion.TabStop = true;
             this.radioCertificacion.Text = "Certificación";
@@ -80,20 +84,20 @@ namespace SimpleSDK_Demo
             // radioProduccion
             // 
             this.radioProduccion.AutoSize = true;
-            this.radioProduccion.Location = new System.Drawing.Point(131, 23);
-            this.radioProduccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioProduccion.Location = new System.Drawing.Point(147, 29);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioProduccion.Name = "radioProduccion";
-            this.radioProduccion.Size = new System.Drawing.Size(96, 20);
+            this.radioProduccion.Size = new System.Drawing.Size(113, 24);
             this.radioProduccion.TabIndex = 15;
             this.radioProduccion.Text = "Producción";
             this.radioProduccion.UseVisualStyleBackColor = true;
             // 
             // botonEnviarSii
             // 
-            this.botonEnviarSii.Location = new System.Drawing.Point(8, 63);
-            this.botonEnviarSii.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonEnviarSii.Location = new System.Drawing.Point(9, 79);
+            this.botonEnviarSii.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonEnviarSii.Name = "botonEnviarSii";
-            this.botonEnviarSii.Size = new System.Drawing.Size(228, 28);
+            this.botonEnviarSii.Size = new System.Drawing.Size(256, 35);
             this.botonEnviarSii.TabIndex = 3;
             this.botonEnviarSii.Text = "Enviar un archivo al SII";
             this.botonEnviarSii.UseVisualStyleBackColor = true;
@@ -101,10 +105,10 @@ namespace SimpleSDK_Demo
             // 
             // botonFacturaCompra
             // 
-            this.botonFacturaCompra.Location = new System.Drawing.Point(8, 23);
-            this.botonFacturaCompra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonFacturaCompra.Location = new System.Drawing.Point(9, 29);
+            this.botonFacturaCompra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonFacturaCompra.Name = "botonFacturaCompra";
-            this.botonFacturaCompra.Size = new System.Drawing.Size(237, 28);
+            this.botonFacturaCompra.Size = new System.Drawing.Size(267, 35);
             this.botonFacturaCompra.TabIndex = 21;
             this.botonFacturaCompra.Text = "Factura de Compra";
             this.botonFacturaCompra.UseVisualStyleBackColor = true;
@@ -112,10 +116,10 @@ namespace SimpleSDK_Demo
             // 
             // botonMuestraImpresa
             // 
-            this.botonMuestraImpresa.Location = new System.Drawing.Point(8, 59);
-            this.botonMuestraImpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonMuestraImpresa.Location = new System.Drawing.Point(9, 74);
+            this.botonMuestraImpresa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonMuestraImpresa.Name = "botonMuestraImpresa";
-            this.botonMuestraImpresa.Size = new System.Drawing.Size(201, 28);
+            this.botonMuestraImpresa.Size = new System.Drawing.Size(226, 35);
             this.botonMuestraImpresa.TabIndex = 19;
             this.botonMuestraImpresa.Text = "Muestra Impresa";
             this.botonMuestraImpresa.UseVisualStyleBackColor = true;
@@ -123,10 +127,10 @@ namespace SimpleSDK_Demo
             // 
             // botonLibroGuias
             // 
-            this.botonLibroGuias.Location = new System.Drawing.Point(8, 165);
-            this.botonLibroGuias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonLibroGuias.Location = new System.Drawing.Point(9, 206);
+            this.botonLibroGuias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonLibroGuias.Name = "botonLibroGuias";
-            this.botonLibroGuias.Size = new System.Drawing.Size(237, 28);
+            this.botonLibroGuias.Size = new System.Drawing.Size(267, 35);
             this.botonLibroGuias.TabIndex = 18;
             this.botonLibroGuias.Text = "Libro de Guías";
             this.botonLibroGuias.UseVisualStyleBackColor = true;
@@ -135,20 +139,20 @@ namespace SimpleSDK_Demo
             // botonSetExportacion2
             // 
             this.botonSetExportacion2.Enabled = false;
-            this.botonSetExportacion2.Location = new System.Drawing.Point(8, 129);
-            this.botonSetExportacion2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonSetExportacion2.Location = new System.Drawing.Point(9, 161);
+            this.botonSetExportacion2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonSetExportacion2.Name = "botonSetExportacion2";
-            this.botonSetExportacion2.Size = new System.Drawing.Size(237, 28);
+            this.botonSetExportacion2.Size = new System.Drawing.Size(267, 35);
             this.botonSetExportacion2.TabIndex = 20;
             this.botonSetExportacion2.Text = "SET de Exportación (2)";
             this.botonSetExportacion2.UseVisualStyleBackColor = true;
             // 
             // botonCesion
             // 
-            this.botonCesion.Location = new System.Drawing.Point(8, 59);
-            this.botonCesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonCesion.Location = new System.Drawing.Point(9, 74);
+            this.botonCesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonCesion.Name = "botonCesion";
-            this.botonCesion.Size = new System.Drawing.Size(237, 28);
+            this.botonCesion.Size = new System.Drawing.Size(267, 35);
             this.botonCesion.TabIndex = 19;
             this.botonCesion.Text = "Cesión de Documentos";
             this.botonCesion.UseVisualStyleBackColor = true;
@@ -157,10 +161,10 @@ namespace SimpleSDK_Demo
             // botonSetExportacion
             // 
             this.botonSetExportacion.Enabled = false;
-            this.botonSetExportacion.Location = new System.Drawing.Point(8, 95);
-            this.botonSetExportacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonSetExportacion.Location = new System.Drawing.Point(9, 119);
+            this.botonSetExportacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonSetExportacion.Name = "botonSetExportacion";
-            this.botonSetExportacion.Size = new System.Drawing.Size(237, 28);
+            this.botonSetExportacion.Size = new System.Drawing.Size(267, 35);
             this.botonSetExportacion.TabIndex = 17;
             this.botonSetExportacion.Text = "SET de Exportación (1)";
             this.botonSetExportacion.UseVisualStyleBackColor = true;
@@ -170,21 +174,21 @@ namespace SimpleSDK_Demo
             this.groupBox5.Controls.Add(this.botonConsultarEstadoEnvio);
             this.groupBox5.Controls.Add(this.botonValidador);
             this.groupBox5.Controls.Add(this.botonConsultarEstadoDTE);
-            this.groupBox5.Location = new System.Drawing.Point(529, 47);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Location = new System.Drawing.Point(595, 59);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox5.Size = new System.Drawing.Size(217, 132);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox5.Size = new System.Drawing.Size(244, 165);
             this.groupBox5.TabIndex = 25;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Utilidades";
             // 
             // botonConsultarEstadoEnvio
             // 
-            this.botonConsultarEstadoEnvio.Location = new System.Drawing.Point(8, 59);
-            this.botonConsultarEstadoEnvio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonConsultarEstadoEnvio.Location = new System.Drawing.Point(9, 74);
+            this.botonConsultarEstadoEnvio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonConsultarEstadoEnvio.Name = "botonConsultarEstadoEnvio";
-            this.botonConsultarEstadoEnvio.Size = new System.Drawing.Size(201, 28);
+            this.botonConsultarEstadoEnvio.Size = new System.Drawing.Size(226, 35);
             this.botonConsultarEstadoEnvio.TabIndex = 18;
             this.botonConsultarEstadoEnvio.Text = "Consultar Estado Envío";
             this.botonConsultarEstadoEnvio.UseVisualStyleBackColor = true;
@@ -192,10 +196,10 @@ namespace SimpleSDK_Demo
             // 
             // botonValidador
             // 
-            this.botonValidador.Location = new System.Drawing.Point(8, 95);
-            this.botonValidador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonValidador.Location = new System.Drawing.Point(9, 119);
+            this.botonValidador.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonValidador.Name = "botonValidador";
-            this.botonValidador.Size = new System.Drawing.Size(201, 28);
+            this.botonValidador.Size = new System.Drawing.Size(226, 35);
             this.botonValidador.TabIndex = 17;
             this.botonValidador.Text = "Validador";
             this.botonValidador.UseVisualStyleBackColor = true;
@@ -203,10 +207,10 @@ namespace SimpleSDK_Demo
             // 
             // botonConsultarEstadoDTE
             // 
-            this.botonConsultarEstadoDTE.Location = new System.Drawing.Point(8, 23);
-            this.botonConsultarEstadoDTE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonConsultarEstadoDTE.Location = new System.Drawing.Point(9, 29);
+            this.botonConsultarEstadoDTE.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonConsultarEstadoDTE.Name = "botonConsultarEstadoDTE";
-            this.botonConsultarEstadoDTE.Size = new System.Drawing.Size(201, 28);
+            this.botonConsultarEstadoDTE.Size = new System.Drawing.Size(226, 35);
             this.botonConsultarEstadoDTE.TabIndex = 1;
             this.botonConsultarEstadoDTE.Text = "Consultar Estado DTE";
             this.botonConsultarEstadoDTE.UseVisualStyleBackColor = true;
@@ -214,10 +218,10 @@ namespace SimpleSDK_Demo
             // 
             // botonTimbre
             // 
-            this.botonTimbre.Location = new System.Drawing.Point(8, 26);
-            this.botonTimbre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonTimbre.Location = new System.Drawing.Point(9, 32);
+            this.botonTimbre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonTimbre.Name = "botonTimbre";
-            this.botonTimbre.Size = new System.Drawing.Size(201, 28);
+            this.botonTimbre.Size = new System.Drawing.Size(226, 35);
             this.botonTimbre.TabIndex = 12;
             this.botonTimbre.Text = "Imagen del Timbre";
             this.botonTimbre.UseVisualStyleBackColor = true;
@@ -225,10 +229,10 @@ namespace SimpleSDK_Demo
             // 
             // botonGenerarNotaCredito
             // 
-            this.botonGenerarNotaCredito.Location = new System.Drawing.Point(8, 59);
-            this.botonGenerarNotaCredito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonGenerarNotaCredito.Location = new System.Drawing.Point(9, 74);
+            this.botonGenerarNotaCredito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonGenerarNotaCredito.Name = "botonGenerarNotaCredito";
-            this.botonGenerarNotaCredito.Size = new System.Drawing.Size(228, 28);
+            this.botonGenerarNotaCredito.Size = new System.Drawing.Size(256, 35);
             this.botonGenerarNotaCredito.TabIndex = 3;
             this.botonGenerarNotaCredito.Text = "Notas de Crédito";
             this.botonGenerarNotaCredito.UseVisualStyleBackColor = true;
@@ -236,10 +240,10 @@ namespace SimpleSDK_Demo
             // 
             // botonGenerarRCOF
             // 
-            this.botonGenerarRCOF.Location = new System.Drawing.Point(8, 130);
-            this.botonGenerarRCOF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonGenerarRCOF.Location = new System.Drawing.Point(9, 162);
+            this.botonGenerarRCOF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonGenerarRCOF.Name = "botonGenerarRCOF";
-            this.botonGenerarRCOF.Size = new System.Drawing.Size(228, 28);
+            this.botonGenerarRCOF.Size = new System.Drawing.Size(256, 35);
             this.botonGenerarRCOF.TabIndex = 2;
             this.botonGenerarRCOF.Text = "Generar RVD";
             this.botonGenerarRCOF.UseVisualStyleBackColor = true;
@@ -251,21 +255,21 @@ namespace SimpleSDK_Demo
             this.groupBox1.Controls.Add(this.botonGenerarNotaCredito);
             this.groupBox1.Controls.Add(this.botonGenerarRCOF);
             this.groupBox1.Controls.Add(this.botonGenerarDocumento);
-            this.groupBox1.Location = new System.Drawing.Point(16, 47);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(18, 59);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(244, 176);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(274, 220);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Generación de Documentos";
             // 
             // botonGenerarSobreEnvio
             // 
-            this.botonGenerarSobreEnvio.Location = new System.Drawing.Point(8, 95);
-            this.botonGenerarSobreEnvio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonGenerarSobreEnvio.Location = new System.Drawing.Point(9, 119);
+            this.botonGenerarSobreEnvio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonGenerarSobreEnvio.Name = "botonGenerarSobreEnvio";
-            this.botonGenerarSobreEnvio.Size = new System.Drawing.Size(228, 28);
+            this.botonGenerarSobreEnvio.Size = new System.Drawing.Size(256, 35);
             this.botonGenerarSobreEnvio.TabIndex = 4;
             this.botonGenerarSobreEnvio.Text = "Generar Sobre Envio";
             this.botonGenerarSobreEnvio.UseVisualStyleBackColor = true;
@@ -273,10 +277,10 @@ namespace SimpleSDK_Demo
             // 
             // botonGenerarDocumento
             // 
-            this.botonGenerarDocumento.Location = new System.Drawing.Point(8, 23);
-            this.botonGenerarDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonGenerarDocumento.Location = new System.Drawing.Point(9, 29);
+            this.botonGenerarDocumento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonGenerarDocumento.Name = "botonGenerarDocumento";
-            this.botonGenerarDocumento.Size = new System.Drawing.Size(228, 28);
+            this.botonGenerarDocumento.Size = new System.Drawing.Size(256, 35);
             this.botonGenerarDocumento.TabIndex = 1;
             this.botonGenerarDocumento.Text = "Generar Documento";
             this.botonGenerarDocumento.UseVisualStyleBackColor = true;
@@ -289,11 +293,11 @@ namespace SimpleSDK_Demo
             this.groupBox6.Controls.Add(this.botonCesion);
             this.groupBox6.Controls.Add(this.botonLibroGuias);
             this.groupBox6.Controls.Add(this.botonSetExportacion2);
-            this.groupBox6.Location = new System.Drawing.Point(268, 47);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Location = new System.Drawing.Point(302, 59);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox6.Size = new System.Drawing.Size(253, 207);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox6.Size = new System.Drawing.Size(285, 259);
             this.groupBox6.TabIndex = 29;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Otros DTE";
@@ -302,11 +306,11 @@ namespace SimpleSDK_Demo
             // 
             this.groupBox3.Controls.Add(this.botonTimbre);
             this.groupBox3.Controls.Add(this.botonMuestraImpresa);
-            this.groupBox3.Location = new System.Drawing.Point(529, 186);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Location = new System.Drawing.Point(595, 232);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(217, 101);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Size = new System.Drawing.Size(244, 126);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Documentos Impresos";
@@ -315,11 +319,11 @@ namespace SimpleSDK_Demo
             // 
             this.groupBox4.Controls.Add(this.radioCertificacion);
             this.groupBox4.Controls.Add(this.radioProduccion);
-            this.groupBox4.Location = new System.Drawing.Point(16, 230);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Location = new System.Drawing.Point(18, 288);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox4.Size = new System.Drawing.Size(244, 54);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox4.Size = new System.Drawing.Size(274, 68);
             this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ambiente en el SII";
@@ -328,11 +332,11 @@ namespace SimpleSDK_Demo
             // 
             this.groupBox2.Controls.Add(this.comboTipoEnvio);
             this.groupBox2.Controls.Add(this.botonEnviarSii);
-            this.groupBox2.Location = new System.Drawing.Point(16, 292);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(18, 365);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(244, 98);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(274, 122);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Enviar al SII";
@@ -341,26 +345,21 @@ namespace SimpleSDK_Demo
             // 
             this.comboTipoEnvio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboTipoEnvio.FormattingEnabled = true;
-            this.comboTipoEnvio.Items.AddRange(new object[] {
-            "EnvioDTE",
-            "EnvioBoleta",
-            "RVD",
-            "LibroGuia"});
-            this.comboTipoEnvio.Location = new System.Drawing.Point(8, 30);
-            this.comboTipoEnvio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboTipoEnvio.Items.AddRange(new object[] { "EnvioDTE", "EnvioBoleta", "RVD", "LibroGuia" });
+            this.comboTipoEnvio.Location = new System.Drawing.Point(9, 38);
+            this.comboTipoEnvio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboTipoEnvio.Name = "comboTipoEnvio";
-            this.comboTipoEnvio.Size = new System.Drawing.Size(227, 24);
+            this.comboTipoEnvio.Size = new System.Drawing.Size(255, 28);
             this.comboTipoEnvio.TabIndex = 4;
             // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configuraciónToolStripMenuItem});
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.configuraciónToolStripMenuItem });
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(765, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(861, 33);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -368,15 +367,46 @@ namespace SimpleSDK_Demo
             // 
             this.configuraciónToolStripMenuItem.Image = global::SimpleSDK_Demo.Properties.Resources.ConfiguracionEdit16;
             this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(155, 29);
             this.configuraciónToolStripMenuItem.Text = "Configuración";
             this.configuraciónToolStripMenuItem.Click += new System.EventHandler(this.configuraciónToolStripMenuItem_Click);
             // 
+            // RegistroComprasVentasGroupBox
+            // 
+            this.RegistroComprasVentasGroupBox.Controls.Add(this.RegistroVentasButton);
+            this.RegistroComprasVentasGroupBox.Controls.Add(this.RegistroComprasButton);
+            this.RegistroComprasVentasGroupBox.Location = new System.Drawing.Point(302, 331);
+            this.RegistroComprasVentasGroupBox.Name = "RegistroComprasVentasGroupBox";
+            this.RegistroComprasVentasGroupBox.Size = new System.Drawing.Size(285, 148);
+            this.RegistroComprasVentasGroupBox.TabIndex = 35;
+            this.RegistroComprasVentasGroupBox.TabStop = false;
+            this.RegistroComprasVentasGroupBox.Text = "Registro de Compras y Ventas";
+            // 
+            // RegistroComprasButton
+            // 
+            this.RegistroComprasButton.Location = new System.Drawing.Point(9, 34);
+            this.RegistroComprasButton.Name = "RegistroComprasButton";
+            this.RegistroComprasButton.Size = new System.Drawing.Size(267, 32);
+            this.RegistroComprasButton.TabIndex = 0;
+            this.RegistroComprasButton.Text = "Registro de Compras";
+            this.RegistroComprasButton.UseVisualStyleBackColor = true;
+            this.RegistroComprasButton.Click += new System.EventHandler(this.RegistroComprasButton_Click);
+            // 
+            // RegistroVentasButton
+            // 
+            this.RegistroVentasButton.Location = new System.Drawing.Point(9, 72);
+            this.RegistroVentasButton.Name = "RegistroVentasButton";
+            this.RegistroVentasButton.Size = new System.Drawing.Size(267, 32);
+            this.RegistroVentasButton.TabIndex = 1;
+            this.RegistroVentasButton.Text = "Registro de Ventas";
+            this.RegistroVentasButton.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 399);
+            this.ClientSize = new System.Drawing.Size(861, 499);
+            this.Controls.Add(this.RegistroComprasVentasGroupBox);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -385,7 +415,7 @@ namespace SimpleSDK_Demo
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario Principal";
@@ -399,10 +429,14 @@ namespace SimpleSDK_Demo
             this.groupBox2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.RegistroComprasVentasGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.GroupBox RegistroComprasVentasGroupBox;
+        private System.Windows.Forms.Button RegistroComprasButton;
+        private System.Windows.Forms.Button RegistroVentasButton;
 
         #endregion
         private System.Windows.Forms.RadioButton radioCertificacion;
