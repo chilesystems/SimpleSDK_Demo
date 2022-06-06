@@ -1,7 +1,7 @@
 ﻿
 namespace SimpleSDK_Demo
 {
-    partial class ConsultaEstadoDTE
+    partial class ConsultaRecepionDTE
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,11 @@ namespace SimpleSDK_Demo
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radioRechazado = new System.Windows.Forms.RadioButton();
+            this.radioAceptado = new System.Windows.Forms.RadioButton();
+            this.checkRecibido = new System.Windows.Forms.CheckBox();
             this.textRespuesta = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkServidorBoleta = new System.Windows.Forms.CheckBox();
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
             this.radioProduccion = new System.Windows.Forms.RadioButton();
             this.botonConsultar = new System.Windows.Forms.Button();
@@ -47,11 +49,7 @@ namespace SimpleSDK_Demo
             this.textDVEnvio = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textDVEmpresa = new System.Windows.Forms.TextBox();
-            this.dateFechaEmision = new System.Windows.Forms.DateTimePicker();
             this.comboTipoDTE = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textTotal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textRUTEnvio = new System.Windows.Forms.TextBox();
@@ -64,15 +62,53 @@ namespace SimpleSDK_Demo
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.radioRechazado);
+            this.groupBox3.Controls.Add(this.radioAceptado);
+            this.groupBox3.Controls.Add(this.checkRecibido);
             this.groupBox3.Controls.Add(this.textRespuesta);
             this.groupBox3.Location = new System.Drawing.Point(400, 15);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(471, 369);
+            this.groupBox3.Size = new System.Drawing.Size(344, 299);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultado";
+            // 
+            // radioRechazado
+            // 
+            this.radioRechazado.AutoSize = true;
+            this.radioRechazado.Enabled = false;
+            this.radioRechazado.Location = new System.Drawing.Point(235, 260);
+            this.radioRechazado.Name = "radioRechazado";
+            this.radioRechazado.Size = new System.Drawing.Size(95, 20);
+            this.radioRechazado.TabIndex = 22;
+            this.radioRechazado.TabStop = true;
+            this.radioRechazado.Text = "Rechazado";
+            this.radioRechazado.UseVisualStyleBackColor = true;
+            // 
+            // radioAceptado
+            // 
+            this.radioAceptado.AutoSize = true;
+            this.radioAceptado.Enabled = false;
+            this.radioAceptado.Location = new System.Drawing.Point(145, 260);
+            this.radioAceptado.Name = "radioAceptado";
+            this.radioAceptado.Size = new System.Drawing.Size(84, 20);
+            this.radioAceptado.TabIndex = 21;
+            this.radioAceptado.TabStop = true;
+            this.radioAceptado.Text = "Aceptado";
+            this.radioAceptado.UseVisualStyleBackColor = true;
+            // 
+            // checkRecibido
+            // 
+            this.checkRecibido.AutoSize = true;
+            this.checkRecibido.Enabled = false;
+            this.checkRecibido.Location = new System.Drawing.Point(8, 261);
+            this.checkRecibido.Name = "checkRecibido";
+            this.checkRecibido.Size = new System.Drawing.Size(131, 20);
+            this.checkRecibido.TabIndex = 20;
+            this.checkRecibido.Text = "Recibido en el SII";
+            this.checkRecibido.UseVisualStyleBackColor = true;
             // 
             // textRespuesta
             // 
@@ -80,16 +116,15 @@ namespace SimpleSDK_Demo
             this.textRespuesta.Margin = new System.Windows.Forms.Padding(4);
             this.textRespuesta.Multiline = true;
             this.textRespuesta.Name = "textRespuesta";
-            this.textRespuesta.Size = new System.Drawing.Size(453, 333);
+            this.textRespuesta.Size = new System.Drawing.Size(322, 223);
             this.textRespuesta.TabIndex = 19;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkServidorBoleta);
             this.groupBox2.Controls.Add(this.radioCertificacion);
             this.groupBox2.Controls.Add(this.radioProduccion);
             this.groupBox2.Controls.Add(this.botonConsultar);
-            this.groupBox2.Location = new System.Drawing.Point(8, 282);
+            this.groupBox2.Location = new System.Drawing.Point(16, 212);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -97,17 +132,6 @@ namespace SimpleSDK_Demo
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ambiente";
-            // 
-            // checkServidorBoleta
-            // 
-            this.checkServidorBoleta.AutoSize = true;
-            this.checkServidorBoleta.Location = new System.Drawing.Point(211, 34);
-            this.checkServidorBoleta.Margin = new System.Windows.Forms.Padding(4);
-            this.checkServidorBoleta.Name = "checkServidorBoleta";
-            this.checkServidorBoleta.Size = new System.Drawing.Size(145, 20);
-            this.checkServidorBoleta.TabIndex = 18;
-            this.checkServidorBoleta.Text = "Servidor de Boletas";
-            this.checkServidorBoleta.UseVisualStyleBackColor = true;
             // 
             // radioCertificacion
             // 
@@ -156,11 +180,7 @@ namespace SimpleSDK_Demo
             this.groupBox1.Controls.Add(this.textDVEnvio);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textDVEmpresa);
-            this.groupBox1.Controls.Add(this.dateFechaEmision);
             this.groupBox1.Controls.Add(this.comboTipoDTE);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textTotal);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textRUTEnvio);
@@ -170,7 +190,7 @@ namespace SimpleSDK_Demo
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(376, 260);
+            this.groupBox1.Size = new System.Drawing.Size(376, 189);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del DTE";
@@ -178,7 +198,7 @@ namespace SimpleSDK_Demo
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 160);
+            this.label10.Location = new System.Drawing.Point(8, 126);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 16);
@@ -187,7 +207,7 @@ namespace SimpleSDK_Demo
             // 
             // textFolio
             // 
-            this.textFolio.Location = new System.Drawing.Point(156, 156);
+            this.textFolio.Location = new System.Drawing.Point(156, 122);
             this.textFolio.Margin = new System.Windows.Forms.Padding(4);
             this.textFolio.Name = "textFolio";
             this.textFolio.Size = new System.Drawing.Size(148, 22);
@@ -266,57 +286,20 @@ namespace SimpleSDK_Demo
             this.textDVEmpresa.Size = new System.Drawing.Size(29, 22);
             this.textDVEmpresa.TabIndex = 1;
             // 
-            // dateFechaEmision
-            // 
-            this.dateFechaEmision.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateFechaEmision.Location = new System.Drawing.Point(156, 188);
-            this.dateFechaEmision.Margin = new System.Windows.Forms.Padding(4);
-            this.dateFechaEmision.Name = "dateFechaEmision";
-            this.dateFechaEmision.Size = new System.Drawing.Size(148, 22);
-            this.dateFechaEmision.TabIndex = 30;
-            // 
             // comboTipoDTE
             // 
             this.comboTipoDTE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboTipoDTE.FormattingEnabled = true;
-            this.comboTipoDTE.Location = new System.Drawing.Point(156, 220);
+            this.comboTipoDTE.Location = new System.Drawing.Point(157, 152);
             this.comboTipoDTE.Margin = new System.Windows.Forms.Padding(4);
             this.comboTipoDTE.Name = "comboTipoDTE";
             this.comboTipoDTE.Size = new System.Drawing.Size(211, 24);
             this.comboTipoDTE.TabIndex = 40;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 192);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 16);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Fecha Emisión:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 128);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Total:";
-            // 
-            // textTotal
-            // 
-            this.textTotal.Location = new System.Drawing.Point(156, 124);
-            this.textTotal.Margin = new System.Windows.Forms.Padding(4);
-            this.textTotal.Name = "textTotal";
-            this.textTotal.Size = new System.Drawing.Size(148, 22);
-            this.textTotal.TabIndex = 10;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 224);
+            this.label3.Location = new System.Drawing.Point(9, 156);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 16);
@@ -360,11 +343,11 @@ namespace SimpleSDK_Demo
             this.textRUTEmpresa.Size = new System.Drawing.Size(148, 22);
             this.textRUTEmpresa.TabIndex = 0;
             // 
-            // ConsultaEstadoDTE
+            // ConsultaRecepionDTE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 396);
+            this.ClientSize = new System.Drawing.Size(762, 325);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -372,9 +355,9 @@ namespace SimpleSDK_Demo
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ConsultaEstadoDTE";
+            this.Name = "ConsultaRecepionDTE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Consulta Estado de DTE";
+            this.Text = "Consulta Recepción de DTE";
             this.Load += new System.EventHandler(this.ConsultaEstadoDTE_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -405,16 +388,14 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.TextBox textDVEnvio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textDVEmpresa;
-        private System.Windows.Forms.DateTimePicker dateFechaEmision;
         private System.Windows.Forms.ComboBox comboTipoDTE;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textTotal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textRUTEnvio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textRUTEmpresa;
-        private System.Windows.Forms.CheckBox checkServidorBoleta;
+        private System.Windows.Forms.RadioButton radioRechazado;
+        private System.Windows.Forms.RadioButton radioAceptado;
+        private System.Windows.Forms.CheckBox checkRecibido;
     }
 }
