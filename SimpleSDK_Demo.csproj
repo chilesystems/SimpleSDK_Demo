@@ -51,8 +51,8 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="SimpleSDK, Version=1.0.2.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\SimpleSDK.1.0.3\lib\netstandard2.0\SimpleSDK.dll</HintPath>
+    <Reference Include="SimpleSDK, Version=1.0.2.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\SimpleSDK.1.0.5\lib\netstandard2.0\SimpleSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="ConfiguracionDemo.Designer.cs">
       <DependentUpon>ConfiguracionDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaRecepionDTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaRecepionDTE.Designer.cs">
+      <DependentUpon>ConsultaRecepionDTE.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultaEstadoDTE.cs">
       <SubType>Form</SubType>
@@ -142,6 +148,9 @@
     </Compile>
     <EmbeddedResource Include="ConfiguracionDemo.resx">
       <DependentUpon>ConfiguracionDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaRecepionDTE.resx">
+      <DependentUpon>ConsultaRecepionDTE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaEstadoDTE.resx">
       <DependentUpon>ConsultaEstadoDTE.cs</DependentUpon>

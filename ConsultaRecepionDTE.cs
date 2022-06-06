@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace SimpleSDK_Demo
 {
-    public partial class ConsultaEstadoDTE : Form
+    public partial class ConsultaRecepionDTE : Form
     {
         Helper handler = new Helper();
-        public ConsultaEstadoDTE()
+        public ConsultaRecepionDTE()
         {
             InitializeComponent();
         }
@@ -34,24 +34,25 @@ namespace SimpleSDK_Demo
             string rutReceptor = $"{textRUTReceptor.Text}-{textDVReceptor.Text}";
             string rutEmpresa = $"{textRUTEmpresa.Text}-{textDVEmpresa.Text}";
             int folio = int.Parse(textFolio.Text);
-            int total = int.Parse(textTotal.Text);
             Enum.TryParse(comboTipoDTE.SelectedItem.ToString(), out TipoDTE.DTEType tipoDTE);
             try
             {
-                var consulta = new SimpleSDK.Models.Estados.ConsultaDTE(rutEmpresa, rutReceptor)
+                var consulta = new SimpleSDK.Models.Estados.ConsultaRecepcionDTE(rutEmpresa, rutReceptor)
                 {
                     Ambiente = radioCertificacion.Checked ? Ambiente.AmbienteEnum.Certificacion : Ambiente.AmbienteEnum.Produccion,
-                    FechaDTE = dateFechaEmision.Value.Date,
                     Folio = folio,
                     Tipo = (short)tipoDTE,
-                    Total = total,
-                    ServidorBoletaREST = checkServidorBoleta.Checked,
                     Certificado = handler.Configuracion.Certificado
                 };
                 consulta.Certificado = handler.Configuracion.Certificado;
                 var resultado = await consulta.ConsultarAlSII(handler.Configuracion.APIKey);
-                textRespuesta.Text = resultado.Item1 ? resultado.Item2.ResponseXML : resultado.Item2.Response;
+                textRespuesta.Text = resultado.Item2.descripcion;
+                checkRecibido.Checked = resultado.Item2.isRecibido;
+                radioAceptado.Checked = resultado.Item2.isAceptado.HasValue && resultado.Item2.isAceptado.Value;
+                radioRechazado.Checked = resultado.Item2.isRechazado.HasValue && resultado.Item2.isRechazado.Value;
 
+                if (radioRechazado.Checked) textRespuesta.Text = "DTE Rechazado";
+                else if (radioAceptado.Checked) textRespuesta.Text = "DTE Aceptado";
             }
             catch (Exception ex)
             {

@@ -388,5 +388,11 @@ namespace SimpleSDK_Demo
             MuestraImpresa formulario = new MuestraImpresa();
             formulario.ShowDialog();
         }
+
+        private void botonConsultaRecepcion_Click(object sender, EventArgs e)
+        {
+            ConsultaRecepionDTE formulario = new ConsultaRecepionDTE();
+            formulario.ShowDialog();
+        }
     }
 }
