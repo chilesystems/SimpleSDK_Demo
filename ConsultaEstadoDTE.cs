@@ -40,7 +40,7 @@ namespace SimpleSDK_Demo
             {
                 var consulta = new SimpleSDK.Models.Estados.ConsultaDTE(rutEmpresa, rutReceptor)
                 {
-                    Ambiente = radioCertificacion.Checked ? Ambiente.AmbienteEnum.Certificacion : Ambiente.AmbienteEnum.Certificacion,
+                    Ambiente = radioCertificacion.Checked ? Ambiente.AmbienteEnum.Certificacion : Ambiente.AmbienteEnum.Produccion,
                     FechaDTE = dateFechaEmision.Value.Date,
                     Folio = folio,
                     Tipo = (short)tipoDTE,
