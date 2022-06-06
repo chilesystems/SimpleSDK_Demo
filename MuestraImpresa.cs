@@ -59,7 +59,10 @@ namespace SimpleSDK_Demo
                         formulario.ShowDialog();
                     }
                 }
-                
+                else
+                {
+                    MessageBox.Show(resultMuestra.Item2, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

@@ -307,5 +307,15 @@ namespace SimpleSDK_Demo
             gridResultados.DataSource = itemsTemporal;
             calculoTotales();
         }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkSetPruebas_CheckedChanged(object sender, EventArgs e)
+        {
+            labelCasoPrueba.Enabled = numericCasoPrueba.Enabled = checkSetPruebas.Checked;
+        }
     }
 }
