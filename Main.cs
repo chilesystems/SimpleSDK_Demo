@@ -400,5 +400,11 @@ namespace SimpleSDK_Demo
             var formulario = new GenerarBoletaHonorarios();
             formulario.ShowDialog();
         }
+
+        private void AnulaBoletaHonorarioButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new AnularBoleta();
+            formulario.ShowDialog();        
+        }
     }
 }

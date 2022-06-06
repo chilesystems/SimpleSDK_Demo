@@ -33,15 +33,15 @@ namespace SimpleSDK_Demo
         {
             this.RutEmisorTextBox = new System.Windows.Forms.TextBox();
             this.DatosBoletaHonorariosGroupBox = new System.Windows.Forms.GroupBox();
-            this.RutReceptorTextbox = new System.Windows.Forms.TextBox();
-            this.RutEmisorLabel = new System.Windows.Forms.Label();
-            this.RutReceptorLabel = new System.Windows.Forms.Label();
-            this.RetencionContribuyenteRadioButton = new System.Windows.Forms.RadioButton();
-            this.ReceptorRetencionRadioButton = new System.Windows.Forms.RadioButton();
-            this.RetencionLabel = new System.Windows.Forms.Label();
-            this.CorreoLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.GenerarBoletaButton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CorreoLabel = new System.Windows.Forms.Label();
+            this.RetencionLabel = new System.Windows.Forms.Label();
+            this.ReceptorRetencionRadioButton = new System.Windows.Forms.RadioButton();
+            this.RetencionContribuyenteRadioButton = new System.Windows.Forms.RadioButton();
+            this.RutReceptorLabel = new System.Windows.Forms.Label();
+            this.RutEmisorLabel = new System.Windows.Forms.Label();
+            this.RutReceptorTextbox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.NombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,40 +75,39 @@ namespace SimpleSDK_Demo
             this.DatosBoletaHonorariosGroupBox.TabStop = false;
             this.DatosBoletaHonorariosGroupBox.Text = "Datos Boleta de Honorarios";
             // 
-            // RutReceptorTextbox
+            // GenerarBoletaButton
             // 
-            this.RutReceptorTextbox.Location = new System.Drawing.Point(123, 58);
-            this.RutReceptorTextbox.Name = "RutReceptorTextbox";
-            this.RutReceptorTextbox.Size = new System.Drawing.Size(100, 26);
-            this.RutReceptorTextbox.TabIndex = 1;
+            this.GenerarBoletaButton.Location = new System.Drawing.Point(649, 39);
+            this.GenerarBoletaButton.Name = "GenerarBoletaButton";
+            this.GenerarBoletaButton.Size = new System.Drawing.Size(106, 64);
+            this.GenerarBoletaButton.TabIndex = 9;
+            this.GenerarBoletaButton.Text = "Generar Boleta";
+            this.GenerarBoletaButton.UseVisualStyleBackColor = true;
             // 
-            // RutEmisorLabel
+            // textBox1
             // 
-            this.RutEmisorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RutEmisorLabel.Location = new System.Drawing.Point(6, 32);
-            this.RutEmisorLabel.Name = "RutEmisorLabel";
-            this.RutEmisorLabel.Size = new System.Drawing.Size(100, 23);
-            this.RutEmisorLabel.TabIndex = 2;
-            this.RutEmisorLabel.Text = "Rut Emisor";
+            this.textBox1.Location = new System.Drawing.Point(241, 58);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(239, 26);
+            this.textBox1.TabIndex = 8;
             // 
-            // RutReceptorLabel
+            // CorreoLabel
             // 
-            this.RutReceptorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RutReceptorLabel.Location = new System.Drawing.Point(123, 32);
-            this.RutReceptorLabel.Name = "RutReceptorLabel";
-            this.RutReceptorLabel.Size = new System.Drawing.Size(112, 23);
-            this.RutReceptorLabel.TabIndex = 3;
-            this.RutReceptorLabel.Text = "Rut Receptor";
+            this.CorreoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CorreoLabel.Location = new System.Drawing.Point(241, 32);
+            this.CorreoLabel.Name = "CorreoLabel";
+            this.CorreoLabel.Size = new System.Drawing.Size(100, 23);
+            this.CorreoLabel.TabIndex = 7;
+            this.CorreoLabel.Text = "Correo";
             // 
-            // RetencionContribuyenteRadioButton
+            // RetencionLabel
             // 
-            this.RetencionContribuyenteRadioButton.Location = new System.Drawing.Point(492, 58);
-            this.RetencionContribuyenteRadioButton.Name = "RetencionContribuyenteRadioButton";
-            this.RetencionContribuyenteRadioButton.Size = new System.Drawing.Size(136, 24);
-            this.RetencionContribuyenteRadioButton.TabIndex = 4;
-            this.RetencionContribuyenteRadioButton.TabStop = true;
-            this.RetencionContribuyenteRadioButton.Text = "Contribuyente";
-            this.RetencionContribuyenteRadioButton.UseVisualStyleBackColor = true;
+            this.RetencionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RetencionLabel.Location = new System.Drawing.Point(492, 32);
+            this.RetencionLabel.Name = "RetencionLabel";
+            this.RetencionLabel.Size = new System.Drawing.Size(100, 23);
+            this.RetencionLabel.TabIndex = 6;
+            this.RetencionLabel.Text = "Retención";
             // 
             // ReceptorRetencionRadioButton
             // 
@@ -120,39 +119,40 @@ namespace SimpleSDK_Demo
             this.ReceptorRetencionRadioButton.Text = "Receptor";
             this.ReceptorRetencionRadioButton.UseVisualStyleBackColor = true;
             // 
-            // RetencionLabel
+            // RetencionContribuyenteRadioButton
             // 
-            this.RetencionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RetencionLabel.Location = new System.Drawing.Point(492, 32);
-            this.RetencionLabel.Name = "RetencionLabel";
-            this.RetencionLabel.Size = new System.Drawing.Size(100, 23);
-            this.RetencionLabel.TabIndex = 6;
-            this.RetencionLabel.Text = "Retención";
+            this.RetencionContribuyenteRadioButton.Location = new System.Drawing.Point(492, 58);
+            this.RetencionContribuyenteRadioButton.Name = "RetencionContribuyenteRadioButton";
+            this.RetencionContribuyenteRadioButton.Size = new System.Drawing.Size(136, 24);
+            this.RetencionContribuyenteRadioButton.TabIndex = 4;
+            this.RetencionContribuyenteRadioButton.TabStop = true;
+            this.RetencionContribuyenteRadioButton.Text = "Contribuyente";
+            this.RetencionContribuyenteRadioButton.UseVisualStyleBackColor = true;
             // 
-            // CorreoLabel
+            // RutReceptorLabel
             // 
-            this.CorreoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CorreoLabel.Location = new System.Drawing.Point(241, 32);
-            this.CorreoLabel.Name = "CorreoLabel";
-            this.CorreoLabel.Size = new System.Drawing.Size(100, 23);
-            this.CorreoLabel.TabIndex = 7;
-            this.CorreoLabel.Text = "Correo";
+            this.RutReceptorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RutReceptorLabel.Location = new System.Drawing.Point(123, 32);
+            this.RutReceptorLabel.Name = "RutReceptorLabel";
+            this.RutReceptorLabel.Size = new System.Drawing.Size(112, 23);
+            this.RutReceptorLabel.TabIndex = 3;
+            this.RutReceptorLabel.Text = "Rut Receptor";
             // 
-            // textBox1
+            // RutEmisorLabel
             // 
-            this.textBox1.Location = new System.Drawing.Point(241, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(239, 26);
-            this.textBox1.TabIndex = 8;
+            this.RutEmisorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RutEmisorLabel.Location = new System.Drawing.Point(6, 32);
+            this.RutEmisorLabel.Name = "RutEmisorLabel";
+            this.RutEmisorLabel.Size = new System.Drawing.Size(100, 23);
+            this.RutEmisorLabel.TabIndex = 2;
+            this.RutEmisorLabel.Text = "Rut Emisor";
             // 
-            // GenerarBoletaButton
+            // RutReceptorTextbox
             // 
-            this.GenerarBoletaButton.Location = new System.Drawing.Point(649, 39);
-            this.GenerarBoletaButton.Name = "GenerarBoletaButton";
-            this.GenerarBoletaButton.Size = new System.Drawing.Size(106, 64);
-            this.GenerarBoletaButton.TabIndex = 9;
-            this.GenerarBoletaButton.Text = "Generar Boleta";
-            this.GenerarBoletaButton.UseVisualStyleBackColor = true;
+            this.RutReceptorTextbox.Location = new System.Drawing.Point(123, 58);
+            this.RutReceptorTextbox.Name = "RutReceptorTextbox";
+            this.RutReceptorTextbox.Size = new System.Drawing.Size(100, 26);
+            this.RutReceptorTextbox.TabIndex = 1;
             // 
             // dataGridView1
             // 

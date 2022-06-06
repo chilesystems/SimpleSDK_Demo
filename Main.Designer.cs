@@ -63,7 +63,7 @@ namespace SimpleSDK_Demo
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.AnulaBoletaHonorarioButton = new System.Windows.Forms.Button();
             this.CrearBoletaHonorariosButton = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -415,7 +415,7 @@ namespace SimpleSDK_Demo
             this.BoletaHonorarioGroupBox.Controls.Add(this.button5);
             this.BoletaHonorarioGroupBox.Controls.Add(this.button4);
             this.BoletaHonorarioGroupBox.Controls.Add(this.button3);
-            this.BoletaHonorarioGroupBox.Controls.Add(this.button2);
+            this.BoletaHonorarioGroupBox.Controls.Add(this.AnulaBoletaHonorarioButton);
             this.BoletaHonorarioGroupBox.Controls.Add(this.CrearBoletaHonorariosButton);
             this.BoletaHonorarioGroupBox.Location = new System.Drawing.Point(595, 365);
             this.BoletaHonorarioGroupBox.Name = "BoletaHonorarioGroupBox";
@@ -460,14 +460,15 @@ namespace SimpleSDK_Demo
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // AnulaBoletaHonorarioButton
             // 
-            this.button2.Location = new System.Drawing.Point(9, 99);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AnulaBoletaHonorarioButton.Location = new System.Drawing.Point(9, 99);
+            this.AnulaBoletaHonorarioButton.Name = "AnulaBoletaHonorarioButton";
+            this.AnulaBoletaHonorarioButton.Size = new System.Drawing.Size(200, 23);
+            this.AnulaBoletaHonorarioButton.TabIndex = 1;
+            this.AnulaBoletaHonorarioButton.Text = "Anular Boleta de Honorarios";
+            this.AnulaBoletaHonorarioButton.UseVisualStyleBackColor = true;
+            this.AnulaBoletaHonorarioButton.Click += new System.EventHandler(this.AnulaBoletaHonorarioButton_Click);
             // 
             // CrearBoletaHonorariosButton
             // 
@@ -516,7 +517,7 @@ namespace SimpleSDK_Demo
 
         private System.Windows.Forms.GroupBox BoletaHonorarioGroupBox;
         private System.Windows.Forms.Button CrearBoletaHonorariosButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AnulaBoletaHonorarioButton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
