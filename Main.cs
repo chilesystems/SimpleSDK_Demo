@@ -394,5 +394,11 @@ namespace SimpleSDK_Demo
             var formulario = new ConsultarRegistroCompras();
             formulario.ShowDialog();
         }
+
+        private void CrearBoletaHonorariosButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new GenerarBoletaHonorarios();
+            formulario.ShowDialog();
+        }
     }
 }

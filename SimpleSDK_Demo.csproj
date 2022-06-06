@@ -91,6 +91,12 @@
     <Compile Include="ConsultarRegistroCompras.Designer.cs">
       <DependentUpon>ConsultarRegistroCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenerarBoletaHonorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarBoletaHonorarios.Designer.cs">
+      <DependentUpon>GenerarBoletaHonorarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenerarNotaCredito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarRegistroCompras.resx">
       <DependentUpon>ConsultarRegistroCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarBoletaHonorarios.resx">
+      <DependentUpon>GenerarBoletaHonorarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenerarNotaCredito.resx">
       <DependentUpon>GenerarNotaCredito.cs</DependentUpon>
