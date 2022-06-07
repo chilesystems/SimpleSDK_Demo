@@ -419,5 +419,10 @@ namespace SimpleSDK_Demo
             var formulario = new EnviarBoletaPorEmail();
             formulario.ShowDialog();
         }
+
+        private void ListadoMensualBoletasButton_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

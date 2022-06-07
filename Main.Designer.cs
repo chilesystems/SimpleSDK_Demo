@@ -60,8 +60,8 @@ namespace SimpleSDK_Demo
             this.RegistroComprasButton = new System.Windows.Forms.Button();
             this.BoletaHonorarioGroupBox = new System.Windows.Forms.GroupBox();
             this.EnviarEmailButton = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.ListadoAnualBoletaButton = new System.Windows.Forms.Button();
+            this.ListadoMensualBoletasButton = new System.Windows.Forms.Button();
             this.DownloadPdfButton = new System.Windows.Forms.Button();
             this.AnulaBoletaHonorarioButton = new System.Windows.Forms.Button();
             this.CrearBoletaHonorariosButton = new System.Windows.Forms.Button();
@@ -412,8 +412,8 @@ namespace SimpleSDK_Demo
             // BoletaHonorarioGroupBox
             // 
             this.BoletaHonorarioGroupBox.Controls.Add(this.EnviarEmailButton);
-            this.BoletaHonorarioGroupBox.Controls.Add(this.button5);
-            this.BoletaHonorarioGroupBox.Controls.Add(this.button4);
+            this.BoletaHonorarioGroupBox.Controls.Add(this.ListadoAnualBoletaButton);
+            this.BoletaHonorarioGroupBox.Controls.Add(this.ListadoMensualBoletasButton);
             this.BoletaHonorarioGroupBox.Controls.Add(this.DownloadPdfButton);
             this.BoletaHonorarioGroupBox.Controls.Add(this.AnulaBoletaHonorarioButton);
             this.BoletaHonorarioGroupBox.Controls.Add(this.CrearBoletaHonorariosButton);
@@ -434,23 +434,24 @@ namespace SimpleSDK_Demo
             this.EnviarEmailButton.UseVisualStyleBackColor = true;
             this.EnviarEmailButton.Click += new System.EventHandler(this.EnviarEmailButton_Click);
             // 
-            // button5
+            // ListadoAnualBoletaButton
             // 
-            this.button5.Location = new System.Drawing.Point(9, 250);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(226, 29);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "ListadoAnualBoletas";
-            this.button5.UseVisualStyleBackColor = true;
+            this.ListadoAnualBoletaButton.Location = new System.Drawing.Point(9, 250);
+            this.ListadoAnualBoletaButton.Name = "ListadoAnualBoletaButton";
+            this.ListadoAnualBoletaButton.Size = new System.Drawing.Size(226, 29);
+            this.ListadoAnualBoletaButton.TabIndex = 4;
+            this.ListadoAnualBoletaButton.Text = "Listado Anual de Boletas";
+            this.ListadoAnualBoletaButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // ListadoMensualBoletasButton
             // 
-            this.button4.Location = new System.Drawing.Point(9, 210);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(226, 34);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Listado Mensual de Boletas";
-            this.button4.UseVisualStyleBackColor = true;
+            this.ListadoMensualBoletasButton.Location = new System.Drawing.Point(9, 210);
+            this.ListadoMensualBoletasButton.Name = "ListadoMensualBoletasButton";
+            this.ListadoMensualBoletasButton.Size = new System.Drawing.Size(226, 34);
+            this.ListadoMensualBoletasButton.TabIndex = 3;
+            this.ListadoMensualBoletasButton.Text = "Listado Mensual de Boletas";
+            this.ListadoMensualBoletasButton.UseVisualStyleBackColor = true;
+            this.ListadoMensualBoletasButton.Click += new System.EventHandler(this.ListadoMensualBoletasButton_Click);
             // 
             // DownloadPdfButton
             // 
@@ -521,8 +522,8 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.Button CrearBoletaHonorariosButton;
         private System.Windows.Forms.Button AnulaBoletaHonorarioButton;
         private System.Windows.Forms.Button DownloadPdfButton;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button ListadoMensualBoletasButton;
+        private System.Windows.Forms.Button ListadoAnualBoletaButton;
         private System.Windows.Forms.Button EnviarEmailButton;
 
         private System.Windows.Forms.GroupBox RegistroComprasVentasGroupBox;
