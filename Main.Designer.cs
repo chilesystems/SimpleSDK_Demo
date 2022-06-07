@@ -65,6 +65,11 @@ namespace SimpleSDK_Demo
             this.DownloadPdfButton = new System.Windows.Forms.Button();
             this.AnulaBoletaHonorarioButton = new System.Windows.Forms.Button();
             this.CrearBoletaHonorariosButton = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.AnularCafMasivamenteButton = new System.Windows.Forms.Button();
+            this.ConsultarUltimosCincoCafButton = new System.Windows.Forms.Button();
+            this.ConsultarMaximoFoliosButton = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -74,6 +79,7 @@ namespace SimpleSDK_Demo
             this.menuStrip1.SuspendLayout();
             this.RegistroComprasVentasGroupBox.SuspendLayout();
             this.BoletaHonorarioGroupBox.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // radioCertificacion
@@ -484,11 +490,61 @@ namespace SimpleSDK_Demo
             this.CrearBoletaHonorariosButton.UseVisualStyleBackColor = true;
             this.CrearBoletaHonorariosButton.Click += new System.EventHandler(this.CrearBoletaHonorariosButton_Click);
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.AnularCafMasivamenteButton);
+            this.groupBox7.Controls.Add(this.ConsultarUltimosCincoCafButton);
+            this.groupBox7.Controls.Add(this.ConsultarMaximoFoliosButton);
+            this.groupBox7.Controls.Add(this.button6);
+            this.groupBox7.Location = new System.Drawing.Point(302, 453);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(285, 217);
+            this.groupBox7.TabIndex = 37;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Folios";
+            // 
+            // AnularCafMasivamenteButton
+            // 
+            this.AnularCafMasivamenteButton.Location = new System.Drawing.Point(9, 168);
+            this.AnularCafMasivamenteButton.Name = "AnularCafMasivamenteButton";
+            this.AnularCafMasivamenteButton.Size = new System.Drawing.Size(267, 36);
+            this.AnularCafMasivamenteButton.TabIndex = 5;
+            this.AnularCafMasivamenteButton.Text = "Anular Masivamente";
+            this.AnularCafMasivamenteButton.UseVisualStyleBackColor = true;
+            // 
+            // ConsultarUltimosCincoCafButton
+            // 
+            this.ConsultarUltimosCincoCafButton.Location = new System.Drawing.Point(9, 129);
+            this.ConsultarUltimosCincoCafButton.Name = "ConsultarUltimosCincoCafButton";
+            this.ConsultarUltimosCincoCafButton.Size = new System.Drawing.Size(267, 33);
+            this.ConsultarUltimosCincoCafButton.TabIndex = 2;
+            this.ConsultarUltimosCincoCafButton.Text = "Consultar Folios Descargados";
+            this.ConsultarUltimosCincoCafButton.UseVisualStyleBackColor = true;
+            // 
+            // ConsultarMaximoFoliosButton
+            // 
+            this.ConsultarMaximoFoliosButton.Location = new System.Drawing.Point(9, 88);
+            this.ConsultarMaximoFoliosButton.Name = "ConsultarMaximoFoliosButton";
+            this.ConsultarMaximoFoliosButton.Size = new System.Drawing.Size(267, 35);
+            this.ConsultarMaximoFoliosButton.TabIndex = 1;
+            this.ConsultarMaximoFoliosButton.Text = "Consultar Máximo de Folios";
+            this.ConsultarMaximoFoliosButton.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(9, 27);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(267, 55);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Generar Boleta de Honorarios";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 693);
+            this.ClientSize = new System.Drawing.Size(861, 681);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.BoletaHonorarioGroupBox);
             this.Controls.Add(this.RegistroComprasVentasGroupBox);
             this.Controls.Add(this.groupBox2);
@@ -515,9 +571,16 @@ namespace SimpleSDK_Demo
             this.menuStrip1.PerformLayout();
             this.RegistroComprasVentasGroupBox.ResumeLayout(false);
             this.BoletaHonorarioGroupBox.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button AnularCafMasivamenteButton;
+        private System.Windows.Forms.Button ConsultarUltimosCincoCafButton;
+        private System.Windows.Forms.Button ConsultarMaximoFoliosButton;
+        private System.Windows.Forms.Button button6;
 
         private System.Windows.Forms.GroupBox BoletaHonorarioGroupBox;
         private System.Windows.Forms.Button CrearBoletaHonorariosButton;
