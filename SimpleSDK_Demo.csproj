@@ -73,6 +73,12 @@
     <Compile Include="AnularBoleta.Designer.cs">
       <DependentUpon>AnularBoleta.cs</DependentUpon>
     </Compile>
+    <Compile Include="AnularMasivamente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnularMasivamente.Designer.cs">
+      <DependentUpon>AnularMasivamente.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConfiguracionDemo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     </Compile>
     <EmbeddedResource Include="AnularBoleta.resx">
       <DependentUpon>AnularBoleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnularMasivamente.resx">
+      <DependentUpon>AnularMasivamente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConfiguracionDemo.resx">
       <DependentUpon>ConfiguracionDemo.cs</DependentUpon>
