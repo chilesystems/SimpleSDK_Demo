@@ -406,5 +406,11 @@ namespace SimpleSDK_Demo
             var formulario = new AnularBoleta();
             formulario.ShowDialog();        
         }
+
+        private void DownloadPdfButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new ObtenerPdfBoleta();
+            formulario.ShowDialog();
+        }
     }
 }

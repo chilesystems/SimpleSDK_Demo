@@ -62,7 +62,7 @@ namespace SimpleSDK_Demo
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.DownloadPdfButton = new System.Windows.Forms.Button();
             this.AnulaBoletaHonorarioButton = new System.Windows.Forms.Button();
             this.CrearBoletaHonorariosButton = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
@@ -414,19 +414,19 @@ namespace SimpleSDK_Demo
             this.BoletaHonorarioGroupBox.Controls.Add(this.button6);
             this.BoletaHonorarioGroupBox.Controls.Add(this.button5);
             this.BoletaHonorarioGroupBox.Controls.Add(this.button4);
-            this.BoletaHonorarioGroupBox.Controls.Add(this.button3);
+            this.BoletaHonorarioGroupBox.Controls.Add(this.DownloadPdfButton);
             this.BoletaHonorarioGroupBox.Controls.Add(this.AnulaBoletaHonorarioButton);
             this.BoletaHonorarioGroupBox.Controls.Add(this.CrearBoletaHonorariosButton);
             this.BoletaHonorarioGroupBox.Location = new System.Drawing.Point(595, 365);
             this.BoletaHonorarioGroupBox.Name = "BoletaHonorarioGroupBox";
-            this.BoletaHonorarioGroupBox.Size = new System.Drawing.Size(244, 254);
+            this.BoletaHonorarioGroupBox.Size = new System.Drawing.Size(244, 283);
             this.BoletaHonorarioGroupBox.TabIndex = 36;
             this.BoletaHonorarioGroupBox.TabStop = false;
             this.BoletaHonorarioGroupBox.Text = "Boletas de Honorarios";
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(22, 216);
+            this.button6.Location = new System.Drawing.Point(9, 239);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 5;
@@ -435,7 +435,7 @@ namespace SimpleSDK_Demo
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(22, 187);
+            this.button5.Location = new System.Drawing.Point(9, 210);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 4;
@@ -444,27 +444,28 @@ namespace SimpleSDK_Demo
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(22, 158);
+            this.button4.Location = new System.Drawing.Point(9, 181);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 3;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // DownloadPdfButton
             // 
-            this.button3.Location = new System.Drawing.Point(22, 129);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.DownloadPdfButton.Location = new System.Drawing.Point(9, 129);
+            this.DownloadPdfButton.Name = "DownloadPdfButton";
+            this.DownloadPdfButton.Size = new System.Drawing.Size(226, 33);
+            this.DownloadPdfButton.TabIndex = 2;
+            this.DownloadPdfButton.Text = "Descargar PDF";
+            this.DownloadPdfButton.UseVisualStyleBackColor = true;
+            this.DownloadPdfButton.Click += new System.EventHandler(this.DownloadPdfButton_Click);
             // 
             // AnulaBoletaHonorarioButton
             // 
-            this.AnulaBoletaHonorarioButton.Location = new System.Drawing.Point(9, 99);
+            this.AnulaBoletaHonorarioButton.Location = new System.Drawing.Point(9, 88);
             this.AnulaBoletaHonorarioButton.Name = "AnulaBoletaHonorarioButton";
-            this.AnulaBoletaHonorarioButton.Size = new System.Drawing.Size(200, 23);
+            this.AnulaBoletaHonorarioButton.Size = new System.Drawing.Size(226, 35);
             this.AnulaBoletaHonorarioButton.TabIndex = 1;
             this.AnulaBoletaHonorarioButton.Text = "Anular Boleta de Honorarios";
             this.AnulaBoletaHonorarioButton.UseVisualStyleBackColor = true;
@@ -484,7 +485,7 @@ namespace SimpleSDK_Demo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 631);
+            this.ClientSize = new System.Drawing.Size(861, 693);
             this.Controls.Add(this.BoletaHonorarioGroupBox);
             this.Controls.Add(this.RegistroComprasVentasGroupBox);
             this.Controls.Add(this.groupBox2);
@@ -518,7 +519,7 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.GroupBox BoletaHonorarioGroupBox;
         private System.Windows.Forms.Button CrearBoletaHonorariosButton;
         private System.Windows.Forms.Button AnulaBoletaHonorarioButton;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button DownloadPdfButton;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;

@@ -32,13 +32,13 @@ namespace SimpleSDK_Demo
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.AnulaButton = new System.Windows.Forms.Button();
             this.MotivoLabel = new System.Windows.Forms.Label();
             this.MotivoTextBox = new System.Windows.Forms.TextBox();
             this.FolioLabel = new System.Windows.Forms.Label();
             this.RutEmisorLabel = new System.Windows.Forms.Label();
             this.FolioTextBox = new System.Windows.Forms.TextBox();
             this.RutEmisorTextBox = new System.Windows.Forms.TextBox();
-            this.AnulaButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,15 @@ namespace SimpleSDK_Demo
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Boleta a Anular";
+            // 
+            // AnulaButton
+            // 
+            this.AnulaButton.Location = new System.Drawing.Point(590, 37);
+            this.AnulaButton.Name = "AnulaButton";
+            this.AnulaButton.Size = new System.Drawing.Size(95, 46);
+            this.AnulaButton.TabIndex = 6;
+            this.AnulaButton.Text = "Anular";
+            this.AnulaButton.UseVisualStyleBackColor = true;
             // 
             // MotivoLabel
             // 
@@ -95,7 +104,6 @@ namespace SimpleSDK_Demo
             this.FolioTextBox.Name = "FolioTextBox";
             this.FolioTextBox.Size = new System.Drawing.Size(100, 26);
             this.FolioTextBox.TabIndex = 1;
-            
             // 
             // RutEmisorTextBox
             // 
@@ -103,15 +111,6 @@ namespace SimpleSDK_Demo
             this.RutEmisorTextBox.Name = "RutEmisorTextBox";
             this.RutEmisorTextBox.Size = new System.Drawing.Size(100, 26);
             this.RutEmisorTextBox.TabIndex = 0;
-            // 
-            // AnulaButton
-            // 
-            this.AnulaButton.Location = new System.Drawing.Point(590, 37);
-            this.AnulaButton.Name = "AnulaButton";
-            this.AnulaButton.Size = new System.Drawing.Size(95, 46);
-            this.AnulaButton.TabIndex = 6;
-            this.AnulaButton.Text = "Anular";
-            this.AnulaButton.UseVisualStyleBackColor = true;
             // 
             // AnularBoleta
             // 
