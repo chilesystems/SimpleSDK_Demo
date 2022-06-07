@@ -2,7 +2,7 @@
 
 namespace SimpleSDK_Demo
 {
-    partial class ConsultarRegistroCompras
+    partial class ConsultarRegistroVentas
     {
         /// <summary>
         /// Required designer variable.
@@ -31,8 +31,6 @@ namespace SimpleSDK_Demo
         /// </summary>
         private void InitializeComponent()
         {
-            this.ResultadoGroupBox = new System.Windows.Forms.GroupBox();
-            this.dataGrid1 = new System.Windows.Forms.DataGrid();
             this.DatosConsultaGroupBox = new System.Windows.Forms.GroupBox();
             this.RutUsuarioTextBox = new System.Windows.Forms.TextBox();
             this.RutUsuarioLabel = new System.Windows.Forms.Label();
@@ -42,29 +40,12 @@ namespace SimpleSDK_Demo
             this.FechaLabel = new System.Windows.Forms.Label();
             this.buttonConsultar = new System.Windows.Forms.Button();
             this.MensualCheckBox = new System.Windows.Forms.CheckBox();
+            this.ResultadoGroupBox = new System.Windows.Forms.GroupBox();
+            this.dataGrid1 = new System.Windows.Forms.DataGrid();
+            this.DatosConsultaGroupBox.SuspendLayout();
             this.ResultadoGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
-            this.DatosConsultaGroupBox.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ResultadoGroupBox
-            // 
-            this.ResultadoGroupBox.Controls.Add(this.dataGrid1);
-            this.ResultadoGroupBox.Location = new System.Drawing.Point(12, 140);
-            this.ResultadoGroupBox.Name = "ResultadoGroupBox";
-            this.ResultadoGroupBox.Size = new System.Drawing.Size(776, 309);
-            this.ResultadoGroupBox.TabIndex = 6;
-            this.ResultadoGroupBox.TabStop = false;
-            this.ResultadoGroupBox.Text = "Resultado";
-            // 
-            // dataGrid1
-            // 
-            this.dataGrid1.DataMember = "";
-            this.dataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGrid1.Location = new System.Drawing.Point(6, 31);
-            this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.Size = new System.Drawing.Size(764, 264);
-            this.dataGrid1.TabIndex = 0;
             // 
             // DatosConsultaGroupBox
             // 
@@ -78,8 +59,8 @@ namespace SimpleSDK_Demo
             this.DatosConsultaGroupBox.Controls.Add(this.MensualCheckBox);
             this.DatosConsultaGroupBox.Location = new System.Drawing.Point(12, 12);
             this.DatosConsultaGroupBox.Name = "DatosConsultaGroupBox";
-            this.DatosConsultaGroupBox.Size = new System.Drawing.Size(770, 113);
-            this.DatosConsultaGroupBox.TabIndex = 7;
+            this.DatosConsultaGroupBox.Size = new System.Drawing.Size(776, 113);
+            this.DatosConsultaGroupBox.TabIndex = 9;
             this.DatosConsultaGroupBox.TabStop = false;
             this.DatosConsultaGroupBox.Text = "Datos Consulta";
             // 
@@ -149,41 +130,52 @@ namespace SimpleSDK_Demo
             this.MensualCheckBox.Text = "Mensual";
             this.MensualCheckBox.UseVisualStyleBackColor = true;
             // 
-            // ConsultarRegistroCompras
+            // ResultadoGroupBox
+            // 
+            this.ResultadoGroupBox.Controls.Add(this.dataGrid1);
+            this.ResultadoGroupBox.Location = new System.Drawing.Point(12, 140);
+            this.ResultadoGroupBox.Name = "ResultadoGroupBox";
+            this.ResultadoGroupBox.Size = new System.Drawing.Size(776, 309);
+            this.ResultadoGroupBox.TabIndex = 8;
+            this.ResultadoGroupBox.TabStop = false;
+            this.ResultadoGroupBox.Text = "Resultado";
+            // 
+            // dataGrid1
+            // 
+            this.dataGrid1.DataMember = "";
+            this.dataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGrid1.Location = new System.Drawing.Point(6, 31);
+            this.dataGrid1.Name = "dataGrid1";
+            this.dataGrid1.Size = new System.Drawing.Size(764, 264);
+            this.dataGrid1.TabIndex = 0;
+            // 
+            // ConsultarRegistroVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 492);
+            this.ClientSize = new System.Drawing.Size(802, 466);
             this.Controls.Add(this.DatosConsultaGroupBox);
             this.Controls.Add(this.ResultadoGroupBox);
-            this.Name = "ConsultarRegistroCompras";
-            this.Text = "Consultar Registro de Compras";
-            this.Load += new System.EventHandler(this.ConsultarRegistroCompras_Load);
-            this.ResultadoGroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
+            this.Name = "ConsultarRegistroVentas";
+            this.Text = "Consultar Registro de Ventas";
             this.DatosConsultaGroupBox.ResumeLayout(false);
             this.DatosConsultaGroupBox.PerformLayout();
+            this.ResultadoGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.TextBox RutUsuarioTextBox;
-        private System.Windows.Forms.TextBox RutEmpresaTextBox;
-
-        private System.Windows.Forms.Label RutUsuarioLabel;
-        private System.Windows.Forms.Label RutEmpresaLabel;
-
-        private System.Windows.Forms.DataGrid dataGrid1;
-
-        private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
-
-        private System.Windows.Forms.GroupBox ResultadoGroupBox;
-
         private System.Windows.Forms.GroupBox DatosConsultaGroupBox;
-
+        private System.Windows.Forms.TextBox RutUsuarioTextBox;
+        private System.Windows.Forms.Label RutUsuarioLabel;
+        private System.Windows.Forms.TextBox RutEmpresaTextBox;
+        private System.Windows.Forms.Label RutEmpresaLabel;
+        private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
         private System.Windows.Forms.Label FechaLabel;
-
-        private System.Windows.Forms.CheckBox MensualCheckBox;
         private System.Windows.Forms.Button buttonConsultar;
+        private System.Windows.Forms.CheckBox MensualCheckBox;
+        private System.Windows.Forms.GroupBox ResultadoGroupBox;
+        private System.Windows.Forms.DataGrid dataGrid1;
 
         #endregion
     }
