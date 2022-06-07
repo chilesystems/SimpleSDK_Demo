@@ -412,5 +412,12 @@ namespace SimpleSDK_Demo
             var formulario = new ObtenerPdfBoleta();
             formulario.ShowDialog();
         }
+
+
+        private void EnviarEmailButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new EnviarBoletaPorEmail();
+            formulario.ShowDialog();
+        }
     }
 }

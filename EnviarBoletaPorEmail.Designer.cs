@@ -2,7 +2,7 @@
 
 namespace SimpleSDK_Demo
 {
-    partial class ObtenerPdfBoleta
+    partial class EnviarBoletaPorEmail
     {
         /// <summary>
         /// Required designer variable.
@@ -32,66 +32,31 @@ namespace SimpleSDK_Demo
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.EmitidaRadioButton = new System.Windows.Forms.RadioButton();
-            this.RecibidaRadioButton = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.AnioTextbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.FolioTextbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.RutEmisorTextbox = new System.Windows.Forms.TextBox();
-            this.DescargarPdfButton = new System.Windows.Forms.Button();
+            this.EnviarEmailButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.EmitidaRadioButton);
-            this.groupBox1.Controls.Add(this.RecibidaRadioButton);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.AnioTextbox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.FolioTextbox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.RutEmisorTextbox);
-            this.groupBox1.Controls.Add(this.DescargarPdfButton);
+            this.groupBox1.Controls.Add(this.EnviarEmailButton);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1008, 113);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Size = new System.Drawing.Size(722, 113);
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Boleta de Honorarios Electrónica";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(643, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 23);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Tipo";
-            // 
-            // EmitidaRadioButton
-            // 
-            this.EmitidaRadioButton.Location = new System.Drawing.Point(753, 49);
-            this.EmitidaRadioButton.Name = "EmitidaRadioButton";
-            this.EmitidaRadioButton.Size = new System.Drawing.Size(104, 24);
-            this.EmitidaRadioButton.TabIndex = 8;
-            this.EmitidaRadioButton.TabStop = true;
-            this.EmitidaRadioButton.Text = "Emitida";
-            this.EmitidaRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // RecibidaRadioButton
-            // 
-            this.RecibidaRadioButton.Location = new System.Drawing.Point(643, 49);
-            this.RecibidaRadioButton.Name = "RecibidaRadioButton";
-            this.RecibidaRadioButton.Size = new System.Drawing.Size(104, 24);
-            this.RecibidaRadioButton.TabIndex = 7;
-            this.RecibidaRadioButton.TabStop = true;
-            this.RecibidaRadioButton.Text = "Recibida";
-            this.RecibidaRadioButton.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -141,43 +106,36 @@ namespace SimpleSDK_Demo
             this.RutEmisorTextbox.Size = new System.Drawing.Size(100, 26);
             this.RutEmisorTextbox.TabIndex = 1;
             // 
-            // DescargarPdfButton
+            // EnviarEmailButton
             // 
-            this.DescargarPdfButton.Location = new System.Drawing.Point(885, 28);
-            this.DescargarPdfButton.Name = "DescargarPdfButton";
-            this.DescargarPdfButton.Size = new System.Drawing.Size(110, 66);
-            this.DescargarPdfButton.TabIndex = 0;
-            this.DescargarPdfButton.Text = "Descargar PDF";
-            this.DescargarPdfButton.UseVisualStyleBackColor = true;
+            this.EnviarEmailButton.Location = new System.Drawing.Point(597, 28);
+            this.EnviarEmailButton.Name = "EnviarEmailButton";
+            this.EnviarEmailButton.Size = new System.Drawing.Size(110, 66);
+            this.EnviarEmailButton.TabIndex = 0;
+            this.EnviarEmailButton.Text = "Enviar Email";
+            this.EnviarEmailButton.UseVisualStyleBackColor = true;
             // 
-            // ObtenerPdfBoleta
+            // EnviarBoletaPorEmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 134);
+            this.ClientSize = new System.Drawing.Size(749, 140);
             this.Controls.Add(this.groupBox1);
-            this.Name = "ObtenerPdfBoleta";
-            this.Text = "Obtener PDF Boleta de Honorarios Electrónica";
+            this.Name = "EnviarBoletaPorEmail";
+            this.Text = "Enviar Boleta de Honorarios por Email";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Label label4;
-
-        private System.Windows.Forms.RadioButton RecibidaRadioButton;
-        private System.Windows.Forms.RadioButton EmitidaRadioButton;
-
-        private System.Windows.Forms.TextBox RutEmisorTextbox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox FolioTextbox;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox AnioTextbox;
-
-        private System.Windows.Forms.Button DescargarPdfButton;
-
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox FolioTextbox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox RutEmisorTextbox;
+        private System.Windows.Forms.Button EnviarEmailButton;
 
         #endregion
     }
