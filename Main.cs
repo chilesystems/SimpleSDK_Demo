@@ -422,7 +422,14 @@ namespace SimpleSDK_Demo
 
         private void ListadoMensualBoletasButton_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            var formulario = new ListadoMensualBoletas();
+            formulario.ShowDialog();
+        }
+
+        private void ListadoAnualBoletaButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new ListadoAnualBoletas();
+            formulario.ShowDialog();
         }
     }
 }

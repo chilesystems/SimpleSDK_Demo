@@ -51,18 +51,18 @@ namespace SimpleSDK_Demo
             this.RetencionContribuyenteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalLiquidoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.RetencionLiquidoValorLabel = new System.Windows.Forms.Label();
             this.RetencionContribuyentesValorLabel = new System.Windows.Forms.Label();
             this.RetencionTercerosValorLabel = new System.Windows.Forms.Label();
             this.otalAnuladasValorLabel = new System.Windows.Forms.Label();
             this.TotalVigentesValorLabel = new System.Windows.Forms.Label();
             this.TotalHonorarioBrutoValorLabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -231,60 +231,6 @@ namespace SimpleSDK_Demo
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Totales";
             // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Honorarios Brutos";
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(21, 77);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Vigentes";
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 111);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 23);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Anuladas";
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(21, 212);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(160, 23);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Retención Líquido";
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(21, 178);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(244, 23);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Retención de Contribuyentes";
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(21, 145);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(193, 23);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Retención de Terceros";
-            // 
             // RetencionLiquidoValorLabel
             // 
             this.RetencionLiquidoValorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -344,6 +290,60 @@ namespace SimpleSDK_Demo
             this.TotalHonorarioBrutoValorLabel.TabIndex = 6;
             this.TotalHonorarioBrutoValorLabel.Text = "0";
             this.TotalHonorarioBrutoValorLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(21, 212);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 23);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Retención Líquido";
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(21, 178);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(244, 23);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Retención de Contribuyentes";
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(21, 145);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(193, 23);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Retención de Terceros";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(21, 111);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 23);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Anuladas";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(21, 77);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Vigentes";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(171, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Honorarios Brutos";
             // 
             // ListadoAnualBoletas
             // 

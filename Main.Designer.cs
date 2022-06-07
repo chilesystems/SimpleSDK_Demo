@@ -442,6 +442,7 @@ namespace SimpleSDK_Demo
             this.ListadoAnualBoletaButton.TabIndex = 4;
             this.ListadoAnualBoletaButton.Text = "Listado Anual de Boletas";
             this.ListadoAnualBoletaButton.UseVisualStyleBackColor = true;
+            this.ListadoAnualBoletaButton.Click += new System.EventHandler(this.ListadoAnualBoletaButton_Click);
             // 
             // ListadoMensualBoletasButton
             // 

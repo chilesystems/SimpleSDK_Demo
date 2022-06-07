@@ -134,6 +134,12 @@
     <Compile Include="ListadoAnualBoletas.Designer.cs">
       <DependentUpon>ListadoAnualBoletas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListadoMensualBoletas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoMensualBoletas.Designer.cs">
+      <DependentUpon>ListadoMensualBoletas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoAnualBoletas.resx">
       <DependentUpon>ListadoAnualBoletas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoMensualBoletas.resx">
+      <DependentUpon>ListadoMensualBoletas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
