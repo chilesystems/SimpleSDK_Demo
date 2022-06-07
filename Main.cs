@@ -431,5 +431,11 @@ namespace SimpleSDK_Demo
             var formulario = new ListadoAnualBoletas();
             formulario.ShowDialog();
         }
+
+        private void AnularCafMasivamenteButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new AnularMasivamente();
+            formulario.ShowDialog();
+        }
     }
 }

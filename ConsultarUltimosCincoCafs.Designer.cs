@@ -2,7 +2,7 @@
 
 namespace SimpleSDK_Demo
 {
-    partial class AnularMasivamente
+    partial class ConsultarUltimosCincoCafs
     {
         /// <summary>
         /// Required designer variable.
@@ -32,12 +32,10 @@ namespace SimpleSDK_Demo
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.HastaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DesdeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.RutEmisorTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.AnularButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.ConsultarButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TipoDteTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,36 +44,25 @@ namespace SimpleSDK_Demo
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.HastaDateTimePicker);
             this.groupBox1.Controls.Add(this.DesdeDateTimePicker);
             this.groupBox1.Controls.Add(this.RutEmisorTextBox);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.AnularButton);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.ConsultarButton);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.TipoDteTextBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(833, 107);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
-            // 
-            // HastaDateTimePicker
-            // 
-            this.HastaDateTimePicker.CustomFormat = "dd-MM-yyyy";
-            this.HastaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.HastaDateTimePicker.Location = new System.Drawing.Point(507, 62);
-            this.HastaDateTimePicker.Name = "HastaDateTimePicker";
-            this.HastaDateTimePicker.Size = new System.Drawing.Size(146, 26);
-            this.HastaDateTimePicker.TabIndex = 10;
             // 
             // DesdeDateTimePicker
             // 
             this.DesdeDateTimePicker.CustomFormat = "dd-MM-yyyy";
             this.DesdeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DesdeDateTimePicker.Location = new System.Drawing.Point(507, 17);
+            this.DesdeDateTimePicker.Location = new System.Drawing.Point(507, 43);
             this.DesdeDateTimePicker.Name = "DesdeDateTimePicker";
             this.DesdeDateTimePicker.Size = new System.Drawing.Size(146, 26);
             this.DesdeDateTimePicker.TabIndex = 9;
@@ -95,26 +82,18 @@ namespace SimpleSDK_Demo
             this.label4.TabIndex = 7;
             this.label4.Text = "Rut Emisor";
             // 
-            // AnularButton
+            // ConsultarButton
             // 
-            this.AnularButton.Location = new System.Drawing.Point(687, 24);
-            this.AnularButton.Name = "AnularButton";
-            this.AnularButton.Size = new System.Drawing.Size(130, 64);
-            this.AnularButton.TabIndex = 6;
-            this.AnularButton.Text = "Anular";
-            this.AnularButton.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(442, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 23);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Hasta";
+            this.ConsultarButton.Location = new System.Drawing.Point(687, 24);
+            this.ConsultarButton.Name = "ConsultarButton";
+            this.ConsultarButton.Size = new System.Drawing.Size(130, 64);
+            this.ConsultarButton.TabIndex = 6;
+            this.ConsultarButton.Text = "Consultar";
+            this.ConsultarButton.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(442, 20);
+            this.label2.Location = new System.Drawing.Point(442, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 23);
             this.label2.TabIndex = 2;
@@ -135,33 +114,27 @@ namespace SimpleSDK_Demo
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipo DTE";
             // 
-            // AnularMasivamente
+            // ConsultarUltimosCincoCafs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 128);
+            this.ClientSize = new System.Drawing.Size(857, 129);
             this.Controls.Add(this.groupBox1);
-            this.Name = "AnularMasivamente";
-            this.Text = "Anulación de Folios Masiva";
+            this.Name = "ConsultarUltimosCincoCafs";
+            this.Text = "Consultar Últimos Cinco Cafs";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.DateTimePicker HastaDateTimePicker;
-
-        private System.Windows.Forms.DateTimePicker DesdeDateTimePicker;
-
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox RutEmisorTextBox;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TipoDteTextBox;
+        private System.Windows.Forms.DateTimePicker DesdeDateTimePicker;
+        private System.Windows.Forms.TextBox RutEmisorTextBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button ConsultarButton;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button AnularButton;
+        private System.Windows.Forms.TextBox TipoDteTextBox;
+        private System.Windows.Forms.Label label1;
 
         #endregion
     }

@@ -109,6 +109,12 @@
     <Compile Include="ConsultarRegistroVentas.Designer.cs">
       <DependentUpon>ConsultarRegistroVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarUltimosCincoCafs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarUltimosCincoCafs.Designer.cs">
+      <DependentUpon>ConsultarUltimosCincoCafs.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnviarBoletaPorEmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarRegistroVentas.resx">
       <DependentUpon>ConsultarRegistroVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarUltimosCincoCafs.resx">
+      <DependentUpon>ConsultarUltimosCincoCafs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EnviarBoletaPorEmail.resx">
       <DependentUpon>EnviarBoletaPorEmail.cs</DependentUpon>
