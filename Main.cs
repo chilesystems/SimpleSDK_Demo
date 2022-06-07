@@ -437,5 +437,11 @@ namespace SimpleSDK_Demo
             var formulario = new AnularMasivamente();
             formulario.ShowDialog();
         }
+
+        private void ConsultarUltimosCincoCafButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new ConsultarUltimosCincoCafs();
+            formulario.ShowDialog();
+        }
     }
 }

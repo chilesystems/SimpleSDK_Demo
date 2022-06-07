@@ -521,6 +521,7 @@ namespace SimpleSDK_Demo
             this.ConsultarUltimosCincoCafButton.TabIndex = 2;
             this.ConsultarUltimosCincoCafButton.Text = "Consultar Folios Descargados";
             this.ConsultarUltimosCincoCafButton.UseVisualStyleBackColor = true;
+            this.ConsultarUltimosCincoCafButton.Click += new System.EventHandler(this.ConsultarUltimosCincoCafButton_Click);
             // 
             // ConsultarMaximoFoliosButton
             // 
