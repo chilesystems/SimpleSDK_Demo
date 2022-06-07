@@ -32,6 +32,8 @@ namespace SimpleSDK_Demo
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.CantidadDocumentosValorLabel = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.TotalLiquidoValorLabel = new System.Windows.Forms.Label();
             this.TotalRetencionReceptorValorLabel = new System.Windows.Forms.Label();
             this.TotalRetencionEmisorValorLabel = new System.Windows.Forms.Label();
@@ -45,19 +47,6 @@ namespace SimpleSDK_Demo
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.MesLabel = new System.Windows.Forms.Label();
-            this.MesTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.EmitidaRadioButton = new System.Windows.Forms.RadioButton();
-            this.RecibidaRadioButton = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.AnioTextbox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.RutEmisorTextbox = new System.Windows.Forms.TextBox();
-            this.ListadoButton = new System.Windows.Forms.Button();
-            this.CantidadDocumentosValorLabel = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.NumeroColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaBoletaColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +60,17 @@ namespace SimpleSDK_Demo
             this.LiquidoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PagadoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RetenidoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.MesLabel = new System.Windows.Forms.Label();
+            this.MesTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.EmitidaRadioButton = new System.Windows.Forms.RadioButton();
+            this.RecibidaRadioButton = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.AnioTextbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.RutEmisorTextbox = new System.Windows.Forms.TextBox();
+            this.ListadoButton = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -98,6 +98,25 @@ namespace SimpleSDK_Demo
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Totales";
+            // 
+            // CantidadDocumentosValorLabel
+            // 
+            this.CantidadDocumentosValorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CantidadDocumentosValorLabel.Location = new System.Drawing.Point(285, 31);
+            this.CantidadDocumentosValorLabel.Name = "CantidadDocumentosValorLabel";
+            this.CantidadDocumentosValorLabel.Size = new System.Drawing.Size(100, 23);
+            this.CantidadDocumentosValorLabel.TabIndex = 13;
+            this.CantidadDocumentosValorLabel.Text = "0";
+            this.CantidadDocumentosValorLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(19, 31);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(233, 23);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Cantidad de Documentos";
             // 
             // TotalLiquidoValorLabel
             // 
@@ -223,6 +242,71 @@ namespace SimpleSDK_Demo
             this.dataGridView1.Size = new System.Drawing.Size(945, 370);
             this.dataGridView1.TabIndex = 5;
             // 
+            // NumeroColumn
+            // 
+            this.NumeroColumn.HeaderText = "Número";
+            this.NumeroColumn.Name = "NumeroColumn";
+            // 
+            // EstadoColumn
+            // 
+            this.EstadoColumn.HeaderText = "Estado";
+            this.EstadoColumn.Name = "EstadoColumn";
+            // 
+            // FechaBoletaColumn
+            // 
+            this.FechaBoletaColumn.HeaderText = "Fecha Boleta";
+            this.FechaBoletaColumn.Name = "FechaBoletaColumn";
+            // 
+            // RutEmisorColumn
+            // 
+            this.RutEmisorColumn.HeaderText = "Rut Emisor";
+            this.RutEmisorColumn.Name = "RutEmisorColumn";
+            // 
+            // RazónSocialEmisorColumn
+            // 
+            this.RazónSocialEmisorColumn.HeaderText = "Razón Social Emisor";
+            this.RazónSocialEmisorColumn.Name = "RazónSocialEmisorColumn";
+            // 
+            // RutReceptorColumn
+            // 
+            this.RutReceptorColumn.HeaderText = "Rut Receptor";
+            this.RutReceptorColumn.Name = "RutReceptorColumn";
+            // 
+            // RazonSocialReceptor
+            // 
+            this.RazonSocialReceptor.HeaderText = "Razón Social Receptor";
+            this.RazonSocialReceptor.Name = "RazonSocialReceptor";
+            // 
+            // BrutoColumn
+            // 
+            this.BrutoColumn.HeaderText = "Bruto";
+            this.BrutoColumn.Name = "BrutoColumn";
+            // 
+            // RetencionEmisorColumn
+            // 
+            this.RetencionEmisorColumn.HeaderText = "Retención Emisor";
+            this.RetencionEmisorColumn.Name = "RetencionEmisorColumn";
+            // 
+            // RetencionReceptorColumn
+            // 
+            this.RetencionReceptorColumn.HeaderText = "Retención Receptor";
+            this.RetencionReceptorColumn.Name = "RetencionReceptorColumn";
+            // 
+            // LiquidoColumn
+            // 
+            this.LiquidoColumn.HeaderText = "Líquido";
+            this.LiquidoColumn.Name = "LiquidoColumn";
+            // 
+            // PagadoColumn
+            // 
+            this.PagadoColumn.HeaderText = "Pagado";
+            this.PagadoColumn.Name = "PagadoColumn";
+            // 
+            // RetenidoColumn
+            // 
+            this.RetenidoColumn.HeaderText = "Retenido";
+            this.RetenidoColumn.Name = "RetenidoColumn";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.MesLabel);
@@ -329,90 +413,6 @@ namespace SimpleSDK_Demo
             this.ListadoButton.TabIndex = 0;
             this.ListadoButton.Text = "Traer Listado";
             this.ListadoButton.UseVisualStyleBackColor = true;
-            // 
-            // CantidadDocumentosValorLabel
-            // 
-            this.CantidadDocumentosValorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CantidadDocumentosValorLabel.Location = new System.Drawing.Point(285, 31);
-            this.CantidadDocumentosValorLabel.Name = "CantidadDocumentosValorLabel";
-            this.CantidadDocumentosValorLabel.Size = new System.Drawing.Size(100, 23);
-            this.CantidadDocumentosValorLabel.TabIndex = 13;
-            this.CantidadDocumentosValorLabel.Text = "0";
-            this.CantidadDocumentosValorLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(19, 31);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(233, 23);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Cantidad de Documentos";
-            // 
-            // NumeroColumn
-            // 
-            this.NumeroColumn.HeaderText = "Número";
-            this.NumeroColumn.Name = "NumeroColumn";
-            // 
-            // EstadoColumn
-            // 
-            this.EstadoColumn.HeaderText = "Estado";
-            this.EstadoColumn.Name = "EstadoColumn";
-            // 
-            // FechaBoletaColumn
-            // 
-            this.FechaBoletaColumn.HeaderText = "Fecha Boleta";
-            this.FechaBoletaColumn.Name = "FechaBoletaColumn";
-            // 
-            // RutEmisorColumn
-            // 
-            this.RutEmisorColumn.HeaderText = "Rut Emisor";
-            this.RutEmisorColumn.Name = "RutEmisorColumn";
-            // 
-            // RazónSocialEmisorColumn
-            // 
-            this.RazónSocialEmisorColumn.HeaderText = "Razón Social Emisor";
-            this.RazónSocialEmisorColumn.Name = "RazónSocialEmisorColumn";
-            // 
-            // RutReceptorColumn
-            // 
-            this.RutReceptorColumn.HeaderText = "Rut Receptor";
-            this.RutReceptorColumn.Name = "RutReceptorColumn";
-            // 
-            // RazonSocialReceptor
-            // 
-            this.RazonSocialReceptor.HeaderText = "Razón Social Receptor";
-            this.RazonSocialReceptor.Name = "RazonSocialReceptor";
-            // 
-            // BrutoColumn
-            // 
-            this.BrutoColumn.HeaderText = "Bruto";
-            this.BrutoColumn.Name = "BrutoColumn";
-            // 
-            // RetencionEmisorColumn
-            // 
-            this.RetencionEmisorColumn.HeaderText = "Retención Emisor";
-            this.RetencionEmisorColumn.Name = "RetencionEmisorColumn";
-            // 
-            // RetencionReceptorColumn
-            // 
-            this.RetencionReceptorColumn.HeaderText = "Retención Receptor";
-            this.RetencionReceptorColumn.Name = "RetencionReceptorColumn";
-            // 
-            // LiquidoColumn
-            // 
-            this.LiquidoColumn.HeaderText = "Líquido";
-            this.LiquidoColumn.Name = "LiquidoColumn";
-            // 
-            // PagadoColumn
-            // 
-            this.PagadoColumn.HeaderText = "Pagado";
-            this.PagadoColumn.Name = "PagadoColumn";
-            // 
-            // RetenidoColumn
-            // 
-            this.RetenidoColumn.HeaderText = "Retenido";
-            this.RetenidoColumn.Name = "RetenidoColumn";
             // 
             // ListadoMensualBoletas
             // 
