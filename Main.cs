@@ -443,5 +443,17 @@ namespace SimpleSDK_Demo
             var formulario = new ConsultarUltimosCincoCafs();
             formulario.ShowDialog();
         }
+
+        private void ConsultarMaximoFoliosButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new ConsultarMaximoFolios();
+            formulario.ShowDialog();
+        }
+
+        private void DescargarCafButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new DescargarCaf();
+            formulario.ShowDialog();
+        }
     }
 }

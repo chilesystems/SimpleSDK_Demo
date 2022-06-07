@@ -531,6 +531,7 @@ namespace SimpleSDK_Demo
             this.ConsultarMaximoFoliosButton.TabIndex = 1;
             this.ConsultarMaximoFoliosButton.Text = "Consultar Máximo de Folios";
             this.ConsultarMaximoFoliosButton.UseVisualStyleBackColor = true;
+            this.ConsultarMaximoFoliosButton.Click += new System.EventHandler(this.ConsultarMaximoFoliosButton_Click);
             // 
             // DescargarCafButton
             // 
@@ -540,6 +541,7 @@ namespace SimpleSDK_Demo
             this.DescargarCafButton.TabIndex = 0;
             this.DescargarCafButton.Text = "Descargar CAF";
             this.DescargarCafButton.UseVisualStyleBackColor = true;
+            this.DescargarCafButton.Click += new System.EventHandler(this.DescargarCafButton_Click);
             // 
             // Main
             // 
