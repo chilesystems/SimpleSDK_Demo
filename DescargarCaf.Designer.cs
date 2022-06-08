@@ -39,11 +39,13 @@ namespace SimpleSDK_Demo
             this.label2 = new System.Windows.Forms.Label();
             this.TipoDteTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.CantidadTextBox);
             this.groupBox1.Controls.Add(this.RutEmisorTextBox);
             this.groupBox1.Controls.Add(this.label4);
@@ -53,14 +55,14 @@ namespace SimpleSDK_Demo
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(833, 107);
+            this.groupBox1.Size = new System.Drawing.Size(1036, 107);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
             // CantidadTextBox
             // 
-            this.CantidadTextBox.Location = new System.Drawing.Point(523, 43);
+            this.CantidadTextBox.Location = new System.Drawing.Point(492, 43);
             this.CantidadTextBox.Name = "CantidadTextBox";
             this.CantidadTextBox.Size = new System.Drawing.Size(100, 26);
             this.CantidadTextBox.TabIndex = 9;
@@ -74,6 +76,7 @@ namespace SimpleSDK_Demo
             // 
             // label4
             // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(18, 46);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 23);
@@ -82,7 +85,7 @@ namespace SimpleSDK_Demo
             // 
             // DescargarButton
             // 
-            this.DescargarButton.Location = new System.Drawing.Point(687, 24);
+            this.DescargarButton.Location = new System.Drawing.Point(891, 24);
             this.DescargarButton.Name = "DescargarButton";
             this.DescargarButton.Size = new System.Drawing.Size(130, 64);
             this.DescargarButton.TabIndex = 6;
@@ -91,7 +94,8 @@ namespace SimpleSDK_Demo
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(443, 46);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(412, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 23);
             this.label2.TabIndex = 2;
@@ -99,24 +103,33 @@ namespace SimpleSDK_Demo
             // 
             // TipoDteTextBox
             // 
-            this.TipoDteTextBox.Location = new System.Drawing.Point(323, 43);
+            this.TipoDteTextBox.Location = new System.Drawing.Point(269, 43);
             this.TipoDteTextBox.Name = "TipoDteTextBox";
             this.TipoDteTextBox.Size = new System.Drawing.Size(100, 26);
             this.TipoDteTextBox.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(236, 46);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(219, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 23);
+            this.label1.Size = new System.Drawing.Size(44, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipo DTE";
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(640, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 23);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Ambiente";
             // 
             // DescargarCaf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 130);
+            this.ClientSize = new System.Drawing.Size(1060, 130);
             this.Controls.Add(this.groupBox1);
             this.Name = "DescargarCaf";
             this.Text = "Descargar Caf";
@@ -125,6 +138,8 @@ namespace SimpleSDK_Demo
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label label3;
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox RutEmisorTextBox;

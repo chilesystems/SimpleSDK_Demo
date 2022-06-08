@@ -64,5 +64,7 @@ namespace SimpleSDK_Demo
                 Console.WriteLine(exception);
             } 
         }
+
+        
     }
 }
