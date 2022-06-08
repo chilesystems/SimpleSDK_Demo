@@ -158,6 +158,7 @@ namespace SimpleSDK_Demo
             this.Controls.Add(this.ResultadoGroupBox);
             this.Name = "ConsultarRegistroVentas";
             this.Text = "Consultar Registro de Ventas";
+            this.Load += new System.EventHandler(this.ConsultarRegistroVentas_Load);
             this.DatosConsultaGroupBox.ResumeLayout(false);
             this.DatosConsultaGroupBox.PerformLayout();
             this.ResultadoGroupBox.ResumeLayout(false);

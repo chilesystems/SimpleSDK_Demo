@@ -455,5 +455,11 @@ namespace SimpleSDK_Demo
             var formulario = new DescargarCaf();
             formulario.ShowDialog();
         }
+
+        private void RegistroVentasButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new ConsultarRegistroVentas();
+            formulario.ShowDialog();
+        }
     }
 }

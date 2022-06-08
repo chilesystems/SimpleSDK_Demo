@@ -404,6 +404,7 @@ namespace SimpleSDK_Demo
             this.RegistroVentasButton.TabIndex = 1;
             this.RegistroVentasButton.Text = "Registro de Ventas";
             this.RegistroVentasButton.UseVisualStyleBackColor = true;
+            this.RegistroVentasButton.Click += new System.EventHandler(this.RegistroVentasButton_Click);
             // 
             // RegistroComprasButton
             // 
