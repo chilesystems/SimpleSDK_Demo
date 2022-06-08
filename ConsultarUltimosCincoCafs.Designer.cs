@@ -90,6 +90,7 @@ namespace SimpleSDK_Demo
             this.ConsultarButton.TabIndex = 6;
             this.ConsultarButton.Text = "Consultar";
             this.ConsultarButton.UseVisualStyleBackColor = true;
+            this.ConsultarButton.Click += new System.EventHandler(this.ConsultarButton_Click);
             // 
             // label2
             // 
@@ -122,6 +123,7 @@ namespace SimpleSDK_Demo
             this.Controls.Add(this.groupBox1);
             this.Name = "ConsultarUltimosCincoCafs";
             this.Text = "Consultar Últimos Cinco Cafs";
+            this.Load += new System.EventHandler(this.ConsultarUltimosCincoCafs_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
