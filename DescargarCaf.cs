@@ -62,7 +62,7 @@ namespace SimpleSDK_Demo
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
-            }
+            } 
         }
     }
 }

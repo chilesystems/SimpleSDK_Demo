@@ -77,6 +77,7 @@ namespace SimpleSDK_Demo
             this.ConsultarButton.TabIndex = 6;
             this.ConsultarButton.Text = "Consultar";
             this.ConsultarButton.UseVisualStyleBackColor = true;
+            this.ConsultarButton.Click += new System.EventHandler(this.ConsultarButton_Click);
             // 
             // TipoDteTextBox
             // 
