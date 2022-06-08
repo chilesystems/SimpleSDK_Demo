@@ -34,7 +34,7 @@ namespace SimpleSDK_Demo
             this.RutEmisorTextBox = new System.Windows.Forms.TextBox();
             this.DatosBoletaHonorariosGroupBox = new System.Windows.Forms.GroupBox();
             this.GenerarBoletaButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CorreoTextBox = new System.Windows.Forms.TextBox();
             this.CorreoLabel = new System.Windows.Forms.Label();
             this.RetencionLabel = new System.Windows.Forms.Label();
             this.ReceptorRetencionRadioButton = new System.Windows.Forms.RadioButton();
@@ -59,7 +59,7 @@ namespace SimpleSDK_Demo
             // DatosBoletaHonorariosGroupBox
             // 
             this.DatosBoletaHonorariosGroupBox.Controls.Add(this.GenerarBoletaButton);
-            this.DatosBoletaHonorariosGroupBox.Controls.Add(this.textBox1);
+            this.DatosBoletaHonorariosGroupBox.Controls.Add(this.CorreoTextBox);
             this.DatosBoletaHonorariosGroupBox.Controls.Add(this.CorreoLabel);
             this.DatosBoletaHonorariosGroupBox.Controls.Add(this.RetencionLabel);
             this.DatosBoletaHonorariosGroupBox.Controls.Add(this.ReceptorRetencionRadioButton);
@@ -83,13 +83,14 @@ namespace SimpleSDK_Demo
             this.GenerarBoletaButton.TabIndex = 9;
             this.GenerarBoletaButton.Text = "Generar Boleta";
             this.GenerarBoletaButton.UseVisualStyleBackColor = true;
+            this.GenerarBoletaButton.Click += new System.EventHandler(this.GenerarBoletaButton_Click);
             // 
-            // textBox1
+            // CorreoTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(241, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(239, 26);
-            this.textBox1.TabIndex = 8;
+            this.CorreoTextBox.Location = new System.Drawing.Point(241, 58);
+            this.CorreoTextBox.Name = "CorreoTextBox";
+            this.CorreoTextBox.Size = new System.Drawing.Size(239, 26);
+            this.CorreoTextBox.TabIndex = 8;
             // 
             // CorreoLabel
             // 
@@ -134,7 +135,7 @@ namespace SimpleSDK_Demo
             this.RutReceptorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RutReceptorLabel.Location = new System.Drawing.Point(123, 32);
             this.RutReceptorLabel.Name = "RutReceptorLabel";
-            this.RutReceptorLabel.Size = new System.Drawing.Size(112, 23);
+            this.RutReceptorLabel.Size = new System.Drawing.Size(121, 23);
             this.RutReceptorLabel.TabIndex = 3;
             this.RutReceptorLabel.Text = "Rut Receptor";
             // 
@@ -186,6 +187,7 @@ namespace SimpleSDK_Demo
             this.Controls.Add(this.DatosBoletaHonorariosGroupBox);
             this.Name = "GenerarBoletaHonorarios";
             this.Text = "Generar Boleta de Honorarios";
+            this.Load += new System.EventHandler(this.GenerarBoletaHonorarios_Load);
             this.DatosBoletaHonorariosGroupBox.ResumeLayout(false);
             this.DatosBoletaHonorariosGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -201,7 +203,7 @@ namespace SimpleSDK_Demo
 
         private System.Windows.Forms.Label RetencionLabel;
         private System.Windows.Forms.Label CorreoLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CorreoTextBox;
 
         private System.Windows.Forms.RadioButton ReceptorRetencionRadioButton;
 
