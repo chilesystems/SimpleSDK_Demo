@@ -32,13 +32,13 @@ namespace SimpleSDK_Demo
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CantidadTextBox = new System.Windows.Forms.TextBox();
             this.RutEmisorTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.DescargarButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TipoDteTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.CantidadTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,13 @@ namespace SimpleSDK_Demo
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
+            // 
+            // CantidadTextBox
+            // 
+            this.CantidadTextBox.Location = new System.Drawing.Point(523, 43);
+            this.CantidadTextBox.Name = "CantidadTextBox";
+            this.CantidadTextBox.Size = new System.Drawing.Size(100, 26);
+            this.CantidadTextBox.TabIndex = 9;
             // 
             // RutEmisorTextBox
             // 
@@ -105,13 +112,6 @@ namespace SimpleSDK_Demo
             this.label1.TabIndex = 0;
             this.label1.Text = "Tipo DTE";
             // 
-            // CantidadTextBox
-            // 
-            this.CantidadTextBox.Location = new System.Drawing.Point(523, 43);
-            this.CantidadTextBox.Name = "CantidadTextBox";
-            this.CantidadTextBox.Size = new System.Drawing.Size(100, 26);
-            this.CantidadTextBox.TabIndex = 9;
-            // 
             // DescargarCaf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -120,6 +120,7 @@ namespace SimpleSDK_Demo
             this.Controls.Add(this.groupBox1);
             this.Name = "DescargarCaf";
             this.Text = "Descargar Caf";
+            this.Load += new System.EventHandler(this.DescargarCaf_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
