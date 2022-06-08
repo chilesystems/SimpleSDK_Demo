@@ -154,6 +154,7 @@ namespace SimpleSDK_Demo
             this.ListadoButton.TabIndex = 0;
             this.ListadoButton.Text = "Traer Listado";
             this.ListadoButton.UseVisualStyleBackColor = true;
+            this.ListadoButton.Click += new System.EventHandler(this.ListadoButton_Click);
             // 
             // dataGridView1
             // 
@@ -355,6 +356,7 @@ namespace SimpleSDK_Demo
             this.Controls.Add(this.groupBox1);
             this.Name = "ListadoAnualBoletas";
             this.Text = "Listado Anual de Boletas";
+            this.Load += new System.EventHandler(this.ListadoAnualBoletas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
