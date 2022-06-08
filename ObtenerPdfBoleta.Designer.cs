@@ -149,6 +149,7 @@ namespace SimpleSDK_Demo
             this.DescargarPdfButton.TabIndex = 0;
             this.DescargarPdfButton.Text = "Descargar PDF";
             this.DescargarPdfButton.UseVisualStyleBackColor = true;
+            this.DescargarPdfButton.Click += new System.EventHandler(this.DescargarPdfButton_Click);
             // 
             // ObtenerPdfBoleta
             // 
@@ -158,6 +159,7 @@ namespace SimpleSDK_Demo
             this.Controls.Add(this.groupBox1);
             this.Name = "ObtenerPdfBoleta";
             this.Text = "Obtener PDF Boleta de Honorarios Electrónica";
+            this.Load += new System.EventHandler(this.ObtenerPdfBoleta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -32,15 +32,15 @@ namespace SimpleSDK_Demo
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CausaAnulacionErrorDigitacionRadioButton = new System.Windows.Forms.RadioButton();
+            this.CausaAnulacionServicioNoEfectuadoRadioButton = new System.Windows.Forms.RadioButton();
+            this.CausaAnulacionServicioNoPagadoRadioButton = new System.Windows.Forms.RadioButton();
             this.AnulaButton = new System.Windows.Forms.Button();
             this.MotivoLabel = new System.Windows.Forms.Label();
             this.FolioLabel = new System.Windows.Forms.Label();
             this.RutEmisorLabel = new System.Windows.Forms.Label();
             this.FolioTextBox = new System.Windows.Forms.TextBox();
             this.RutEmisorTextBox = new System.Windows.Forms.TextBox();
-            this.CausaAnulacionServicioNoPagadoRadioButton = new System.Windows.Forms.RadioButton();
-            this.CausaAnulacionServicioNoEfectuadoRadioButton = new System.Windows.Forms.RadioButton();
-            this.CausaAnulacionErrorDigitacionRadioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,36 @@ namespace SimpleSDK_Demo
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Boleta a Anular";
+            // 
+            // CausaAnulacionErrorDigitacionRadioButton
+            // 
+            this.CausaAnulacionErrorDigitacionRadioButton.Location = new System.Drawing.Point(118, 131);
+            this.CausaAnulacionErrorDigitacionRadioButton.Name = "CausaAnulacionErrorDigitacionRadioButton";
+            this.CausaAnulacionErrorDigitacionRadioButton.Size = new System.Drawing.Size(181, 24);
+            this.CausaAnulacionErrorDigitacionRadioButton.TabIndex = 9;
+            this.CausaAnulacionErrorDigitacionRadioButton.TabStop = true;
+            this.CausaAnulacionErrorDigitacionRadioButton.Text = "Error de Digitación";
+            this.CausaAnulacionErrorDigitacionRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // CausaAnulacionServicioNoEfectuadoRadioButton
+            // 
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.Location = new System.Drawing.Point(118, 101);
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.Name = "CausaAnulacionServicioNoEfectuadoRadioButton";
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.Size = new System.Drawing.Size(201, 24);
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.TabIndex = 8;
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.TabStop = true;
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.Text = "No se prestó el servicio";
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // CausaAnulacionServicioNoPagadoRadioButton
+            // 
+            this.CausaAnulacionServicioNoPagadoRadioButton.Location = new System.Drawing.Point(118, 71);
+            this.CausaAnulacionServicioNoPagadoRadioButton.Name = "CausaAnulacionServicioNoPagadoRadioButton";
+            this.CausaAnulacionServicioNoPagadoRadioButton.Size = new System.Drawing.Size(276, 24);
+            this.CausaAnulacionServicioNoPagadoRadioButton.TabIndex = 7;
+            this.CausaAnulacionServicioNoPagadoRadioButton.TabStop = true;
+            this.CausaAnulacionServicioNoPagadoRadioButton.Text = "El receptor no pagó los servicios";
+            this.CausaAnulacionServicioNoPagadoRadioButton.UseVisualStyleBackColor = true;
             // 
             // AnulaButton
             // 
@@ -112,36 +142,6 @@ namespace SimpleSDK_Demo
             this.RutEmisorTextBox.Name = "RutEmisorTextBox";
             this.RutEmisorTextBox.Size = new System.Drawing.Size(100, 26);
             this.RutEmisorTextBox.TabIndex = 0;
-            // 
-            // CausaAnulacionServicioNoPagadoRadioButton
-            // 
-            this.CausaAnulacionServicioNoPagadoRadioButton.Location = new System.Drawing.Point(118, 71);
-            this.CausaAnulacionServicioNoPagadoRadioButton.Name = "CausaAnulacionServicioNoPagadoRadioButton";
-            this.CausaAnulacionServicioNoPagadoRadioButton.Size = new System.Drawing.Size(276, 24);
-            this.CausaAnulacionServicioNoPagadoRadioButton.TabIndex = 7;
-            this.CausaAnulacionServicioNoPagadoRadioButton.TabStop = true;
-            this.CausaAnulacionServicioNoPagadoRadioButton.Text = "El receptor no pagó los servicios";
-            this.CausaAnulacionServicioNoPagadoRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // CausaAnulacionServicioNoEfectuadoRadioButton
-            // 
-            this.CausaAnulacionServicioNoEfectuadoRadioButton.Location = new System.Drawing.Point(118, 101);
-            this.CausaAnulacionServicioNoEfectuadoRadioButton.Name = "CausaAnulacionServicioNoEfectuadoRadioButton";
-            this.CausaAnulacionServicioNoEfectuadoRadioButton.Size = new System.Drawing.Size(201, 24);
-            this.CausaAnulacionServicioNoEfectuadoRadioButton.TabIndex = 8;
-            this.CausaAnulacionServicioNoEfectuadoRadioButton.TabStop = true;
-            this.CausaAnulacionServicioNoEfectuadoRadioButton.Text = "No se prestó el servicio";
-            this.CausaAnulacionServicioNoEfectuadoRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // CausaAnulacionErrorDigitacionRadioButton
-            // 
-            this.CausaAnulacionErrorDigitacionRadioButton.Location = new System.Drawing.Point(118, 131);
-            this.CausaAnulacionErrorDigitacionRadioButton.Name = "CausaAnulacionErrorDigitacionRadioButton";
-            this.CausaAnulacionErrorDigitacionRadioButton.Size = new System.Drawing.Size(181, 24);
-            this.CausaAnulacionErrorDigitacionRadioButton.TabIndex = 9;
-            this.CausaAnulacionErrorDigitacionRadioButton.TabStop = true;
-            this.CausaAnulacionErrorDigitacionRadioButton.Text = "Error de Digitación";
-            this.CausaAnulacionErrorDigitacionRadioButton.UseVisualStyleBackColor = true;
             // 
             // AnularBoleta
             // 
