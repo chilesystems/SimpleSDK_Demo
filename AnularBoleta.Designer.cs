@@ -34,56 +34,56 @@ namespace SimpleSDK_Demo
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.AnulaButton = new System.Windows.Forms.Button();
             this.MotivoLabel = new System.Windows.Forms.Label();
-            this.MotivoTextBox = new System.Windows.Forms.TextBox();
             this.FolioLabel = new System.Windows.Forms.Label();
             this.RutEmisorLabel = new System.Windows.Forms.Label();
             this.FolioTextBox = new System.Windows.Forms.TextBox();
             this.RutEmisorTextBox = new System.Windows.Forms.TextBox();
+            this.CausaAnulacionServicioNoPagadoRadioButton = new System.Windows.Forms.RadioButton();
+            this.CausaAnulacionServicioNoEfectuadoRadioButton = new System.Windows.Forms.RadioButton();
+            this.CausaAnulacionErrorDigitacionRadioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CausaAnulacionErrorDigitacionRadioButton);
+            this.groupBox1.Controls.Add(this.CausaAnulacionServicioNoEfectuadoRadioButton);
+            this.groupBox1.Controls.Add(this.CausaAnulacionServicioNoPagadoRadioButton);
             this.groupBox1.Controls.Add(this.AnulaButton);
             this.groupBox1.Controls.Add(this.MotivoLabel);
-            this.groupBox1.Controls.Add(this.MotivoTextBox);
             this.groupBox1.Controls.Add(this.FolioLabel);
             this.groupBox1.Controls.Add(this.RutEmisorLabel);
             this.groupBox1.Controls.Add(this.FolioTextBox);
             this.groupBox1.Controls.Add(this.RutEmisorTextBox);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(718, 111);
+            this.groupBox1.Size = new System.Drawing.Size(561, 186);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Boleta a Anular";
             // 
             // AnulaButton
             // 
-            this.AnulaButton.Location = new System.Drawing.Point(590, 37);
+            this.AnulaButton.Location = new System.Drawing.Point(450, 27);
             this.AnulaButton.Name = "AnulaButton";
             this.AnulaButton.Size = new System.Drawing.Size(95, 46);
             this.AnulaButton.TabIndex = 6;
             this.AnulaButton.Text = "Anular";
             this.AnulaButton.UseVisualStyleBackColor = true;
+            this.AnulaButton.Click += new System.EventHandler(this.AnulaButton_Click);
             // 
             // MotivoLabel
             // 
+            this.MotivoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MotivoLabel.Location = new System.Drawing.Point(22, 71);
             this.MotivoLabel.Name = "MotivoLabel";
             this.MotivoLabel.Size = new System.Drawing.Size(62, 23);
             this.MotivoLabel.TabIndex = 5;
             this.MotivoLabel.Text = "Motivo";
             // 
-            // MotivoTextBox
-            // 
-            this.MotivoTextBox.Location = new System.Drawing.Point(118, 68);
-            this.MotivoTextBox.Name = "MotivoTextBox";
-            this.MotivoTextBox.Size = new System.Drawing.Size(421, 26);
-            this.MotivoTextBox.TabIndex = 4;
-            // 
             // FolioLabel
             // 
+            this.FolioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FolioLabel.Location = new System.Drawing.Point(233, 40);
             this.FolioLabel.Name = "FolioLabel";
             this.FolioLabel.Size = new System.Drawing.Size(55, 23);
@@ -92,6 +92,7 @@ namespace SimpleSDK_Demo
             // 
             // RutEmisorLabel
             // 
+            this.RutEmisorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RutEmisorLabel.Location = new System.Drawing.Point(22, 40);
             this.RutEmisorLabel.Name = "RutEmisorLabel";
             this.RutEmisorLabel.Size = new System.Drawing.Size(90, 23);
@@ -112,20 +113,53 @@ namespace SimpleSDK_Demo
             this.RutEmisorTextBox.Size = new System.Drawing.Size(100, 26);
             this.RutEmisorTextBox.TabIndex = 0;
             // 
+            // CausaAnulacionServicioNoPagadoRadioButton
+            // 
+            this.CausaAnulacionServicioNoPagadoRadioButton.Location = new System.Drawing.Point(118, 71);
+            this.CausaAnulacionServicioNoPagadoRadioButton.Name = "CausaAnulacionServicioNoPagadoRadioButton";
+            this.CausaAnulacionServicioNoPagadoRadioButton.Size = new System.Drawing.Size(276, 24);
+            this.CausaAnulacionServicioNoPagadoRadioButton.TabIndex = 7;
+            this.CausaAnulacionServicioNoPagadoRadioButton.TabStop = true;
+            this.CausaAnulacionServicioNoPagadoRadioButton.Text = "El receptor no pagó los servicios";
+            this.CausaAnulacionServicioNoPagadoRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // CausaAnulacionServicioNoEfectuadoRadioButton
+            // 
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.Location = new System.Drawing.Point(118, 101);
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.Name = "CausaAnulacionServicioNoEfectuadoRadioButton";
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.Size = new System.Drawing.Size(201, 24);
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.TabIndex = 8;
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.TabStop = true;
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.Text = "No se prestó el servicio";
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // CausaAnulacionErrorDigitacionRadioButton
+            // 
+            this.CausaAnulacionErrorDigitacionRadioButton.Location = new System.Drawing.Point(118, 131);
+            this.CausaAnulacionErrorDigitacionRadioButton.Name = "CausaAnulacionErrorDigitacionRadioButton";
+            this.CausaAnulacionErrorDigitacionRadioButton.Size = new System.Drawing.Size(181, 24);
+            this.CausaAnulacionErrorDigitacionRadioButton.TabIndex = 9;
+            this.CausaAnulacionErrorDigitacionRadioButton.TabStop = true;
+            this.CausaAnulacionErrorDigitacionRadioButton.Text = "Error de Digitación";
+            this.CausaAnulacionErrorDigitacionRadioButton.UseVisualStyleBackColor = true;
+            // 
             // AnularBoleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 132);
+            this.ClientSize = new System.Drawing.Size(583, 210);
             this.Controls.Add(this.groupBox1);
             this.Name = "AnularBoleta";
             this.Text = "Anular Boleta de Honorarios";
+            this.Load += new System.EventHandler(this.AnularBoleta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.TextBox MotivoTextBox;
+        private System.Windows.Forms.RadioButton CausaAnulacionServicioNoPagadoRadioButton;
+        private System.Windows.Forms.RadioButton CausaAnulacionServicioNoEfectuadoRadioButton;
+        private System.Windows.Forms.RadioButton CausaAnulacionErrorDigitacionRadioButton;
 
         private System.Windows.Forms.TextBox RutEmisorTextBox;
 
