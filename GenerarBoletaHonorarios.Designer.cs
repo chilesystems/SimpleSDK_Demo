@@ -116,12 +116,12 @@ namespace SimpleSDK_Demo
             this.ReceptorRetencionRadioButton.Name = "ReceptorRetencionRadioButton";
             this.ReceptorRetencionRadioButton.Size = new System.Drawing.Size(104, 24);
             this.ReceptorRetencionRadioButton.TabIndex = 5;
-            this.ReceptorRetencionRadioButton.TabStop = true;
             this.ReceptorRetencionRadioButton.Text = "Receptor";
             this.ReceptorRetencionRadioButton.UseVisualStyleBackColor = true;
             // 
             // RetencionContribuyenteRadioButton
             // 
+            this.RetencionContribuyenteRadioButton.Checked = true;
             this.RetencionContribuyenteRadioButton.Location = new System.Drawing.Point(492, 58);
             this.RetencionContribuyenteRadioButton.Name = "RetencionContribuyenteRadioButton";
             this.RetencionContribuyenteRadioButton.Size = new System.Drawing.Size(136, 24);

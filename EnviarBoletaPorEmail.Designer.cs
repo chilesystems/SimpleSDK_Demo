@@ -32,6 +32,8 @@ namespace SimpleSDK_Demo
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CorreoTextBox = new System.Windows.Forms.TextBox();
+            this.CorreoLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.AnioTextbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,8 +41,6 @@ namespace SimpleSDK_Demo
             this.label1 = new System.Windows.Forms.Label();
             this.RutEmisorTextbox = new System.Windows.Forms.TextBox();
             this.EnviarEmailButton = new System.Windows.Forms.Button();
-            this.CorreoLabel = new System.Windows.Forms.Label();
-            this.CorreoTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,22 @@ namespace SimpleSDK_Demo
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Boleta de Honorarios Electrónica";
+            // 
+            // CorreoTextBox
+            // 
+            this.CorreoTextBox.Location = new System.Drawing.Point(639, 45);
+            this.CorreoTextBox.Name = "CorreoTextBox";
+            this.CorreoTextBox.Size = new System.Drawing.Size(311, 26);
+            this.CorreoTextBox.TabIndex = 8;
+            // 
+            // CorreoLabel
+            // 
+            this.CorreoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CorreoLabel.Location = new System.Drawing.Point(562, 48);
+            this.CorreoLabel.Name = "CorreoLabel";
+            this.CorreoLabel.Size = new System.Drawing.Size(71, 23);
+            this.CorreoLabel.TabIndex = 7;
+            this.CorreoLabel.Text = "Correo";
             // 
             // label3
             // 
@@ -119,22 +135,6 @@ namespace SimpleSDK_Demo
             this.EnviarEmailButton.Text = "Enviar Email";
             this.EnviarEmailButton.UseVisualStyleBackColor = true;
             this.EnviarEmailButton.Click += new System.EventHandler(this.EnviarEmailButton_Click);
-            // 
-            // CorreoLabel
-            // 
-            this.CorreoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CorreoLabel.Location = new System.Drawing.Point(562, 48);
-            this.CorreoLabel.Name = "CorreoLabel";
-            this.CorreoLabel.Size = new System.Drawing.Size(71, 23);
-            this.CorreoLabel.TabIndex = 7;
-            this.CorreoLabel.Text = "Correo";
-            // 
-            // CorreoTextBox
-            // 
-            this.CorreoTextBox.Location = new System.Drawing.Point(639, 45);
-            this.CorreoTextBox.Name = "CorreoTextBox";
-            this.CorreoTextBox.Size = new System.Drawing.Size(311, 26);
-            this.CorreoTextBox.TabIndex = 8;
             // 
             // EnviarBoletaPorEmail
             // 

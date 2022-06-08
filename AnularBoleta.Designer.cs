@@ -66,9 +66,8 @@ namespace SimpleSDK_Demo
             // 
             this.CausaAnulacionErrorDigitacionRadioButton.Location = new System.Drawing.Point(118, 131);
             this.CausaAnulacionErrorDigitacionRadioButton.Name = "CausaAnulacionErrorDigitacionRadioButton";
-            this.CausaAnulacionErrorDigitacionRadioButton.Size = new System.Drawing.Size(181, 24);
+            this.CausaAnulacionErrorDigitacionRadioButton.Size = new System.Drawing.Size(181, 37);
             this.CausaAnulacionErrorDigitacionRadioButton.TabIndex = 9;
-            this.CausaAnulacionErrorDigitacionRadioButton.TabStop = true;
             this.CausaAnulacionErrorDigitacionRadioButton.Text = "Error de Digitación";
             this.CausaAnulacionErrorDigitacionRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -76,14 +75,14 @@ namespace SimpleSDK_Demo
             // 
             this.CausaAnulacionServicioNoEfectuadoRadioButton.Location = new System.Drawing.Point(118, 101);
             this.CausaAnulacionServicioNoEfectuadoRadioButton.Name = "CausaAnulacionServicioNoEfectuadoRadioButton";
-            this.CausaAnulacionServicioNoEfectuadoRadioButton.Size = new System.Drawing.Size(201, 24);
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.Size = new System.Drawing.Size(230, 24);
             this.CausaAnulacionServicioNoEfectuadoRadioButton.TabIndex = 8;
-            this.CausaAnulacionServicioNoEfectuadoRadioButton.TabStop = true;
             this.CausaAnulacionServicioNoEfectuadoRadioButton.Text = "No se prestó el servicio";
             this.CausaAnulacionServicioNoEfectuadoRadioButton.UseVisualStyleBackColor = true;
             // 
             // CausaAnulacionServicioNoPagadoRadioButton
             // 
+            this.CausaAnulacionServicioNoPagadoRadioButton.Checked = true;
             this.CausaAnulacionServicioNoPagadoRadioButton.Location = new System.Drawing.Point(118, 71);
             this.CausaAnulacionServicioNoPagadoRadioButton.Name = "CausaAnulacionServicioNoPagadoRadioButton";
             this.CausaAnulacionServicioNoPagadoRadioButton.Size = new System.Drawing.Size(276, 24);

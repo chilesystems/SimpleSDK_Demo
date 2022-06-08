@@ -79,12 +79,12 @@ namespace SimpleSDK_Demo
             this.EmitidaRadioButton.Name = "EmitidaRadioButton";
             this.EmitidaRadioButton.Size = new System.Drawing.Size(104, 24);
             this.EmitidaRadioButton.TabIndex = 8;
-            this.EmitidaRadioButton.TabStop = true;
             this.EmitidaRadioButton.Text = "Emitida";
             this.EmitidaRadioButton.UseVisualStyleBackColor = true;
             // 
             // RecibidaRadioButton
             // 
+            this.RecibidaRadioButton.Checked = true;
             this.RecibidaRadioButton.Location = new System.Drawing.Point(643, 49);
             this.RecibidaRadioButton.Name = "RecibidaRadioButton";
             this.RecibidaRadioButton.Size = new System.Drawing.Size(104, 24);
