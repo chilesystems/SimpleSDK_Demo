@@ -32,8 +32,8 @@ namespace SimpleSDK_Demo
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.HastaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.DesdeDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.FolioHastaTextBox = new System.Windows.Forms.TextBox();
+            this.FolioDesdeTextBox = new System.Windows.Forms.TextBox();
             this.RutEmisorTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.AnularButton = new System.Windows.Forms.Button();
@@ -46,8 +46,8 @@ namespace SimpleSDK_Demo
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.HastaDateTimePicker);
-            this.groupBox1.Controls.Add(this.DesdeDateTimePicker);
+            this.groupBox1.Controls.Add(this.FolioHastaTextBox);
+            this.groupBox1.Controls.Add(this.FolioDesdeTextBox);
             this.groupBox1.Controls.Add(this.RutEmisorTextBox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.AnularButton);
@@ -62,23 +62,19 @@ namespace SimpleSDK_Demo
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
-            // HastaDateTimePicker
+            // FolioHastaTextBox
             // 
-            this.HastaDateTimePicker.CustomFormat = "dd-MM-yyyy";
-            this.HastaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.HastaDateTimePicker.Location = new System.Drawing.Point(507, 62);
-            this.HastaDateTimePicker.Name = "HastaDateTimePicker";
-            this.HastaDateTimePicker.Size = new System.Drawing.Size(146, 26);
-            this.HastaDateTimePicker.TabIndex = 10;
+            this.FolioHastaTextBox.Location = new System.Drawing.Point(517, 62);
+            this.FolioHastaTextBox.Name = "FolioHastaTextBox";
+            this.FolioHastaTextBox.Size = new System.Drawing.Size(100, 26);
+            this.FolioHastaTextBox.TabIndex = 10;
             // 
-            // DesdeDateTimePicker
+            // FolioDesdeTextBox
             // 
-            this.DesdeDateTimePicker.CustomFormat = "dd-MM-yyyy";
-            this.DesdeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DesdeDateTimePicker.Location = new System.Drawing.Point(507, 17);
-            this.DesdeDateTimePicker.Name = "DesdeDateTimePicker";
-            this.DesdeDateTimePicker.Size = new System.Drawing.Size(146, 26);
-            this.DesdeDateTimePicker.TabIndex = 9;
+            this.FolioDesdeTextBox.Location = new System.Drawing.Point(517, 17);
+            this.FolioDesdeTextBox.Name = "FolioDesdeTextBox";
+            this.FolioDesdeTextBox.Size = new System.Drawing.Size(100, 26);
+            this.FolioDesdeTextBox.TabIndex = 9;
             // 
             // RutEmisorTextBox
             // 
@@ -103,6 +99,7 @@ namespace SimpleSDK_Demo
             this.AnularButton.TabIndex = 6;
             this.AnularButton.Text = "Anular";
             this.AnularButton.UseVisualStyleBackColor = true;
+            this.AnularButton.Click += new System.EventHandler(this.AnularButton_Click);
             // 
             // label3
             // 
@@ -143,14 +140,14 @@ namespace SimpleSDK_Demo
             this.Controls.Add(this.groupBox1);
             this.Name = "AnularMasivamente";
             this.Text = "Anulación de Folios Masiva";
+            this.Load += new System.EventHandler(this.AnularMasivamente_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.DateTimePicker HastaDateTimePicker;
-
-        private System.Windows.Forms.DateTimePicker DesdeDateTimePicker;
+        private System.Windows.Forms.TextBox FolioDesdeTextBox;
+        private System.Windows.Forms.TextBox FolioHastaTextBox;
 
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox RutEmisorTextBox;
