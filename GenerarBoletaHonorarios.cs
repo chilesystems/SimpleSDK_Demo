@@ -40,7 +40,7 @@ namespace SimpleSDK_Demo
                 // todo detalles y receptor
                 var input = new BHData
                 {
-                    RutUsuario = rutUsuario,
+                    RutCertificado =  rutUsuario,
                     Password = password,
                     CertificadoB64 = certificado,
                     RutEmisor = rutEmisor,

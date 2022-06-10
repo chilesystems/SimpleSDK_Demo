@@ -36,7 +36,7 @@ namespace SimpleSDK_Demo
                 var anio = int.Parse(AnioTextbox.Text);
                 var input = new BHData
                 {
-                    RutUsuario = rutUsuario,
+                    RutCertificado =  rutUsuario,
                     Password = password,
                     CertificadoB64 = certificado,
                     Correo = correo

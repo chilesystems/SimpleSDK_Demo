@@ -43,7 +43,7 @@ namespace SimpleSDK_Demo
                 var apikey = handler.Configuracion.APIKey;
                 var input = new BasicData()
                 {
-                    RutUsuario = rutUsuario,
+                    RutCertificado =  rutUsuario,
                     Password = password,
                     CertificadoB64 = certificado,
                 };

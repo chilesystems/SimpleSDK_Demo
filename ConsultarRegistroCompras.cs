@@ -41,7 +41,7 @@ namespace SimpleSDK_Demo
             
                 RCVData basicData = new RCVData
                 {
-                    RutUsuario = rutUsuario,
+                    RutCertificado =  rutUsuario,
                     Password = password,
                     RutEmpresa = rutEmpresa,
                     Ambiente = (int)Ambiente.AmbienteEnum.Certificacion,

@@ -36,7 +36,7 @@ namespace SimpleSDK_Demo
                 var apikey = handler.Configuracion.APIKey;
                 var input = new FoliosData
                 {
-                    RutUsuario = rutUsuario,
+                    RutCertificado =  rutUsuario,
                     Password = password,
                     RutEmpresa = rutEmisor,
                     Ambiente = 0,

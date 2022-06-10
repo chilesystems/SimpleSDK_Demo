@@ -37,7 +37,7 @@ namespace SimpleSDK_Demo
                 var apikey = handler.Configuracion.APIKey;
                 var input = new FoliosData
                 {
-                    RutUsuario = rutUsuario,
+                    RutCertificado =  rutUsuario,
                     Password = password,
                     RutEmpresa = rutEmisor,
                     Ambiente = 0,
@@ -62,11 +62,6 @@ namespace SimpleSDK_Demo
             {
                 Console.WriteLine(exception);
             }
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

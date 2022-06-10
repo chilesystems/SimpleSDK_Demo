@@ -146,7 +146,6 @@ namespace SimpleSDK_Demo
             this.label3.Size = new System.Drawing.Size(67, 23);
             this.label3.TabIndex = 4;
             this.label3.Text = "Hasta";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http;
 using System.Windows.Forms;
 using SimpleSDK.Helpers;
 using SimpleSDK.Models.Folios;
@@ -14,20 +15,15 @@ namespace SimpleSDK_Demo
             InitializeComponent();
         }
         
-        private void DescargarCaf_Load(object sender, EventArgs e)
-        {
-            handler.Configuracion = new Configuracion();
-            handler.Configuracion.LeerArchivo();
-            RutEmisorTextBox.Text = handler.Configuracion.Empresa.RutEmpresa;
-            RutEmisorTextBox.Enabled = false;
-        }
-
         private async void ConsultarButton_Click(object sender, EventArgs e)
         {
             try
             {
                 var rutEmisor = RutEmisorTextBox.Text;
                 var tipoDte = int.Parse(TipoDteTextBox.Text);
+                int ambiente = 0;
+                if (AmbienteProducciónRadioButton.Checked)
+                    ambiente = 0;
                 
                 var rutaCertificado = handler.Configuracion.Certificado.Ruta;
                 var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
@@ -36,15 +32,15 @@ namespace SimpleSDK_Demo
                 var apikey = handler.Configuracion.APIKey;
                 var input = new FoliosData
                 {
-                    RutUsuario = rutUsuario,
+                    RutCertificado = rutUsuario,
                     Password = password,
                     RutEmpresa = rutEmisor,
-                    Ambiente = 0,
+                    Ambiente = ambiente,
                     CertificadoB64 = certificado,
                     Tipo = tipoDte,
                 };
                 
-                var (hasResponse, message, maximoFolios) = await FoliosHelper.ConsultarMaximoFoliosDisponibles(input, apikey);
+                var (hasResponse, message, maximoFolios) = await FoliosHelper.ConsultarMaximoFoliosDisponibles(input, apikey, new WinHttpHandler());
                 if (hasResponse)
                 {
                     var buttons = MessageBoxButtons.OK;
@@ -54,13 +50,24 @@ namespace SimpleSDK_Demo
                 }
                 else
                 {
-                    Console.WriteLine(message);
+                    var buttons = MessageBoxButtons.OK;
+                    var messageBoxMessage = message;
+                    var caption = "Resultado Consulta";
+                    MessageBox.Show(messageBoxMessage, caption, buttons);
                 }
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception);
+                Console.WriteLine(exception.Message + Environment.NewLine + exception.InnerException?.Message ?? "");
             }
+        }
+
+        private void ConsultarMaximoFolios_Load(object sender, EventArgs e)
+        {
+            handler.Configuracion = new Configuracion();
+            handler.Configuracion.LeerArchivo();
+            RutEmisorTextBox.Text = handler.Configuracion.Empresa.RutEmpresa;
+            RutEmisorTextBox.Enabled = false;
         }
     }
 }
