@@ -391,7 +391,7 @@ namespace SimpleSDK_Demo
 
         private void RegistroComprasButton_Click(object sender, EventArgs e)
         {
-            var formulario = new ConsultarRegistroCompras();
+            var formulario = new ConsultarRegistroCompras(radioCertificacion.Checked);
             formulario.ShowDialog();
         }
 

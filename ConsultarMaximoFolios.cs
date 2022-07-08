@@ -28,7 +28,7 @@ namespace SimpleSDK_Demo
                 var rutaCertificado = handler.Configuracion.Certificado.Ruta;
                 var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
                 var rutUsuario = handler.Configuracion.Certificado.Rut;
-                var password = handler.Configuracion.Certificado.Rut;
+                var password = handler.Configuracion.Certificado.Password;
                 var apikey = handler.Configuracion.APIKey;
                 var input = new FoliosData
                 {
