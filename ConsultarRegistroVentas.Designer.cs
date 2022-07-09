@@ -31,111 +31,35 @@ namespace SimpleSDK_Demo
         /// </summary>
         private void InitializeComponent()
         {
+            this.ResultadoGroupBox = new System.Windows.Forms.GroupBox();
+            this.dataGrid1 = new System.Windows.Forms.DataGrid();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioProduccion = new System.Windows.Forms.RadioButton();
+            this.radioCertificacion = new System.Windows.Forms.RadioButton();
             this.DatosConsultaGroupBox = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkDetallado = new System.Windows.Forms.CheckBox();
             this.RutUsuarioTextBox = new System.Windows.Forms.TextBox();
-            this.RutUsuarioLabel = new System.Windows.Forms.Label();
             this.RutEmpresaTextBox = new System.Windows.Forms.TextBox();
             this.RutEmpresaLabel = new System.Windows.Forms.Label();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.FechaLabel = new System.Windows.Forms.Label();
-            this.buttonConsultar = new System.Windows.Forms.Button();
             this.MensualCheckBox = new System.Windows.Forms.CheckBox();
-            this.ResultadoGroupBox = new System.Windows.Forms.GroupBox();
-            this.dataGrid1 = new System.Windows.Forms.DataGrid();
-            this.DatosConsultaGroupBox.SuspendLayout();
+            this.buttonConsultar = new System.Windows.Forms.Button();
             this.ResultadoGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.DatosConsultaGroupBox.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // DatosConsultaGroupBox
-            // 
-            this.DatosConsultaGroupBox.Controls.Add(this.RutUsuarioTextBox);
-            this.DatosConsultaGroupBox.Controls.Add(this.RutUsuarioLabel);
-            this.DatosConsultaGroupBox.Controls.Add(this.RutEmpresaTextBox);
-            this.DatosConsultaGroupBox.Controls.Add(this.RutEmpresaLabel);
-            this.DatosConsultaGroupBox.Controls.Add(this.FechaDateTimePicker);
-            this.DatosConsultaGroupBox.Controls.Add(this.FechaLabel);
-            this.DatosConsultaGroupBox.Controls.Add(this.buttonConsultar);
-            this.DatosConsultaGroupBox.Controls.Add(this.MensualCheckBox);
-            this.DatosConsultaGroupBox.Location = new System.Drawing.Point(12, 12);
-            this.DatosConsultaGroupBox.Name = "DatosConsultaGroupBox";
-            this.DatosConsultaGroupBox.Size = new System.Drawing.Size(776, 113);
-            this.DatosConsultaGroupBox.TabIndex = 9;
-            this.DatosConsultaGroupBox.TabStop = false;
-            this.DatosConsultaGroupBox.Text = "Datos Consulta";
-            // 
-            // RutUsuarioTextBox
-            // 
-            this.RutUsuarioTextBox.Location = new System.Drawing.Point(410, 17);
-            this.RutUsuarioTextBox.Name = "RutUsuarioTextBox";
-            this.RutUsuarioTextBox.Size = new System.Drawing.Size(100, 26);
-            this.RutUsuarioTextBox.TabIndex = 16;
-            // 
-            // RutUsuarioLabel
-            // 
-            this.RutUsuarioLabel.Location = new System.Drawing.Point(276, 20);
-            this.RutUsuarioLabel.Name = "RutUsuarioLabel";
-            this.RutUsuarioLabel.Size = new System.Drawing.Size(128, 23);
-            this.RutUsuarioLabel.TabIndex = 15;
-            this.RutUsuarioLabel.Text = "RUT Usuario";
-            // 
-            // RutEmpresaTextBox
-            // 
-            this.RutEmpresaTextBox.Location = new System.Drawing.Point(161, 20);
-            this.RutEmpresaTextBox.Name = "RutEmpresaTextBox";
-            this.RutEmpresaTextBox.Size = new System.Drawing.Size(100, 26);
-            this.RutEmpresaTextBox.TabIndex = 14;
-            // 
-            // RutEmpresaLabel
-            // 
-            this.RutEmpresaLabel.Location = new System.Drawing.Point(32, 23);
-            this.RutEmpresaLabel.Name = "RutEmpresaLabel";
-            this.RutEmpresaLabel.Size = new System.Drawing.Size(128, 23);
-            this.RutEmpresaLabel.TabIndex = 13;
-            this.RutEmpresaLabel.Text = "RUT Empresa";
-            // 
-            // FechaDateTimePicker
-            // 
-            this.FechaDateTimePicker.CustomFormat = "dd/MM/yyyy";
-            this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaDateTimePicker.Location = new System.Drawing.Point(96, 69);
-            this.FechaDateTimePicker.Name = "FechaDateTimePicker";
-            this.FechaDateTimePicker.Size = new System.Drawing.Size(200, 26);
-            this.FechaDateTimePicker.TabIndex = 12;
-            // 
-            // FechaLabel
-            // 
-            this.FechaLabel.Location = new System.Drawing.Point(36, 69);
-            this.FechaLabel.Name = "FechaLabel";
-            this.FechaLabel.Size = new System.Drawing.Size(54, 23);
-            this.FechaLabel.TabIndex = 11;
-            this.FechaLabel.Text = "Fecha";
-            // 
-            // buttonConsultar
-            // 
-            this.buttonConsultar.Location = new System.Drawing.Point(626, 51);
-            this.buttonConsultar.Name = "buttonConsultar";
-            this.buttonConsultar.Size = new System.Drawing.Size(122, 44);
-            this.buttonConsultar.TabIndex = 10;
-            this.buttonConsultar.Text = "Consultar";
-            this.buttonConsultar.UseVisualStyleBackColor = true;
-            this.buttonConsultar.Click += new System.EventHandler(this.buttonConsultar_Click);
-            // 
-            // MensualCheckBox
-            // 
-            this.MensualCheckBox.Location = new System.Drawing.Point(428, 71);
-            this.MensualCheckBox.Name = "MensualCheckBox";
-            this.MensualCheckBox.Size = new System.Drawing.Size(104, 24);
-            this.MensualCheckBox.TabIndex = 9;
-            this.MensualCheckBox.Text = "Mensual";
-            this.MensualCheckBox.UseVisualStyleBackColor = true;
             // 
             // ResultadoGroupBox
             // 
             this.ResultadoGroupBox.Controls.Add(this.dataGrid1);
-            this.ResultadoGroupBox.Location = new System.Drawing.Point(12, 140);
+            this.ResultadoGroupBox.Location = new System.Drawing.Point(12, 88);
+            this.ResultadoGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResultadoGroupBox.Name = "ResultadoGroupBox";
-            this.ResultadoGroupBox.Size = new System.Drawing.Size(776, 309);
+            this.ResultadoGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ResultadoGroupBox.Size = new System.Drawing.Size(1025, 481);
             this.ResultadoGroupBox.TabIndex = 8;
             this.ResultadoGroupBox.TabStop = false;
             this.ResultadoGroupBox.Text = "Resultado";
@@ -144,40 +68,190 @@ namespace SimpleSDK_Demo
             // 
             this.dataGrid1.DataMember = "";
             this.dataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGrid1.Location = new System.Drawing.Point(6, 31);
+            this.dataGrid1.Location = new System.Drawing.Point(5, 25);
+            this.dataGrid1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.Size = new System.Drawing.Size(764, 264);
+            this.dataGrid1.Size = new System.Drawing.Size(1014, 446);
             this.dataGrid1.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioProduccion);
+            this.groupBox1.Controls.Add(this.radioCertificacion);
+            this.groupBox1.Location = new System.Drawing.Point(813, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(224, 71);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ambiente";
+            // 
+            // radioProduccion
+            // 
+            this.radioProduccion.AutoSize = true;
+            this.radioProduccion.Location = new System.Drawing.Point(118, 35);
+            this.radioProduccion.Name = "radioProduccion";
+            this.radioProduccion.Size = new System.Drawing.Size(100, 21);
+            this.radioProduccion.TabIndex = 1;
+            this.radioProduccion.TabStop = true;
+            this.radioProduccion.Text = "Producción";
+            this.radioProduccion.UseVisualStyleBackColor = true;
+            // 
+            // radioCertificacion
+            // 
+            this.radioCertificacion.AutoSize = true;
+            this.radioCertificacion.Location = new System.Drawing.Point(6, 35);
+            this.radioCertificacion.Name = "radioCertificacion";
+            this.radioCertificacion.Size = new System.Drawing.Size(106, 21);
+            this.radioCertificacion.TabIndex = 0;
+            this.radioCertificacion.TabStop = true;
+            this.radioCertificacion.Text = "Certificación";
+            this.radioCertificacion.UseVisualStyleBackColor = true;
+            // 
+            // DatosConsultaGroupBox
+            // 
+            this.DatosConsultaGroupBox.Controls.Add(this.label1);
+            this.DatosConsultaGroupBox.Controls.Add(this.checkDetallado);
+            this.DatosConsultaGroupBox.Controls.Add(this.RutUsuarioTextBox);
+            this.DatosConsultaGroupBox.Controls.Add(this.RutEmpresaTextBox);
+            this.DatosConsultaGroupBox.Controls.Add(this.RutEmpresaLabel);
+            this.DatosConsultaGroupBox.Controls.Add(this.FechaDateTimePicker);
+            this.DatosConsultaGroupBox.Controls.Add(this.FechaLabel);
+            this.DatosConsultaGroupBox.Controls.Add(this.MensualCheckBox);
+            this.DatosConsultaGroupBox.Location = new System.Drawing.Point(12, 11);
+            this.DatosConsultaGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DatosConsultaGroupBox.Name = "DatosConsultaGroupBox";
+            this.DatosConsultaGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DatosConsultaGroupBox.Size = new System.Drawing.Size(795, 73);
+            this.DatosConsultaGroupBox.TabIndex = 12;
+            this.DatosConsultaGroupBox.TabStop = false;
+            this.DatosConsultaGroupBox.Text = "Datos Consulta";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(206, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 17);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "RUT Usuario:";
+            // 
+            // checkDetallado
+            // 
+            this.checkDetallado.Location = new System.Drawing.Point(503, 35);
+            this.checkDetallado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkDetallado.Name = "checkDetallado";
+            this.checkDetallado.Size = new System.Drawing.Size(97, 19);
+            this.checkDetallado.TabIndex = 17;
+            this.checkDetallado.Text = "Detallado";
+            this.checkDetallado.UseVisualStyleBackColor = true;
+            // 
+            // RutUsuarioTextBox
+            // 
+            this.RutUsuarioTextBox.Location = new System.Drawing.Point(306, 32);
+            this.RutUsuarioTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RutUsuarioTextBox.Name = "RutUsuarioTextBox";
+            this.RutUsuarioTextBox.Size = new System.Drawing.Size(89, 22);
+            this.RutUsuarioTextBox.TabIndex = 16;
+            // 
+            // RutEmpresaTextBox
+            // 
+            this.RutEmpresaTextBox.Location = new System.Drawing.Point(111, 32);
+            this.RutEmpresaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RutEmpresaTextBox.Name = "RutEmpresaTextBox";
+            this.RutEmpresaTextBox.Size = new System.Drawing.Size(89, 22);
+            this.RutEmpresaTextBox.TabIndex = 14;
+            // 
+            // RutEmpresaLabel
+            // 
+            this.RutEmpresaLabel.Location = new System.Drawing.Point(6, 35);
+            this.RutEmpresaLabel.Name = "RutEmpresaLabel";
+            this.RutEmpresaLabel.Size = new System.Drawing.Size(114, 18);
+            this.RutEmpresaLabel.TabIndex = 13;
+            this.RutEmpresaLabel.Text = "RUT Empresa:";
+            // 
+            // FechaDateTimePicker
+            // 
+            this.FechaDateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(662, 34);
+            this.FechaDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FechaDateTimePicker.Name = "FechaDateTimePicker";
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(112, 22);
+            this.FechaDateTimePicker.TabIndex = 12;
+            // 
+            // FechaLabel
+            // 
+            this.FechaLabel.Location = new System.Drawing.Point(601, 37);
+            this.FechaLabel.Name = "FechaLabel";
+            this.FechaLabel.Size = new System.Drawing.Size(54, 18);
+            this.FechaLabel.TabIndex = 11;
+            this.FechaLabel.Text = "Fecha:";
+            // 
+            // MensualCheckBox
+            // 
+            this.MensualCheckBox.Location = new System.Drawing.Point(412, 35);
+            this.MensualCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MensualCheckBox.Name = "MensualCheckBox";
+            this.MensualCheckBox.Size = new System.Drawing.Size(92, 19);
+            this.MensualCheckBox.TabIndex = 9;
+            this.MensualCheckBox.Text = "Mensual";
+            this.MensualCheckBox.UseVisualStyleBackColor = true;
+            this.MensualCheckBox.CheckedChanged += new System.EventHandler(this.MensualCheckBox_CheckedChanged);
+            // 
+            // buttonConsultar
+            // 
+            this.buttonConsultar.Location = new System.Drawing.Point(929, 575);
+            this.buttonConsultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonConsultar.Name = "buttonConsultar";
+            this.buttonConsultar.Size = new System.Drawing.Size(108, 35);
+            this.buttonConsultar.TabIndex = 14;
+            this.buttonConsultar.Text = "Consultar";
+            this.buttonConsultar.UseVisualStyleBackColor = true;
+            this.buttonConsultar.Click += new System.EventHandler(this.buttonConsultar_Click);
             // 
             // ConsultarRegistroVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 466);
+            this.ClientSize = new System.Drawing.Size(1050, 621);
+            this.Controls.Add(this.buttonConsultar);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DatosConsultaGroupBox);
             this.Controls.Add(this.ResultadoGroupBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ConsultarRegistroVentas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Registro de Ventas";
             this.Load += new System.EventHandler(this.ConsultarRegistroVentas_Load);
-            this.DatosConsultaGroupBox.ResumeLayout(false);
-            this.DatosConsultaGroupBox.PerformLayout();
             this.ResultadoGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.DatosConsultaGroupBox.ResumeLayout(false);
+            this.DatosConsultaGroupBox.PerformLayout();
             this.ResumeLayout(false);
-        }
 
-        private System.Windows.Forms.GroupBox DatosConsultaGroupBox;
-        private System.Windows.Forms.TextBox RutUsuarioTextBox;
-        private System.Windows.Forms.Label RutUsuarioLabel;
-        private System.Windows.Forms.TextBox RutEmpresaTextBox;
-        private System.Windows.Forms.Label RutEmpresaLabel;
-        private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
-        private System.Windows.Forms.Label FechaLabel;
-        private System.Windows.Forms.Button buttonConsultar;
-        private System.Windows.Forms.CheckBox MensualCheckBox;
+        }
         private System.Windows.Forms.GroupBox ResultadoGroupBox;
         private System.Windows.Forms.DataGrid dataGrid1;
 
         #endregion
+
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioProduccion;
+        private System.Windows.Forms.RadioButton radioCertificacion;
+        private System.Windows.Forms.GroupBox DatosConsultaGroupBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkDetallado;
+        private System.Windows.Forms.TextBox RutUsuarioTextBox;
+        private System.Windows.Forms.TextBox RutEmpresaTextBox;
+        private System.Windows.Forms.Label RutEmpresaLabel;
+        private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
+        private System.Windows.Forms.Label FechaLabel;
+        private System.Windows.Forms.CheckBox MensualCheckBox;
+        private System.Windows.Forms.Button buttonConsultar;
     }
 }
