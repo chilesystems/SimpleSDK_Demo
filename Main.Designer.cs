@@ -442,6 +442,7 @@ namespace SimpleSDK_Demo
             this.RegistroVentasButton.TabIndex = 1;
             this.RegistroVentasButton.Text = "Registro de Ventas";
             this.RegistroVentasButton.UseVisualStyleBackColor = true;
+            this.RegistroVentasButton.Click += new System.EventHandler(this.RegistroVentasButton_Click);
             // 
             // RegistroComprasButton
             // 
@@ -452,6 +453,7 @@ namespace SimpleSDK_Demo
             this.RegistroComprasButton.TabIndex = 0;
             this.RegistroComprasButton.Text = "Registro de Compras";
             this.RegistroComprasButton.UseVisualStyleBackColor = true;
+            this.RegistroComprasButton.Click += new System.EventHandler(this.RegistroComprasButton_Click);
             // 
             // FoliosGroupBox
             // 
