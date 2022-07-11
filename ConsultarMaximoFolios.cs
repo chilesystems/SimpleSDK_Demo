@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net.Http;
 using System.Windows.Forms;
 using SimpleSDK.Helpers;
@@ -10,21 +11,34 @@ namespace SimpleSDK_Demo
     public partial class ConsultarMaximoFolios : Form
     {
         Helper handler = new Helper();
-        public ConsultarMaximoFolios()
+        public ConsultarMaximoFolios(bool certificacion = false)
         {
             InitializeComponent();
+            radioCertificacion.Checked = certificacion;
+            radioProduccion.Checked = !certificacion;
         }
-        
+
         private async void ConsultarButton_Click(object sender, EventArgs e)
         {
             try
             {
+                Enum.TryParse(comboTipo.SelectedItem.ToString(), out SimpleSDK.Enum.TipoDTE.DTEFoliosType tipoDTE);
+                if (tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.BoletaElectronica || tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.BoletaElectronicaExenta
+                    || tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.FacturaElectronicaExenta || tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.FacturaExportacionElectronica
+                    || tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.NotaCreditoExportacionElectronica || tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.NotaDebitoExportacionElectronica
+                    || tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.GuiaDespachoElectronica)
+                {
+                    MessageBox.Show("El tipo seleccionado no tiene un límite establecido de documentos a descargar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    labelFoliosDisponibles.Text = "Sin límite";
+                    return;
+                }
+                Loading.ShowLoading(ConsultarButton);
+
                 var rutEmisor = RutEmisorTextBox.Text;
-                var tipoDte = int.Parse(TipoDteTextBox.Text);
-                int ambiente = 0;
-                if (AmbienteProducciónRadioButton.Checked)
+                int ambiente = 1;
+                if (radioProduccion.Checked)
                     ambiente = 0;
-                
+
                 var rutaCertificado = handler.Configuracion.Certificado.Ruta;
                 var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
                 var rutUsuario = handler.Configuracion.Certificado.Rut;
@@ -37,29 +51,25 @@ namespace SimpleSDK_Demo
                     RutEmpresa = rutEmisor,
                     Ambiente = ambiente,
                     CertificadoB64 = certificado,
-                    Tipo = tipoDte,
+                    Tipo = (int)tipoDTE,
                 };
-                
+
                 var (hasResponse, message, maximoFolios) = await FoliosHelper.ConsultarMaximoFoliosDisponibles(input, apikey, new WinHttpHandler());
                 if (hasResponse)
                 {
-                    var buttons = MessageBoxButtons.OK;
-                    var messageBoxMessage = $"Puede solicitar un máximo de {maximoFolios} para DTEs de tipo {tipoDte}";
-                    var caption = "Resultado Consulta";
-                    MessageBox.Show(messageBoxMessage, caption, buttons);
+                    //var messageBoxMessage = $"Puede solicitar un máximo de {maximoFolios} para DTEs de tipo {tipoDTE}";
+                    labelFoliosDisponibles.Text = maximoFolios.ToString("N0");
                 }
                 else
                 {
-                    var buttons = MessageBoxButtons.OK;
-                    var messageBoxMessage = message;
-                    var caption = "Resultado Consulta";
-                    MessageBox.Show(messageBoxMessage, caption, buttons);
+                    MessageBox.Show($"Ocurrió un error: {message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.Message + Environment.NewLine + exception.InnerException?.Message ?? "");
+                MessageBox.Show($"Ocurrió un error: {exception.Message + Environment.NewLine + exception.InnerException?.Message ?? ""}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Loading.HideLoading(ConsultarButton);
         }
 
         private void ConsultarMaximoFolios_Load(object sender, EventArgs e)
@@ -67,7 +77,13 @@ namespace SimpleSDK_Demo
             handler.Configuracion = new Configuracion();
             handler.Configuracion.LeerArchivo();
             RutEmisorTextBox.Text = handler.Configuracion.Empresa.RutEmpresa;
-            RutEmisorTextBox.Enabled = false;
+            labelFoliosDisponibles.Text = "0";
+         
+
+            var tipos = ((SimpleSDK.Enum.TipoDTE.DTEFoliosType[])Enum.GetValues(typeof(SimpleSDK.Enum.TipoDTE.DTEFoliosType))).OrderBy(x => x.ToString());
+            foreach (var tipo in tipos) comboTipo.Items.Add(tipo);
+
+            comboTipo.SelectedItem = SimpleSDK.Enum.TipoDTE.DTEFoliosType.NotSet;
         }
     }
 }

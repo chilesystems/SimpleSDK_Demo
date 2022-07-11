@@ -53,7 +53,6 @@ namespace SimpleSDK_Demo
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboTipoEnvio = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -72,6 +71,7 @@ namespace SimpleSDK_Demo
             this.DownloadPdfButton = new System.Windows.Forms.Button();
             this.AnulaBoletaHonorarioButton = new System.Windows.Forms.Button();
             this.CrearBoletaHonorariosButton = new System.Windows.Forms.Button();
+            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -370,17 +370,9 @@ namespace SimpleSDK_Demo
             this.configuraciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(779, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(779, 30);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // configuraciónToolStripMenuItem
-            // 
-            this.configuraciónToolStripMenuItem.Image = global::SimpleSDK_Demo.Properties.Resources.ConfiguracionEdit16;
-            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
-            this.configuraciónToolStripMenuItem.Text = "Configuración";
-            this.configuraciónToolStripMenuItem.Click += new System.EventHandler(this.configuraciónToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -499,6 +491,7 @@ namespace SimpleSDK_Demo
             this.ConsultarMaximoFoliosButton.TabIndex = 1;
             this.ConsultarMaximoFoliosButton.Text = "Consultar Máximo de Folios";
             this.ConsultarMaximoFoliosButton.UseVisualStyleBackColor = true;
+            this.ConsultarMaximoFoliosButton.Click += new System.EventHandler(this.ConsultarMaximoFoliosButton_Click);
             // 
             // DescargarCafButton
             // 
@@ -509,6 +502,7 @@ namespace SimpleSDK_Demo
             this.DescargarCafButton.TabIndex = 0;
             this.DescargarCafButton.Text = "Descargar CAF";
             this.DescargarCafButton.UseVisualStyleBackColor = true;
+            this.DescargarCafButton.Click += new System.EventHandler(this.DescargarCafButton_Click);
             // 
             // BoletaHonorarioGroupBox
             // 
@@ -586,6 +580,14 @@ namespace SimpleSDK_Demo
             this.CrearBoletaHonorariosButton.TabIndex = 0;
             this.CrearBoletaHonorariosButton.Text = "Generar Boleta de Honorarios";
             this.CrearBoletaHonorariosButton.UseVisualStyleBackColor = true;
+            // 
+            // configuraciónToolStripMenuItem
+            // 
+            this.configuraciónToolStripMenuItem.Image = global::SimpleSDK_Demo.Properties.Resources.ConfiguracionEdit16;
+            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.configuraciónToolStripMenuItem.Text = "Configuración";
+            this.configuraciónToolStripMenuItem.Click += new System.EventHandler(this.configuraciónToolStripMenuItem_Click);
             // 
             // Main
             // 

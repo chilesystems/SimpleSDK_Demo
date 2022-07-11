@@ -341,6 +341,9 @@
     <EmbeddedResource Include="ConsultarRegistroVentas.resx">
       <DependentUpon>ConsultarRegistroVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DescargarCaf.resx">
+      <DependentUpon>DescargarCaf.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GenerarNotaCredito.resx">
       <DependentUpon>GenerarNotaCredito.cs</DependentUpon>
     </EmbeddedResource>

@@ -446,13 +446,13 @@ namespace SimpleSDK_Demo
 
         private void ConsultarMaximoFoliosButton_Click(object sender, EventArgs e)
         {
-            var formulario = new ConsultarMaximoFolios();
+            var formulario = new ConsultarMaximoFolios(radioCertificacion.Checked);
             formulario.ShowDialog();
         }
 
         private void DescargarCafButton_Click(object sender, EventArgs e)
         {
-            var formulario = new DescargarCaf();
+            var formulario = new DescargarCaf(radioCertificacion.Checked);
             formulario.ShowDialog();
         }
 
