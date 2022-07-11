@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
 using System.Windows.Forms;
 using SimpleSDK.Helpers;
 using SimpleSDK.Models.Folios;
@@ -59,7 +58,7 @@ namespace SimpleSDK_Demo
                     Tipo = (int)tipoDTE
                 };
 
-                var (hasResponse, message, file) = await FoliosHelper.ObtenerFolios((int)numericCantidad.Value, input, apikey, new WinHttpHandler());
+                var (hasResponse, message, file) = await FoliosHelper.ObtenerFolios((int)numericCantidad.Value, input, apikey);
                 if (hasResponse)
                 {
                     MessageBox.Show("Folios descargados con éxito. Por favor indique donde guardará el archivo", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);

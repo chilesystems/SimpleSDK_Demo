@@ -440,7 +440,7 @@ namespace SimpleSDK_Demo
 
         private void ConsultarUltimosCincoCafButton_Click(object sender, EventArgs e)
         {
-            var formulario = new ConsultarUltimosCincoCafs();
+            var formulario = new ConsultarCAFs(radioCertificacion.Checked);
             formulario.ShowDialog();
         }
 

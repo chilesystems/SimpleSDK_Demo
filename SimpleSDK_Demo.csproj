@@ -225,11 +225,11 @@
     <Compile Include="ConsultarRegistroVentas.Designer.cs">
       <DependentUpon>ConsultarRegistroVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConsultarUltimosCincoCafs.cs">
+    <Compile Include="ConsultarCAFs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultarUltimosCincoCafs.Designer.cs">
-      <DependentUpon>ConsultarUltimosCincoCafs.cs</DependentUpon>
+    <Compile Include="ConsultarCAFs.Designer.cs">
+      <DependentUpon>ConsultarCAFs.cs</DependentUpon>
     </Compile>
     <Compile Include="DescargarCaf.cs">
       <SubType>Form</SubType>
@@ -323,6 +323,9 @@
     <Compile Include="Validador.Designer.cs">
       <DependentUpon>Validador.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AnularMasivamente.resx">
+      <DependentUpon>AnularMasivamente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfiguracionDemo.resx">
       <DependentUpon>ConfiguracionDemo.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarRegistroVentas.resx">
       <DependentUpon>ConsultarRegistroVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarCAFs.resx">
+      <DependentUpon>ConsultarCAFs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DescargarCaf.resx">
       <DependentUpon>DescargarCaf.cs</DependentUpon>

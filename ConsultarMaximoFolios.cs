@@ -54,7 +54,7 @@ namespace SimpleSDK_Demo
                     Tipo = (int)tipoDTE,
                 };
 
-                var (hasResponse, message, maximoFolios) = await FoliosHelper.ConsultarMaximoFoliosDisponibles(input, apikey, new WinHttpHandler());
+                var (hasResponse, message, maximoFolios) = await FoliosHelper.ConsultarMaximoFoliosDisponibles(input, apikey);
                 if (hasResponse)
                 {
                     //var messageBoxMessage = $"Puede solicitar un máximo de {maximoFolios} para DTEs de tipo {tipoDTE}";

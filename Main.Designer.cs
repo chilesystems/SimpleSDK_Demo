@@ -93,7 +93,7 @@ namespace SimpleSDK_Demo
             this.radioCertificacion.Location = new System.Drawing.Point(12, 62);
             this.radioCertificacion.Margin = new System.Windows.Forms.Padding(4);
             this.radioCertificacion.Name = "radioCertificacion";
-            this.radioCertificacion.Size = new System.Drawing.Size(106, 21);
+            this.radioCertificacion.Size = new System.Drawing.Size(99, 20);
             this.radioCertificacion.TabIndex = 14;
             this.radioCertificacion.TabStop = true;
             this.radioCertificacion.Text = "Certificación";
@@ -105,7 +105,7 @@ namespace SimpleSDK_Demo
             this.radioProduccion.Location = new System.Drawing.Point(135, 62);
             this.radioProduccion.Margin = new System.Windows.Forms.Padding(4);
             this.radioProduccion.Name = "radioProduccion";
-            this.radioProduccion.Size = new System.Drawing.Size(100, 21);
+            this.radioProduccion.Size = new System.Drawing.Size(94, 20);
             this.radioProduccion.TabIndex = 15;
             this.radioProduccion.Text = "Producción";
             this.radioProduccion.UseVisualStyleBackColor = true;
@@ -370,7 +370,7 @@ namespace SimpleSDK_Demo
             this.configuraciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(779, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(779, 28);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -471,6 +471,7 @@ namespace SimpleSDK_Demo
             this.AnularCafMasivamenteButton.TabIndex = 5;
             this.AnularCafMasivamenteButton.Text = "Anular Masivamente";
             this.AnularCafMasivamenteButton.UseVisualStyleBackColor = true;
+            this.AnularCafMasivamenteButton.Click += new System.EventHandler(this.AnularCafMasivamenteButton_Click);
             // 
             // ConsultarUltimosCincoCafButton
             // 
@@ -481,6 +482,7 @@ namespace SimpleSDK_Demo
             this.ConsultarUltimosCincoCafButton.TabIndex = 2;
             this.ConsultarUltimosCincoCafButton.Text = "Consultar Folios Descargados";
             this.ConsultarUltimosCincoCafButton.UseVisualStyleBackColor = true;
+            this.ConsultarUltimosCincoCafButton.Click += new System.EventHandler(this.ConsultarUltimosCincoCafButton_Click);
             // 
             // ConsultarMaximoFoliosButton
             // 
@@ -585,7 +587,7 @@ namespace SimpleSDK_Demo
             // 
             this.configuraciónToolStripMenuItem.Image = global::SimpleSDK_Demo.Properties.Resources.ConfiguracionEdit16;
             this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
             this.configuraciónToolStripMenuItem.Text = "Configuración";
             this.configuraciónToolStripMenuItem.Click += new System.EventHandler(this.configuraciónToolStripMenuItem_Click);
             // 

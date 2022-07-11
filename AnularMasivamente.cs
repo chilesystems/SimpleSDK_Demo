@@ -24,6 +24,7 @@ namespace SimpleSDK_Demo
 
         private async void AnularButton_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(AnularButton);
             try
             {
                 var rutEmisor = RutEmisorTextBox.Text;
@@ -33,35 +34,27 @@ namespace SimpleSDK_Demo
                 var rutaCertificado = handler.Configuracion.Certificado.Ruta;
                 var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
                 var rutUsuario = handler.Configuracion.Certificado.Rut;
-                var password = handler.Configuracion.Certificado.Rut;
+                var password = handler.Configuracion.Certificado.Password;
                 var apikey = handler.Configuracion.APIKey;
                 var input = new FoliosData
                 {
                     RutCertificado =  rutUsuario,
                     Password = password,
                     RutEmpresa = rutEmisor,
-                    Ambiente = 0,
+                    Ambiente = AmbienteCertificacionRadioButton.Checked ? 0 : 1,
                     CertificadoB64 = certificado,
                     Tipo = tipoDte,
                 };
                 var (anulacionExitosa, message) = await FoliosHelper.AnulacionMasiva(desde, hasta, input, apikey);
-                var buttons = MessageBoxButtons.OK;
-                var messageBoxMessage = "";
+                var icon = anulacionExitosa ? MessageBoxIcon.Information : MessageBoxIcon.Error;
                 var caption = "Resultado Anulación de Folios";
-                if (anulacionExitosa)
-                {
-                    messageBoxMessage = "Anulación completada con éxito";
-                }
-                else
-                {
-                    messageBoxMessage = "No se pudo completar la operación";
-                }
-                MessageBox.Show(messageBoxMessage, caption, buttons);
+                MessageBox.Show(message, caption, MessageBoxButtons.OK, icon);
             }
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
             }
+            Loading.HideLoading(AnularButton);
         }
     }
 }

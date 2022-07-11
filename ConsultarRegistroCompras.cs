@@ -52,7 +52,7 @@ namespace SimpleSDK_Demo
                     CertificadoB64 = certificado,
                     Detallado = checkDetallado.Checked
                 };
-                var (exito, registro) = await RCVHelper.ConsultaRegistroComprasAsync(fecha, mensual, basicData, apikey, new WinHttpHandler());
+                var (exito, registro) = await RCVHelper.ConsultaRegistroComprasAsync(fecha, mensual, basicData, apikey);
                 if (exito)
                 {
                     var compras = registro.Compras.DetalleCompras;
