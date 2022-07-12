@@ -31,13 +31,13 @@ namespace SimpleSDK_Demo
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.CantidadDocumentosValorLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -125,7 +125,7 @@ namespace SimpleSDK_Demo
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(17, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(207, 18);
+            this.label11.Size = new System.Drawing.Size(217, 18);
             this.label11.TabIndex = 12;
             this.label11.Text = "Cantidad de Documentos";
             // 
@@ -194,7 +194,7 @@ namespace SimpleSDK_Demo
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(17, 186);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 18);
+            this.label7.Size = new System.Drawing.Size(181, 18);
             this.label7.TabIndex = 5;
             this.label7.Text = "Total Líquido";
             // 
@@ -221,7 +221,7 @@ namespace SimpleSDK_Demo
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(17, 105);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 18);
+            this.label6.Size = new System.Drawing.Size(217, 18);
             this.label6.TabIndex = 2;
             this.label6.Text = "Total Pagado";
             // 
@@ -230,7 +230,7 @@ namespace SimpleSDK_Demo
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(17, 78);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 18);
+            this.label5.Size = new System.Drawing.Size(217, 18);
             this.label5.TabIndex = 1;
             this.label5.Text = "Total Retenido";
             // 
@@ -239,7 +239,7 @@ namespace SimpleSDK_Demo
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(17, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 18);
+            this.label2.Size = new System.Drawing.Size(217, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Total Bruto";
             // 
@@ -386,9 +386,9 @@ namespace SimpleSDK_Demo
             // FechaBoletaColumn
             // 
             this.FechaBoletaColumn.DataPropertyName = "FechaBoleta";
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.FechaBoletaColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Format = "d";
+            dataGridViewCellStyle8.NullValue = null;
+            this.FechaBoletaColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.FechaBoletaColumn.HeaderText = "Fecha Boleta";
             this.FechaBoletaColumn.Name = "FechaBoletaColumn";
             this.FechaBoletaColumn.ReadOnly = true;
@@ -427,8 +427,8 @@ namespace SimpleSDK_Demo
             // BrutoColumn
             // 
             this.BrutoColumn.DataPropertyName = "Bruto";
-            dataGridViewCellStyle2.Format = "N0";
-            this.BrutoColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.Format = "N0";
+            this.BrutoColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.BrutoColumn.HeaderText = "Bruto";
             this.BrutoColumn.Name = "BrutoColumn";
             this.BrutoColumn.ReadOnly = true;
@@ -436,8 +436,8 @@ namespace SimpleSDK_Demo
             // RetencionEmisorColumn
             // 
             this.RetencionEmisorColumn.DataPropertyName = "RetencionEmisor";
-            dataGridViewCellStyle3.Format = "N0";
-            this.RetencionEmisorColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.Format = "N0";
+            this.RetencionEmisorColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.RetencionEmisorColumn.HeaderText = "Retención Emisor";
             this.RetencionEmisorColumn.Name = "RetencionEmisorColumn";
             this.RetencionEmisorColumn.ReadOnly = true;
@@ -445,8 +445,8 @@ namespace SimpleSDK_Demo
             // RetencionReceptorColumn
             // 
             this.RetencionReceptorColumn.DataPropertyName = "RetencionReceptor";
-            dataGridViewCellStyle4.Format = "N0";
-            this.RetencionReceptorColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.Format = "N0";
+            this.RetencionReceptorColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.RetencionReceptorColumn.HeaderText = "Retención Receptor";
             this.RetencionReceptorColumn.Name = "RetencionReceptorColumn";
             this.RetencionReceptorColumn.ReadOnly = true;
@@ -454,8 +454,8 @@ namespace SimpleSDK_Demo
             // LiquidoColumn
             // 
             this.LiquidoColumn.DataPropertyName = "Liquido";
-            dataGridViewCellStyle5.Format = "N0";
-            this.LiquidoColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Format = "N0";
+            this.LiquidoColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.LiquidoColumn.HeaderText = "Líquido";
             this.LiquidoColumn.Name = "LiquidoColumn";
             this.LiquidoColumn.ReadOnly = true;
@@ -463,8 +463,8 @@ namespace SimpleSDK_Demo
             // PagadoColumn
             // 
             this.PagadoColumn.DataPropertyName = "Pagado";
-            dataGridViewCellStyle6.Format = "N0";
-            this.PagadoColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.Format = "N0";
+            this.PagadoColumn.DefaultCellStyle = dataGridViewCellStyle13;
             this.PagadoColumn.HeaderText = "Pagado";
             this.PagadoColumn.Name = "PagadoColumn";
             this.PagadoColumn.ReadOnly = true;
@@ -472,8 +472,8 @@ namespace SimpleSDK_Demo
             // RetenidoColumn
             // 
             this.RetenidoColumn.DataPropertyName = "Retenido";
-            dataGridViewCellStyle7.Format = "N0";
-            this.RetenidoColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle14.Format = "N0";
+            this.RetenidoColumn.DefaultCellStyle = dataGridViewCellStyle14;
             this.RetenidoColumn.HeaderText = "Retenido";
             this.RetenidoColumn.Name = "RetenidoColumn";
             this.RetenidoColumn.ReadOnly = true;

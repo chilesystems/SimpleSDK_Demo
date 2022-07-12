@@ -20,11 +20,13 @@ namespace SimpleSDK_Demo
             handler.Configuracion = new Configuracion();
             handler.Configuracion.LeerArchivo();
             RutEmisorTextbox.Text = handler.Configuracion.Certificado.Rut;
-            RutEmisorTextbox.Enabled = false;
+            numericAnio.Value = DateTime.Now.Year;
         }
 
         private async void ListadoButton_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(gridResultados);
+            ListadoButton.Enabled = false; 
             try
             {
                 var rutaCertificado = handler.Configuracion.Certificado.Ruta;
@@ -35,9 +37,9 @@ namespace SimpleSDK_Demo
                     tipo = "emitidas";
                 var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
                 var rutUsuario = handler.Configuracion.Certificado.Rut;
-                var password = handler.Configuracion.Certificado.Rut;
+                var password = handler.Configuracion.Certificado.Password;
                 var apikey = handler.Configuracion.APIKey;
-                var anio = int.Parse(AnioTextbox.Text);
+                var anio = (int)numericAnio.Value;
                 var basicData = new BasicData
                 {
                     RutCertificado =  rutUsuario,
@@ -45,12 +47,23 @@ namespace SimpleSDK_Demo
                     CertificadoB64 = certificado
                 };
                 var resumenAnual = await BHHelper.ObtenerListadoAnualAsync(basicData, tipo, anio, apikey);
-                Console.WriteLine(JsonConvert.SerializeObject(resumenAnual));
+                gridResultados.AutoGenerateColumns = true;
+                gridResultados.DataSource = null;
+                gridResultados.DataSource = resumenAnual.Periodos;
+
+                TotalHonorarioBrutoValorLabel.Text = resumenAnual.TotalHonorarioBruto.ToString("N0");
+                TotalVigentesValorLabel.Text = resumenAnual.TotalVigentes.ToString("N0");
+                TotalAnuladasValorLabel.Text = resumenAnual.TotalAnuladas.ToString("N0");
+                RetencionContribuyentesValorLabel.Text = resumenAnual.TotalRetencionContribuyente.ToString("N0");
+                RetencionLiquidoValorLabel.Text = resumenAnual.TotalRetencionLiquido.ToString("N0");
+                RetencionTercerosValorLabel.Text = resumenAnual.TotalRetencionTerceros.ToString("N0");
             }
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
             }
+            Loading.HideLoading(gridResultados);
+            ListadoButton.Enabled = true;
         }
     }
 }

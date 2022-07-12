@@ -20,7 +20,6 @@ namespace SimpleSDK_Demo
             handler.Configuracion = new Configuracion();
             handler.Configuracion.LeerArchivo();
             RutEmisorTextbox.Text = handler.Configuracion.Certificado.Rut;
-            RutEmisorTextbox.Enabled = false;
             numericAnio.Value = DateTime.Now.Year;
             numericMes.Value = DateTime.Now.Month;
         }
