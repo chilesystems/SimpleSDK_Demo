@@ -26,6 +26,7 @@ namespace SimpleSDK_Demo
 
         private async void DescargarPdfButton_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(DescargarPdfButton);
             try
             {
                 var rutEmisor = RutEmisorTextbox.Text;
@@ -38,7 +39,7 @@ namespace SimpleSDK_Demo
                 var rutaCertificado = handler.Configuracion.Certificado.Ruta;
                 var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
                 var rutUsuario = handler.Configuracion.Certificado.Rut;
-                var password = handler.Configuracion.Certificado.Rut;
+                var password = handler.Configuracion.Certificado.Password;
                 var anio = int.Parse(AnioTextbox.Text);
                 var apikey = handler.Configuracion.APIKey;
                 var input = new BHData
@@ -54,12 +55,15 @@ namespace SimpleSDK_Demo
                 if (!string.IsNullOrEmpty(saveFileDialog.FileName))
                 {
                     File.WriteAllBytes(saveFileDialog.FileName, pdfBytes);
+                    MessageBox.Show("PDF descargado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Loading.HideLoading(DescargarPdfButton);
         }
     }
 }

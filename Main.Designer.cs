@@ -570,6 +570,7 @@ namespace SimpleSDK_Demo
             this.DownloadPdfButton.TabIndex = 2;
             this.DownloadPdfButton.Text = "Descargar PDF";
             this.DownloadPdfButton.UseVisualStyleBackColor = true;
+            this.DownloadPdfButton.Click += new System.EventHandler(this.DownloadPdfButton_Click);
             // 
             // AnulaBoletaHonorarioButton
             // 

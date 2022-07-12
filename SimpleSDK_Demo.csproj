@@ -380,6 +380,9 @@
     <EmbeddedResource Include="MuestraTimbre.resx">
       <DependentUpon>MuestraTimbre.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ObtenerPdfBoleta.resx">
+      <DependentUpon>ObtenerPdfBoleta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

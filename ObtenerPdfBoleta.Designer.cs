@@ -32,7 +32,6 @@ namespace SimpleSDK_Demo
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.EmitidaRadioButton = new System.Windows.Forms.RadioButton();
             this.RecibidaRadioButton = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +46,6 @@ namespace SimpleSDK_Demo
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.EmitidaRadioButton);
             this.groupBox1.Controls.Add(this.RecibidaRadioButton);
             this.groupBox1.Controls.Add(this.label3);
@@ -57,27 +55,21 @@ namespace SimpleSDK_Demo
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.RutEmisorTextbox);
             this.groupBox1.Controls.Add(this.DescargarPdfButton);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(11, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1008, 113);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(896, 90);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Boleta de Honorarios Electrónica";
             // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(643, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 23);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Tipo";
-            // 
             // EmitidaRadioButton
             // 
-            this.EmitidaRadioButton.Location = new System.Drawing.Point(753, 49);
+            this.EmitidaRadioButton.Location = new System.Drawing.Point(614, 40);
+            this.EmitidaRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EmitidaRadioButton.Name = "EmitidaRadioButton";
-            this.EmitidaRadioButton.Size = new System.Drawing.Size(104, 24);
+            this.EmitidaRadioButton.Size = new System.Drawing.Size(92, 19);
             this.EmitidaRadioButton.TabIndex = 8;
             this.EmitidaRadioButton.Text = "Emitida";
             this.EmitidaRadioButton.UseVisualStyleBackColor = true;
@@ -85,9 +77,10 @@ namespace SimpleSDK_Demo
             // RecibidaRadioButton
             // 
             this.RecibidaRadioButton.Checked = true;
-            this.RecibidaRadioButton.Location = new System.Drawing.Point(643, 49);
+            this.RecibidaRadioButton.Location = new System.Drawing.Point(517, 40);
+            this.RecibidaRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RecibidaRadioButton.Name = "RecibidaRadioButton";
-            this.RecibidaRadioButton.Size = new System.Drawing.Size(104, 24);
+            this.RecibidaRadioButton.Size = new System.Drawing.Size(92, 19);
             this.RecibidaRadioButton.TabIndex = 7;
             this.RecibidaRadioButton.TabStop = true;
             this.RecibidaRadioButton.Text = "Recibida";
@@ -96,56 +89,60 @@ namespace SimpleSDK_Demo
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(425, 48);
+            this.label3.Location = new System.Drawing.Point(377, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 23);
+            this.label3.Size = new System.Drawing.Size(41, 18);
             this.label3.TabIndex = 6;
             this.label3.Text = "Año";
             // 
             // AnioTextbox
             // 
-            this.AnioTextbox.Location = new System.Drawing.Point(477, 48);
+            this.AnioTextbox.Location = new System.Drawing.Point(424, 38);
+            this.AnioTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AnioTextbox.Name = "AnioTextbox";
-            this.AnioTextbox.Size = new System.Drawing.Size(61, 26);
+            this.AnioTextbox.Size = new System.Drawing.Size(55, 22);
             this.AnioTextbox.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(240, 48);
+            this.label2.Location = new System.Drawing.Point(213, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 23);
+            this.label2.Size = new System.Drawing.Size(52, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "Folio";
             // 
             // FolioTextbox
             // 
-            this.FolioTextbox.Location = new System.Drawing.Point(304, 48);
+            this.FolioTextbox.Location = new System.Drawing.Point(270, 38);
+            this.FolioTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FolioTextbox.Name = "FolioTextbox";
-            this.FolioTextbox.Size = new System.Drawing.Size(100, 26);
+            this.FolioTextbox.Size = new System.Drawing.Size(89, 22);
             this.FolioTextbox.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 48);
+            this.label1.Location = new System.Drawing.Point(6, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 23);
+            this.label1.Size = new System.Drawing.Size(99, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "RUT Emisor";
             // 
             // RutEmisorTextbox
             // 
-            this.RutEmisorTextbox.Location = new System.Drawing.Point(123, 48);
+            this.RutEmisorTextbox.Location = new System.Drawing.Point(118, 38);
+            this.RutEmisorTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RutEmisorTextbox.Name = "RutEmisorTextbox";
-            this.RutEmisorTextbox.Size = new System.Drawing.Size(100, 26);
+            this.RutEmisorTextbox.Size = new System.Drawing.Size(89, 22);
             this.RutEmisorTextbox.TabIndex = 1;
             // 
             // DescargarPdfButton
             // 
-            this.DescargarPdfButton.Location = new System.Drawing.Point(885, 28);
+            this.DescargarPdfButton.Location = new System.Drawing.Point(761, 30);
+            this.DescargarPdfButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DescargarPdfButton.Name = "DescargarPdfButton";
-            this.DescargarPdfButton.Size = new System.Drawing.Size(110, 66);
+            this.DescargarPdfButton.Size = new System.Drawing.Size(129, 38);
             this.DescargarPdfButton.TabIndex = 0;
             this.DescargarPdfButton.Text = "Descargar PDF";
             this.DescargarPdfButton.UseVisualStyleBackColor = true;
@@ -153,19 +150,23 @@ namespace SimpleSDK_Demo
             // 
             // ObtenerPdfBoleta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 134);
+            this.ClientSize = new System.Drawing.Size(916, 107);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ObtenerPdfBoleta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Obtener PDF Boleta de Honorarios Electrónica";
             this.Load += new System.EventHandler(this.ObtenerPdfBoleta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-        }
 
-        private System.Windows.Forms.Label label4;
+        }
 
         private System.Windows.Forms.RadioButton RecibidaRadioButton;
         private System.Windows.Forms.RadioButton EmitidaRadioButton;
