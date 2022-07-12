@@ -201,6 +201,12 @@
     <Compile Include="ConfiguracionDemo.Designer.cs">
       <DependentUpon>ConfiguracionDemo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaRecepionDTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaRecepionDTE.Designer.cs">
+      <DependentUpon>ConsultaRecepionDTE.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaEstadoDTE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfiguracionDemo.resx">
       <DependentUpon>ConfiguracionDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaRecepionDTE.resx">
+      <DependentUpon>ConsultaRecepionDTE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaEstadoDTE.resx">
       <DependentUpon>ConsultaEstadoDTE.cs</DependentUpon>
