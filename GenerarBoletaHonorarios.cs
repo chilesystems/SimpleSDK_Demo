@@ -27,18 +27,7 @@ namespace SimpleSDK_Demo
         private async void GenerarBoletaButton_Click(object sender, EventArgs e)
         {
             try
-            {
-                var rutEmisor = textRutEmisor.Text;
-                var rutReceptor = textRutReceptor.Text;
-                var rutaCertificado = handler.Configuracion.Certificado.Ruta;
-                var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
-                var rutUsuario = handler.Configuracion.Certificado.Rut;
-                var password = handler.Configuracion.Certificado.Password;
-                TipoRetencionEnum tipoRetencion = RetencionContribuyenteRadioButton.Checked
-                    ? TipoRetencionEnum.Contribuyente
-                    : TipoRetencionEnum.Receptor;
-                var apikey = handler.Configuracion.APIKey;
-
+            {           
                 int domicilioIndex = 0;
                 if (groupDomicilios.Visible) //Tiene más de un domicilio
                 {
@@ -49,6 +38,20 @@ namespace SimpleSDK_Demo
                     }
                     domicilioIndex = gridDomicilios.SelectedRows[0].Index + 1;
                 }
+
+                Loading.ShowLoading(gridDetalles);
+                GenerarBoletaButton.Enabled = false;
+
+                var rutEmisor = textRutEmisor.Text;
+                var rutReceptor = textRutReceptor.Text;
+                var rutaCertificado = handler.Configuracion.Certificado.Ruta;
+                var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
+                var rutUsuario = handler.Configuracion.Certificado.Rut;
+                var password = handler.Configuracion.Certificado.Password;
+                TipoRetencionEnum tipoRetencion = RetencionContribuyenteRadioButton.Checked
+                    ? TipoRetencionEnum.Contribuyente
+                    : TipoRetencionEnum.Receptor;
+                var apikey = handler.Configuracion.APIKey;
 
                 // todo detalles
                 var input = new BHData
@@ -109,6 +112,8 @@ namespace SimpleSDK_Demo
             {
                 Console.WriteLine(exception);
             }
+            Loading.HideLoading(gridDetalles);
+            GenerarBoletaButton.Enabled = true;
         }
     }
 }

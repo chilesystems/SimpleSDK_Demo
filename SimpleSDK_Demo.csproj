@@ -323,6 +323,9 @@
     <Compile Include="Validador.Designer.cs">
       <DependentUpon>Validador.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AnularBoleta.resx">
+      <DependentUpon>AnularBoleta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AnularMasivamente.resx">
       <DependentUpon>AnularMasivamente.cs</DependentUpon>
     </EmbeddedResource>

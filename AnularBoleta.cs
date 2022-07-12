@@ -26,6 +26,7 @@ namespace SimpleSDK_Demo
 
         private async void AnulaButton_Click(object sender, EventArgs e)
         {
+            Loading.ShowLoading(AnulaButton);
             try
             {
                 var folio = int.Parse(FolioTextBox.Text);
@@ -39,7 +40,7 @@ namespace SimpleSDK_Demo
                 var rutaCertificado = handler.Configuracion.Certificado.Ruta;
                 var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
                 var rutUsuario = handler.Configuracion.Certificado.Rut;
-                var password = handler.Configuracion.Certificado.Rut;
+                var password = handler.Configuracion.Certificado.Password;
                 var apikey = handler.Configuracion.APIKey;
                 var input = new BasicData()
                 {
@@ -53,17 +54,18 @@ namespace SimpleSDK_Demo
                     var buttons = MessageBoxButtons.OK;
                     var messageBoxMessage = "Se anuló exitosamente la boleta de honorarios";
                     var caption = "Resultado Anulación de Boletas de Honorarios";
-                    MessageBox.Show(messageBoxMessage, caption, buttons);
+                    MessageBox.Show(messageBoxMessage, caption, buttons, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    Console.WriteLine(message);
+                    MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception);
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            Loading.HideLoading(AnulaButton);
         }
     }
 }

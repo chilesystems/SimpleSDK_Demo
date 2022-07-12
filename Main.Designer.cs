@@ -580,6 +580,7 @@ namespace SimpleSDK_Demo
             this.AnulaBoletaHonorarioButton.TabIndex = 1;
             this.AnulaBoletaHonorarioButton.Text = "Anular Boleta de Honorarios";
             this.AnulaBoletaHonorarioButton.UseVisualStyleBackColor = true;
+            this.AnulaBoletaHonorarioButton.Click += new System.EventHandler(this.AnulaBoletaHonorarioButton_Click);
             // 
             // CrearBoletaHonorariosButton
             // 
