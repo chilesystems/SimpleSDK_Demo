@@ -20,9 +20,14 @@ namespace SimpleSDK_Demo
 
         private async void ConsultarButton_Click(object sender, EventArgs e)
         {
-            try
+            Enum.TryParse(comboTipo.SelectedItem.ToString(), out SimpleSDK.Enum.TipoDTE.DTEFoliosType tipoDTE);
+            if (tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.NotSet)
             {
-                Enum.TryParse(comboTipo.SelectedItem.ToString(), out SimpleSDK.Enum.TipoDTE.DTEFoliosType tipoDTE);
+                MessageBox.Show("Debe seleccionar un tipo de DTE", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            try
+            {       
                 if (tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.BoletaElectronica || tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.BoletaElectronicaExenta
                     || tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.FacturaElectronicaExenta || tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.FacturaExportacionElectronica
                     || tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.NotaCreditoExportacionElectronica || tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.NotaDebitoExportacionElectronica

@@ -10,9 +10,11 @@ namespace SimpleSDK_Demo
     public partial class AnularMasivamente : Form
     {
         Helper handler = new Helper();
-        public AnularMasivamente()
+        public AnularMasivamente(bool certificacion = false)
         {
             InitializeComponent();
+            radioCertificacion.Checked = certificacion;
+            radioProduccion.Checked = !certificacion;
         }
 
         private void AnularMasivamente_Load(object sender, EventArgs e)

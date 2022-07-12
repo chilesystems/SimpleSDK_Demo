@@ -32,12 +32,17 @@ namespace SimpleSDK_Demo
 
         private async void ConsultarButton_Click(object sender, EventArgs e)
         {
+            Enum.TryParse(comboTipo.SelectedItem.ToString(), out SimpleSDK.Enum.TipoDTE.DTEFoliosType tipoDTE);
+            if (tipoDTE == SimpleSDK.Enum.TipoDTE.DTEFoliosType.NotSet)
+            {
+                MessageBox.Show("Debe seleccionar un tipo de DTE", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             Loading.ShowLoading(dataGrid1);
             ConsultarButton.Enabled = false;
             try
             {
-                Enum.TryParse(comboTipo.SelectedItem.ToString(), out SimpleSDK.Enum.TipoDTE.DTEFoliosType tipoDTE);
-
+               
                 var rutEmisor = RutEmisorTextBox.Text;
                 var desde = DesdeDateTimePicker.Value;
                 var rutaCertificado = handler.Configuracion.Certificado.Ruta;
