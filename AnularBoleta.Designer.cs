@@ -80,16 +80,16 @@ namespace SimpleSDK_Demo
             this.MotivoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MotivoLabel.Location = new System.Drawing.Point(20, 57);
             this.MotivoLabel.Name = "MotivoLabel";
-            this.MotivoLabel.Size = new System.Drawing.Size(55, 18);
+            this.MotivoLabel.Size = new System.Drawing.Size(79, 18);
             this.MotivoLabel.TabIndex = 5;
             this.MotivoLabel.Text = "Motivo";
             // 
             // FolioLabel
             // 
             this.FolioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FolioLabel.Location = new System.Drawing.Point(207, 32);
+            this.FolioLabel.Location = new System.Drawing.Point(226, 32);
             this.FolioLabel.Name = "FolioLabel";
-            this.FolioLabel.Size = new System.Drawing.Size(49, 18);
+            this.FolioLabel.Size = new System.Drawing.Size(57, 18);
             this.FolioLabel.TabIndex = 3;
             this.FolioLabel.Text = "Folio";
             // 
@@ -98,13 +98,13 @@ namespace SimpleSDK_Demo
             this.RutEmisorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RutEmisorLabel.Location = new System.Drawing.Point(20, 32);
             this.RutEmisorLabel.Name = "RutEmisorLabel";
-            this.RutEmisorLabel.Size = new System.Drawing.Size(80, 18);
+            this.RutEmisorLabel.Size = new System.Drawing.Size(84, 18);
             this.RutEmisorLabel.TabIndex = 2;
             this.RutEmisorLabel.Text = "Rut Emisor";
             // 
             // FolioTextBox
             // 
-            this.FolioTextBox.Location = new System.Drawing.Point(261, 30);
+            this.FolioTextBox.Location = new System.Drawing.Point(289, 30);
             this.FolioTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FolioTextBox.Name = "FolioTextBox";
             this.FolioTextBox.Size = new System.Drawing.Size(89, 22);
@@ -112,7 +112,7 @@ namespace SimpleSDK_Demo
             // 
             // RutEmisorTextBox
             // 
-            this.RutEmisorTextBox.Location = new System.Drawing.Point(105, 30);
+            this.RutEmisorTextBox.Location = new System.Drawing.Point(112, 30);
             this.RutEmisorTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RutEmisorTextBox.Name = "RutEmisorTextBox";
             this.RutEmisorTextBox.Size = new System.Drawing.Size(89, 22);
@@ -121,7 +121,7 @@ namespace SimpleSDK_Demo
             // CausaAnulacionServicioNoPagadoRadioButton
             // 
             this.CausaAnulacionServicioNoPagadoRadioButton.AutoSize = true;
-            this.CausaAnulacionServicioNoPagadoRadioButton.Location = new System.Drawing.Point(105, 57);
+            this.CausaAnulacionServicioNoPagadoRadioButton.Location = new System.Drawing.Point(112, 57);
             this.CausaAnulacionServicioNoPagadoRadioButton.Name = "CausaAnulacionServicioNoPagadoRadioButton";
             this.CausaAnulacionServicioNoPagadoRadioButton.Size = new System.Drawing.Size(222, 20);
             this.CausaAnulacionServicioNoPagadoRadioButton.TabIndex = 10;
@@ -132,7 +132,7 @@ namespace SimpleSDK_Demo
             // CausaAnulacionServicioNoEfectuadoRadioButton
             // 
             this.CausaAnulacionServicioNoEfectuadoRadioButton.AutoSize = true;
-            this.CausaAnulacionServicioNoEfectuadoRadioButton.Location = new System.Drawing.Point(105, 83);
+            this.CausaAnulacionServicioNoEfectuadoRadioButton.Location = new System.Drawing.Point(112, 83);
             this.CausaAnulacionServicioNoEfectuadoRadioButton.Name = "CausaAnulacionServicioNoEfectuadoRadioButton";
             this.CausaAnulacionServicioNoEfectuadoRadioButton.Size = new System.Drawing.Size(167, 20);
             this.CausaAnulacionServicioNoEfectuadoRadioButton.TabIndex = 11;
@@ -143,7 +143,7 @@ namespace SimpleSDK_Demo
             // CausaAnulacionErrorDigitacionRadioButton
             // 
             this.CausaAnulacionErrorDigitacionRadioButton.AutoSize = true;
-            this.CausaAnulacionErrorDigitacionRadioButton.Location = new System.Drawing.Point(105, 109);
+            this.CausaAnulacionErrorDigitacionRadioButton.Location = new System.Drawing.Point(112, 109);
             this.CausaAnulacionErrorDigitacionRadioButton.Name = "CausaAnulacionErrorDigitacionRadioButton";
             this.CausaAnulacionErrorDigitacionRadioButton.Size = new System.Drawing.Size(137, 20);
             this.CausaAnulacionErrorDigitacionRadioButton.TabIndex = 12;

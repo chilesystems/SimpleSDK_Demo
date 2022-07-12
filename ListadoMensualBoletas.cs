@@ -35,7 +35,7 @@ namespace SimpleSDK_Demo
                     tipo = "emitidas";
                 var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
                 var rutUsuario = handler.Configuracion.Certificado.Rut;
-                var password = handler.Configuracion.Certificado.Rut;
+                var password = handler.Configuracion.Certificado.Password;
                 var apikey = handler.Configuracion.APIKey;
                 var mes = int.Parse(MesTextBox.Text);
                 var anio = int.Parse(AnioTextbox.Text);

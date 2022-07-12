@@ -21,7 +21,6 @@ namespace SimpleSDK_Demo
             handler.Configuracion = new Configuracion();
             handler.Configuracion.LeerArchivo();
             RutEmisorTextBox.Text = handler.Configuracion.Certificado.Rut;
-            RutEmisorTextBox.Enabled = false;
         }
 
         private async void AnulaButton_Click(object sender, EventArgs e)
