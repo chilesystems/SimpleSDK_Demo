@@ -389,9 +389,76 @@ namespace SimpleSDK_Demo
             formulario.ShowDialog();
         }
 
-        private void botonConsultaRecepcion_Click(object sender, EventArgs e)
+        private void RegistroComprasButton_Click(object sender, EventArgs e)
         {
-            ConsultaRecepionDTE formulario = new ConsultaRecepionDTE();
+            var formulario = new ConsultarRegistroCompras(radioCertificacion.Checked);
+            formulario.ShowDialog();
+        }
+
+        private void CrearBoletaHonorariosButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new GenerarBoletaHonorarios();
+            formulario.ShowDialog();
+        }
+
+        private void AnulaBoletaHonorarioButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new AnularBoleta();
+            formulario.ShowDialog();        
+        }
+
+        private void DownloadPdfButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new ObtenerPdfBoleta();
+            formulario.ShowDialog();
+        }
+
+
+        private void EnviarEmailButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new EnviarBoletaPorEmail();
+            formulario.ShowDialog();
+        }
+
+        private void ListadoMensualBoletasButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new ListadoMensualBoletas();
+            formulario.ShowDialog();
+        }
+
+        private void ListadoAnualBoletaButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new ListadoAnualBoletas();
+            formulario.ShowDialog();
+        }
+
+        private void AnularCafMasivamenteButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new AnularMasivamente();
+            formulario.ShowDialog();
+        }
+
+        private void ConsultarUltimosCincoCafButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new ConsultarCAFs(radioCertificacion.Checked);
+            formulario.ShowDialog();
+        }
+
+        private void ConsultarMaximoFoliosButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new ConsultarMaximoFolios(radioCertificacion.Checked);
+            formulario.ShowDialog();
+        }
+
+        private void DescargarCafButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new DescargarCaf(radioCertificacion.Checked);
+            formulario.ShowDialog();
+        }
+
+        private void RegistroVentasButton_Click(object sender, EventArgs e)
+        {
+            var formulario = new ConsultarRegistroVentas();
             formulario.ShowDialog();
         }
     }
