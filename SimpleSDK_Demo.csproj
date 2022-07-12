@@ -353,6 +353,9 @@
     <EmbeddedResource Include="DescargarCaf.resx">
       <DependentUpon>DescargarCaf.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EnviarBoletaPorEmail.resx">
+      <DependentUpon>EnviarBoletaPorEmail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GenerarBoletaHonorarios.resx">
       <DependentUpon>GenerarBoletaHonorarios.cs</DependentUpon>
     </EmbeddedResource>

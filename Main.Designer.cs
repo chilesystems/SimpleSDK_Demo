@@ -532,6 +532,7 @@ namespace SimpleSDK_Demo
             this.EnviarEmailButton.TabIndex = 5;
             this.EnviarEmailButton.Text = "Enviar por email";
             this.EnviarEmailButton.UseVisualStyleBackColor = true;
+            this.EnviarEmailButton.Click += new System.EventHandler(this.EnviarEmailButton_Click);
             // 
             // ListadoAnualBoletaButton
             // 
