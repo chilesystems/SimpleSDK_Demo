@@ -40,9 +40,9 @@ namespace SimpleSDK_Demo
                 Loading.ShowLoading(ConsultarButton);
 
                 var rutEmisor = RutEmisorTextBox.Text;
-                int ambiente = 1;
+                int ambiente = 0;
                 if (radioProduccion.Checked)
-                    ambiente = 0;
+                    ambiente = 1;
 
                 var rutaCertificado = handler.Configuracion.Certificado.Ruta;
                 var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
