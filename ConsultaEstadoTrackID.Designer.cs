@@ -41,10 +41,10 @@ namespace SimpleSDK_Demo
             this.label1 = new System.Windows.Forms.Label();
             this.textRUTEmpresa = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkServidorBoleta = new System.Windows.Forms.CheckBox();
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
             this.radioProduccion = new System.Windows.Forms.RadioButton();
             this.botonConsultar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -161,7 +161,6 @@ namespace SimpleSDK_Demo
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkServidorBoleta);
             this.groupBox2.Controls.Add(this.radioCertificacion);
             this.groupBox2.Controls.Add(this.radioProduccion);
             this.groupBox2.Controls.Add(this.botonConsultar);
@@ -171,16 +170,6 @@ namespace SimpleSDK_Demo
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ambiente";
-            // 
-            // checkServidorBoleta
-            // 
-            this.checkServidorBoleta.AutoSize = true;
-            this.checkServidorBoleta.Location = new System.Drawing.Point(158, 28);
-            this.checkServidorBoleta.Name = "checkServidorBoleta";
-            this.checkServidorBoleta.Size = new System.Drawing.Size(118, 17);
-            this.checkServidorBoleta.TabIndex = 18;
-            this.checkServidorBoleta.Text = "Servidor de Boletas";
-            this.checkServidorBoleta.UseVisualStyleBackColor = true;
             // 
             // radioCertificacion
             // 
@@ -206,7 +195,7 @@ namespace SimpleSDK_Demo
             // 
             // botonConsultar
             // 
-            this.botonConsultar.Location = new System.Drawing.Point(201, 48);
+            this.botonConsultar.Location = new System.Drawing.Point(201, 28);
             this.botonConsultar.Name = "botonConsultar";
             this.botonConsultar.Size = new System.Drawing.Size(75, 23);
             this.botonConsultar.TabIndex = 0;
@@ -214,11 +203,23 @@ namespace SimpleSDK_Demo
             this.botonConsultar.UseVisualStyleBackColor = true;
             this.botonConsultar.Click += new System.EventHandler(this.botonConsultar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 219);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(285, 52);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "* Las boletas son enviadas y consultadas en los nuevos \r\nservidores de boleta. No" +
+    " en el maullin ni pangal donde son \r\nenviadas las facturas\r\n* No sirve para cert" +
+    "ificar boletas.";
+            // 
             // ConsultaEstadoTrackID
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 323);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -236,6 +237,7 @@ namespace SimpleSDK_Demo
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -253,9 +255,9 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textRUTEmpresa;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkServidorBoleta;
         private System.Windows.Forms.RadioButton radioCertificacion;
         private System.Windows.Forms.RadioButton radioProduccion;
         private System.Windows.Forms.Button botonConsultar;
+        private System.Windows.Forms.Label label2;
     }
 }

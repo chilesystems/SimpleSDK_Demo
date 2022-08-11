@@ -38,20 +38,20 @@ namespace SimpleSDK_Demo
                 var consulta = new SimpleSDK.Models.Estados.ConsultaTrackID(rutEmpresa)
                 {
                     Ambiente = radioCertificacion.Checked ? Ambiente.AmbienteEnum.Certificacion : Ambiente.AmbienteEnum.Produccion,
-                    ServidorBoletaREST = checkServidorBoleta.Checked,
                     Certificado = handler.Configuracion.Certificado,
-                    TrackId = trackId
+                    TrackId = trackId,
+                    
                 };
 
                 if (radioEnvioBoleta.Checked)
                 {
                     var resultado = await consulta.ConsultarBoletasAlSII(handler.Configuracion.APIKey);
-                    textRespuesta.Text = resultado.Item2.Response;
+                    textRespuesta.Text = resultado.respuesta.ToString();
                 }
                 else
                 {
                     var resultado = await consulta.ConsultarAlSII(handler.Configuracion.APIKey);
-                    textRespuesta.Text = resultado.Item2.ResponseXml;
+                    textRespuesta.Text = resultado.respuesta.ResponseXml;
                 }
 
             }
