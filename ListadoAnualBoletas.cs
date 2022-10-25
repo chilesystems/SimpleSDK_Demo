@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using SimpleSDK.Helpers;
+using SimpleSDK.Models.BHE;
 using SimpleSDK.Models.RegistroCompraVentas;
 using SimpleSDK_Demo.Models;
 
@@ -19,7 +20,7 @@ namespace SimpleSDK_Demo
         {
             handler.Configuracion = new Configuracion();
             handler.Configuracion.LeerArchivo();
-            RutEmisorTextbox.Text = handler.Configuracion.Certificado.Rut;
+            RutEmisorTextbox.Text = handler.Configuracion.UsuarioSII.RutUsuario;
             numericAnio.Value = DateTime.Now.Year;
         }
 
@@ -29,22 +30,19 @@ namespace SimpleSDK_Demo
             ListadoButton.Enabled = false; 
             try
             {
-                var rutaCertificado = handler.Configuracion.Certificado.Ruta;
                 string tipo = "";
                 if (RecibidaRadioButton.Checked)
                     tipo = "recibidas";
                 else if (EmitidaRadioButton.Checked)
                     tipo = "emitidas";
-                var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
-                var rutUsuario = handler.Configuracion.Certificado.Rut;
-                var password = handler.Configuracion.Certificado.Password;
+                var rutUsuario = RutEmisorTextbox.Text;
+                var password = handler.Configuracion.UsuarioSII.PasswordSII;
                 var apikey = handler.Configuracion.APIKey;
                 var anio = (int)numericAnio.Value;
-                var basicData = new BasicData
+                var basicData = new BHData
                 {
-                    RutCertificado =  rutUsuario,
-                    Password = password,
-                    CertificadoB64 = certificado
+                    RutUsuario =  rutUsuario,
+                    PasswordSII = password
                 };
                 var resumenAnual = await BHHelper.ObtenerListadoAnualAsync(basicData, tipo, anio, apikey);
                 gridResultados.AutoGenerateColumns = true;

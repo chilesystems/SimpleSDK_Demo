@@ -20,7 +20,7 @@ namespace SimpleSDK_Demo
         {
             handler.Configuracion = new Configuracion();
             handler.Configuracion.LeerArchivo();
-            RutEmisorTextBox.Text = handler.Configuracion.Certificado.Rut;
+            textRutUsuario.Text = handler.Configuracion.UsuarioSII.RutUsuario;
         }
 
         private async void AnulaButton_Click(object sender, EventArgs e)
@@ -36,16 +36,14 @@ namespace SimpleSDK_Demo
                     causaAnulacionBh = CausaAnulacionBHEnum.ServicioNoEfectuado;
                 else if (CausaAnulacionServicioNoPagadoRadioButton.Checked)
                     causaAnulacionBh = CausaAnulacionBHEnum.ServicioNoPagado;
-                var rutaCertificado = handler.Configuracion.Certificado.Ruta;
-                var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
-                var rutUsuario = handler.Configuracion.Certificado.Rut;
-                var password = handler.Configuracion.Certificado.Password;
+
+                var rutUsuario = textRutUsuario.Text;
+                var password = handler.Configuracion.UsuarioSII.PasswordSII;
                 var apikey = handler.Configuracion.APIKey;
                 var input = new BasicData()
                 {
-                    RutCertificado =  rutUsuario,
-                    Password = password,
-                    CertificadoB64 = certificado,
+                    RutUsuario =  rutUsuario,
+                    PasswordSII = password
                 };
                 var (anulacionExitosa, message) = await BHHelper.AnularAsync(input, folio, causaAnulacionBh, apikey);
                 if (anulacionExitosa)

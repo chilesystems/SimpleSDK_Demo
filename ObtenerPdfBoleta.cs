@@ -19,9 +19,8 @@ namespace SimpleSDK_Demo
         {
             handler.Configuracion = new Configuracion();
             handler.Configuracion.LeerArchivo();
-            RutEmisorTextbox.Text = handler.Configuracion.Certificado.Rut;
+            RutEmisorTextbox.Text = handler.Configuracion.Empresa.RutEmpresa;
         }
-
 
         private async void DescargarPdfButton_Click(object sender, EventArgs e)
         {
@@ -35,21 +34,20 @@ namespace SimpleSDK_Demo
                 else if (EmitidaRadioButton.Checked)
                     tipo = "emitidas";
                 var folio = int.Parse(FolioTextbox.Text);
-                var rutaCertificado = handler.Configuracion.Certificado.Ruta;
-                var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
-                var rutUsuario = handler.Configuracion.Certificado.Rut;
-                var password = handler.Configuracion.Certificado.Password;
+                var rutUsuario = handler.Configuracion.UsuarioSII.RutUsuario;
+                var password = handler.Configuracion.UsuarioSII.PasswordSII;
                 var anio = int.Parse(AnioTextbox.Text);
                 var apikey = handler.Configuracion.APIKey;
                 var input = new BHData
                 {
-                    RutCertificado =  rutUsuario,
-                    Password = password,
-                    CertificadoB64 = certificado,
+                    RutUsuario =  rutUsuario,
+                    PasswordSII = password,
                     RutEmisor = rutEmisor,
                 };
                 var pdfBytes = await BHHelper.ObtenerPdfBoletaAsync(input, tipo, folio, apikey, anio);
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "PDF|*.pdf";
+                saveFileDialog.FileName = $"BOLETA_HONORARIOS_{folio}";
                 saveFileDialog.ShowDialog();
                 if (!string.IsNullOrEmpty(saveFileDialog.FileName))
                 {

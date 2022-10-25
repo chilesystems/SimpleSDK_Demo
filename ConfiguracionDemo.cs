@@ -1,4 +1,5 @@
-﻿using SimpleSDK_Demo.Models;
+﻿using SimpleSDK.Models.Extras;
+using SimpleSDK_Demo.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,6 +41,9 @@ namespace SimpleSDK_Demo
 
                 gridResultados.DataSource = null;
                 gridResultados.DataSource = configuracion.Empresa.CodigosActividades;
+
+                textRutUsuario.Text = configuracion.UsuarioSII.RutUsuario;
+                textPasswordSII.Text = configuracion.UsuarioSII.PasswordSII;
             }
             catch { }
         }
@@ -58,6 +62,9 @@ namespace SimpleSDK_Demo
             configuracion.Certificado.Rut = textRutCertificado.Text;
             configuracion.Certificado.Ruta = textRutaCertificado.Text;
             configuracion.Certificado.Password = textPassword.Text;
+
+            configuracion.UsuarioSII.RutUsuario = textRutUsuario.Text;
+            configuracion.UsuarioSII.PasswordSII = textPasswordSII.Text;
 
             configuracion.GenerarArchivo();
 
@@ -81,7 +88,7 @@ namespace SimpleSDK_Demo
 
         private void gridResultados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex != -1 && e.ColumnIndex == 1)
+            if (e.RowIndex != -1 && e.ColumnIndex == EliminarButton.Index)
             {
                 var Codigo = gridResultados.Rows[e.RowIndex].DataBoundItem as ActividadEconomica;
                 configuracion.Empresa.CodigosActividades.Remove(Codigo);

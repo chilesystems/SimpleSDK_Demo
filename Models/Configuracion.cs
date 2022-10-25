@@ -11,6 +11,8 @@ namespace SimpleSDK_Demo.Models
     {
         public Contribuyente Empresa { get; set; }
         public CertificadoDigital Certificado { get; set; }
+
+        public UsuarioSII UsuarioSII { get; set; }
         public string APIKey { get; set; }
 
         public void GenerarArchivo()
@@ -25,6 +27,7 @@ namespace SimpleSDK_Demo.Models
                 var conf = JsonConvert.DeserializeObject<Configuracion>(File.ReadAllText("configuracion.json", Encoding.GetEncoding("ISO-8859-1")));
                 this.Empresa = conf.Empresa;
                 this.Certificado = conf.Certificado;
+                this.UsuarioSII = conf.UsuarioSII ?? new UsuarioSII();
                 this.APIKey = conf.APIKey;
                 return true;
             }
@@ -60,6 +63,11 @@ namespace SimpleSDK_Demo.Models
                 Ruta = "path/to/your/certifificate.pfx", //Debe estar en formato .pfx
                 Rut = "55555555-5",
                 Password = "123123"
+            };
+            UsuarioSII = new UsuarioSII()
+            { 
+                RutUsuario = "44444444-4",
+                PasswordSII = "123123"
             };
             APIKey = "API-KEY";
             GenerarArchivo();

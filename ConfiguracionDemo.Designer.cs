@@ -37,6 +37,10 @@ namespace SimpleSDK_Demo
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.botonBuscarCertificado = new System.Windows.Forms.Button();
+            this.textPassword = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textRutaCertificado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textRutCertificado = new System.Windows.Forms.TextBox();
@@ -45,7 +49,7 @@ namespace SimpleSDK_Demo
             this.botonGuardarActividad = new System.Windows.Forms.Button();
             this.gridResultados = new System.Windows.Forms.DataGridView();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.EliminarButton = new System.Windows.Forms.DataGridViewImageColumn();
             this.textNumeroActividad = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -59,25 +63,27 @@ namespace SimpleSDK_Demo
             this.label55 = new System.Windows.Forms.Label();
             this.textDireccionEmpresa = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.textRutaCertificado = new System.Windows.Forms.TextBox();
-            this.textPassword = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.botonBuscarCertificado = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textPasswordSII = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textRutUsuario = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericNResolucion)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(8, 297);
+            this.label6.Location = new System.Drawing.Point(13, 362);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 20);
+            this.label6.Size = new System.Drawing.Size(111, 29);
             this.label6.TabIndex = 42;
             this.label6.Text = "API Key:";
             // 
@@ -85,9 +91,9 @@ namespace SimpleSDK_Demo
             // 
             this.textAPIKey.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textAPIKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textAPIKey.Location = new System.Drawing.Point(91, 294);
+            this.textAPIKey.Location = new System.Drawing.Point(130, 359);
             this.textAPIKey.Name = "textAPIKey";
-            this.textAPIKey.Size = new System.Drawing.Size(273, 26);
+            this.textAPIKey.Size = new System.Drawing.Size(273, 35);
             this.textAPIKey.TabIndex = 41;
             // 
             // groupBox2
@@ -152,6 +158,40 @@ namespace SimpleSDK_Demo
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Certificado";
             // 
+            // botonBuscarCertificado
+            // 
+            this.botonBuscarCertificado.Image = global::SimpleSDK_Demo.Properties.Resources.View;
+            this.botonBuscarCertificado.Location = new System.Drawing.Point(316, 43);
+            this.botonBuscarCertificado.Name = "botonBuscarCertificado";
+            this.botonBuscarCertificado.Size = new System.Drawing.Size(28, 23);
+            this.botonBuscarCertificado.TabIndex = 37;
+            this.botonBuscarCertificado.UseVisualStyleBackColor = true;
+            this.botonBuscarCertificado.Click += new System.EventHandler(this.botonBuscarCertificado_Click);
+            // 
+            // textPassword
+            // 
+            this.textPassword.Location = new System.Drawing.Point(118, 71);
+            this.textPassword.Name = "textPassword";
+            this.textPassword.Size = new System.Drawing.Size(112, 20);
+            this.textPassword.TabIndex = 36;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 74);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Password:";
+            // 
+            // textRutaCertificado
+            // 
+            this.textRutaCertificado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textRutaCertificado.Location = new System.Drawing.Point(118, 45);
+            this.textRutaCertificado.Name = "textRutaCertificado";
+            this.textRutaCertificado.Size = new System.Drawing.Size(192, 20);
+            this.textRutaCertificado.TabIndex = 34;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -180,10 +220,11 @@ namespace SimpleSDK_Demo
             // 
             // botonGuardar
             // 
+            this.botonGuardar.Image = global::SimpleSDK_Demo.Properties.Resources.Guardar_32;
             this.botonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botonGuardar.Location = new System.Drawing.Point(506, 294);
+            this.botonGuardar.Location = new System.Drawing.Point(493, 362);
             this.botonGuardar.Name = "botonGuardar";
-            this.botonGuardar.Size = new System.Drawing.Size(79, 33);
+            this.botonGuardar.Size = new System.Drawing.Size(92, 33);
             this.botonGuardar.TabIndex = 38;
             this.botonGuardar.Text = "Guardar";
             this.botonGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -218,10 +259,11 @@ namespace SimpleSDK_Demo
             this.gridResultados.AllowUserToDeleteRows = false;
             this.gridResultados.AllowUserToResizeColumns = false;
             this.gridResultados.AllowUserToResizeRows = false;
+            this.gridResultados.ColumnHeadersHeight = 34;
             this.gridResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridResultados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Numero,
-            this.Eliminar});
+            this.EliminarButton});
             this.gridResultados.Location = new System.Drawing.Point(11, 52);
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
@@ -235,15 +277,18 @@ namespace SimpleSDK_Demo
             // 
             this.Numero.DataPropertyName = "Codigo";
             this.Numero.HeaderText = "Numero";
+            this.Numero.MinimumWidth = 8;
             this.Numero.Name = "Numero";
             this.Numero.ReadOnly = true;
+            this.Numero.Width = 150;
             // 
-            // Eliminar
+            // EliminarButton
             // 
-            this.Eliminar.HeaderText = "";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Width = 35;
+            this.EliminarButton.HeaderText = "";
+            this.EliminarButton.MinimumWidth = 8;
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.ReadOnly = true;
+            this.EliminarButton.Width = 35;
             // 
             // textNumeroActividad
             // 
@@ -364,45 +409,58 @@ namespace SimpleSDK_Demo
             this.label54.TabIndex = 36;
             this.label54.Text = "Dirección:";
             // 
-            // textRutaCertificado
+            // groupBox4
             // 
-            this.textRutaCertificado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textRutaCertificado.Location = new System.Drawing.Point(118, 45);
-            this.textRutaCertificado.Name = "textRutaCertificado";
-            this.textRutaCertificado.Size = new System.Drawing.Size(192, 20);
-            this.textRutaCertificado.TabIndex = 34;
+            this.groupBox4.Controls.Add(this.textPasswordSII);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.textRutUsuario);
+            this.groupBox4.Location = new System.Drawing.Point(12, 278);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(352, 75);
+            this.groupBox4.TabIndex = 43;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Datos SII (Sólo para Boletas de Honorarios y RCV)";
             // 
-            // textPassword
+            // textPasswordSII
             // 
-            this.textPassword.Location = new System.Drawing.Point(118, 71);
-            this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(112, 20);
-            this.textPassword.TabIndex = 36;
+            this.textPasswordSII.Location = new System.Drawing.Point(118, 45);
+            this.textPasswordSII.Name = "textPasswordSII";
+            this.textPasswordSII.Size = new System.Drawing.Size(112, 20);
+            this.textPasswordSII.TabIndex = 36;
             // 
-            // label5
+            // label7
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 74);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Password:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 48);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 20);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Password SII:";
             // 
-            // botonBuscarCertificado
+            // label8
             // 
-            this.botonBuscarCertificado.Image = global::SimpleSDK_Demo.Properties.Resources.View;
-            this.botonBuscarCertificado.Location = new System.Drawing.Point(316, 43);
-            this.botonBuscarCertificado.Name = "botonBuscarCertificado";
-            this.botonBuscarCertificado.Size = new System.Drawing.Size(28, 23);
-            this.botonBuscarCertificado.TabIndex = 37;
-            this.botonBuscarCertificado.UseVisualStyleBackColor = true;
-            this.botonBuscarCertificado.Click += new System.EventHandler(this.botonBuscarCertificado_Click);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 20);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "RUT Usuario:";
+            // 
+            // textRutUsuario
+            // 
+            this.textRutUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textRutUsuario.Location = new System.Drawing.Point(118, 19);
+            this.textRutUsuario.Name = "textRutUsuario";
+            this.textRutUsuario.Size = new System.Drawing.Size(112, 20);
+            this.textRutUsuario.TabIndex = 33;
             // 
             // ConfiguracionDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 335);
+            this.ClientSize = new System.Drawing.Size(599, 413);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textAPIKey);
             this.Controls.Add(this.groupBox2);
@@ -427,6 +485,8 @@ namespace SimpleSDK_Demo
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,8 +509,6 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.Button botonGuardarActividad;
         private System.Windows.Forms.DataGridView gridResultados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
-        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.TextBox textNumeroActividad;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -468,5 +526,12 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button botonBuscarCertificado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
+        private System.Windows.Forms.DataGridViewImageColumn EliminarButton;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox textPasswordSII;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textRutUsuario;
     }
 }

@@ -26,20 +26,17 @@ namespace SimpleSDK_Demo
             {
                 var fecha = FechaDateTimePicker.Value;
                 var mensual = MensualCheckBox.Checked;
-                var rutaCertificado = handler.Configuracion.Certificado.Ruta;
-                var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
-                var rutUsuario = handler.Configuracion.Certificado.Rut;
-                var password = handler.Configuracion.Certificado.Password;
-                var rutEmpresa = handler.Configuracion.Empresa.RutEmpresa;
+                var rutUsuario = RutUsuarioTextBox.Text;
+                var password = handler.Configuracion.UsuarioSII.PasswordSII;
+                var rutEmpresa = RutEmpresaTextBox.Text;
                 var apikey = handler.Configuracion.APIKey;
             
                 RCVData basicData = new RCVData
                 {
-                    RutCertificado =  rutUsuario,
-                    Password = password,
+                    RutUsuario =  rutUsuario,
+                    PasswordSII = password,
                     RutEmpresa = rutEmpresa,
                     Ambiente = radioCertificacion.Checked ? 0 : 1,
-                    CertificadoB64 = certificado,
                     Detallado = checkDetallado.Checked
                 };
                 var (exito, registro) = await RCVHelper.ConsultaRegistroVentasAsync(fecha, mensual, basicData, apikey);
@@ -67,7 +64,7 @@ namespace SimpleSDK_Demo
             handler.Configuracion = new Configuracion();
             handler.Configuracion.LeerArchivo();
             RutEmpresaTextBox.Text = handler.Configuracion.Empresa.RutEmpresa;
-            RutUsuarioTextBox.Text = handler.Configuracion.Certificado.Rut;
+            RutUsuarioTextBox.Text = handler.Configuracion.UsuarioSII.RutUsuario;
             MensualCheckBox.Checked = true;
         }
 

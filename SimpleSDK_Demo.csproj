@@ -64,7 +64,7 @@
       <HintPath>packages\RestSharp.108.0.1\lib\netstandard2.0\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="SimpleSDK, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\SimpleSDK.1.1.1\lib\netstandard2.0\SimpleSDK.dll</HintPath>
+      <HintPath>packages\SimpleSDK.1.1.2\lib\netstandard2.0\SimpleSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -301,7 +301,6 @@
     </Compile>
     <Compile Include="Models\CertificadoDigital.cs" />
     <Compile Include="Models\Configuracion.cs" />
-    <Compile Include="Models\Empresa.cs" />
     <Compile Include="Models\ItemBoleta.cs" />
     <Compile Include="MuestraImpresa.cs">
       <SubType>Form</SubType>

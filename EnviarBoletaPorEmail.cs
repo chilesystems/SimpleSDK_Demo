@@ -18,7 +18,7 @@ namespace SimpleSDK_Demo
         {
             handler.Configuracion = new Configuracion();
             handler.Configuracion.LeerArchivo();
-            RutEmisorTextbox.Text = handler.Configuracion.Certificado.Rut;
+            RutEmisorTextbox.Text = handler.Configuracion.UsuarioSII.RutUsuario;
         }
 
         private async void EnviarEmailButton_Click(object sender, EventArgs e)
@@ -27,18 +27,15 @@ namespace SimpleSDK_Demo
             try
             {
                 var folio = int.Parse(FolioTextbox.Text);
-                var rutaCertificado = handler.Configuracion.Certificado.Ruta;
-                var certificado = System.IO.File.ReadAllBytes(rutaCertificado);
-                var rutUsuario = handler.Configuracion.Certificado.Rut;
-                var password = handler.Configuracion.Certificado.Password;
+                var rutUsuario = RutEmisorTextbox.Text;
+                var password = handler.Configuracion.UsuarioSII.PasswordSII;
                 var apikey = handler.Configuracion.APIKey;
                 var correo = CorreoTextBox.Text;
                 var anio = int.Parse(AnioTextbox.Text);
                 var input = new BHData
                 {
-                    RutCertificado =  rutUsuario,
-                    Password = password,
-                    CertificadoB64 = certificado,
+                    RutUsuario =  rutUsuario,
+                    PasswordSII = password,
                     Correo = correo
                 };
                 var (boletaEnviada, message) = await BHHelper.EnviarEmail(input, folio, apikey, anio);
