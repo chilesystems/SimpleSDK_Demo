@@ -72,10 +72,10 @@ namespace SimpleSDK_Demo
             return detalles;
         }
 
-        public Referencia ReferenciaSetdePruebas(TipoDTE.TipoReferencia tipoDocumentoReferencia, DateTime? fechaDocReferencia, int? folioReferencia = 0, string casoPrueba = "")
+        public Referencia ReferenciaSetdePruebas(string tipoDocumentoReferencia, DateTime? fechaDocReferencia, int? folioReferencia = 0, string casoPrueba = "")
         {
             Referencia referencia = new Referencia();
-            if (tipoDocumentoReferencia == TipoDTE.TipoReferencia.BoletaElectronica || tipoDocumentoReferencia == TipoDTE.TipoReferencia.BoletaExentaElectronica)
+            if (tipoDocumentoReferencia == "39" || tipoDocumentoReferencia == "41")
             {
                 referencia = new Referencia()
                 {
@@ -91,8 +91,7 @@ namespace SimpleSDK_Demo
                     FechaDocumentoReferencia = fechaDocReferencia.HasValue ? fechaDocReferencia.Value : default,
                     FolioReferencia = folioReferencia.ToString(),
                     Numero = 1,
-                    RazonReferencia = casoPrueba,
-                    TipoDocumento = TipoDTE.TipoReferencia.SetPruebas
+                    RazonReferencia = casoPrueba
                 };
             }
             return referencia;

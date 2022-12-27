@@ -136,11 +136,11 @@ namespace SimpleSDK_Demo
                 razonReferencia = "MODIFICA TEXTO DE DOCUMENTO DE REFERENCIA";
             }
 
-            var tipoDteOrigen = TipoDTE.TipoReferencia.NotSet;
+            var tipoDteOrigen = string.Empty;
             if (dteOrigen.Documento.Encabezado.IdentificacionDTE.TipoDTE == TipoDTE.DTEType.FacturaElectronica)
-                tipoDteOrigen = TipoDTE.TipoReferencia.FacturaElectronica;
+                tipoDteOrigen = "33";
             else if (dteOrigen.Documento.Encabezado.IdentificacionDTE.TipoDTE == TipoDTE.DTEType.BoletaElectronica)
-                tipoDteOrigen = TipoDTE.TipoReferencia.BoletaElectronica;
+                tipoDteOrigen = "39";
 
             //Si se trata de un caso del set de pruebas para certificación
             if (checkSetPruebas.Checked)

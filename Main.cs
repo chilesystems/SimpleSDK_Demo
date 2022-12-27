@@ -461,5 +461,6 @@ namespace SimpleSDK_Demo
             var formulario = new ConsultarRegistroVentas();
             formulario.ShowDialog();
         }
+
     }
 }

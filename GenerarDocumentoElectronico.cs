@@ -119,7 +119,7 @@ namespace SimpleSDK_Demo
                 string casoPrueba = "CASO 123456-" + numericCasoPrueba.Value.ToString("N0");
                 //Para boletas electrónicas no se requiere agregar el número de atención. 
                 //string casoPrueba = "CASO-" + numericCasoPrueba.Value.ToString("N0");
-                var referenciaPrueba = handler.ReferenciaSetdePruebas(tipoDte == TipoDTE.DTEType.BoletaElectronica ? TipoDTE.TipoReferencia.BoletaElectronica : TipoDTE.TipoReferencia.FacturaElectronica, null, 0, casoPrueba);
+                var referenciaPrueba = handler.ReferenciaSetdePruebas(tipoDte == TipoDTE.DTEType.BoletaElectronica ? "39" : "33", null, 0, casoPrueba);
                 dte.Documento.Referencias.Add(referenciaPrueba);
             }
 
