@@ -35,9 +35,6 @@ namespace SimpleSDK_Demo
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.comboTipo = new System.Windows.Forms.ComboBox();
-            this.checkSetPruebas = new System.Windows.Forms.CheckBox();
-            this.labelCasoPrueba = new System.Windows.Forms.Label();
-            this.numericCasoPrueba = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.numericFolio = new System.Windows.Forms.NumericUpDown();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -101,7 +98,6 @@ namespace SimpleSDK_Demo
             this.textTotal = new System.Windows.Forms.TextBox();
             this.botonGenerar = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericCasoPrueba)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -119,9 +115,6 @@ namespace SimpleSDK_Demo
             // 
             this.groupBox5.Controls.Add(this.label16);
             this.groupBox5.Controls.Add(this.comboTipo);
-            this.groupBox5.Controls.Add(this.checkSetPruebas);
-            this.groupBox5.Controls.Add(this.labelCasoPrueba);
-            this.groupBox5.Controls.Add(this.numericCasoPrueba);
             this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Controls.Add(this.numericFolio);
             this.groupBox5.Location = new System.Drawing.Point(12, 12);
@@ -152,45 +145,6 @@ namespace SimpleSDK_Demo
             this.comboTipo.Name = "comboTipo";
             this.comboTipo.Size = new System.Drawing.Size(168, 21);
             this.comboTipo.TabIndex = 15;
-            // 
-            // checkSetPruebas
-            // 
-            this.checkSetPruebas.AutoSize = true;
-            this.checkSetPruebas.Location = new System.Drawing.Point(9, 22);
-            this.checkSetPruebas.Name = "checkSetPruebas";
-            this.checkSetPruebas.Size = new System.Drawing.Size(111, 17);
-            this.checkSetPruebas.TabIndex = 14;
-            this.checkSetPruebas.Text = "¿Set de Pruebas?";
-            this.checkSetPruebas.UseVisualStyleBackColor = true;
-            this.checkSetPruebas.CheckedChanged += new System.EventHandler(this.checkSetPruebas_CheckedChanged);
-            // 
-            // labelCasoPrueba
-            // 
-            this.labelCasoPrueba.AutoSize = true;
-            this.labelCasoPrueba.Enabled = false;
-            this.labelCasoPrueba.Location = new System.Drawing.Point(124, 23);
-            this.labelCasoPrueba.Name = "labelCasoPrueba";
-            this.labelCasoPrueba.Size = new System.Drawing.Size(85, 13);
-            this.labelCasoPrueba.TabIndex = 7;
-            this.labelCasoPrueba.Text = "Caso de prueba:";
-            // 
-            // numericCasoPrueba
-            // 
-            this.numericCasoPrueba.Enabled = false;
-            this.numericCasoPrueba.Location = new System.Drawing.Point(215, 20);
-            this.numericCasoPrueba.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.numericCasoPrueba.Name = "numericCasoPrueba";
-            this.numericCasoPrueba.Size = new System.Drawing.Size(45, 20);
-            this.numericCasoPrueba.TabIndex = 8;
-            this.numericCasoPrueba.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // label5
             // 
@@ -814,7 +768,7 @@ namespace SimpleSDK_Demo
             this.botonGenerar.UseVisualStyleBackColor = true;
             this.botonGenerar.Click += new System.EventHandler(this.botonGenerar_Click);
             // 
-            // GenerarDocumentoElectronico
+            // GenerarDocumentoElectronicoExportacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -829,13 +783,12 @@ namespace SimpleSDK_Demo
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
-            this.Name = "GenerarDocumentoElectronico";
+            this.Name = "GenerarDocumentoElectronicoExportacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generar Documento Electrónico";
             this.Load += new System.EventHandler(this.GenerarDocumentoElectronico_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericCasoPrueba)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -862,9 +815,6 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox comboTipo;
-        private System.Windows.Forms.CheckBox checkSetPruebas;
-        private System.Windows.Forms.Label labelCasoPrueba;
-        private System.Windows.Forms.NumericUpDown numericCasoPrueba;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numericFolio;
         private System.Windows.Forms.GroupBox groupBox4;
