@@ -64,7 +64,7 @@
       <HintPath>packages\RestSharp.108.0.1\lib\netstandard2.0\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="SimpleSDK, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\SimpleSDK.1.1.3\lib\netstandard2.0\SimpleSDK.dll</HintPath>
+      <HintPath>packages\SimpleSDK.1.1.4\lib\netstandard2.0\SimpleSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -261,6 +261,12 @@
     <Compile Include="GenerarBoletaHonorarios.Designer.cs">
       <DependentUpon>GenerarBoletaHonorarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenerarDocumentoElectronicoExportacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarDocumentoElectronicoExportacion.Designer.cs">
+      <DependentUpon>GenerarDocumentoElectronicoExportacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenerarNotaCredito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -372,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GenerarBoletaHonorarios.resx">
       <DependentUpon>GenerarBoletaHonorarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarDocumentoElectronicoExportacion.resx">
+      <DependentUpon>GenerarDocumentoElectronicoExportacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenerarNotaCredito.resx">
       <DependentUpon>GenerarNotaCredito.cs</DependentUpon>

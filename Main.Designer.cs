@@ -35,7 +35,6 @@ namespace SimpleSDK_Demo
             this.botonFacturaCompra = new System.Windows.Forms.Button();
             this.botonMuestraImpresa = new System.Windows.Forms.Button();
             this.botonLibroGuias = new System.Windows.Forms.Button();
-            this.botonSetExportacion2 = new System.Windows.Forms.Button();
             this.botonCesion = new System.Windows.Forms.Button();
             this.botonSetExportacion = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -140,23 +139,13 @@ namespace SimpleSDK_Demo
             // 
             // botonLibroGuias
             // 
-            this.botonLibroGuias.Location = new System.Drawing.Point(6, 134);
+            this.botonLibroGuias.Location = new System.Drawing.Point(6, 106);
             this.botonLibroGuias.Name = "botonLibroGuias";
             this.botonLibroGuias.Size = new System.Drawing.Size(178, 23);
             this.botonLibroGuias.TabIndex = 18;
             this.botonLibroGuias.Text = "Libro de Guías";
             this.botonLibroGuias.UseVisualStyleBackColor = true;
             this.botonLibroGuias.Click += new System.EventHandler(this.botonLibroGuias_ClickAsync);
-            // 
-            // botonSetExportacion2
-            // 
-            this.botonSetExportacion2.Enabled = false;
-            this.botonSetExportacion2.Location = new System.Drawing.Point(6, 105);
-            this.botonSetExportacion2.Name = "botonSetExportacion2";
-            this.botonSetExportacion2.Size = new System.Drawing.Size(178, 23);
-            this.botonSetExportacion2.TabIndex = 20;
-            this.botonSetExportacion2.Text = "SET de Exportación (2)";
-            this.botonSetExportacion2.UseVisualStyleBackColor = true;
             // 
             // botonCesion
             // 
@@ -175,8 +164,9 @@ namespace SimpleSDK_Demo
             this.botonSetExportacion.Name = "botonSetExportacion";
             this.botonSetExportacion.Size = new System.Drawing.Size(178, 23);
             this.botonSetExportacion.TabIndex = 17;
-            this.botonSetExportacion.Text = "SET de Exportación (1)";
+            this.botonSetExportacion.Text = "Generar Doc. de Exportación";
             this.botonSetExportacion.UseVisualStyleBackColor = true;
+            this.botonSetExportacion.Click += new System.EventHandler(this.botonSetExportacion_Click);
             // 
             // groupBox5
             // 
@@ -289,10 +279,9 @@ namespace SimpleSDK_Demo
             this.groupBox6.Controls.Add(this.botonSetExportacion);
             this.groupBox6.Controls.Add(this.botonCesion);
             this.groupBox6.Controls.Add(this.botonLibroGuias);
-            this.groupBox6.Controls.Add(this.botonSetExportacion2);
             this.groupBox6.Location = new System.Drawing.Point(194, 6);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(190, 168);
+            this.groupBox6.Size = new System.Drawing.Size(190, 143);
             this.groupBox6.TabIndex = 29;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Otros DTE";
@@ -301,7 +290,7 @@ namespace SimpleSDK_Demo
             // 
             this.groupBox3.Controls.Add(this.botonTimbre);
             this.groupBox3.Controls.Add(this.botonMuestraImpresa);
-            this.groupBox3.Location = new System.Drawing.Point(194, 176);
+            this.groupBox3.Location = new System.Drawing.Point(194, 155);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(190, 82);
             this.groupBox3.TabIndex = 31;
@@ -360,7 +349,7 @@ namespace SimpleSDK_Demo
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(9, 33);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(568, 290);
@@ -374,9 +363,9 @@ namespace SimpleSDK_Demo
             this.tabPage1.Controls.Add(this.groupBox6);
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(560, 264);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "SimpleAPI - Facturación Electrónica";
@@ -388,9 +377,9 @@ namespace SimpleSDK_Demo
             this.tabPage2.Controls.Add(this.FoliosGroupBox);
             this.tabPage2.Controls.Add(this.BoletaHonorarioGroupBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(560, 264);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "SimpleAPI - Servicios";
@@ -401,9 +390,9 @@ namespace SimpleSDK_Demo
             this.RegistroComprasVentasGroupBox.Controls.Add(this.RegistroVentasButton);
             this.RegistroComprasVentasGroupBox.Controls.Add(this.RegistroComprasButton);
             this.RegistroComprasVentasGroupBox.Location = new System.Drawing.Point(4, 4);
-            this.RegistroComprasVentasGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RegistroComprasVentasGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.RegistroComprasVentasGroupBox.Name = "RegistroComprasVentasGroupBox";
-            this.RegistroComprasVentasGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RegistroComprasVentasGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.RegistroComprasVentasGroupBox.Size = new System.Drawing.Size(190, 75);
             this.RegistroComprasVentasGroupBox.TabIndex = 38;
             this.RegistroComprasVentasGroupBox.TabStop = false;
@@ -412,7 +401,7 @@ namespace SimpleSDK_Demo
             // RegistroVentasButton
             // 
             this.RegistroVentasButton.Location = new System.Drawing.Point(6, 48);
-            this.RegistroVentasButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RegistroVentasButton.Margin = new System.Windows.Forms.Padding(2);
             this.RegistroVentasButton.Name = "RegistroVentasButton";
             this.RegistroVentasButton.Size = new System.Drawing.Size(162, 23);
             this.RegistroVentasButton.TabIndex = 1;
@@ -423,7 +412,7 @@ namespace SimpleSDK_Demo
             // RegistroComprasButton
             // 
             this.RegistroComprasButton.Location = new System.Drawing.Point(6, 22);
-            this.RegistroComprasButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RegistroComprasButton.Margin = new System.Windows.Forms.Padding(2);
             this.RegistroComprasButton.Name = "RegistroComprasButton";
             this.RegistroComprasButton.Size = new System.Drawing.Size(162, 23);
             this.RegistroComprasButton.TabIndex = 0;
@@ -438,9 +427,9 @@ namespace SimpleSDK_Demo
             this.FoliosGroupBox.Controls.Add(this.ConsultarMaximoFoliosButton);
             this.FoliosGroupBox.Controls.Add(this.DescargarCafButton);
             this.FoliosGroupBox.Location = new System.Drawing.Point(4, 82);
-            this.FoliosGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FoliosGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.FoliosGroupBox.Name = "FoliosGroupBox";
-            this.FoliosGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FoliosGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.FoliosGroupBox.Size = new System.Drawing.Size(190, 126);
             this.FoliosGroupBox.TabIndex = 40;
             this.FoliosGroupBox.TabStop = false;
@@ -449,7 +438,7 @@ namespace SimpleSDK_Demo
             // AnularCafMasivamenteButton
             // 
             this.AnularCafMasivamenteButton.Location = new System.Drawing.Point(6, 96);
-            this.AnularCafMasivamenteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnularCafMasivamenteButton.Margin = new System.Windows.Forms.Padding(2);
             this.AnularCafMasivamenteButton.Name = "AnularCafMasivamenteButton";
             this.AnularCafMasivamenteButton.Size = new System.Drawing.Size(162, 23);
             this.AnularCafMasivamenteButton.TabIndex = 5;
@@ -460,7 +449,7 @@ namespace SimpleSDK_Demo
             // ConsultarUltimosCincoCafButton
             // 
             this.ConsultarUltimosCincoCafButton.Location = new System.Drawing.Point(6, 70);
-            this.ConsultarUltimosCincoCafButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ConsultarUltimosCincoCafButton.Margin = new System.Windows.Forms.Padding(2);
             this.ConsultarUltimosCincoCafButton.Name = "ConsultarUltimosCincoCafButton";
             this.ConsultarUltimosCincoCafButton.Size = new System.Drawing.Size(162, 23);
             this.ConsultarUltimosCincoCafButton.TabIndex = 2;
@@ -471,7 +460,7 @@ namespace SimpleSDK_Demo
             // ConsultarMaximoFoliosButton
             // 
             this.ConsultarMaximoFoliosButton.Location = new System.Drawing.Point(6, 44);
-            this.ConsultarMaximoFoliosButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ConsultarMaximoFoliosButton.Margin = new System.Windows.Forms.Padding(2);
             this.ConsultarMaximoFoliosButton.Name = "ConsultarMaximoFoliosButton";
             this.ConsultarMaximoFoliosButton.Size = new System.Drawing.Size(162, 23);
             this.ConsultarMaximoFoliosButton.TabIndex = 1;
@@ -482,7 +471,7 @@ namespace SimpleSDK_Demo
             // DescargarCafButton
             // 
             this.DescargarCafButton.Location = new System.Drawing.Point(6, 18);
-            this.DescargarCafButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DescargarCafButton.Margin = new System.Windows.Forms.Padding(2);
             this.DescargarCafButton.Name = "DescargarCafButton";
             this.DescargarCafButton.Size = new System.Drawing.Size(162, 23);
             this.DescargarCafButton.TabIndex = 0;
@@ -499,9 +488,9 @@ namespace SimpleSDK_Demo
             this.BoletaHonorarioGroupBox.Controls.Add(this.AnulaBoletaHonorarioButton);
             this.BoletaHonorarioGroupBox.Controls.Add(this.CrearBoletaHonorariosButton);
             this.BoletaHonorarioGroupBox.Location = new System.Drawing.Point(199, 4);
-            this.BoletaHonorarioGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BoletaHonorarioGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.BoletaHonorarioGroupBox.Name = "BoletaHonorarioGroupBox";
-            this.BoletaHonorarioGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BoletaHonorarioGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.BoletaHonorarioGroupBox.Size = new System.Drawing.Size(194, 204);
             this.BoletaHonorarioGroupBox.TabIndex = 39;
             this.BoletaHonorarioGroupBox.TabStop = false;
@@ -510,7 +499,7 @@ namespace SimpleSDK_Demo
             // EnviarEmailButton
             // 
             this.EnviarEmailButton.Location = new System.Drawing.Point(6, 96);
-            this.EnviarEmailButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EnviarEmailButton.Margin = new System.Windows.Forms.Padding(2);
             this.EnviarEmailButton.Name = "EnviarEmailButton";
             this.EnviarEmailButton.Size = new System.Drawing.Size(178, 23);
             this.EnviarEmailButton.TabIndex = 5;
@@ -521,7 +510,7 @@ namespace SimpleSDK_Demo
             // ListadoAnualBoletaButton
             // 
             this.ListadoAnualBoletaButton.Location = new System.Drawing.Point(6, 148);
-            this.ListadoAnualBoletaButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ListadoAnualBoletaButton.Margin = new System.Windows.Forms.Padding(2);
             this.ListadoAnualBoletaButton.Name = "ListadoAnualBoletaButton";
             this.ListadoAnualBoletaButton.Size = new System.Drawing.Size(178, 23);
             this.ListadoAnualBoletaButton.TabIndex = 4;
@@ -532,7 +521,7 @@ namespace SimpleSDK_Demo
             // ListadoMensualBoletasButton
             // 
             this.ListadoMensualBoletasButton.Location = new System.Drawing.Point(6, 122);
-            this.ListadoMensualBoletasButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ListadoMensualBoletasButton.Margin = new System.Windows.Forms.Padding(2);
             this.ListadoMensualBoletasButton.Name = "ListadoMensualBoletasButton";
             this.ListadoMensualBoletasButton.Size = new System.Drawing.Size(178, 23);
             this.ListadoMensualBoletasButton.TabIndex = 3;
@@ -543,7 +532,7 @@ namespace SimpleSDK_Demo
             // DownloadPdfButton
             // 
             this.DownloadPdfButton.Location = new System.Drawing.Point(6, 70);
-            this.DownloadPdfButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DownloadPdfButton.Margin = new System.Windows.Forms.Padding(2);
             this.DownloadPdfButton.Name = "DownloadPdfButton";
             this.DownloadPdfButton.Size = new System.Drawing.Size(178, 23);
             this.DownloadPdfButton.TabIndex = 2;
@@ -554,7 +543,7 @@ namespace SimpleSDK_Demo
             // AnulaBoletaHonorarioButton
             // 
             this.AnulaBoletaHonorarioButton.Location = new System.Drawing.Point(6, 44);
-            this.AnulaBoletaHonorarioButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnulaBoletaHonorarioButton.Margin = new System.Windows.Forms.Padding(2);
             this.AnulaBoletaHonorarioButton.Name = "AnulaBoletaHonorarioButton";
             this.AnulaBoletaHonorarioButton.Size = new System.Drawing.Size(178, 23);
             this.AnulaBoletaHonorarioButton.TabIndex = 1;
@@ -565,7 +554,7 @@ namespace SimpleSDK_Demo
             // CrearBoletaHonorariosButton
             // 
             this.CrearBoletaHonorariosButton.Location = new System.Drawing.Point(6, 18);
-            this.CrearBoletaHonorariosButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CrearBoletaHonorariosButton.Margin = new System.Windows.Forms.Padding(2);
             this.CrearBoletaHonorariosButton.Name = "CrearBoletaHonorariosButton";
             this.CrearBoletaHonorariosButton.Size = new System.Drawing.Size(178, 23);
             this.CrearBoletaHonorariosButton.TabIndex = 0;
@@ -611,7 +600,6 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.Button botonFacturaCompra;
         private System.Windows.Forms.Button botonMuestraImpresa;
         private System.Windows.Forms.Button botonLibroGuias;
-        private System.Windows.Forms.Button botonSetExportacion2;
         private System.Windows.Forms.Button botonCesion;
         private System.Windows.Forms.Button botonSetExportacion;
         private System.Windows.Forms.GroupBox groupBox5;

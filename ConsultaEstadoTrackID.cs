@@ -40,7 +40,7 @@ namespace SimpleSDK_Demo
                     Ambiente = radioCertificacion.Checked ? Ambiente.AmbienteEnum.Certificacion : Ambiente.AmbienteEnum.Produccion,
                     Certificado = handler.Configuracion.Certificado,
                     TrackId = trackId,
-                    
+                    ServidorBoletaREST = radioEnvioBoleta.Checked
                 };
 
                 if (radioEnvioBoleta.Checked)
@@ -51,7 +51,7 @@ namespace SimpleSDK_Demo
                 else
                 {
                     var resultado = await consulta.ConsultarAlSII(handler.Configuracion.APIKey);
-                    textRespuesta.Text = resultado.respuesta.ResponseXml;
+                    textRespuesta.Text = resultado.respuesta.ResponseXml ?? resultado.respuesta.Response;
                 }
 
             }

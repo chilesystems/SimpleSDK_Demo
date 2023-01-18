@@ -462,5 +462,10 @@ namespace SimpleSDK_Demo
             formulario.ShowDialog();
         }
 
+        private void botonSetExportacion_Click(object sender, EventArgs e)
+        {
+            GenerarDocumentoElectronicoExportacion formulario = new GenerarDocumentoElectronicoExportacion();
+            formulario.ShowDialog();
+        }
     }
 }
