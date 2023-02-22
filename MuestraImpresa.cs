@@ -35,6 +35,8 @@ namespace SimpleSDK_Demo
                 validador.FechaResolucion = dateFechaRes.Value.Date;
                 validador.Hora = dateHoraEmision.Value.ToShortTimeString();
                 validador.Vendedor = textVendedor.Text;
+                validador.FormaPago = textFormaPago.Text;
+                validador.CondicionVenta = textCondVenta.Text;
 
                 validador.LogoBase64 = !string.IsNullOrEmpty(txtFilePath.Text) ? Convert.ToBase64String(File.ReadAllBytes(txtFilePath.Text)) : "";
 
@@ -82,5 +84,6 @@ namespace SimpleSDK_Demo
                 txtFilePath.Text = openFileDialog.FileName;
             }
         }
+
     }
 }
