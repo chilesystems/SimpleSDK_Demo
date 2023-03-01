@@ -35,7 +35,7 @@ namespace SimpleSDK_Demo
                         MessageBox.Show("Debe seleccionar un domicilio de emisor obligatoriamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    domicilioIndex = gridDomicilios.SelectedRows[0].Index + 1;
+                    domicilioIndex = gridDomicilios.SelectedRows[0].Index;
                 }
 
                 Loading.ShowLoading(gridDetalles);
@@ -52,7 +52,7 @@ namespace SimpleSDK_Demo
                 // todo detalles
                 var input = new BHData
                 {
-                    RutUsuario =  rutEmisor,
+                    RutUsuario = handler.Configuracion.UsuarioSII.RutUsuario,
                     PasswordSII = password,
                     Retencion = tipoRetencion,
                     FechaEmision = DateTime.Today,
@@ -73,7 +73,12 @@ namespace SimpleSDK_Demo
                     input.Detalles.Add(new Detalle() { Nombre = gridDetalles.Rows[i].Cells[0].Value.ToString(), Valor = int.Parse(gridDetalles.Rows[i].Cells[1].Value.ToString()) });
                 }
 
-                var (emisionExitosa, message, retorno) = await BHHelper.EmitirAsync(input, apikey);
+                if (checkBoxTerceros.Checked)
+                {
+                    input.Emisor.Rut = textRutEmisor.Text;
+                }
+
+                var (emisionExitosa, message, retorno) = await BHHelper.EmitirAsync(input, checkBoxTerceros.Checked, apikey);
                 if (emisionExitosa)
                 {
                     SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -114,6 +119,19 @@ namespace SimpleSDK_Demo
             }
             Loading.HideLoading(gridDetalles);
             GenerarBoletaButton.Enabled = true;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {            
+
+            if (checkBoxTerceros.Checked)
+            {
+                textRutEmisor.Text = "";
+            }
+            else
+            {
+                textRutEmisor.Text = handler.Configuracion.UsuarioSII.RutUsuario;
+            }
         }
     }
 }
