@@ -33,8 +33,6 @@ namespace SimpleSDK_Demo
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.comboTipo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.numericFolio = new System.Windows.Forms.NumericUpDown();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -113,8 +111,6 @@ namespace SimpleSDK_Demo
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Controls.Add(this.comboTipo);
             this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Controls.Add(this.numericFolio);
             this.groupBox5.Location = new System.Drawing.Point(12, 12);
@@ -123,28 +119,6 @@ namespace SimpleSDK_Demo
             this.groupBox5.TabIndex = 22;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "General";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(396, 23);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 13);
-            this.label16.TabIndex = 16;
-            this.label16.Text = "Tipo:";
-            // 
-            // comboTipo
-            // 
-            this.comboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboTipo.FormattingEnabled = true;
-            this.comboTipo.Items.AddRange(new object[] {
-            "BOLETA ELECTRÓNICA",
-            "FACTURA ELECTRÓNICA",
-            "FACTURA EXENTA ELECTRÓNICA"});
-            this.comboTipo.Location = new System.Drawing.Point(433, 20);
-            this.comboTipo.Name = "comboTipo";
-            this.comboTipo.Size = new System.Drawing.Size(168, 21);
-            this.comboTipo.TabIndex = 15;
             // 
             // label5
             // 
@@ -813,8 +787,6 @@ namespace SimpleSDK_Demo
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboTipo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numericFolio;
         private System.Windows.Forms.GroupBox groupBox4;

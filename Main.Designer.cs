@@ -159,7 +159,6 @@ namespace SimpleSDK_Demo
             // 
             // botonSetExportacion
             // 
-            this.botonSetExportacion.Enabled = false;
             this.botonSetExportacion.Location = new System.Drawing.Point(6, 77);
             this.botonSetExportacion.Name = "botonSetExportacion";
             this.botonSetExportacion.Size = new System.Drawing.Size(178, 23);

@@ -26,7 +26,6 @@ namespace SimpleSDK_Demo
         private void GenerarDocumentoElectronico_Load(object sender, EventArgs e)
         {
             gridResultados.AutoGenerateColumns = false;
-            comboTipo.SelectedIndex = 0;
 
             handler.Configuracion = new Configuracion();
             handler.Configuracion.LeerArchivo();
@@ -71,7 +70,7 @@ namespace SimpleSDK_Demo
                 return;
             }
 
-            var tipoDte = comboTipo.SelectedIndex == 0 ? TipoDTE.DTEType.BoletaElectronica : TipoDTE.DTEType.FacturaElectronica;
+            var tipoDte = TipoDTE.DTEType.FacturaExportacionElectronica;
 
             var emisor = new SimpleSDK.Models.DTE.Emisor()
             {
