@@ -50,7 +50,7 @@ namespace SimpleSDK_Demo
                 };
                 consulta.Certificado = handler.Configuracion.Certificado;
                 var resultado = await consulta.ConsultarAlSII(handler.Configuracion.APIKey);
-                textRespuesta.Text = resultado.Item1 ? resultado.Item2.ResponseXML ?? resultado.Item2.descripcion : resultado.Item2.Response;
+                textRespuesta.Text = resultado.Item1 ? resultado.Item2.ResponseXML ?? resultado.Item2.descripcion : resultado.Item2.Response + resultado.Item2.Estado;
 
             }
             catch (Exception ex)
