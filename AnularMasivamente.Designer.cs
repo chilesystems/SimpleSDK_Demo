@@ -241,7 +241,6 @@ namespace SimpleSDK_Demo
             this.ResumeLayout(false);
 
         }
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button AnularButton;
 
         #endregion

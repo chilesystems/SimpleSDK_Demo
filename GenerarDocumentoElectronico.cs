@@ -15,8 +15,8 @@ namespace SimpleSDK_Demo
 {
     public partial class GenerarDocumentoElectronico : Form
     {
-        Helper handler = new Helper();
-        List<ItemBoleta> items = new List<ItemBoleta>();
+        readonly Helper handler = new Helper();
+        readonly List<ItemBoleta> items = new List<ItemBoleta>();
 
         public GenerarDocumentoElectronico()
         {
@@ -48,7 +48,7 @@ namespace SimpleSDK_Demo
             textPassword.Text = handler.Configuracion.Certificado.Password;
         }
 
-        private async void botonGenerar_Click(object sender, EventArgs e)
+        private async void BotonGenerar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textRutaCertificado.Text))
             {
@@ -151,7 +151,7 @@ namespace SimpleSDK_Demo
 
         }
 
-        private void gridResultados_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void GridResultados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
             {
@@ -161,19 +161,21 @@ namespace SimpleSDK_Demo
                     items.Remove(item);
                     gridResultados.DataSource = null;
                     gridResultados.DataSource = items;
-                    calculoTotales();
+                    CalculoTotales();
                 }
             }
         }
 
-        private void botonAgregarLinea_Click(object sender, EventArgs e)
+        private void BotonAgregarLinea_Click(object sender, EventArgs e)
         {
-            ItemBoleta item = new ItemBoleta();
-            item.Nombre = textNombre.Text;
-            item.Cantidad = (double)numericCantidad.Value;
-            item.Afecto = checkAfecto.Checked;
-            item.Precio = (int)numericPrecio.Value;
-            item.UnidadMedida = checkUnidad.Checked ? "Kg." : string.Empty;
+            ItemBoleta item = new ItemBoleta
+            {
+                Nombre = textNombre.Text,
+                Cantidad = (double)numericCantidad.Value,
+                Afecto = checkAfecto.Checked,
+                Precio = (int)numericPrecio.Value,
+                UnidadMedida = checkUnidad.Checked ? "Kg." : string.Empty
+            };
             items.Add(item);
             gridResultados.DataSource = null;
             gridResultados.DataSource = items;
@@ -182,10 +184,10 @@ namespace SimpleSDK_Demo
             numericCantidad.Value = 1;
             checkAfecto.Checked = true;
 
-            calculoTotales();
+            CalculoTotales();
         }
 
-        private void calculoTotales()
+        private void CalculoTotales()
         {
             var total = items.Sum(x => x.Total);
             var neto = Math.Round(total / 1.19, 0);
@@ -195,7 +197,7 @@ namespace SimpleSDK_Demo
             textTotal.Text = total.ToString("N0");
         }
 
-        private void botonBuscarCAF_Click(object sender, EventArgs e)
+        private void BotonBuscarCAF_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -209,7 +211,7 @@ namespace SimpleSDK_Demo
                 
         }
 
-        private void botonBuscarCertificado_Click(object sender, EventArgs e)
+        private void BotonBuscarCertificado_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -222,7 +224,7 @@ namespace SimpleSDK_Demo
             }
         }
 
-        private void checkSetPruebas_CheckedChanged(object sender, EventArgs e)
+        private void CheckSetPruebas_CheckedChanged(object sender, EventArgs e)
         {
             labelCasoPrueba.Enabled = numericCasoPrueba.Enabled = checkSetPruebas.Checked;
         }

@@ -42,8 +42,10 @@ namespace SimpleSDK_Demo
 
                 if (det.TipoImpuesto != TipoImpuesto.TipoImpuestoEnum.NotSet)
                 {
-                    detalle.CodigoImpuestoAdicional = new List<TipoImpuesto.TipoImpuestoEnum>();
-                    detalle.CodigoImpuestoAdicional.Add(det.TipoImpuesto);
+                    detalle.CodigoImpuestoAdicional = new List<TipoImpuesto.TipoImpuestoEnum>
+                    {
+                        det.TipoImpuesto
+                    };
                 }
                 detalles.Add(detalle);
                 contador++;
