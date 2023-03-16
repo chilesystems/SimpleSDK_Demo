@@ -26,7 +26,6 @@ namespace SimpleSDK_Demo
         private void GenerarDocumentoElectronico_Load(object sender, EventArgs e)
         {
             gridResultados.AutoGenerateColumns = false;
-            comboTipo.SelectedIndex = 0;
 
             handler.Configuracion = new Configuracion();
             handler.Configuracion.LeerArchivo();
@@ -37,11 +36,11 @@ namespace SimpleSDK_Demo
             textComunaEmisor.Text = handler.Configuracion.Empresa.Comuna;
             textGiroEmisor.Text = handler.Configuracion.Empresa.Giro;
 
-            textRUTReceptor.Text = "66666666-6";
             textRazonSocialReceptor.Text = "Razón Social de Cliente";
             textDireccionReceptor.Text = "Dirección de Cliente";
-            textComunaReceptor.Text = "Comuna de Cliente";
+            textCiudadReceptor.Text = "Ciudad de Cliente";
             textGiroReceptor.Text = "Giro de Cliente";
+            textRUTReceptor.Text = "55555555-5";
 
             textRutaCertificado.Text = handler.Configuracion.Certificado.Ruta;
             textRUTCertificado.Text = handler.Configuracion.Certificado.Rut;
@@ -71,7 +70,7 @@ namespace SimpleSDK_Demo
                 return;
             }
 
-            var tipoDte = comboTipo.SelectedIndex == 0 ? TipoDTE.DTEType.BoletaElectronica : TipoDTE.DTEType.FacturaElectronica;
+            var tipoDte = TipoDTE.DTEType.FacturaExportacionElectronica;
 
             var emisor = new SimpleSDK.Models.DTE.Emisor()
             {
@@ -82,10 +81,10 @@ namespace SimpleSDK_Demo
 
             var receptor = new SimpleSDK.Models.DTE.Receptor()
             {
-                Rut = textRUTReceptor.Text,
+                Rut = "55555555-5",
                 RazonSocial = textRazonSocialReceptor.Text,
                 Direccion = textDireccionReceptor.Text,
-                Comuna = textComunaReceptor.Text
+                Comuna = textCiudadReceptor.Text
             };
 
             //Etiquetas propias para boletas y para el resto.
@@ -208,6 +207,16 @@ namespace SimpleSDK_Demo
                     textRutaCertificado.Text = openFileDialog.FileName;
                 }
             }
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
