@@ -462,7 +462,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleSDK\SimpleSDK.csproj">
-      <Project>{5892ec73-9443-4b96-ae9d-f20d03e37d77}</Project>
+      <Project>{e9227b61-316e-4f5f-9385-bd4b389f04a4}</Project>
       <Name>SimpleSDK</Name>
     </ProjectReference>
   </ItemGroup>

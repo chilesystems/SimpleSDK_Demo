@@ -109,6 +109,15 @@ namespace SimpleSDK_Demo
             //Asignación de detalles
             dte.Documento.Detalles = handler.ItemboletaADetalle(items);
 
+
+            dte.Documento.DescuentosRecargos.Add(new SimpleSDK.Models.DTE.DescuentosRecargos() {
+                Descripcion = "Descuento prueba",
+                TipoMovimiento = TipoMovimiento.TipoMovimientoEnum.Descuento,
+                Valor = 10,
+                TipoValor = ExpresionDinero.ExpresionDineroEnum.Porcentaje,
+                Numero = 1                
+            });
+
             dte.CalcularTotales();
 
             //Si se trata de un caso del set de pruebas para certificación
@@ -174,7 +183,8 @@ namespace SimpleSDK_Demo
                 Cantidad = (double)numericCantidad.Value,
                 Afecto = checkAfecto.Checked,
                 Precio = (int)numericPrecio.Value,
-                UnidadMedida = checkUnidad.Checked ? "Kg." : string.Empty
+                UnidadMedida = checkUnidad.Checked ? "Kg." : string.Empty,
+             
             };
             items.Add(item);
             gridResultados.DataSource = null;

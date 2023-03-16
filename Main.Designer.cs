@@ -43,7 +43,6 @@ namespace SimpleSDK_Demo
             this.botonConsultarEstadoDTE = new System.Windows.Forms.Button();
             this.botonTimbre = new System.Windows.Forms.Button();
             this.botonGenerarNotaCredito = new System.Windows.Forms.Button();
-            this.botonGenerarRCOF = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.botonGenerarSobreEnvio = new System.Windows.Forms.Button();
             this.botonGenerarDocumento = new System.Windows.Forms.Button();
@@ -89,9 +88,10 @@ namespace SimpleSDK_Demo
             // 
             this.radioCertificacion.AutoSize = true;
             this.radioCertificacion.Checked = true;
-            this.radioCertificacion.Location = new System.Drawing.Point(9, 50);
+            this.radioCertificacion.Location = new System.Drawing.Point(14, 77);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioCertificacion.Name = "radioCertificacion";
-            this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
+            this.radioCertificacion.Size = new System.Drawing.Size(117, 24);
             this.radioCertificacion.TabIndex = 14;
             this.radioCertificacion.TabStop = true;
             this.radioCertificacion.Text = "Certificación";
@@ -100,18 +100,20 @@ namespace SimpleSDK_Demo
             // radioProduccion
             // 
             this.radioProduccion.AutoSize = true;
-            this.radioProduccion.Location = new System.Drawing.Point(101, 50);
+            this.radioProduccion.Location = new System.Drawing.Point(152, 77);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioProduccion.Name = "radioProduccion";
-            this.radioProduccion.Size = new System.Drawing.Size(79, 17);
+            this.radioProduccion.Size = new System.Drawing.Size(109, 24);
             this.radioProduccion.TabIndex = 15;
             this.radioProduccion.Text = "Producción";
             this.radioProduccion.UseVisualStyleBackColor = true;
             // 
             // botonEnviarSii
             // 
-            this.botonEnviarSii.Location = new System.Drawing.Point(5, 74);
+            this.botonEnviarSii.Location = new System.Drawing.Point(8, 114);
+            this.botonEnviarSii.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonEnviarSii.Name = "botonEnviarSii";
-            this.botonEnviarSii.Size = new System.Drawing.Size(171, 23);
+            this.botonEnviarSii.Size = new System.Drawing.Size(256, 35);
             this.botonEnviarSii.TabIndex = 3;
             this.botonEnviarSii.Text = "Enviar un archivo al SII";
             this.botonEnviarSii.UseVisualStyleBackColor = true;
@@ -119,9 +121,10 @@ namespace SimpleSDK_Demo
             // 
             // botonFacturaCompra
             // 
-            this.botonFacturaCompra.Location = new System.Drawing.Point(6, 19);
+            this.botonFacturaCompra.Location = new System.Drawing.Point(9, 29);
+            this.botonFacturaCompra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonFacturaCompra.Name = "botonFacturaCompra";
-            this.botonFacturaCompra.Size = new System.Drawing.Size(178, 23);
+            this.botonFacturaCompra.Size = new System.Drawing.Size(267, 35);
             this.botonFacturaCompra.TabIndex = 21;
             this.botonFacturaCompra.Text = "Factura de Compra";
             this.botonFacturaCompra.UseVisualStyleBackColor = true;
@@ -129,9 +132,10 @@ namespace SimpleSDK_Demo
             // 
             // botonMuestraImpresa
             // 
-            this.botonMuestraImpresa.Location = new System.Drawing.Point(6, 50);
+            this.botonMuestraImpresa.Location = new System.Drawing.Point(9, 77);
+            this.botonMuestraImpresa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonMuestraImpresa.Name = "botonMuestraImpresa";
-            this.botonMuestraImpresa.Size = new System.Drawing.Size(178, 23);
+            this.botonMuestraImpresa.Size = new System.Drawing.Size(267, 35);
             this.botonMuestraImpresa.TabIndex = 19;
             this.botonMuestraImpresa.Text = "Muestra Impresa";
             this.botonMuestraImpresa.UseVisualStyleBackColor = true;
@@ -139,9 +143,10 @@ namespace SimpleSDK_Demo
             // 
             // botonLibroGuias
             // 
-            this.botonLibroGuias.Location = new System.Drawing.Point(6, 106);
+            this.botonLibroGuias.Location = new System.Drawing.Point(9, 163);
+            this.botonLibroGuias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonLibroGuias.Name = "botonLibroGuias";
-            this.botonLibroGuias.Size = new System.Drawing.Size(178, 23);
+            this.botonLibroGuias.Size = new System.Drawing.Size(267, 35);
             this.botonLibroGuias.TabIndex = 18;
             this.botonLibroGuias.Text = "Libro de Guías";
             this.botonLibroGuias.UseVisualStyleBackColor = true;
@@ -149,9 +154,10 @@ namespace SimpleSDK_Demo
             // 
             // botonCesion
             // 
-            this.botonCesion.Location = new System.Drawing.Point(6, 48);
+            this.botonCesion.Location = new System.Drawing.Point(9, 74);
+            this.botonCesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonCesion.Name = "botonCesion";
-            this.botonCesion.Size = new System.Drawing.Size(178, 23);
+            this.botonCesion.Size = new System.Drawing.Size(267, 35);
             this.botonCesion.TabIndex = 19;
             this.botonCesion.Text = "Cesión de Documentos";
             this.botonCesion.UseVisualStyleBackColor = true;
@@ -160,9 +166,10 @@ namespace SimpleSDK_Demo
             // botonSetExportacion
             // 
             this.botonSetExportacion.Enabled = false;
-            this.botonSetExportacion.Location = new System.Drawing.Point(6, 77);
+            this.botonSetExportacion.Location = new System.Drawing.Point(9, 118);
+            this.botonSetExportacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonSetExportacion.Name = "botonSetExportacion";
-            this.botonSetExportacion.Size = new System.Drawing.Size(178, 23);
+            this.botonSetExportacion.Size = new System.Drawing.Size(267, 35);
             this.botonSetExportacion.TabIndex = 17;
             this.botonSetExportacion.Text = "Generar Doc. de Exportación";
             this.botonSetExportacion.UseVisualStyleBackColor = true;
@@ -173,18 +180,21 @@ namespace SimpleSDK_Demo
             this.groupBox5.Controls.Add(this.botonConsultarEstadoEnvio);
             this.groupBox5.Controls.Add(this.botonValidador);
             this.groupBox5.Controls.Add(this.botonConsultarEstadoDTE);
-            this.groupBox5.Location = new System.Drawing.Point(390, 6);
+            this.groupBox5.Location = new System.Drawing.Point(585, 9);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(163, 107);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox5.Size = new System.Drawing.Size(244, 165);
             this.groupBox5.TabIndex = 25;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Utilidades";
             // 
             // botonConsultarEstadoEnvio
             // 
-            this.botonConsultarEstadoEnvio.Location = new System.Drawing.Point(6, 48);
+            this.botonConsultarEstadoEnvio.Location = new System.Drawing.Point(9, 74);
+            this.botonConsultarEstadoEnvio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonConsultarEstadoEnvio.Name = "botonConsultarEstadoEnvio";
-            this.botonConsultarEstadoEnvio.Size = new System.Drawing.Size(151, 23);
+            this.botonConsultarEstadoEnvio.Size = new System.Drawing.Size(226, 35);
             this.botonConsultarEstadoEnvio.TabIndex = 18;
             this.botonConsultarEstadoEnvio.Text = "Consultar Estado Envío";
             this.botonConsultarEstadoEnvio.UseVisualStyleBackColor = true;
@@ -192,9 +202,10 @@ namespace SimpleSDK_Demo
             // 
             // botonValidador
             // 
-            this.botonValidador.Location = new System.Drawing.Point(6, 77);
+            this.botonValidador.Location = new System.Drawing.Point(9, 118);
+            this.botonValidador.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonValidador.Name = "botonValidador";
-            this.botonValidador.Size = new System.Drawing.Size(151, 23);
+            this.botonValidador.Size = new System.Drawing.Size(226, 35);
             this.botonValidador.TabIndex = 17;
             this.botonValidador.Text = "Validador";
             this.botonValidador.UseVisualStyleBackColor = true;
@@ -202,9 +213,10 @@ namespace SimpleSDK_Demo
             // 
             // botonConsultarEstadoDTE
             // 
-            this.botonConsultarEstadoDTE.Location = new System.Drawing.Point(6, 19);
+            this.botonConsultarEstadoDTE.Location = new System.Drawing.Point(9, 29);
+            this.botonConsultarEstadoDTE.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonConsultarEstadoDTE.Name = "botonConsultarEstadoDTE";
-            this.botonConsultarEstadoDTE.Size = new System.Drawing.Size(151, 23);
+            this.botonConsultarEstadoDTE.Size = new System.Drawing.Size(226, 35);
             this.botonConsultarEstadoDTE.TabIndex = 1;
             this.botonConsultarEstadoDTE.Text = "Consultar Estado DTE";
             this.botonConsultarEstadoDTE.UseVisualStyleBackColor = true;
@@ -212,9 +224,10 @@ namespace SimpleSDK_Demo
             // 
             // botonTimbre
             // 
-            this.botonTimbre.Location = new System.Drawing.Point(6, 24);
+            this.botonTimbre.Location = new System.Drawing.Point(9, 37);
+            this.botonTimbre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonTimbre.Name = "botonTimbre";
-            this.botonTimbre.Size = new System.Drawing.Size(178, 23);
+            this.botonTimbre.Size = new System.Drawing.Size(267, 35);
             this.botonTimbre.TabIndex = 12;
             this.botonTimbre.Text = "Imagen del Timbre";
             this.botonTimbre.UseVisualStyleBackColor = true;
@@ -222,42 +235,35 @@ namespace SimpleSDK_Demo
             // 
             // botonGenerarNotaCredito
             // 
-            this.botonGenerarNotaCredito.Location = new System.Drawing.Point(6, 48);
+            this.botonGenerarNotaCredito.Location = new System.Drawing.Point(9, 74);
+            this.botonGenerarNotaCredito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonGenerarNotaCredito.Name = "botonGenerarNotaCredito";
-            this.botonGenerarNotaCredito.Size = new System.Drawing.Size(171, 23);
+            this.botonGenerarNotaCredito.Size = new System.Drawing.Size(256, 35);
             this.botonGenerarNotaCredito.TabIndex = 3;
             this.botonGenerarNotaCredito.Text = "Notas de Crédito";
             this.botonGenerarNotaCredito.UseVisualStyleBackColor = true;
             this.botonGenerarNotaCredito.Click += new System.EventHandler(this.botonGenerarNotaCredito_Click);
             // 
-            // botonGenerarRCOF
-            // 
-            this.botonGenerarRCOF.Location = new System.Drawing.Point(6, 106);
-            this.botonGenerarRCOF.Name = "botonGenerarRCOF";
-            this.botonGenerarRCOF.Size = new System.Drawing.Size(171, 23);
-            this.botonGenerarRCOF.TabIndex = 2;
-            this.botonGenerarRCOF.Text = "Generar RVD";
-            this.botonGenerarRCOF.UseVisualStyleBackColor = true;
-            this.botonGenerarRCOF.Click += new System.EventHandler(this.botonGenerarRCOF_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.botonGenerarSobreEnvio);
             this.groupBox1.Controls.Add(this.botonGenerarNotaCredito);
-            this.groupBox1.Controls.Add(this.botonGenerarRCOF);
             this.groupBox1.Controls.Add(this.botonGenerarDocumento);
-            this.groupBox1.Location = new System.Drawing.Point(5, 6);
+            this.groupBox1.Location = new System.Drawing.Point(8, 9);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(183, 143);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(274, 165);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Generación de Documentos";
             // 
             // botonGenerarSobreEnvio
             // 
-            this.botonGenerarSobreEnvio.Location = new System.Drawing.Point(6, 77);
+            this.botonGenerarSobreEnvio.Location = new System.Drawing.Point(9, 118);
+            this.botonGenerarSobreEnvio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonGenerarSobreEnvio.Name = "botonGenerarSobreEnvio";
-            this.botonGenerarSobreEnvio.Size = new System.Drawing.Size(171, 23);
+            this.botonGenerarSobreEnvio.Size = new System.Drawing.Size(256, 35);
             this.botonGenerarSobreEnvio.TabIndex = 4;
             this.botonGenerarSobreEnvio.Text = "Generar Sobre Envio";
             this.botonGenerarSobreEnvio.UseVisualStyleBackColor = true;
@@ -265,9 +271,10 @@ namespace SimpleSDK_Demo
             // 
             // botonGenerarDocumento
             // 
-            this.botonGenerarDocumento.Location = new System.Drawing.Point(6, 19);
+            this.botonGenerarDocumento.Location = new System.Drawing.Point(9, 29);
+            this.botonGenerarDocumento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.botonGenerarDocumento.Name = "botonGenerarDocumento";
-            this.botonGenerarDocumento.Size = new System.Drawing.Size(171, 23);
+            this.botonGenerarDocumento.Size = new System.Drawing.Size(256, 35);
             this.botonGenerarDocumento.TabIndex = 1;
             this.botonGenerarDocumento.Text = "Generar Documento";
             this.botonGenerarDocumento.UseVisualStyleBackColor = true;
@@ -279,9 +286,11 @@ namespace SimpleSDK_Demo
             this.groupBox6.Controls.Add(this.botonSetExportacion);
             this.groupBox6.Controls.Add(this.botonCesion);
             this.groupBox6.Controls.Add(this.botonLibroGuias);
-            this.groupBox6.Location = new System.Drawing.Point(194, 6);
+            this.groupBox6.Location = new System.Drawing.Point(291, 9);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(190, 143);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox6.Size = new System.Drawing.Size(285, 220);
             this.groupBox6.TabIndex = 29;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Otros DTE";
@@ -290,9 +299,11 @@ namespace SimpleSDK_Demo
             // 
             this.groupBox3.Controls.Add(this.botonTimbre);
             this.groupBox3.Controls.Add(this.botonMuestraImpresa);
-            this.groupBox3.Location = new System.Drawing.Point(194, 155);
+            this.groupBox3.Location = new System.Drawing.Point(291, 238);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(190, 82);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Size = new System.Drawing.Size(285, 126);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Documentos Impresos";
@@ -303,9 +314,11 @@ namespace SimpleSDK_Demo
             this.groupBox2.Controls.Add(this.comboTipoEnvio);
             this.groupBox2.Controls.Add(this.radioProduccion);
             this.groupBox2.Controls.Add(this.botonEnviarSii);
-            this.groupBox2.Location = new System.Drawing.Point(5, 155);
+            this.groupBox2.Location = new System.Drawing.Point(8, 238);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(183, 103);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(274, 158);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Enviar al SII";
@@ -319,9 +332,10 @@ namespace SimpleSDK_Demo
             "EnvioBoleta",
             "RVD",
             "LibroGuia"});
-            this.comboTipoEnvio.Location = new System.Drawing.Point(6, 24);
+            this.comboTipoEnvio.Location = new System.Drawing.Point(9, 37);
+            this.comboTipoEnvio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboTipoEnvio.Name = "comboTipoEnvio";
-            this.comboTipoEnvio.Size = new System.Drawing.Size(171, 21);
+            this.comboTipoEnvio.Size = new System.Drawing.Size(254, 28);
             this.comboTipoEnvio.TabIndex = 4;
             // 
             // menuStrip1
@@ -331,8 +345,8 @@ namespace SimpleSDK_Demo
             this.configuraciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(584, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(876, 30);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -340,7 +354,7 @@ namespace SimpleSDK_Demo
             // 
             this.configuraciónToolStripMenuItem.Image = global::SimpleSDK_Demo.Properties.Resources.ConfiguracionEdit16;
             this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.configuraciónToolStripMenuItem.Text = "Configuración";
             this.configuraciónToolStripMenuItem.Click += new System.EventHandler(this.configuraciónToolStripMenuItem_Click);
             // 
@@ -348,11 +362,10 @@ namespace SimpleSDK_Demo
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(9, 33);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl1.Location = new System.Drawing.Point(14, 51);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(568, 290);
+            this.tabControl1.Size = new System.Drawing.Size(852, 446);
             this.tabControl1.TabIndex = 40;
             // 
             // tabPage1
@@ -362,11 +375,10 @@ namespace SimpleSDK_Demo
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox6);
             this.tabPage1.Controls.Add(this.groupBox5);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(560, 264);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(844, 413);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "SimpleAPI - Facturación Electrónica";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -376,11 +388,10 @@ namespace SimpleSDK_Demo
             this.tabPage2.Controls.Add(this.RegistroComprasVentasGroupBox);
             this.tabPage2.Controls.Add(this.FoliosGroupBox);
             this.tabPage2.Controls.Add(this.BoletaHonorarioGroupBox);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(560, 264);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(844, 413);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "SimpleAPI - Servicios";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -389,21 +400,18 @@ namespace SimpleSDK_Demo
             // 
             this.RegistroComprasVentasGroupBox.Controls.Add(this.RegistroVentasButton);
             this.RegistroComprasVentasGroupBox.Controls.Add(this.RegistroComprasButton);
-            this.RegistroComprasVentasGroupBox.Location = new System.Drawing.Point(4, 4);
-            this.RegistroComprasVentasGroupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.RegistroComprasVentasGroupBox.Location = new System.Drawing.Point(6, 6);
             this.RegistroComprasVentasGroupBox.Name = "RegistroComprasVentasGroupBox";
-            this.RegistroComprasVentasGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.RegistroComprasVentasGroupBox.Size = new System.Drawing.Size(190, 75);
+            this.RegistroComprasVentasGroupBox.Size = new System.Drawing.Size(285, 115);
             this.RegistroComprasVentasGroupBox.TabIndex = 38;
             this.RegistroComprasVentasGroupBox.TabStop = false;
             this.RegistroComprasVentasGroupBox.Text = "Registro de Compras y Ventas";
             // 
             // RegistroVentasButton
             // 
-            this.RegistroVentasButton.Location = new System.Drawing.Point(6, 48);
-            this.RegistroVentasButton.Margin = new System.Windows.Forms.Padding(2);
+            this.RegistroVentasButton.Location = new System.Drawing.Point(9, 74);
             this.RegistroVentasButton.Name = "RegistroVentasButton";
-            this.RegistroVentasButton.Size = new System.Drawing.Size(162, 23);
+            this.RegistroVentasButton.Size = new System.Drawing.Size(243, 35);
             this.RegistroVentasButton.TabIndex = 1;
             this.RegistroVentasButton.Text = "Registro de Ventas";
             this.RegistroVentasButton.UseVisualStyleBackColor = true;
@@ -411,10 +419,9 @@ namespace SimpleSDK_Demo
             // 
             // RegistroComprasButton
             // 
-            this.RegistroComprasButton.Location = new System.Drawing.Point(6, 22);
-            this.RegistroComprasButton.Margin = new System.Windows.Forms.Padding(2);
+            this.RegistroComprasButton.Location = new System.Drawing.Point(9, 34);
             this.RegistroComprasButton.Name = "RegistroComprasButton";
-            this.RegistroComprasButton.Size = new System.Drawing.Size(162, 23);
+            this.RegistroComprasButton.Size = new System.Drawing.Size(243, 35);
             this.RegistroComprasButton.TabIndex = 0;
             this.RegistroComprasButton.Text = "Registro de Compras";
             this.RegistroComprasButton.UseVisualStyleBackColor = true;
@@ -426,21 +433,18 @@ namespace SimpleSDK_Demo
             this.FoliosGroupBox.Controls.Add(this.ConsultarUltimosCincoCafButton);
             this.FoliosGroupBox.Controls.Add(this.ConsultarMaximoFoliosButton);
             this.FoliosGroupBox.Controls.Add(this.DescargarCafButton);
-            this.FoliosGroupBox.Location = new System.Drawing.Point(4, 82);
-            this.FoliosGroupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.FoliosGroupBox.Location = new System.Drawing.Point(6, 126);
             this.FoliosGroupBox.Name = "FoliosGroupBox";
-            this.FoliosGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.FoliosGroupBox.Size = new System.Drawing.Size(190, 126);
+            this.FoliosGroupBox.Size = new System.Drawing.Size(285, 194);
             this.FoliosGroupBox.TabIndex = 40;
             this.FoliosGroupBox.TabStop = false;
             this.FoliosGroupBox.Text = "Folios";
             // 
             // AnularCafMasivamenteButton
             // 
-            this.AnularCafMasivamenteButton.Location = new System.Drawing.Point(6, 96);
-            this.AnularCafMasivamenteButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AnularCafMasivamenteButton.Location = new System.Drawing.Point(9, 148);
             this.AnularCafMasivamenteButton.Name = "AnularCafMasivamenteButton";
-            this.AnularCafMasivamenteButton.Size = new System.Drawing.Size(162, 23);
+            this.AnularCafMasivamenteButton.Size = new System.Drawing.Size(243, 35);
             this.AnularCafMasivamenteButton.TabIndex = 5;
             this.AnularCafMasivamenteButton.Text = "Anular Masivamente";
             this.AnularCafMasivamenteButton.UseVisualStyleBackColor = true;
@@ -448,10 +452,9 @@ namespace SimpleSDK_Demo
             // 
             // ConsultarUltimosCincoCafButton
             // 
-            this.ConsultarUltimosCincoCafButton.Location = new System.Drawing.Point(6, 70);
-            this.ConsultarUltimosCincoCafButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ConsultarUltimosCincoCafButton.Location = new System.Drawing.Point(9, 108);
             this.ConsultarUltimosCincoCafButton.Name = "ConsultarUltimosCincoCafButton";
-            this.ConsultarUltimosCincoCafButton.Size = new System.Drawing.Size(162, 23);
+            this.ConsultarUltimosCincoCafButton.Size = new System.Drawing.Size(243, 35);
             this.ConsultarUltimosCincoCafButton.TabIndex = 2;
             this.ConsultarUltimosCincoCafButton.Text = "Consultar Folios Descargados";
             this.ConsultarUltimosCincoCafButton.UseVisualStyleBackColor = true;
@@ -459,10 +462,9 @@ namespace SimpleSDK_Demo
             // 
             // ConsultarMaximoFoliosButton
             // 
-            this.ConsultarMaximoFoliosButton.Location = new System.Drawing.Point(6, 44);
-            this.ConsultarMaximoFoliosButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ConsultarMaximoFoliosButton.Location = new System.Drawing.Point(9, 68);
             this.ConsultarMaximoFoliosButton.Name = "ConsultarMaximoFoliosButton";
-            this.ConsultarMaximoFoliosButton.Size = new System.Drawing.Size(162, 23);
+            this.ConsultarMaximoFoliosButton.Size = new System.Drawing.Size(243, 35);
             this.ConsultarMaximoFoliosButton.TabIndex = 1;
             this.ConsultarMaximoFoliosButton.Text = "Consultar Máximo de Folios";
             this.ConsultarMaximoFoliosButton.UseVisualStyleBackColor = true;
@@ -470,10 +472,9 @@ namespace SimpleSDK_Demo
             // 
             // DescargarCafButton
             // 
-            this.DescargarCafButton.Location = new System.Drawing.Point(6, 18);
-            this.DescargarCafButton.Margin = new System.Windows.Forms.Padding(2);
+            this.DescargarCafButton.Location = new System.Drawing.Point(9, 28);
             this.DescargarCafButton.Name = "DescargarCafButton";
-            this.DescargarCafButton.Size = new System.Drawing.Size(162, 23);
+            this.DescargarCafButton.Size = new System.Drawing.Size(243, 35);
             this.DescargarCafButton.TabIndex = 0;
             this.DescargarCafButton.Text = "Descargar CAF";
             this.DescargarCafButton.UseVisualStyleBackColor = true;
@@ -487,21 +488,18 @@ namespace SimpleSDK_Demo
             this.BoletaHonorarioGroupBox.Controls.Add(this.DownloadPdfButton);
             this.BoletaHonorarioGroupBox.Controls.Add(this.AnulaBoletaHonorarioButton);
             this.BoletaHonorarioGroupBox.Controls.Add(this.CrearBoletaHonorariosButton);
-            this.BoletaHonorarioGroupBox.Location = new System.Drawing.Point(199, 4);
-            this.BoletaHonorarioGroupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.BoletaHonorarioGroupBox.Location = new System.Drawing.Point(298, 6);
             this.BoletaHonorarioGroupBox.Name = "BoletaHonorarioGroupBox";
-            this.BoletaHonorarioGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.BoletaHonorarioGroupBox.Size = new System.Drawing.Size(194, 204);
+            this.BoletaHonorarioGroupBox.Size = new System.Drawing.Size(291, 314);
             this.BoletaHonorarioGroupBox.TabIndex = 39;
             this.BoletaHonorarioGroupBox.TabStop = false;
             this.BoletaHonorarioGroupBox.Text = "Boletas de Honorarios";
             // 
             // EnviarEmailButton
             // 
-            this.EnviarEmailButton.Location = new System.Drawing.Point(6, 96);
-            this.EnviarEmailButton.Margin = new System.Windows.Forms.Padding(2);
+            this.EnviarEmailButton.Location = new System.Drawing.Point(9, 148);
             this.EnviarEmailButton.Name = "EnviarEmailButton";
-            this.EnviarEmailButton.Size = new System.Drawing.Size(178, 23);
+            this.EnviarEmailButton.Size = new System.Drawing.Size(267, 35);
             this.EnviarEmailButton.TabIndex = 5;
             this.EnviarEmailButton.Text = "Enviar por email";
             this.EnviarEmailButton.UseVisualStyleBackColor = true;
@@ -509,10 +507,9 @@ namespace SimpleSDK_Demo
             // 
             // ListadoAnualBoletaButton
             // 
-            this.ListadoAnualBoletaButton.Location = new System.Drawing.Point(6, 148);
-            this.ListadoAnualBoletaButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ListadoAnualBoletaButton.Location = new System.Drawing.Point(9, 228);
             this.ListadoAnualBoletaButton.Name = "ListadoAnualBoletaButton";
-            this.ListadoAnualBoletaButton.Size = new System.Drawing.Size(178, 23);
+            this.ListadoAnualBoletaButton.Size = new System.Drawing.Size(267, 35);
             this.ListadoAnualBoletaButton.TabIndex = 4;
             this.ListadoAnualBoletaButton.Text = "Listado Anual de Boletas";
             this.ListadoAnualBoletaButton.UseVisualStyleBackColor = true;
@@ -520,10 +517,9 @@ namespace SimpleSDK_Demo
             // 
             // ListadoMensualBoletasButton
             // 
-            this.ListadoMensualBoletasButton.Location = new System.Drawing.Point(6, 122);
-            this.ListadoMensualBoletasButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ListadoMensualBoletasButton.Location = new System.Drawing.Point(9, 188);
             this.ListadoMensualBoletasButton.Name = "ListadoMensualBoletasButton";
-            this.ListadoMensualBoletasButton.Size = new System.Drawing.Size(178, 23);
+            this.ListadoMensualBoletasButton.Size = new System.Drawing.Size(267, 35);
             this.ListadoMensualBoletasButton.TabIndex = 3;
             this.ListadoMensualBoletasButton.Text = "Listado Mensual de Boletas";
             this.ListadoMensualBoletasButton.UseVisualStyleBackColor = true;
@@ -531,10 +527,9 @@ namespace SimpleSDK_Demo
             // 
             // DownloadPdfButton
             // 
-            this.DownloadPdfButton.Location = new System.Drawing.Point(6, 70);
-            this.DownloadPdfButton.Margin = new System.Windows.Forms.Padding(2);
+            this.DownloadPdfButton.Location = new System.Drawing.Point(9, 108);
             this.DownloadPdfButton.Name = "DownloadPdfButton";
-            this.DownloadPdfButton.Size = new System.Drawing.Size(178, 23);
+            this.DownloadPdfButton.Size = new System.Drawing.Size(267, 35);
             this.DownloadPdfButton.TabIndex = 2;
             this.DownloadPdfButton.Text = "Descargar PDF";
             this.DownloadPdfButton.UseVisualStyleBackColor = true;
@@ -542,10 +537,9 @@ namespace SimpleSDK_Demo
             // 
             // AnulaBoletaHonorarioButton
             // 
-            this.AnulaBoletaHonorarioButton.Location = new System.Drawing.Point(6, 44);
-            this.AnulaBoletaHonorarioButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AnulaBoletaHonorarioButton.Location = new System.Drawing.Point(9, 68);
             this.AnulaBoletaHonorarioButton.Name = "AnulaBoletaHonorarioButton";
-            this.AnulaBoletaHonorarioButton.Size = new System.Drawing.Size(178, 23);
+            this.AnulaBoletaHonorarioButton.Size = new System.Drawing.Size(267, 35);
             this.AnulaBoletaHonorarioButton.TabIndex = 1;
             this.AnulaBoletaHonorarioButton.Text = "Anular Boleta de Honorarios";
             this.AnulaBoletaHonorarioButton.UseVisualStyleBackColor = true;
@@ -553,10 +547,9 @@ namespace SimpleSDK_Demo
             // 
             // CrearBoletaHonorariosButton
             // 
-            this.CrearBoletaHonorariosButton.Location = new System.Drawing.Point(6, 18);
-            this.CrearBoletaHonorariosButton.Margin = new System.Windows.Forms.Padding(2);
+            this.CrearBoletaHonorariosButton.Location = new System.Drawing.Point(9, 28);
             this.CrearBoletaHonorariosButton.Name = "CrearBoletaHonorariosButton";
-            this.CrearBoletaHonorariosButton.Size = new System.Drawing.Size(178, 23);
+            this.CrearBoletaHonorariosButton.Size = new System.Drawing.Size(267, 35);
             this.CrearBoletaHonorariosButton.TabIndex = 0;
             this.CrearBoletaHonorariosButton.Text = "Generar Boleta de Honorarios";
             this.CrearBoletaHonorariosButton.UseVisualStyleBackColor = true;
@@ -564,12 +557,13 @@ namespace SimpleSDK_Demo
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 331);
+            this.ClientSize = new System.Drawing.Size(876, 509);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario Principal";
@@ -608,7 +602,6 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.Button botonTimbre;
         private System.Windows.Forms.Button botonConsultarEstadoDTE;
         private System.Windows.Forms.Button botonGenerarNotaCredito;
-        private System.Windows.Forms.Button botonGenerarRCOF;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button botonGenerarDocumento;
         private System.Windows.Forms.GroupBox groupBox6;
