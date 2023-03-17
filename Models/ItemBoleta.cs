@@ -11,6 +11,9 @@ namespace SimpleSDK_Demo.Models
         public int Total { get { return (int)Math.Round(Cantidad * Precio, 0); } }
         public bool Afecto { get; set; }
         public string UnidadMedida { get; set; }
+        /// <summary>
+        /// Valor en porcentaje
+        /// </summary>
         public double Descuento { get; set; }
         public int _tipoImpuesto;
         public TipoImpuestoEnum TipoImpuesto
