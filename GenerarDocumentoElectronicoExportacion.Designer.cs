@@ -29,9 +29,9 @@ namespace SimpleSDK_Demo
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.botonBuscarCAF = new System.Windows.Forms.Button();
@@ -65,7 +65,6 @@ namespace SimpleSDK_Demo
             this.numericPrecio = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.botonAgregarLinea = new System.Windows.Forms.Button();
-            this.checkAfecto = new System.Windows.Forms.CheckBox();
             this.numericCantidad = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.textNombre = new System.Windows.Forms.TextBox();
@@ -88,21 +87,25 @@ namespace SimpleSDK_Demo
             this.botonBuscarCertificado = new System.Windows.Forms.Button();
             this.textRutaCertificado = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textClausulaVenta = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textNeto = new System.Windows.Forms.TextBox();
+            this.textFlete = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textIVA = new System.Windows.Forms.TextBox();
+            this.textSeguro = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textTotal = new System.Windows.Forms.TextBox();
+            this.textValorBienes = new System.Windows.Forms.TextBox();
             this.botonGenerar = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.numericPesoNeto = new System.Windows.Forms.NumericUpDown();
+            this.numericTara = new System.Windows.Forms.NumericUpDown();
+            this.numericSeguro = new System.Windows.Forms.NumericUpDown();
+            this.numericFlete = new System.Windows.Forms.NumericUpDown();
             this.comboUnidadMedidaPeso = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.textPesoNeto = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.comboUnidadMedidaTara = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.textTara = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.comboPuertoDesembarque = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -112,9 +115,7 @@ namespace SimpleSDK_Demo
             this.label25 = new System.Windows.Forms.Label();
             this.comboViaTransporte = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textSeguro = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textFlete = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).BeginInit();
@@ -128,6 +129,10 @@ namespace SimpleSDK_Demo
             this.groupBox6.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPesoNeto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericTara)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericSeguro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFlete)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox5
@@ -137,7 +142,8 @@ namespace SimpleSDK_Demo
             this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Controls.Add(this.textPathCAF);
             this.groupBox5.Controls.Add(this.numericFolio);
-            this.groupBox5.Location = new System.Drawing.Point(16, 15);
+            this.groupBox5.Controls.Add(this.botonGenerar);
+            this.groupBox5.Location = new System.Drawing.Point(16, 13);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -158,7 +164,7 @@ namespace SimpleSDK_Demo
             // botonBuscarCAF
             // 
             this.botonBuscarCAF.Image = global::SimpleSDK_Demo.Properties.Resources.View;
-            this.botonBuscarCAF.Location = new System.Drawing.Point(453, 21);
+            this.botonBuscarCAF.Location = new System.Drawing.Point(382, 21);
             this.botonBuscarCAF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botonBuscarCAF.Name = "botonBuscarCAF";
             this.botonBuscarCAF.Size = new System.Drawing.Size(37, 28);
@@ -169,7 +175,7 @@ namespace SimpleSDK_Demo
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(573, 28);
+            this.label5.Location = new System.Drawing.Point(446, 28);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 16);
@@ -181,12 +187,12 @@ namespace SimpleSDK_Demo
             this.textPathCAF.Location = new System.Drawing.Point(79, 25);
             this.textPathCAF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textPathCAF.Name = "textPathCAF";
-            this.textPathCAF.Size = new System.Drawing.Size(367, 22);
+            this.textPathCAF.Size = new System.Drawing.Size(290, 22);
             this.textPathCAF.TabIndex = 0;
             // 
             // numericFolio
             // 
-            this.numericFolio.Location = new System.Drawing.Point(624, 27);
+            this.numericFolio.Location = new System.Drawing.Point(497, 27);
             this.numericFolio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericFolio.Maximum = new decimal(new int[] {
             100000,
@@ -214,7 +220,7 @@ namespace SimpleSDK_Demo
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.textRazonSocialReceptor);
             this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Location = new System.Drawing.Point(16, 199);
+            this.groupBox4.Location = new System.Drawing.Point(16, 195);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -326,7 +332,7 @@ namespace SimpleSDK_Demo
             this.groupBox3.Controls.Add(this.textRUTEmisor);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(16, 87);
+            this.groupBox3.Location = new System.Drawing.Point(16, 82);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -431,12 +437,11 @@ namespace SimpleSDK_Demo
             this.groupBox2.Controls.Add(this.numericPrecio);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.botonAgregarLinea);
-            this.groupBox2.Controls.Add(this.checkAfecto);
             this.groupBox2.Controls.Add(this.numericCantidad);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.textNombre);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(16, 530);
+            this.groupBox2.Location = new System.Drawing.Point(15, 449);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -458,7 +463,7 @@ namespace SimpleSDK_Demo
             // 
             // numericPrecio
             // 
-            this.numericPrecio.Location = new System.Drawing.Point(491, 32);
+            this.numericPrecio.Location = new System.Drawing.Point(539, 32);
             this.numericPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericPrecio.Maximum = new decimal(new int[] {
             1000000,
@@ -477,7 +482,7 @@ namespace SimpleSDK_Demo
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(431, 34);
+            this.label4.Location = new System.Drawing.Point(479, 34);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 16);
@@ -495,23 +500,10 @@ namespace SimpleSDK_Demo
             this.botonAgregarLinea.UseVisualStyleBackColor = true;
             this.botonAgregarLinea.Click += new System.EventHandler(this.botonAgregarLinea_Click);
             // 
-            // checkAfecto
-            // 
-            this.checkAfecto.AutoSize = true;
-            this.checkAfecto.Checked = true;
-            this.checkAfecto.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkAfecto.Location = new System.Drawing.Point(572, 33);
-            this.checkAfecto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.checkAfecto.Name = "checkAfecto";
-            this.checkAfecto.Size = new System.Drawing.Size(67, 20);
-            this.checkAfecto.TabIndex = 12;
-            this.checkAfecto.Text = "Afecto";
-            this.checkAfecto.UseVisualStyleBackColor = true;
-            // 
             // numericCantidad
             // 
             this.numericCantidad.DecimalPlaces = 1;
-            this.numericCantidad.Location = new System.Drawing.Point(363, 31);
+            this.numericCantidad.Location = new System.Drawing.Point(388, 31);
             this.numericCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericCantidad.Maximum = new decimal(new int[] {
             100000,
@@ -530,7 +522,7 @@ namespace SimpleSDK_Demo
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(285, 34);
+            this.label3.Location = new System.Drawing.Point(310, 34);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 16);
@@ -558,11 +550,11 @@ namespace SimpleSDK_Demo
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.gridResultados);
-            this.groupBox1.Location = new System.Drawing.Point(16, 610);
+            this.groupBox1.Location = new System.Drawing.Point(15, 530);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(809, 209);
+            this.groupBox1.Size = new System.Drawing.Size(809, 144);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Productos";
@@ -583,13 +575,12 @@ namespace SimpleSDK_Demo
             this.gridAfecto,
             this.umedida,
             this.gridEliminar});
-            this.gridResultados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridResultados.Location = new System.Drawing.Point(4, 19);
+            this.gridResultados.Location = new System.Drawing.Point(4, 16);
             this.gridResultados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
             this.gridResultados.RowHeadersWidth = 25;
-            this.gridResultados.Size = new System.Drawing.Size(801, 186);
+            this.gridResultados.Size = new System.Drawing.Size(801, 120);
             this.gridResultados.TabIndex = 0;
             this.gridResultados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridResultados_CellClick);
             // 
@@ -605,8 +596,8 @@ namespace SimpleSDK_Demo
             // gridCantidadProducto
             // 
             this.gridCantidadProducto.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle1.Format = "N1";
-            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Format = "N1";
+            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle10;
             this.gridCantidadProducto.HeaderText = "Cantidad";
             this.gridCantidadProducto.MinimumWidth = 6;
             this.gridCantidadProducto.Name = "gridCantidadProducto";
@@ -616,8 +607,8 @@ namespace SimpleSDK_Demo
             // gridPrecio
             // 
             this.gridPrecio.DataPropertyName = "Precio";
-            dataGridViewCellStyle2.Format = "N0";
-            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Format = "N0";
+            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle11;
             this.gridPrecio.HeaderText = "Precio";
             this.gridPrecio.MinimumWidth = 6;
             this.gridPrecio.Name = "gridPrecio";
@@ -627,8 +618,8 @@ namespace SimpleSDK_Demo
             // gridTotal
             // 
             this.gridTotal.DataPropertyName = "Total";
-            dataGridViewCellStyle3.Format = "N0";
-            this.gridTotal.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Format = "N0";
+            this.gridTotal.DefaultCellStyle = dataGridViewCellStyle12;
             this.gridTotal.HeaderText = "Total";
             this.gridTotal.MinimumWidth = 6;
             this.gridTotal.Name = "gridTotal";
@@ -670,7 +661,7 @@ namespace SimpleSDK_Demo
             this.groupBox6.Controls.Add(this.textPassword);
             this.groupBox6.Controls.Add(this.botonBuscarCertificado);
             this.groupBox6.Controls.Add(this.textRutaCertificado);
-            this.groupBox6.Location = new System.Drawing.Point(833, 15);
+            this.groupBox6.Location = new System.Drawing.Point(16, 760);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -746,86 +737,108 @@ namespace SimpleSDK_Demo
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.label32);
+            this.groupBox8.Controls.Add(this.textClausulaVenta);
             this.groupBox8.Controls.Add(this.label20);
-            this.groupBox8.Controls.Add(this.textNeto);
+            this.groupBox8.Controls.Add(this.textFlete);
             this.groupBox8.Controls.Add(this.label19);
-            this.groupBox8.Controls.Add(this.textIVA);
+            this.groupBox8.Controls.Add(this.textSeguro);
             this.groupBox8.Controls.Add(this.label18);
-            this.groupBox8.Controls.Add(this.textTotal);
-            this.groupBox8.Location = new System.Drawing.Point(357, 828);
+            this.groupBox8.Controls.Add(this.textValorBienes);
+            this.groupBox8.Location = new System.Drawing.Point(16, 674);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox8.Size = new System.Drawing.Size(468, 78);
+            this.groupBox8.Size = new System.Drawing.Size(808, 78);
             this.groupBox8.TabIndex = 25;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Totales";
             // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(562, 38);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(116, 16);
+            this.label32.TabIndex = 35;
+            this.label32.Text = "Clausula de Venta";
+            // 
+            // textClausulaVenta
+            // 
+            this.textClausulaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textClausulaVenta.Location = new System.Drawing.Point(692, 34);
+            this.textClausulaVenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textClausulaVenta.Name = "textClausulaVenta";
+            this.textClausulaVenta.ReadOnly = true;
+            this.textClausulaVenta.Size = new System.Drawing.Size(88, 22);
+            this.textClausulaVenta.TabIndex = 34;
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(8, 38);
+            this.label20.Location = new System.Drawing.Point(247, 38);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(39, 16);
+            this.label20.Size = new System.Drawing.Size(40, 16);
             this.label20.TabIndex = 33;
-            this.label20.Text = "Neto:";
+            this.label20.Text = "Flete:";
             // 
-            // textNeto
+            // textFlete
             // 
-            this.textNeto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textNeto.Location = new System.Drawing.Point(60, 34);
-            this.textNeto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textNeto.Name = "textNeto";
-            this.textNeto.ReadOnly = true;
-            this.textNeto.Size = new System.Drawing.Size(88, 22);
-            this.textNeto.TabIndex = 32;
+            this.textFlete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textFlete.Location = new System.Drawing.Point(290, 34);
+            this.textFlete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textFlete.Name = "textFlete";
+            this.textFlete.ReadOnly = true;
+            this.textFlete.Size = new System.Drawing.Size(88, 22);
+            this.textFlete.TabIndex = 32;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(167, 38);
+            this.label19.Location = new System.Drawing.Point(383, 38);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(31, 16);
+            this.label19.Size = new System.Drawing.Size(54, 16);
             this.label19.TabIndex = 31;
-            this.label19.Text = "IVA:";
+            this.label19.Text = "Seguro:";
             // 
-            // textIVA
+            // textSeguro
             // 
-            this.textIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textIVA.Location = new System.Drawing.Point(211, 34);
-            this.textIVA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textIVA.Name = "textIVA";
-            this.textIVA.ReadOnly = true;
-            this.textIVA.Size = new System.Drawing.Size(88, 22);
-            this.textIVA.TabIndex = 30;
+            this.textSeguro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textSeguro.Location = new System.Drawing.Point(444, 34);
+            this.textSeguro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textSeguro.Name = "textSeguro";
+            this.textSeguro.ReadOnly = true;
+            this.textSeguro.Size = new System.Drawing.Size(88, 22);
+            this.textSeguro.TabIndex = 30;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(308, 38);
+            this.label18.Location = new System.Drawing.Point(14, 38);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 16);
+            this.label18.Size = new System.Drawing.Size(106, 16);
             this.label18.TabIndex = 29;
-            this.label18.Text = "Total:";
+            this.label18.Text = "Valor de Bienes:";
             // 
-            // textTotal
+            // textValorBienes
             // 
-            this.textTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textTotal.Location = new System.Drawing.Point(361, 34);
-            this.textTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textTotal.Name = "textTotal";
-            this.textTotal.ReadOnly = true;
-            this.textTotal.Size = new System.Drawing.Size(97, 22);
-            this.textTotal.TabIndex = 28;
+            this.textValorBienes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textValorBienes.Location = new System.Drawing.Point(132, 34);
+            this.textValorBienes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textValorBienes.Name = "textValorBienes";
+            this.textValorBienes.ReadOnly = true;
+            this.textValorBienes.Size = new System.Drawing.Size(97, 22);
+            this.textValorBienes.TabIndex = 28;
             // 
             // botonGenerar
             // 
             this.botonGenerar.Image = global::SimpleSDK_Demo.Properties.Resources.Guardar_32;
             this.botonGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botonGenerar.Location = new System.Drawing.Point(704, 998);
+            this.botonGenerar.Location = new System.Drawing.Point(665, 11);
             this.botonGenerar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.botonGenerar.Name = "botonGenerar";
             this.botonGenerar.Size = new System.Drawing.Size(121, 50);
@@ -837,13 +850,15 @@ namespace SimpleSDK_Demo
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.numericPesoNeto);
+            this.groupBox9.Controls.Add(this.numericTara);
+            this.groupBox9.Controls.Add(this.numericSeguro);
+            this.groupBox9.Controls.Add(this.numericFlete);
             this.groupBox9.Controls.Add(this.comboUnidadMedidaPeso);
             this.groupBox9.Controls.Add(this.label30);
-            this.groupBox9.Controls.Add(this.textPesoNeto);
             this.groupBox9.Controls.Add(this.label31);
             this.groupBox9.Controls.Add(this.comboUnidadMedidaTara);
             this.groupBox9.Controls.Add(this.label29);
-            this.groupBox9.Controls.Add(this.textTara);
             this.groupBox9.Controls.Add(this.label28);
             this.groupBox9.Controls.Add(this.comboPuertoDesembarque);
             this.groupBox9.Controls.Add(this.label27);
@@ -853,52 +868,113 @@ namespace SimpleSDK_Demo
             this.groupBox9.Controls.Add(this.label25);
             this.groupBox9.Controls.Add(this.comboViaTransporte);
             this.groupBox9.Controls.Add(this.label24);
-            this.groupBox9.Controls.Add(this.textSeguro);
             this.groupBox9.Controls.Add(this.label23);
-            this.groupBox9.Controls.Add(this.textFlete);
             this.groupBox9.Controls.Add(this.label22);
-            this.groupBox9.Location = new System.Drawing.Point(15, 310);
+            this.groupBox9.Location = new System.Drawing.Point(16, 306);
             this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Size = new System.Drawing.Size(810, 214);
+            this.groupBox9.Size = new System.Drawing.Size(811, 137);
             this.groupBox9.TabIndex = 26;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Transporte - Exportación";
+            // 
+            // numericPesoNeto
+            // 
+            this.numericPesoNeto.Location = new System.Drawing.Point(470, 95);
+            this.numericPesoNeto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericPesoNeto.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericPesoNeto.Name = "numericPesoNeto";
+            this.numericPesoNeto.Size = new System.Drawing.Size(59, 22);
+            this.numericPesoNeto.TabIndex = 27;
+            this.numericPesoNeto.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // numericTara
+            // 
+            this.numericTara.Location = new System.Drawing.Point(68, 95);
+            this.numericTara.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericTara.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericTara.Name = "numericTara";
+            this.numericTara.Size = new System.Drawing.Size(59, 22);
+            this.numericTara.TabIndex = 26;
+            this.numericTara.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // numericSeguro
+            // 
+            this.numericSeguro.Location = new System.Drawing.Point(68, 60);
+            this.numericSeguro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericSeguro.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericSeguro.Name = "numericSeguro";
+            this.numericSeguro.Size = new System.Drawing.Size(59, 22);
+            this.numericSeguro.TabIndex = 25;
+            this.numericSeguro.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // numericFlete
+            // 
+            this.numericFlete.Location = new System.Drawing.Point(68, 22);
+            this.numericFlete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericFlete.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericFlete.Name = "numericFlete";
+            this.numericFlete.Size = new System.Drawing.Size(59, 22);
+            this.numericFlete.TabIndex = 24;
+            this.numericFlete.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // comboUnidadMedidaPeso
             // 
             this.comboUnidadMedidaPeso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboUnidadMedidaPeso.FormattingEnabled = true;
-            this.comboUnidadMedidaPeso.Location = new System.Drawing.Point(379, 169);
+            this.comboUnidadMedidaPeso.Location = new System.Drawing.Point(690, 94);
             this.comboUnidadMedidaPeso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboUnidadMedidaPeso.Name = "comboUnidadMedidaPeso";
-            this.comboUnidadMedidaPeso.Size = new System.Drawing.Size(421, 24);
+            this.comboUnidadMedidaPeso.Size = new System.Drawing.Size(110, 24);
             this.comboUnidadMedidaPeso.TabIndex = 23;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(217, 172);
+            this.label30.Location = new System.Drawing.Point(545, 100);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(157, 16);
+            this.label30.Size = new System.Drawing.Size(133, 16);
             this.label30.TabIndex = 22;
-            this.label30.Text = "Unidad de Medida Peso:";
-            // 
-            // textPesoNeto
-            // 
-            this.textPesoNeto.Location = new System.Drawing.Point(93, 166);
-            this.textPesoNeto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textPesoNeto.Name = "textPesoNeto";
-            this.textPesoNeto.Size = new System.Drawing.Size(107, 22);
-            this.textPesoNeto.TabIndex = 21;
-            this.textPesoNeto.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.label30.Text = "Un. de Medida Peso:";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(11, 169);
+            this.label31.Location = new System.Drawing.Point(388, 100);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(74, 16);
@@ -909,34 +985,26 @@ namespace SimpleSDK_Demo
             // 
             this.comboUnidadMedidaTara.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboUnidadMedidaTara.FormattingEnabled = true;
-            this.comboUnidadMedidaTara.Location = new System.Drawing.Point(403, 132);
+            this.comboUnidadMedidaTara.Location = new System.Drawing.Point(267, 94);
             this.comboUnidadMedidaTara.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboUnidadMedidaTara.Name = "comboUnidadMedidaTara";
-            this.comboUnidadMedidaTara.Size = new System.Drawing.Size(397, 24);
+            this.comboUnidadMedidaTara.Size = new System.Drawing.Size(110, 24);
             this.comboUnidadMedidaTara.TabIndex = 19;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(217, 135);
+            this.label29.Location = new System.Drawing.Point(135, 100);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(154, 16);
+            this.label29.Size = new System.Drawing.Size(130, 16);
             this.label29.TabIndex = 18;
-            this.label29.Text = "Unidad de Medida Tara:";
-            // 
-            // textTara
-            // 
-            this.textTara.Location = new System.Drawing.Point(93, 132);
-            this.textTara.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textTara.Name = "textTara";
-            this.textTara.Size = new System.Drawing.Size(107, 22);
-            this.textTara.TabIndex = 17;
+            this.label29.Text = "Un. de Medida Tara:";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(9, 135);
+            this.label28.Location = new System.Drawing.Point(9, 100);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(39, 16);
@@ -947,16 +1015,16 @@ namespace SimpleSDK_Demo
             // 
             this.comboPuertoDesembarque.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPuertoDesembarque.FormattingEnabled = true;
-            this.comboPuertoDesembarque.Location = new System.Drawing.Point(564, 98);
+            this.comboPuertoDesembarque.Location = new System.Drawing.Point(611, 60);
             this.comboPuertoDesembarque.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboPuertoDesembarque.Name = "comboPuertoDesembarque";
-            this.comboPuertoDesembarque.Size = new System.Drawing.Size(236, 24);
+            this.comboPuertoDesembarque.Size = new System.Drawing.Size(190, 24);
             this.comboPuertoDesembarque.TabIndex = 15;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(399, 103);
+            this.label27.Location = new System.Drawing.Point(462, 63);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(142, 16);
@@ -967,16 +1035,16 @@ namespace SimpleSDK_Demo
             // 
             this.comboPuertoEmbarque.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPuertoEmbarque.FormattingEnabled = true;
-            this.comboPuertoEmbarque.Location = new System.Drawing.Point(147, 98);
+            this.comboPuertoEmbarque.Location = new System.Drawing.Point(267, 58);
             this.comboPuertoEmbarque.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboPuertoEmbarque.Name = "comboPuertoEmbarque";
-            this.comboPuertoEmbarque.Size = new System.Drawing.Size(236, 24);
+            this.comboPuertoEmbarque.Size = new System.Drawing.Size(188, 24);
             this.comboPuertoEmbarque.TabIndex = 13;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(9, 103);
+            this.label26.Location = new System.Drawing.Point(135, 63);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(118, 16);
@@ -987,36 +1055,36 @@ namespace SimpleSDK_Demo
             // 
             this.comboPaisReceptorDestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPaisReceptorDestino.FormattingEnabled = true;
-            this.comboPaisReceptorDestino.Location = new System.Drawing.Point(392, 64);
+            this.comboPaisReceptorDestino.Location = new System.Drawing.Point(611, 20);
             this.comboPaisReceptorDestino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboPaisReceptorDestino.Name = "comboPaisReceptorDestino";
-            this.comboPaisReceptorDestino.Size = new System.Drawing.Size(408, 24);
+            this.comboPaisReceptorDestino.Size = new System.Drawing.Size(188, 24);
             this.comboPaisReceptorDestino.TabIndex = 11;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(215, 69);
+            this.label25.Location = new System.Drawing.Point(462, 23);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(155, 16);
+            this.label25.Size = new System.Drawing.Size(86, 16);
             this.label25.TabIndex = 10;
-            this.label25.Text = "Pais Receptor y Destino:";
+            this.label25.Text = "Pais Destino:";
             // 
             // comboViaTransporte
             // 
             this.comboViaTransporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboViaTransporte.FormattingEnabled = true;
-            this.comboViaTransporte.Location = new System.Drawing.Point(355, 30);
+            this.comboViaTransporte.Location = new System.Drawing.Point(267, 20);
             this.comboViaTransporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboViaTransporte.Name = "comboViaTransporte";
-            this.comboViaTransporte.Size = new System.Drawing.Size(445, 24);
+            this.comboViaTransporte.Size = new System.Drawing.Size(188, 24);
             this.comboViaTransporte.TabIndex = 9;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(215, 32);
+            this.label24.Location = new System.Drawing.Point(135, 23);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(118, 16);
@@ -1024,36 +1092,20 @@ namespace SimpleSDK_Demo
             this.label24.Text = "Via de Transporte:";
             this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
-            // textSeguro
-            // 
-            this.textSeguro.Location = new System.Drawing.Point(81, 65);
-            this.textSeguro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textSeguro.Name = "textSeguro";
-            this.textSeguro.Size = new System.Drawing.Size(107, 22);
-            this.textSeguro.TabIndex = 7;
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(9, 69);
+            this.label23.Location = new System.Drawing.Point(9, 63);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(54, 16);
             this.label23.TabIndex = 6;
             this.label23.Text = "Seguro:";
             // 
-            // textFlete
-            // 
-            this.textFlete.Location = new System.Drawing.Point(81, 30);
-            this.textFlete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textFlete.Name = "textFlete";
-            this.textFlete.Size = new System.Drawing.Size(107, 22);
-            this.textFlete.TabIndex = 5;
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(9, 32);
+            this.label22.Location = new System.Drawing.Point(9, 23);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(40, 16);
@@ -1064,14 +1116,14 @@ namespace SimpleSDK_Demo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1663, 1040);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(839, 848);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.botonGenerar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -1099,6 +1151,10 @@ namespace SimpleSDK_Demo
             this.groupBox8.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPesoNeto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericTara)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericSeguro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFlete)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1134,7 +1190,6 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.NumericUpDown numericPrecio;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button botonAgregarLinea;
-        private System.Windows.Forms.CheckBox checkAfecto;
         private System.Windows.Forms.NumericUpDown numericCantidad;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textNombre;
@@ -1158,30 +1213,26 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textNeto;
+        private System.Windows.Forms.TextBox textFlete;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textIVA;
+        private System.Windows.Forms.TextBox textSeguro;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textTotal;
+        private System.Windows.Forms.TextBox textValorBienes;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textRUTCertificado;
         private System.Windows.Forms.TextBox textRUTReceptor;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.TextBox textSeguro;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textFlete;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox comboViaTransporte;
         private System.Windows.Forms.ComboBox comboUnidadMedidaPeso;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textPesoNeto;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.ComboBox comboUnidadMedidaTara;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textTara;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ComboBox comboPuertoDesembarque;
         private System.Windows.Forms.Label label27;
@@ -1189,5 +1240,11 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ComboBox comboPaisReceptorDestino;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.NumericUpDown numericPesoNeto;
+        private System.Windows.Forms.NumericUpDown numericTara;
+        private System.Windows.Forms.NumericUpDown numericSeguro;
+        private System.Windows.Forms.NumericUpDown numericFlete;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textClausulaVenta;
     }
 }

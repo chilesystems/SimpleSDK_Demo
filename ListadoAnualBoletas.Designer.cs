@@ -32,6 +32,7 @@ namespace SimpleSDK_Demo
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numericAnio = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.EmitidaRadioButton = new System.Windows.Forms.RadioButton();
             this.RecibidaRadioButton = new System.Windows.Forms.RadioButton();
@@ -53,11 +54,10 @@ namespace SimpleSDK_Demo
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericAnio = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericAnio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericAnio)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -78,6 +78,28 @@ namespace SimpleSDK_Demo
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Boleta de Honorarios Electrónica";
+            // 
+            // numericAnio
+            // 
+            this.numericAnio.Location = new System.Drawing.Point(263, 39);
+            this.numericAnio.Maximum = new decimal(new int[] {
+            2030,
+            0,
+            0,
+            0});
+            this.numericAnio.Minimum = new decimal(new int[] {
+            2008,
+            0,
+            0,
+            0});
+            this.numericAnio.Name = "numericAnio";
+            this.numericAnio.Size = new System.Drawing.Size(60, 22);
+            this.numericAnio.TabIndex = 13;
+            this.numericAnio.Value = new decimal(new int[] {
+            2008,
+            0,
+            0,
+            0});
             // 
             // label4
             // 
@@ -153,6 +175,7 @@ namespace SimpleSDK_Demo
             this.gridResultados.Location = new System.Drawing.Point(11, 114);
             this.gridResultados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridResultados.Name = "gridResultados";
+            this.gridResultados.RowHeadersWidth = 51;
             this.gridResultados.RowTemplate.Height = 28;
             this.gridResultados.Size = new System.Drawing.Size(840, 296);
             this.gridResultados.TabIndex = 2;
@@ -294,28 +317,6 @@ namespace SimpleSDK_Demo
             this.label2.TabIndex = 0;
             this.label2.Text = "Honorarios Brutos";
             // 
-            // numericAnio
-            // 
-            this.numericAnio.Location = new System.Drawing.Point(263, 39);
-            this.numericAnio.Maximum = new decimal(new int[] {
-            2030,
-            0,
-            0,
-            0});
-            this.numericAnio.Minimum = new decimal(new int[] {
-            2008,
-            0,
-            0,
-            0});
-            this.numericAnio.Name = "numericAnio";
-            this.numericAnio.Size = new System.Drawing.Size(60, 22);
-            this.numericAnio.TabIndex = 13;
-            this.numericAnio.Value = new decimal(new int[] {
-            2008,
-            0,
-            0,
-            0});
-            // 
             // ListadoAnualBoletas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -334,9 +335,9 @@ namespace SimpleSDK_Demo
             this.Load += new System.EventHandler(this.ListadoAnualBoletas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericAnio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridResultados)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericAnio)).EndInit();
             this.ResumeLayout(false);
 
         }
