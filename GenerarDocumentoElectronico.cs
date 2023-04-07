@@ -120,18 +120,6 @@ namespace SimpleSDK_Demo
 
             dte.CalcularTotales();
 
-            //Si se trata de un caso del set de pruebas para certificación
-            if (checkSetPruebas.Checked)
-            {
-                //Para facturas electrónicas debes agregar aquí el n° de atención CASO {N°Atencion}-{NumeroCaso}
-
-                string casoPrueba = "CASO 123456-" + numericCasoPrueba.Value.ToString("N0");
-                //Para boletas electrónicas no se requiere agregar el número de atención. 
-                //string casoPrueba = "CASO-" + numericCasoPrueba.Value.ToString("N0");
-                var referenciaPrueba = handler.ReferenciaSetdePruebas(tipoDte == TipoDTE.DTEType.BoletaElectronica ? "39" : "33", null, 0, casoPrueba);
-                dte.Documento.Referencias.Add(referenciaPrueba);
-            }
-
             dte.Certificado.Ruta = textRutaCertificado.Text;
             dte.Certificado.Rut = textRUTCertificado.Text;
             dte.Certificado.Password = textPassword.Text;
@@ -234,9 +222,5 @@ namespace SimpleSDK_Demo
             }
         }
 
-        private void CheckSetPruebas_CheckedChanged(object sender, EventArgs e)
-        {
-            labelCasoPrueba.Enabled = numericCasoPrueba.Enabled = checkSetPruebas.Checked;
-        }
     }
 }
