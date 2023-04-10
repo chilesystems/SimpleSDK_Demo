@@ -185,11 +185,8 @@ namespace SimpleSDK_Demo
 
         private System.Windows.Forms.Label FolioLabel;
         private System.Windows.Forms.Label MotivoLabel;
-        private System.Windows.Forms.TextBox textBox3;
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label RutEmisorLabel;
 
         #endregion

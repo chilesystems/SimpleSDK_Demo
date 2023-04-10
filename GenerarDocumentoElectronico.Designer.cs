@@ -162,7 +162,7 @@ namespace SimpleSDK_Demo
             this.checkSetPruebas.TabIndex = 14;
             this.checkSetPruebas.Text = "¿Set de Pruebas?";
             this.checkSetPruebas.UseVisualStyleBackColor = true;
-            this.checkSetPruebas.CheckedChanged += new System.EventHandler(this.checkSetPruebas_CheckedChanged);
+            this.checkSetPruebas.CheckedChanged += new System.EventHandler(this.CheckSetPruebas_CheckedChanged);
             // 
             // labelCasoPrueba
             // 
@@ -478,7 +478,7 @@ namespace SimpleSDK_Demo
             this.botonAgregarLinea.TabIndex = 15;
             this.botonAgregarLinea.Text = " + ";
             this.botonAgregarLinea.UseVisualStyleBackColor = true;
-            this.botonAgregarLinea.Click += new System.EventHandler(this.botonAgregarLinea_Click);
+            this.botonAgregarLinea.Click += new System.EventHandler(this.BotonAgregarLinea_Click);
             // 
             // checkAfecto
             // 
@@ -567,7 +567,7 @@ namespace SimpleSDK_Demo
             this.gridResultados.RowHeadersWidth = 25;
             this.gridResultados.Size = new System.Drawing.Size(601, 151);
             this.gridResultados.TabIndex = 0;
-            this.gridResultados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridResultados_CellClick);
+            this.gridResultados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridResultados_CellClick);
             // 
             // gridNombreProducto
             // 
@@ -695,7 +695,7 @@ namespace SimpleSDK_Demo
             this.botonBuscarCertificado.Size = new System.Drawing.Size(28, 23);
             this.botonBuscarCertificado.TabIndex = 1;
             this.botonBuscarCertificado.UseVisualStyleBackColor = true;
-            this.botonBuscarCertificado.Click += new System.EventHandler(this.botonBuscarCertificado_Click);
+            this.botonBuscarCertificado.Click += new System.EventHandler(this.BotonBuscarCertificado_Click);
             // 
             // textRutaCertificado
             // 
@@ -723,7 +723,7 @@ namespace SimpleSDK_Demo
             this.botonBuscarCAF.Size = new System.Drawing.Size(28, 23);
             this.botonBuscarCAF.TabIndex = 1;
             this.botonBuscarCAF.UseVisualStyleBackColor = true;
-            this.botonBuscarCAF.Click += new System.EventHandler(this.botonBuscarCAF_Click);
+            this.botonBuscarCAF.Click += new System.EventHandler(this.BotonBuscarCAF_Click);
             // 
             // textPathCAF
             // 
@@ -812,7 +812,7 @@ namespace SimpleSDK_Demo
             this.botonGenerar.Text = "Generar";
             this.botonGenerar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.botonGenerar.UseVisualStyleBackColor = true;
-            this.botonGenerar.Click += new System.EventHandler(this.botonGenerar_Click);
+            this.botonGenerar.Click += new System.EventHandler(this.BotonGenerar_Click);
             // 
             // GenerarDocumentoElectronico
             // 
