@@ -70,7 +70,11 @@ namespace SimpleSDK_Demo
                 MessageBox.Show("Ruta incorrecta. No fue posible encontrar un archivo CAF en esta ruta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            else if (items.Count == 0)
+            {
+                MessageBox.Show("Se requiere al menos un detalle ingresado en la grilla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var tipoDte = comboTipo.SelectedIndex == 0 ? TipoDTE.DTEType.BoletaElectronica : TipoDTE.DTEType.FacturaElectronica;
 
             var emisor = new SimpleSDK.Models.DTE.Emisor()
@@ -113,8 +117,8 @@ namespace SimpleSDK_Demo
             dte.Documento.DescuentosRecargos.Add(new SimpleSDK.Models.DTE.DescuentosRecargos() {
                 Descripcion = "Descuento prueba",
                 TipoMovimiento = TipoMovimiento.TipoMovimientoEnum.Descuento,
-                Valor = 10,
-                TipoValor = ExpresionDinero.ExpresionDineroEnum.Porcentaje,
+                Valor = 100,
+                TipoValor = ExpresionDinero.ExpresionDineroEnum.Pesos,
                 Numero = 1                
             });
 
