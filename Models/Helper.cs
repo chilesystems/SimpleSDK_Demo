@@ -52,6 +52,41 @@ namespace SimpleSDK_Demo
             }
             return detalles;
         }
+        public List<DetalleExportacion> ItemboletaADetalleExportacion(List<ItemBoleta> items)
+        {
+            List<DetalleExportacion> detalles = new List<DetalleExportacion>();
+            int contador = 1;
+            foreach (var det in items)
+            {
+                var detalle = new DetalleExportacion();
+                detalle.NumeroLinea = contador;
+                /*IndicadorExento = Sólo aplica si el producto es exento de IVA*/
+                detalle.IndicadorExento = det.Afecto ? IndicadorFacturacionExencionEnum.NotSet : IndicadorFacturacionExencionEnum.NoAfectoOExento;
+
+                detalle.Nombre = det.Nombre;
+                detalle.Cantidad = (double)det.Cantidad;
+                detalle.Precio = det.Precio;
+                if (!string.IsNullOrEmpty(det.UnidadMedida))
+                {
+                    detalle.UnidadMedida = det.UnidadMedida;
+                }
+                /*Recordar que debe restarse el descuento del detalle y sumarse el recargo*/
+                if (det.Descuento != 0)
+                {
+                    detalle.Descuento = (int)Math.Round(det.Total * (det.Descuento / 100), 0);
+                }
+                detalle.MontoItem = det.Total - detalle.Descuento;
+
+                if (det.TipoImpuesto != TipoImpuesto.TipoImpuestoEnum.NotSet)
+                {
+                    detalle.CodigoImpuestoAdicional = new List<TipoImpuesto.TipoImpuestoEnum>();
+                    detalle.CodigoImpuestoAdicional.Add(det.TipoImpuesto);
+                }
+                detalles.Add(detalle);
+                contador++;
+            }
+            return detalles;
+        }
 
         public List<ItemBoleta> DetalleAItemBoleta(List<SimpleSDK.Models.DTE.Detalle> items)
         {
