@@ -26,7 +26,6 @@ namespace SimpleSDK_Demo
         private void GenerarDocumentoElectronico_Load(object sender, EventArgs e)
         {
             gridResultados.AutoGenerateColumns = false;
-            comboTipo.SelectedIndex = 0;
 
             handler.Configuracion = new Configuracion();
             handler.Configuracion.LeerArchivo();
@@ -37,15 +36,46 @@ namespace SimpleSDK_Demo
             textComunaEmisor.Text = handler.Configuracion.Empresa.Comuna;
             textGiroEmisor.Text = handler.Configuracion.Empresa.Giro;
 
-            textRUTReceptor.Text = "66666666-6";
             textRazonSocialReceptor.Text = "Razón Social de Cliente";
             textDireccionReceptor.Text = "Dirección de Cliente";
-            textComunaReceptor.Text = "Comuna de Cliente";
+            textCiudadReceptor.Text = "Ciudad de Cliente";
             textGiroReceptor.Text = "Giro de Cliente";
+            textRUTReceptor.Text = "55555555-5";
 
             textRutaCertificado.Text = handler.Configuracion.Certificado.Ruta;
             textRUTCertificado.Text = handler.Configuracion.Certificado.Rut;
             textPassword.Text = handler.Configuracion.Certificado.Password;
+
+            var transportes = ((SimpleSDK.Enum.CodigosAduana.ViasdeTransporte[])Enum.GetValues(typeof(SimpleSDK.Enum.CodigosAduana.ViasdeTransporte))).OrderBy(x => x.ToString());
+            foreach (var transporte in transportes) comboViaTransporte.Items.Add(transporte);
+
+            comboViaTransporte.SelectedItem = SimpleSDK.Enum.CodigosAduana.ViasdeTransporte.MARITINA_FLUVIAL_Y_LACUSTRE;
+
+            var paisesDestino = ((SimpleSDK.Enum.CodigosAduana.Paises[])Enum.GetValues(typeof(SimpleSDK.Enum.CodigosAduana.Paises))).OrderBy(x => x.ToString());
+            foreach (var paisDestino in paisesDestino) comboPaisReceptorDestino.Items.Add(paisDestino);
+
+            comboPaisReceptorDestino.SelectedItem = SimpleSDK.Enum.CodigosAduana.Paises.AFGHANISTAN;
+
+            var puertosEmbarque = ((SimpleSDK.Enum.CodigosAduana.Puertos[])Enum.GetValues(typeof(SimpleSDK.Enum.CodigosAduana.Puertos))).OrderBy(x => x.ToString());
+            foreach (var puertoEmbarque in puertosEmbarque) comboPuertoEmbarque.Items.Add(puertoEmbarque);
+
+            comboPuertoEmbarque.SelectedItem = SimpleSDK.Enum.CodigosAduana.Puertos.ABRA_DE_NAPA;
+
+            var puertosDesembarque = ((SimpleSDK.Enum.CodigosAduana.Puertos[])Enum.GetValues(typeof(SimpleSDK.Enum.CodigosAduana.Puertos))).OrderBy(x => x.ToString());
+            foreach (var puertoDesembarque in puertosDesembarque) comboPuertoDesembarque.Items.Add(puertoDesembarque);
+
+            comboPuertoDesembarque.SelectedItem = SimpleSDK.Enum.CodigosAduana.Puertos.OTROS_PTOS_DE_CHINA;
+
+            var unidadesMedidaTara = ((SimpleSDK.Enum.CodigosAduana.UnidadMedida[])Enum.GetValues(typeof(SimpleSDK.Enum.CodigosAduana.UnidadMedida))).OrderBy(x => x.ToString());
+            foreach (var unidadMedidaTara in unidadesMedidaTara) comboUnidadMedidaTara.Items.Add(unidadMedidaTara);
+
+            comboUnidadMedidaTara.SelectedItem = SimpleSDK.Enum.CodigosAduana.UnidadMedida.KLT;
+
+            var unidadesMedidaPeso = ((SimpleSDK.Enum.CodigosAduana.UnidadMedida[])Enum.GetValues(typeof(SimpleSDK.Enum.CodigosAduana.UnidadMedida))).OrderBy(x => x.ToString());
+            foreach (var unidadMedidaPeso in unidadesMedidaPeso) comboUnidadMedidaPeso.Items.Add(unidadMedidaPeso);
+
+            comboUnidadMedidaPeso.SelectedItem = SimpleSDK.Enum.CodigosAduana.UnidadMedida.KLT;
+
         }
 
         private async void botonGenerar_Click(object sender, EventArgs e)
@@ -71,7 +101,7 @@ namespace SimpleSDK_Demo
                 return;
             }
 
-            var tipoDte = comboTipo.SelectedIndex == 0 ? TipoDTE.DTEType.BoletaElectronica : TipoDTE.DTEType.FacturaElectronica;
+            var tipoDte = TipoDTE.DTEType.FacturaExportacionElectronica;
 
             var emisor = new SimpleSDK.Models.DTE.Emisor()
             {
@@ -82,11 +112,55 @@ namespace SimpleSDK_Demo
 
             var receptor = new SimpleSDK.Models.DTE.Receptor()
             {
-                Rut = textRUTReceptor.Text,
+                Rut = "55555555-5",
                 RazonSocial = textRazonSocialReceptor.Text,
                 Direccion = textDireccionReceptor.Text,
-                Comuna = textComunaReceptor.Text
+                Ciudad = textCiudadReceptor.Text
             };
+
+            Enum.TryParse(comboViaTransporte.SelectedItem.ToString(), out SimpleSDK.Enum.CodigosAduana.ViasdeTransporte codViaTransp);
+            Enum.TryParse(comboPuertoEmbarque.SelectedItem.ToString(), out SimpleSDK.Enum.CodigosAduana.Puertos codPtoEmb);
+            Enum.TryParse(comboPuertoDesembarque.SelectedItem.ToString(), out SimpleSDK.Enum.CodigosAduana.Puertos codPtoDes);
+            Enum.TryParse(comboUnidadMedidaTara.SelectedItem.ToString(), out SimpleSDK.Enum.CodigosAduana.UnidadMedida codUnMedTara);
+            Enum.TryParse(comboUnidadMedidaPeso.SelectedItem.ToString(), out SimpleSDK.Enum.CodigosAduana.UnidadMedida codUnMedPesoNeto);
+            Enum.TryParse(comboPaisReceptorDestino.SelectedItem.ToString(), out SimpleSDK.Enum.CodigosAduana.Paises codPaisRecep);
+
+
+            var aduana = new SimpleSDK.Models.DTE.Aduana()
+            {
+                CodigoModalidadVenta = CodigosAduana.ModalidadVenta.A_FIRME,
+                CodigoClausulaVenta = CodigosAduana.ClausulaCompraVenta.CIF,
+                TotalClausulaVenta = int.Parse(textClausulaVenta.Text.Replace(".","")),
+                CodigoViaTransporte = codViaTransp,
+                CodigoPuertoEmbarque = codPtoEmb,
+                CodigoPuertoDesembarque = codPtoDes,
+                Tara = (int)numericTara.Value,
+                CodigoUnidadMedidaTara  = codUnMedTara,
+                PesoNeto = (int)numericPesoNeto.Value,
+                CodigoUnidadPesoNeto = codUnMedPesoNeto,
+                PesoBruto = (int)numericPesoNeto.Value + (int)numericTara.Value,
+                CodigoUnidadPesoBruto = codUnMedPesoNeto,
+                CantidadBultos = 0,
+                MontoFlete = (double)numericFlete.Value,
+                MontoSeguro = (double)numericSeguro.Value,
+                CodigoPaisReceptor = codPaisRecep,
+                CodigoPaisDestino = codPaisRecep,
+
+            };
+
+            var otraMoneda = new SimpleSDK.Models.DTE.OtraMoneda()
+            {
+                TipoMoneda = CodigosAduana.Moneda.PESO_CHILENO,
+                TipoCambio = 800,
+
+            };
+            //var bultos = new SimpleSDK.Models.DTE.TipoBulto()
+            //{
+               //CodigoTipoBulto = CodigosAduana.TipoBultoEnum.CAJON,
+               //CantidadBultos = 1,
+               //Marcas = "MarcaTest",
+
+            //};
 
             //Etiquetas propias para boletas y para el resto.
             if (tipoDte == TipoDTE.DTEType.BoletaElectronica || tipoDte == TipoDTE.DTEType.BoletaElectronicaExenta)
@@ -99,21 +173,29 @@ namespace SimpleSDK_Demo
                 emisor.RazonSocial = textRazonSocialEmisor.Text;
                 emisor.Giro = textGiroEmisor.Text;
                 emisor.ActividadEconomica = handler.Configuracion.Empresa.CodigosActividades.Select(x => x.Codigo).ToList();
-                receptor.Ciudad = receptor.Comuna;
-                receptor.Giro = textGiroReceptor.Text;
+                receptor.Ciudad = receptor.Ciudad;
             }
 
             //Creación del objeto
-            var dte = new SimpleSDK.Models.DTE.DTE(emisor, receptor, (int)numericFolio.Value, tipoDte);
+            var dte = new SimpleSDK.Models.DTE.DTE(emisor, receptor, (int)numericFolio.Value, tipoDte, aduana, otraMoneda);
 
             //Asignación de detalles
-            dte.Documento.Detalles = handler.ItemboletaADetalle(items);
+            dte.Exportaciones.Detalles = handler.ItemboletaADetalleExportacion(items);
 
-            dte.CalcularTotales();
+
+            dte.CalcularTotalesExportacion(CodigosAduana.Moneda.DOLAR_ESTADOUNIDENSE);
+
 
             dte.Certificado.Ruta = textRutaCertificado.Text;
             dte.Certificado.Rut = textRUTCertificado.Text;
             dte.Certificado.Password = textPassword.Text;
+
+            var totalesMontoTotal = dte.Exportaciones.Encabezado.Totales.MontoTotal;
+            var otraMonedaTipoCambio = dte.Exportaciones.Encabezado.OtraMoneda.TipoCambio;
+
+            dte.Exportaciones.Encabezado.OtraMoneda.MontoExento = totalesMontoTotal * otraMonedaTipoCambio;
+            dte.Exportaciones.Encabezado.OtraMoneda.MontoTotal = dte.Exportaciones.Encabezado.OtraMoneda.MontoExento;
+
 
             try 
             {
@@ -159,7 +241,7 @@ namespace SimpleSDK_Demo
             ItemBoleta item = new ItemBoleta();
             item.Nombre = textNombre.Text;
             item.Cantidad = (double)numericCantidad.Value;
-            item.Afecto = checkAfecto.Checked;
+            item.Afecto = false;
             item.Precio = (int)numericPrecio.Value;
             item.UnidadMedida = checkUnidad.Checked ? "Kg." : string.Empty;
             items.Add(item);
@@ -168,19 +250,23 @@ namespace SimpleSDK_Demo
 
             textNombre.Text = "";
             numericCantidad.Value = 1;
-            checkAfecto.Checked = true;
 
             calculoTotales();
         }
 
         private void calculoTotales()
         {
-            var total = items.Sum(x => x.Total);
-            var neto = Math.Round(total / 1.19, 0);
+            var totalExento = items.Sum(x => x.Total);
 
-            textNeto.Text = neto.ToString("N0");
-            textIVA.Text = (total - neto).ToString("N0");
-            textTotal.Text = total.ToString("N0");
+            int totalTotalTotal = totalExento + (int)numericFlete.Value + (int)numericSeguro.Value;
+
+            textValorBienes.Text = totalExento.ToString("N0");
+
+            textClausulaVenta.Text = totalTotalTotal.ToString("N0");
+
+            textFlete.Text = numericFlete.Value.ToString("N0");
+
+            textSeguro.Text = numericSeguro.Value.ToString("N0");
         }
 
         private void botonBuscarCAF_Click(object sender, EventArgs e)
@@ -208,6 +294,21 @@ namespace SimpleSDK_Demo
                     textRutaCertificado.Text = openFileDialog.FileName;
                 }
             }
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textFlete_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
