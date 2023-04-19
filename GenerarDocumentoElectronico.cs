@@ -113,14 +113,15 @@ namespace SimpleSDK_Demo
             //Asignación de detalles
             dte.Documento.Detalles = handler.ItemboletaADetalle(items);
 
-
-            dte.Documento.DescuentosRecargos.Add(new SimpleSDK.Models.DTE.DescuentosRecargos() {
-                Descripcion = "Descuento prueba",
-                TipoMovimiento = TipoMovimiento.TipoMovimientoEnum.Descuento,
-                Valor = 100,
-                TipoValor = ExpresionDinero.ExpresionDineroEnum.Pesos,
-                Numero = 1                
-            });
+            //Si se quiere agregar un descuento en porcentaje o pesos. Se aplica sobre el neto.
+            //dte.Documento.DescuentosRecargos.Add(new SimpleSDK.Models.DTE.DescuentosRecargos()
+            //{
+            //    Descripcion = "Descuento prueba",
+            //    TipoMovimiento = TipoMovimiento.TipoMovimientoEnum.Descuento,
+            //    Valor = 100,
+            //    TipoValor = ExpresionDinero.ExpresionDineroEnum.Pesos,
+            //    Numero = 1
+            //});
 
             dte.CalcularTotales();
 
