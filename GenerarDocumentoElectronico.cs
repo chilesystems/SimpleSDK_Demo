@@ -114,11 +114,12 @@ namespace SimpleSDK_Demo
             dte.Documento.Detalles = handler.ItemboletaADetalle(items);
 
             //Si se quiere agregar un descuento en porcentaje o pesos. Se aplica sobre el neto.
+            //No se calculan los descuentos globales si es boleta. Se debe aplicar antes de traspasar los valores al DTE (Neto, IVA y Total).
             //dte.Documento.DescuentosRecargos.Add(new SimpleSDK.Models.DTE.DescuentosRecargos()
             //{
             //    Descripcion = "Descuento prueba",
             //    TipoMovimiento = TipoMovimiento.TipoMovimientoEnum.Descuento,
-            //    Valor = 100,
+            //    Valor = 3201,
             //    TipoValor = ExpresionDinero.ExpresionDineroEnum.Pesos,
             //    Numero = 1
             //});
