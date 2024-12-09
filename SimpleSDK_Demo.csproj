@@ -64,7 +64,7 @@
       <HintPath>packages\RestSharp.108.0.1\lib\netstandard2.0\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="SimpleSDK, Version=1.1.0.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\SimpleSDK.1.2.7\lib\netstandard2.0\SimpleSDK.dll</HintPath>
+      <HintPath>packages\SimpleSDK.1.2.8\lib\netstandard2.0\SimpleSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">

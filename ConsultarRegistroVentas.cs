@@ -36,8 +36,7 @@ namespace SimpleSDK_Demo
                     RutUsuario =  rutUsuario,
                     PasswordSII = password,
                     RutEmpresa = rutEmpresa,
-                    Ambiente = radioCertificacion.Checked ? 0 : 1,
-                    Detallado = checkDetallado.Checked
+                    Ambiente = radioCertificacion.Checked ? 0 : 1
                 };
                 var (exito, registro) = await RCVHelper.ConsultaRegistroVentasAsync(fecha, mensual, basicData, apikey);
                 if (exito)

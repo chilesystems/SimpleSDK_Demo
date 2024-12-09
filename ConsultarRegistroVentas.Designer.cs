@@ -38,7 +38,6 @@ namespace SimpleSDK_Demo
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
             this.DatosConsultaGroupBox = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkDetallado = new System.Windows.Forms.CheckBox();
             this.RutUsuarioTextBox = new System.Windows.Forms.TextBox();
             this.RutEmpresaTextBox = new System.Windows.Forms.TextBox();
             this.RutEmpresaLabel = new System.Windows.Forms.Label();
@@ -55,11 +54,11 @@ namespace SimpleSDK_Demo
             // ResultadoGroupBox
             // 
             this.ResultadoGroupBox.Controls.Add(this.dataGrid1);
-            this.ResultadoGroupBox.Location = new System.Drawing.Point(12, 88);
-            this.ResultadoGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ResultadoGroupBox.Location = new System.Drawing.Point(9, 72);
+            this.ResultadoGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ResultadoGroupBox.Name = "ResultadoGroupBox";
-            this.ResultadoGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ResultadoGroupBox.Size = new System.Drawing.Size(1025, 481);
+            this.ResultadoGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ResultadoGroupBox.Size = new System.Drawing.Size(769, 391);
             this.ResultadoGroupBox.TabIndex = 8;
             this.ResultadoGroupBox.TabStop = false;
             this.ResultadoGroupBox.Text = "Resultado";
@@ -68,19 +67,21 @@ namespace SimpleSDK_Demo
             // 
             this.dataGrid1.DataMember = "";
             this.dataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGrid1.Location = new System.Drawing.Point(5, 25);
-            this.dataGrid1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGrid1.Location = new System.Drawing.Point(4, 20);
+            this.dataGrid1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.Size = new System.Drawing.Size(1014, 446);
+            this.dataGrid1.Size = new System.Drawing.Size(760, 362);
             this.dataGrid1.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.radioProduccion);
             this.groupBox1.Controls.Add(this.radioCertificacion);
-            this.groupBox1.Location = new System.Drawing.Point(813, 13);
+            this.groupBox1.Location = new System.Drawing.Point(610, 11);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(224, 71);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(168, 58);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ambiente";
@@ -88,9 +89,10 @@ namespace SimpleSDK_Demo
             // radioProduccion
             // 
             this.radioProduccion.AutoSize = true;
-            this.radioProduccion.Location = new System.Drawing.Point(118, 35);
+            this.radioProduccion.Location = new System.Drawing.Point(88, 28);
+            this.radioProduccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioProduccion.Name = "radioProduccion";
-            this.radioProduccion.Size = new System.Drawing.Size(100, 21);
+            this.radioProduccion.Size = new System.Drawing.Size(79, 17);
             this.radioProduccion.TabIndex = 1;
             this.radioProduccion.TabStop = true;
             this.radioProduccion.Text = "Producción";
@@ -99,9 +101,10 @@ namespace SimpleSDK_Demo
             // radioCertificacion
             // 
             this.radioCertificacion.AutoSize = true;
-            this.radioCertificacion.Location = new System.Drawing.Point(6, 35);
+            this.radioCertificacion.Location = new System.Drawing.Point(4, 28);
+            this.radioCertificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioCertificacion.Name = "radioCertificacion";
-            this.radioCertificacion.Size = new System.Drawing.Size(106, 21);
+            this.radioCertificacion.Size = new System.Drawing.Size(83, 17);
             this.radioCertificacion.TabIndex = 0;
             this.radioCertificacion.TabStop = true;
             this.radioCertificacion.Text = "Certificación";
@@ -110,18 +113,17 @@ namespace SimpleSDK_Demo
             // DatosConsultaGroupBox
             // 
             this.DatosConsultaGroupBox.Controls.Add(this.label1);
-            this.DatosConsultaGroupBox.Controls.Add(this.checkDetallado);
             this.DatosConsultaGroupBox.Controls.Add(this.RutUsuarioTextBox);
             this.DatosConsultaGroupBox.Controls.Add(this.RutEmpresaTextBox);
             this.DatosConsultaGroupBox.Controls.Add(this.RutEmpresaLabel);
             this.DatosConsultaGroupBox.Controls.Add(this.FechaDateTimePicker);
             this.DatosConsultaGroupBox.Controls.Add(this.FechaLabel);
             this.DatosConsultaGroupBox.Controls.Add(this.MensualCheckBox);
-            this.DatosConsultaGroupBox.Location = new System.Drawing.Point(12, 11);
-            this.DatosConsultaGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DatosConsultaGroupBox.Location = new System.Drawing.Point(9, 9);
+            this.DatosConsultaGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DatosConsultaGroupBox.Name = "DatosConsultaGroupBox";
-            this.DatosConsultaGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.DatosConsultaGroupBox.Size = new System.Drawing.Size(795, 73);
+            this.DatosConsultaGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DatosConsultaGroupBox.Size = new System.Drawing.Size(596, 59);
             this.DatosConsultaGroupBox.TabIndex = 12;
             this.DatosConsultaGroupBox.TabStop = false;
             this.DatosConsultaGroupBox.Text = "Datos Consulta";
@@ -129,43 +131,35 @@ namespace SimpleSDK_Demo
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(206, 35);
+            this.label1.Location = new System.Drawing.Point(154, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 17);
+            this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 18;
             this.label1.Text = "RUT Usuario:";
             // 
-            // checkDetallado
-            // 
-            this.checkDetallado.Location = new System.Drawing.Point(503, 35);
-            this.checkDetallado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkDetallado.Name = "checkDetallado";
-            this.checkDetallado.Size = new System.Drawing.Size(97, 19);
-            this.checkDetallado.TabIndex = 17;
-            this.checkDetallado.Text = "Detallado";
-            this.checkDetallado.UseVisualStyleBackColor = true;
-            // 
             // RutUsuarioTextBox
             // 
-            this.RutUsuarioTextBox.Location = new System.Drawing.Point(306, 32);
-            this.RutUsuarioTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RutUsuarioTextBox.Location = new System.Drawing.Point(230, 26);
+            this.RutUsuarioTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RutUsuarioTextBox.Name = "RutUsuarioTextBox";
-            this.RutUsuarioTextBox.Size = new System.Drawing.Size(89, 22);
+            this.RutUsuarioTextBox.Size = new System.Drawing.Size(68, 20);
             this.RutUsuarioTextBox.TabIndex = 16;
             // 
             // RutEmpresaTextBox
             // 
-            this.RutEmpresaTextBox.Location = new System.Drawing.Point(111, 32);
-            this.RutEmpresaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RutEmpresaTextBox.Location = new System.Drawing.Point(83, 26);
+            this.RutEmpresaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RutEmpresaTextBox.Name = "RutEmpresaTextBox";
-            this.RutEmpresaTextBox.Size = new System.Drawing.Size(89, 22);
+            this.RutEmpresaTextBox.Size = new System.Drawing.Size(68, 20);
             this.RutEmpresaTextBox.TabIndex = 14;
             // 
             // RutEmpresaLabel
             // 
-            this.RutEmpresaLabel.Location = new System.Drawing.Point(6, 35);
+            this.RutEmpresaLabel.Location = new System.Drawing.Point(4, 28);
+            this.RutEmpresaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RutEmpresaLabel.Name = "RutEmpresaLabel";
-            this.RutEmpresaLabel.Size = new System.Drawing.Size(114, 18);
+            this.RutEmpresaLabel.Size = new System.Drawing.Size(86, 15);
             this.RutEmpresaLabel.TabIndex = 13;
             this.RutEmpresaLabel.Text = "RUT Empresa:";
             // 
@@ -173,26 +167,27 @@ namespace SimpleSDK_Demo
             // 
             this.FechaDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaDateTimePicker.Location = new System.Drawing.Point(662, 34);
-            this.FechaDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(496, 28);
+            this.FechaDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
-            this.FechaDateTimePicker.Size = new System.Drawing.Size(112, 22);
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(85, 20);
             this.FechaDateTimePicker.TabIndex = 12;
             // 
             // FechaLabel
             // 
-            this.FechaLabel.Location = new System.Drawing.Point(601, 37);
+            this.FechaLabel.Location = new System.Drawing.Point(451, 30);
+            this.FechaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FechaLabel.Name = "FechaLabel";
-            this.FechaLabel.Size = new System.Drawing.Size(54, 18);
+            this.FechaLabel.Size = new System.Drawing.Size(40, 15);
             this.FechaLabel.TabIndex = 11;
             this.FechaLabel.Text = "Fecha:";
             // 
             // MensualCheckBox
             // 
-            this.MensualCheckBox.Location = new System.Drawing.Point(412, 35);
-            this.MensualCheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MensualCheckBox.Location = new System.Drawing.Point(309, 28);
+            this.MensualCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MensualCheckBox.Name = "MensualCheckBox";
-            this.MensualCheckBox.Size = new System.Drawing.Size(92, 19);
+            this.MensualCheckBox.Size = new System.Drawing.Size(69, 15);
             this.MensualCheckBox.TabIndex = 9;
             this.MensualCheckBox.Text = "Mensual";
             this.MensualCheckBox.UseVisualStyleBackColor = true;
@@ -200,10 +195,10 @@ namespace SimpleSDK_Demo
             // 
             // buttonConsultar
             // 
-            this.buttonConsultar.Location = new System.Drawing.Point(929, 575);
-            this.buttonConsultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonConsultar.Location = new System.Drawing.Point(697, 467);
+            this.buttonConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonConsultar.Name = "buttonConsultar";
-            this.buttonConsultar.Size = new System.Drawing.Size(108, 35);
+            this.buttonConsultar.Size = new System.Drawing.Size(81, 28);
             this.buttonConsultar.TabIndex = 14;
             this.buttonConsultar.Text = "Consultar";
             this.buttonConsultar.UseVisualStyleBackColor = true;
@@ -211,15 +206,15 @@ namespace SimpleSDK_Demo
             // 
             // ConsultarRegistroVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 621);
+            this.ClientSize = new System.Drawing.Size(788, 505);
             this.Controls.Add(this.buttonConsultar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DatosConsultaGroupBox);
             this.Controls.Add(this.ResultadoGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConsultarRegistroVentas";
@@ -245,7 +240,6 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.RadioButton radioCertificacion;
         private System.Windows.Forms.GroupBox DatosConsultaGroupBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkDetallado;
         private System.Windows.Forms.TextBox RutUsuarioTextBox;
         private System.Windows.Forms.TextBox RutEmpresaTextBox;
         private System.Windows.Forms.Label RutEmpresaLabel;
