@@ -64,7 +64,7 @@
       <HintPath>packages\RestSharp.108.0.1\lib\netstandard2.0\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="SimpleSDK, Version=1.1.0.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\SimpleSDK.1.2.5\lib\netstandard2.0\SimpleSDK.dll</HintPath>
+      <HintPath>packages\SimpleSDK.1.2.9\lib\netstandard2.0\SimpleSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -285,6 +285,12 @@
     <Compile Include="GenerarRVD.Designer.cs">
       <DependentUpon>GenerarRVD.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListadoComunas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoComunas.Designer.cs">
+      <DependentUpon>ListadoComunas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Helper.cs" />
     <Compile Include="ListadoAnualBoletas.cs">
       <SubType>Form</SubType>
@@ -393,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoAnualBoletas.resx">
       <DependentUpon>ListadoAnualBoletas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoComunas.resx">
+      <DependentUpon>ListadoComunas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoMensualBoletas.resx">
       <DependentUpon>ListadoMensualBoletas.cs</DependentUpon>
