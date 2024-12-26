@@ -467,5 +467,11 @@ namespace SimpleSDK_Demo
             GenerarDocumentoElectronicoExportacion formulario = new GenerarDocumentoElectronicoExportacion();
             formulario.ShowDialog();
         }
+
+        private void listarComuna_Click(object sender, EventArgs e)
+        {
+            ListadoComunas formulario = new ListadoComunas();
+            formulario.ShowDialog();
+        }
     }
 }
