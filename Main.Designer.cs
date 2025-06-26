@@ -318,7 +318,8 @@ namespace SimpleSDK_Demo
             "EnvioDTE",
             "EnvioBoleta",
             "RVD",
-            "LibroGuia"});
+            "LibroGuia",
+            "Cesion"});
             this.comboTipoEnvio.Location = new System.Drawing.Point(6, 24);
             this.comboTipoEnvio.Name = "comboTipoEnvio";
             this.comboTipoEnvio.Size = new System.Drawing.Size(171, 21);
