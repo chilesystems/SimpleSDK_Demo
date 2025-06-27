@@ -146,7 +146,8 @@ namespace SimpleSDK_Demo
                         Ambiente = radioCertificacion.Checked ? Ambiente.AmbienteEnum.Certificacion : Ambiente.AmbienteEnum.Produccion,
 
                         Tipo = TipoEnvio.EnvioType.Cesion,
-                        CorreoNotificacion = ""
+                        //obligatorio: correo electrónico indicado para notificación de cesión
+                        CorreoNotificacion = "TestEnvioCesion@chilesystems.com"
 
                     };
                     
@@ -157,7 +158,9 @@ namespace SimpleSDK_Demo
                     };
 
                     var resultCesion = await envioCesion.EnviarCesionAsync(pathFile, handler.Configuracion.APIKey);
-                    ResultadoOperacion formCesion = new ResultadoOperacion(resultCesion.Item2.ResponseXml ?? resultCesion.Item2.ToString());
+                    string mensaje = $"TrackID: {resultCesion.Item2.TrackId}{Environment.NewLine}{Environment.NewLine} Response:{resultCesion.Item2.ResponseXml ?? resultCesion.Item2.ToString()}";
+
+                    ResultadoOperacion formCesion = new ResultadoOperacion(mensaje);
                     formCesion.ShowDialog();
                 }
                 return;
