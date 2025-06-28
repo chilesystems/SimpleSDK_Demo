@@ -21,6 +21,8 @@ namespace SimpleSDK_Demo
         public GenerarDocumentoElectronico()
         {
             InitializeComponent();
+            this.comboTipo.SelectedIndexChanged += new System.EventHandler(this.comboTipo_SelectedIndexChanged);
+
         }
 
         private void GenerarDocumentoElectronico_Load(object sender, EventArgs e)
@@ -46,6 +48,10 @@ namespace SimpleSDK_Demo
             textRutaCertificado.Text = handler.Configuracion.Certificado.Ruta;
             textRUTCertificado.Text = handler.Configuracion.Certificado.Rut;
             textPassword.Text = handler.Configuracion.Certificado.Password;
+
+            groupBoxTransporte.Enabled = false;
+            groupBoxTransporte.Visible = true;
+
         }
 
         private async void BotonGenerar_Click(object sender, EventArgs e)
@@ -112,6 +118,21 @@ namespace SimpleSDK_Demo
 
             //Asignación de detalles
             dte.Documento.Detalles = handler.ItemboletaADetalle(items);
+            if (tipoDte == TipoDTE.DTEType.GuiaDespachoElectronica)
+            {
+                var transporte = new SimpleSDK.Models.DTE.Transporte()
+                {
+                    Patente = textBoxPatente.Text,
+                    RutTransportista = textBoxRutTranspote.Text,
+                    Chofer = new SimpleSDK.Models.DTE.Chofer()
+                    {
+                        Rut = textBoxRutChofer.Text,
+                        Nombre = textBoxNombreChofer.Text
+                    }
+                };
+
+                dte.Documento.Encabezado.Transporte = transporte;
+            }
 
             //Si se quiere agregar un descuento en porcentaje o pesos. Se aplica sobre el neto.
             //No se calculan los descuentos globales si es boleta. Se debe aplicar antes de traspasar los valores al DTE (Neto, IVA y Total).
@@ -225,6 +246,19 @@ namespace SimpleSDK_Demo
                 {
                     textRutaCertificado.Text = openFileDialog.FileName;
                 }
+            }
+        }
+
+        private void comboTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Asegúrate de comparar el texto y no el índice (en caso de que el orden cambie)
+            if (comboTipo.SelectedItem != null && comboTipo.SelectedItem.ToString().ToUpper().Contains("GUÍA DE DESPACHO"))
+            {
+                groupBoxTransporte.Enabled = true;
+            }
+            else
+            {
+                groupBoxTransporte.Enabled = false;
             }
         }
 
