@@ -128,7 +128,10 @@ namespace SimpleSDK_Demo
                     {
                         Rut = textBoxRutChofer.Text,
                         Nombre = textBoxNombreChofer.Text
-                    }
+                    },
+                    DireccionDestino = "Direccion Test",
+                    CiudadDestino = "Ciudad Test",
+                    ComunaDestino = "Comuna Test"
                 };
 
                 dte.Documento.Encabezado.Transporte = transporte;
