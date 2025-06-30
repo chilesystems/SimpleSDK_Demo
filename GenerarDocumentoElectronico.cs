@@ -1,4 +1,6 @@
 ﻿using SimpleSDK.Enum;
+using SimpleSDK.Helpers;
+using SimpleSDK.Models.DTE;
 using SimpleSDK_Demo.Models;
 using System;
 using System.Collections.Generic;
@@ -9,7 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SimpleSDK.Helpers;
 
 namespace SimpleSDK_Demo
 {
@@ -44,6 +45,11 @@ namespace SimpleSDK_Demo
             textDireccionReceptor.Text = "Dirección de Cliente";
             textComunaReceptor.Text = "Comuna de Cliente";
             textGiroReceptor.Text = "Giro de Cliente";
+
+            textBoxPatente.Text = "LFFR-87";
+            textBoxRutTranspote.Text = "11111111-1";
+            textBoxRutChofer.Text = "11111111-1";
+            textBoxNombreChofer.Text = "Nombre Chofer";
 
             textRutaCertificado.Text = handler.Configuracion.Certificado.Ruta;
             textRUTCertificado.Text = handler.Configuracion.Certificado.Rut;
@@ -81,7 +87,26 @@ namespace SimpleSDK_Demo
                 MessageBox.Show("Se requiere al menos un detalle ingresado en la grilla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            var tipoDte = comboTipo.SelectedIndex == 0 ? TipoDTE.DTEType.BoletaElectronica : TipoDTE.DTEType.FacturaElectronica;
+            TipoDTE.DTEType tipoDte;
+            switch (comboTipo.SelectedIndex)
+            {
+                case 0:
+                    tipoDte = TipoDTE.DTEType.BoletaElectronica;
+                    break;
+                case 1:
+                    tipoDte = TipoDTE.DTEType.FacturaElectronica;
+                    break;
+                case 2:
+                    tipoDte = TipoDTE.DTEType.FacturaElectronicaExenta;
+                    break;
+                case 3:
+                    tipoDte = TipoDTE.DTEType.GuiaDespachoElectronica;
+                    break;
+                default:
+                    tipoDte = TipoDTE.DTEType.BoletaElectronica;
+                    break;
+            }
+
 
             var emisor = new SimpleSDK.Models.DTE.Emisor()
             {
@@ -122,9 +147,13 @@ namespace SimpleSDK_Demo
             {
                 var IdentificacionDTE = new SimpleSDK.Models.DTE.IdentificacionDTE()
                 {
+                    TipoDTE = tipoDte,
+                    Folio = (int)numericFolio.Value,
                     TipoDespacho = (TipoDespacho.TipoDespachoEnum)comboBoxTipoDespacho.SelectedItem,
                     TipoTraslado = (TipoTraslado.TipoTrasladoEnum)comboBoxTipoTraslado.SelectedItem,
                     FechaEmision = DateTime.Now,
+                    FechaVencimiento = DateTime.Now,
+                    FormaPago = FormaPago.FormaPagoEnum.Contado,
                 };
                 var transporte = new SimpleSDK.Models.DTE.Transporte()
                 {
