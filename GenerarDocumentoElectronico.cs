@@ -120,6 +120,12 @@ namespace SimpleSDK_Demo
             dte.Documento.Detalles = handler.ItemboletaADetalle(items);
             if (tipoDte == TipoDTE.DTEType.GuiaDespachoElectronica)
             {
+                var IdentificacionDTE = new SimpleSDK.Models.DTE.IdentificacionDTE()
+                {
+                    TipoDespacho = (TipoDespacho.TipoDespachoEnum)comboBoxTipoDespacho.SelectedItem,
+                    TipoTraslado = (TipoTraslado.TipoTrasladoEnum)comboBoxTipoTraslado.SelectedItem,
+                    FechaEmision = DateTime.Now,
+                };
                 var transporte = new SimpleSDK.Models.DTE.Transporte()
                 {
                     Patente = textBoxPatente.Text,
@@ -135,6 +141,7 @@ namespace SimpleSDK_Demo
                 };
 
                 dte.Documento.Encabezado.Transporte = transporte;
+                dte.Documento.Encabezado.IdentificacionDTE = IdentificacionDTE;
             }
 
             //Si se quiere agregar un descuento en porcentaje o pesos. Se aplica sobre el neto.
@@ -254,7 +261,6 @@ namespace SimpleSDK_Demo
 
         private void comboTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Asegúrate de comparar el texto y no el índice (en caso de que el orden cambie)
             if (comboTipo.SelectedItem != null && comboTipo.SelectedItem.ToString().ToUpper().Contains("GUÍA DE DESPACHO"))
             {
                 groupBoxTransporte.Enabled = true;
@@ -262,6 +268,27 @@ namespace SimpleSDK_Demo
             else
             {
                 groupBoxTransporte.Enabled = false;
+            }
+
+            comboBoxTipoDespacho.Items.Clear();
+            foreach (TipoDespacho.TipoDespachoEnum val in Enum.GetValues(typeof(TipoDespacho.TipoDespachoEnum)))
+            {
+                if (val != TipoDespacho.TipoDespachoEnum.NotSet)
+                    comboBoxTipoDespacho.Items.Add(val);
+                if (comboBoxTipoDespacho.SelectedItem == null)
+                {
+                    comboBoxTipoDespacho.SelectedItem = val;
+                }
+            }
+            comboBoxTipoTraslado.Items.Clear();
+            foreach (TipoTraslado.TipoTrasladoEnum val in Enum.GetValues(typeof(TipoTraslado.TipoTrasladoEnum)))
+            {
+                if (val != TipoTraslado.TipoTrasladoEnum.NotSet)
+                    comboBoxTipoTraslado.Items.Add(val);
+                if (comboBoxTipoTraslado.SelectedItem == null)
+                {
+                    comboBoxTipoTraslado.SelectedItem = val;
+                }
             }
         }
 

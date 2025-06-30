@@ -98,13 +98,17 @@ namespace SimpleSDK_Demo
             this.textTotal = new System.Windows.Forms.TextBox();
             this.botonGenerar = new System.Windows.Forms.Button();
             this.groupBoxTransporte = new System.Windows.Forms.GroupBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBoxPatente = new System.Windows.Forms.TextBox();
+            this.comboBoxTipoTraslado = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.comboBoxTipoDespacho = new System.Windows.Forms.ComboBox();
             this.textBoxNombreChofer = new System.Windows.Forms.TextBox();
             this.textBoxRutChofer = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBoxPatente = new System.Windows.Forms.TextBox();
             this.textBoxRutTranspote = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).BeginInit();
@@ -516,6 +520,7 @@ namespace SimpleSDK_Demo
             this.gridResultados.AllowUserToDeleteRows = false;
             this.gridResultados.AllowUserToResizeColumns = false;
             this.gridResultados.AllowUserToResizeRows = false;
+            this.gridResultados.ColumnHeadersHeight = 29;
             this.gridResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridResultados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.gridNombreProducto,
@@ -538,6 +543,7 @@ namespace SimpleSDK_Demo
             // 
             this.gridNombreProducto.DataPropertyName = "Nombre";
             this.gridNombreProducto.HeaderText = "Nombre";
+            this.gridNombreProducto.MinimumWidth = 6;
             this.gridNombreProducto.Name = "gridNombreProducto";
             this.gridNombreProducto.ReadOnly = true;
             this.gridNombreProducto.Width = 230;
@@ -548,6 +554,7 @@ namespace SimpleSDK_Demo
             dataGridViewCellStyle4.Format = "N1";
             this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridCantidadProducto.HeaderText = "Cantidad";
+            this.gridCantidadProducto.MinimumWidth = 6;
             this.gridCantidadProducto.Name = "gridCantidadProducto";
             this.gridCantidadProducto.ReadOnly = true;
             this.gridCantidadProducto.Width = 55;
@@ -558,6 +565,7 @@ namespace SimpleSDK_Demo
             dataGridViewCellStyle5.Format = "N0";
             this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridPrecio.HeaderText = "Precio";
+            this.gridPrecio.MinimumWidth = 6;
             this.gridPrecio.Name = "gridPrecio";
             this.gridPrecio.ReadOnly = true;
             this.gridPrecio.Width = 65;
@@ -568,6 +576,7 @@ namespace SimpleSDK_Demo
             dataGridViewCellStyle6.Format = "N0";
             this.gridTotal.DefaultCellStyle = dataGridViewCellStyle6;
             this.gridTotal.HeaderText = "Total";
+            this.gridTotal.MinimumWidth = 6;
             this.gridTotal.Name = "gridTotal";
             this.gridTotal.ReadOnly = true;
             this.gridTotal.Width = 70;
@@ -576,6 +585,7 @@ namespace SimpleSDK_Demo
             // 
             this.gridAfecto.DataPropertyName = "Afecto";
             this.gridAfecto.HeaderText = "Afecto";
+            this.gridAfecto.MinimumWidth = 6;
             this.gridAfecto.Name = "gridAfecto";
             this.gridAfecto.ReadOnly = true;
             this.gridAfecto.Width = 45;
@@ -584,6 +594,7 @@ namespace SimpleSDK_Demo
             // 
             this.umedida.DataPropertyName = "UnidadMedida";
             this.umedida.HeaderText = "Unidad";
+            this.umedida.MinimumWidth = 6;
             this.umedida.Name = "umedida";
             this.umedida.ReadOnly = true;
             this.umedida.Width = 45;
@@ -591,6 +602,7 @@ namespace SimpleSDK_Demo
             // gridEliminar
             // 
             this.gridEliminar.HeaderText = "Elim.";
+            this.gridEliminar.MinimumWidth = 6;
             this.gridEliminar.Name = "gridEliminar";
             this.gridEliminar.ReadOnly = true;
             this.gridEliminar.Width = 40;
@@ -781,13 +793,17 @@ namespace SimpleSDK_Demo
             // 
             // groupBoxTransporte
             // 
+            this.groupBoxTransporte.Controls.Add(this.label28);
+            this.groupBoxTransporte.Controls.Add(this.textBoxPatente);
+            this.groupBoxTransporte.Controls.Add(this.comboBoxTipoTraslado);
+            this.groupBoxTransporte.Controls.Add(this.label26);
+            this.groupBoxTransporte.Controls.Add(this.label24);
+            this.groupBoxTransporte.Controls.Add(this.comboBoxTipoDespacho);
             this.groupBoxTransporte.Controls.Add(this.textBoxNombreChofer);
             this.groupBoxTransporte.Controls.Add(this.textBoxRutChofer);
             this.groupBoxTransporte.Controls.Add(this.label22);
             this.groupBoxTransporte.Controls.Add(this.label23);
-            this.groupBoxTransporte.Controls.Add(this.textBoxPatente);
             this.groupBoxTransporte.Controls.Add(this.textBoxRutTranspote);
-            this.groupBoxTransporte.Controls.Add(this.label24);
             this.groupBoxTransporte.Controls.Add(this.label25);
             this.groupBoxTransporte.Location = new System.Drawing.Point(12, 253);
             this.groupBoxTransporte.Name = "groupBoxTransporte";
@@ -796,11 +812,63 @@ namespace SimpleSDK_Demo
             this.groupBoxTransporte.TabStop = false;
             this.groupBoxTransporte.Text = "Transporte";
             // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(174, 27);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(75, 13);
+            this.label28.TabIndex = 20;
+            this.label28.Text = "Tipo Traslado:";
+            // 
+            // textBoxPatente
+            // 
+            this.textBoxPatente.Location = new System.Drawing.Point(476, 54);
+            this.textBoxPatente.Name = "textBoxPatente";
+            this.textBoxPatente.Size = new System.Drawing.Size(125, 20);
+            this.textBoxPatente.TabIndex = 18;
+            // 
+            // comboBoxTipoTraslado
+            // 
+            this.comboBoxTipoTraslado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoTraslado.FormattingEnabled = true;
+            this.comboBoxTipoTraslado.Location = new System.Drawing.Point(256, 24);
+            this.comboBoxTipoTraslado.Name = "comboBoxTipoTraslado";
+            this.comboBoxTipoTraslado.Size = new System.Drawing.Size(134, 21);
+            this.comboBoxTipoTraslado.TabIndex = 19;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(393, 27);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(83, 13);
+            this.label26.TabIndex = 18;
+            this.label26.Text = "Tipo Despacho:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(427, 59);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(47, 13);
+            this.label24.TabIndex = 17;
+            this.label24.Text = "Patente:";
+            // 
+            // comboBoxTipoDespacho
+            // 
+            this.comboBoxTipoDespacho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoDespacho.FormattingEnabled = true;
+            this.comboBoxTipoDespacho.Location = new System.Drawing.Point(476, 24);
+            this.comboBoxTipoDespacho.Name = "comboBoxTipoDespacho";
+            this.comboBoxTipoDespacho.Size = new System.Drawing.Size(125, 21);
+            this.comboBoxTipoDespacho.TabIndex = 17;
+            // 
             // textBoxNombreChofer
             // 
-            this.textBoxNombreChofer.Location = new System.Drawing.Point(254, 24);
+            this.textBoxNombreChofer.Location = new System.Drawing.Point(256, 55);
             this.textBoxNombreChofer.Name = "textBoxNombreChofer";
-            this.textBoxNombreChofer.Size = new System.Drawing.Size(188, 20);
+            this.textBoxNombreChofer.Size = new System.Drawing.Size(171, 20);
             this.textBoxNombreChofer.TabIndex = 18;
             // 
             // textBoxRutChofer
@@ -813,7 +881,7 @@ namespace SimpleSDK_Demo
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(175, 28);
+            this.label22.Location = new System.Drawing.Point(175, 59);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(81, 13);
             this.label22.TabIndex = 17;
@@ -828,28 +896,12 @@ namespace SimpleSDK_Demo
             this.label23.TabIndex = 3;
             this.label23.Text = "RUT Chofer:";
             // 
-            // textBoxPatente
-            // 
-            this.textBoxPatente.Location = new System.Drawing.Point(497, 25);
-            this.textBoxPatente.Name = "textBoxPatente";
-            this.textBoxPatente.Size = new System.Drawing.Size(104, 20);
-            this.textBoxPatente.TabIndex = 18;
-            // 
             // textBoxRutTranspote
             // 
             this.textBoxRutTranspote.Location = new System.Drawing.Point(90, 24);
             this.textBoxRutTranspote.Name = "textBoxRutTranspote";
             this.textBoxRutTranspote.Size = new System.Drawing.Size(81, 20);
             this.textBoxRutTranspote.TabIndex = 4;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(444, 28);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(47, 13);
-            this.label24.TabIndex = 17;
-            this.label24.Text = "Patente:";
             // 
             // label25
             // 
@@ -981,5 +1033,9 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.TextBox textBoxRutTranspote;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.ComboBox comboBoxTipoDespacho;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox comboBoxTipoTraslado;
     }
 }
