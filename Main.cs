@@ -131,7 +131,40 @@ namespace SimpleSDK_Demo
             else if (comboTipoEnvio.SelectedIndex == 1) envioSII.Tipo = TipoEnvio.EnvioType.EnvioBoleta;
             else if (comboTipoEnvio.SelectedIndex == 2) envioSII.Tipo = TipoEnvio.EnvioType.RVD;
             else if (comboTipoEnvio.SelectedIndex == 3) envioSII.Tipo = TipoEnvio.EnvioType.LVC;
+            else if (comboTipoEnvio.SelectedIndex == 4)
+            {
+                OpenFileDialog fileDialog = new OpenFileDialog();
+                fileDialog.Multiselect = false;
+                fileDialog.Title = "Seleccione archivo AEC para ser enviado al SII";
+                fileDialog.Filter = "Archivo XML (*.xml)|*.xml";
+                if (fileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string pathFile = fileDialog.FileName;
 
+                    var envioCesion = new SimpleSDK.Models.Cesion.EnvioCesion()
+                    {
+                        Ambiente = radioCertificacion.Checked ? Ambiente.AmbienteEnum.Certificacion : Ambiente.AmbienteEnum.Produccion,
+
+                        Tipo = TipoEnvio.EnvioType.Cesion,
+                        //obligatorio: correo electrónico indicado para notificación de cesión
+                        CorreoNotificacion = "TestEnvioCesion@chilesystems.com"
+
+                    };
+                    
+                    envioCesion.Autenticacion = new SimpleSDK.Models.Cesion.EnvioCesion.AutenticacionData()
+                    {
+                        Rut = handler.Configuracion.UsuarioSII.RutUsuario,
+                        Password = handler.Configuracion.UsuarioSII.PasswordSII
+                    };
+
+                    var resultCesion = await envioCesion.EnviarCesionAsync(pathFile, handler.Configuracion.APIKey);
+                    string mensaje = $"TrackID: {resultCesion.Item2.TrackId}{Environment.NewLine}{Environment.NewLine} Response:{resultCesion.Item2.ResponseXml ?? resultCesion.Item2.ToString()}";
+
+                    ResultadoOperacion formCesion = new ResultadoOperacion(mensaje);
+                    formCesion.ShowDialog();
+                }
+                return;
+            }
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Multiselect = false;
             openFileDialog.Title = $"Seleccione archivo para ser enviado al SII";

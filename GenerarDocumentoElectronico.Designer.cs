@@ -29,9 +29,9 @@ namespace SimpleSDK_Demo
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.comboTipo = new System.Windows.Forms.ComboBox();
@@ -97,6 +97,19 @@ namespace SimpleSDK_Demo
             this.label18 = new System.Windows.Forms.Label();
             this.textTotal = new System.Windows.Forms.TextBox();
             this.botonGenerar = new System.Windows.Forms.Button();
+            this.groupBoxTransporte = new System.Windows.Forms.GroupBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBoxPatente = new System.Windows.Forms.TextBox();
+            this.comboBoxTipoTraslado = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.comboBoxTipoDespacho = new System.Windows.Forms.ComboBox();
+            this.textBoxNombreChofer = new System.Windows.Forms.TextBox();
+            this.textBoxRutChofer = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBoxRutTranspote = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericFolio)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -109,6 +122,7 @@ namespace SimpleSDK_Demo
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.groupBoxTransporte.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox5
@@ -117,11 +131,9 @@ namespace SimpleSDK_Demo
             this.groupBox5.Controls.Add(this.comboTipo);
             this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Controls.Add(this.numericFolio);
-            this.groupBox5.Location = new System.Drawing.Point(16, 15);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Location = new System.Drawing.Point(12, 12);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox5.Size = new System.Drawing.Size(809, 65);
+            this.groupBox5.Size = new System.Drawing.Size(607, 53);
             this.groupBox5.TabIndex = 22;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "General";
@@ -129,10 +141,9 @@ namespace SimpleSDK_Demo
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(528, 28);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(396, 23);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(38, 16);
+            this.label16.Size = new System.Drawing.Size(31, 13);
             this.label16.TabIndex = 16;
             this.label16.Text = "Tipo:";
             // 
@@ -143,34 +154,32 @@ namespace SimpleSDK_Demo
             this.comboTipo.Items.AddRange(new object[] {
             "BOLETA ELECTRÓNICA",
             "FACTURA ELECTRÓNICA",
-            "FACTURA EXENTA ELECTRÓNICA"});
-            this.comboTipo.Location = new System.Drawing.Point(577, 25);
-            this.comboTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            "FACTURA EXENTA ELECTRÓNICA",
+            "GUÍA DE DESPACHO"});
+            this.comboTipo.Location = new System.Drawing.Point(433, 20);
             this.comboTipo.Name = "comboTipo";
-            this.comboTipo.Size = new System.Drawing.Size(223, 24);
+            this.comboTipo.Size = new System.Drawing.Size(168, 21);
             this.comboTipo.TabIndex = 15;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(383, 28);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(287, 23);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 16);
+            this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "Folio:";
             // 
             // numericFolio
             // 
-            this.numericFolio.Location = new System.Drawing.Point(433, 25);
-            this.numericFolio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericFolio.Location = new System.Drawing.Point(325, 20);
             this.numericFolio.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.numericFolio.Name = "numericFolio";
-            this.numericFolio.Size = new System.Drawing.Size(87, 22);
+            this.numericFolio.Size = new System.Drawing.Size(65, 20);
             this.numericFolio.TabIndex = 13;
             this.numericFolio.Value = new decimal(new int[] {
             1,
@@ -190,102 +199,90 @@ namespace SimpleSDK_Demo
             this.groupBox4.Controls.Add(this.textRUTReceptor);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Location = new System.Drawing.Point(16, 199);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Location = new System.Drawing.Point(12, 162);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox4.Size = new System.Drawing.Size(809, 105);
+            this.groupBox4.Size = new System.Drawing.Size(607, 85);
             this.groupBox4.TabIndex = 21;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Receptor";
             // 
             // textGiroReceptor
             // 
-            this.textGiroReceptor.Location = new System.Drawing.Point(300, 62);
-            this.textGiroReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textGiroReceptor.Location = new System.Drawing.Point(225, 50);
             this.textGiroReceptor.Name = "textGiroReceptor";
-            this.textGiroReceptor.Size = new System.Drawing.Size(500, 22);
+            this.textGiroReceptor.Size = new System.Drawing.Size(376, 20);
             this.textGiroReceptor.TabIndex = 24;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(248, 65);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(186, 53);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 16);
+            this.label11.Size = new System.Drawing.Size(29, 13);
             this.label11.TabIndex = 23;
             this.label11.Text = "Giro:";
             // 
             // textComunaReceptor
             // 
-            this.textComunaReceptor.Location = new System.Drawing.Point(81, 62);
-            this.textComunaReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textComunaReceptor.Location = new System.Drawing.Point(61, 50);
             this.textComunaReceptor.Name = "textComunaReceptor";
-            this.textComunaReceptor.Size = new System.Drawing.Size(157, 22);
+            this.textComunaReceptor.Size = new System.Drawing.Size(119, 20);
             this.textComunaReceptor.TabIndex = 22;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 65);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(6, 53);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 16);
+            this.label12.Size = new System.Drawing.Size(49, 13);
             this.label12.TabIndex = 21;
             this.label12.Text = "Comuna:";
             // 
             // textDireccionReceptor
             // 
-            this.textDireccionReceptor.Location = new System.Drawing.Point(577, 30);
-            this.textDireccionReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textDireccionReceptor.Location = new System.Drawing.Point(433, 24);
             this.textDireccionReceptor.Name = "textDireccionReceptor";
-            this.textDireccionReceptor.Size = new System.Drawing.Size(223, 22);
+            this.textDireccionReceptor.Size = new System.Drawing.Size(168, 20);
             this.textDireccionReceptor.TabIndex = 20;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(496, 33);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(372, 27);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(67, 16);
+            this.label13.Size = new System.Drawing.Size(55, 13);
             this.label13.TabIndex = 19;
             this.label13.Text = "Dirección:";
             // 
             // textRazonSocialReceptor
             // 
-            this.textRazonSocialReceptor.Location = new System.Drawing.Point(300, 30);
-            this.textRazonSocialReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRazonSocialReceptor.Location = new System.Drawing.Point(225, 24);
             this.textRazonSocialReceptor.Name = "textRazonSocialReceptor";
-            this.textRazonSocialReceptor.Size = new System.Drawing.Size(187, 22);
+            this.textRazonSocialReceptor.Size = new System.Drawing.Size(141, 20);
             this.textRazonSocialReceptor.TabIndex = 18;
             // 
             // textRUTReceptor
             // 
-            this.textRUTReceptor.Location = new System.Drawing.Point(81, 30);
-            this.textRUTReceptor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRUTReceptor.Location = new System.Drawing.Point(61, 24);
             this.textRUTReceptor.Name = "textRUTReceptor";
-            this.textRUTReceptor.Size = new System.Drawing.Size(107, 22);
+            this.textRUTReceptor.Size = new System.Drawing.Size(81, 20);
             this.textRUTReceptor.TabIndex = 4;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(195, 33);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(146, 27);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(90, 16);
+            this.label14.Size = new System.Drawing.Size(73, 13);
             this.label14.TabIndex = 17;
             this.label14.Text = "Razón Social:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(8, 33);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(6, 27);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(39, 16);
+            this.label15.Size = new System.Drawing.Size(33, 13);
             this.label15.TabIndex = 3;
             this.label15.Text = "RUT:";
             // 
@@ -301,102 +298,90 @@ namespace SimpleSDK_Demo
             this.groupBox3.Controls.Add(this.textRUTEmisor);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(16, 87);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Location = new System.Drawing.Point(12, 71);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(809, 105);
+            this.groupBox3.Size = new System.Drawing.Size(607, 85);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Emisor";
             // 
             // textGiroEmisor
             // 
-            this.textGiroEmisor.Location = new System.Drawing.Point(300, 62);
-            this.textGiroEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textGiroEmisor.Location = new System.Drawing.Point(225, 50);
             this.textGiroEmisor.Name = "textGiroEmisor";
-            this.textGiroEmisor.Size = new System.Drawing.Size(500, 22);
+            this.textGiroEmisor.Size = new System.Drawing.Size(376, 20);
             this.textGiroEmisor.TabIndex = 24;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(248, 65);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(186, 53);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 16);
+            this.label10.Size = new System.Drawing.Size(29, 13);
             this.label10.TabIndex = 23;
             this.label10.Text = "Giro:";
             // 
             // textComunaEmisor
             // 
-            this.textComunaEmisor.Location = new System.Drawing.Point(81, 62);
-            this.textComunaEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textComunaEmisor.Location = new System.Drawing.Point(61, 50);
             this.textComunaEmisor.Name = "textComunaEmisor";
-            this.textComunaEmisor.Size = new System.Drawing.Size(157, 22);
+            this.textComunaEmisor.Size = new System.Drawing.Size(119, 20);
             this.textComunaEmisor.TabIndex = 22;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 65);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(6, 53);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 16);
+            this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 21;
             this.label9.Text = "Comuna:";
             // 
             // textDireccionEmisor
             // 
-            this.textDireccionEmisor.Location = new System.Drawing.Point(577, 30);
-            this.textDireccionEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textDireccionEmisor.Location = new System.Drawing.Point(433, 24);
             this.textDireccionEmisor.Name = "textDireccionEmisor";
-            this.textDireccionEmisor.Size = new System.Drawing.Size(223, 22);
+            this.textDireccionEmisor.Size = new System.Drawing.Size(168, 20);
             this.textDireccionEmisor.TabIndex = 20;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(496, 33);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(372, 27);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 16);
+            this.label8.Size = new System.Drawing.Size(55, 13);
             this.label8.TabIndex = 19;
             this.label8.Text = "Dirección:";
             // 
             // textRazonSocialEmisor
             // 
-            this.textRazonSocialEmisor.Location = new System.Drawing.Point(300, 30);
-            this.textRazonSocialEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRazonSocialEmisor.Location = new System.Drawing.Point(225, 24);
             this.textRazonSocialEmisor.Name = "textRazonSocialEmisor";
-            this.textRazonSocialEmisor.Size = new System.Drawing.Size(187, 22);
+            this.textRazonSocialEmisor.Size = new System.Drawing.Size(141, 20);
             this.textRazonSocialEmisor.TabIndex = 18;
             // 
             // textRUTEmisor
             // 
-            this.textRUTEmisor.Location = new System.Drawing.Point(81, 30);
-            this.textRUTEmisor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRUTEmisor.Location = new System.Drawing.Point(61, 24);
             this.textRUTEmisor.Name = "textRUTEmisor";
-            this.textRUTEmisor.Size = new System.Drawing.Size(107, 22);
+            this.textRUTEmisor.Size = new System.Drawing.Size(81, 20);
             this.textRUTEmisor.TabIndex = 4;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(197, 33);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(148, 27);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 16);
+            this.label7.Size = new System.Drawing.Size(73, 13);
             this.label7.TabIndex = 17;
             this.label7.Text = "Razón Social:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 33);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(6, 27);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 16);
+            this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 3;
             this.label6.Text = "RUT:";
             // 
@@ -411,11 +396,9 @@ namespace SimpleSDK_Demo
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.textNombre);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(16, 311);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(12, 343);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(809, 73);
+            this.groupBox2.Size = new System.Drawing.Size(607, 59);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nuevo Producto";
@@ -423,25 +406,23 @@ namespace SimpleSDK_Demo
             // checkUnidad
             // 
             this.checkUnidad.AutoSize = true;
-            this.checkUnidad.Location = new System.Drawing.Point(656, 33);
-            this.checkUnidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkUnidad.Location = new System.Drawing.Point(492, 27);
             this.checkUnidad.Name = "checkUnidad";
-            this.checkUnidad.Size = new System.Drawing.Size(70, 20);
+            this.checkUnidad.Size = new System.Drawing.Size(60, 17);
             this.checkUnidad.TabIndex = 16;
             this.checkUnidad.Text = "Unidad";
             this.checkUnidad.UseVisualStyleBackColor = true;
             // 
             // numericPrecio
             // 
-            this.numericPrecio.Location = new System.Drawing.Point(491, 32);
-            this.numericPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericPrecio.Location = new System.Drawing.Point(368, 26);
             this.numericPrecio.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.numericPrecio.Name = "numericPrecio";
-            this.numericPrecio.Size = new System.Drawing.Size(73, 22);
+            this.numericPrecio.Size = new System.Drawing.Size(55, 20);
             this.numericPrecio.TabIndex = 9;
             this.numericPrecio.Value = new decimal(new int[] {
             1000,
@@ -452,19 +433,17 @@ namespace SimpleSDK_Demo
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(431, 34);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(323, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 16);
+            this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Precio:";
             // 
             // botonAgregarLinea
             // 
-            this.botonAgregarLinea.Location = new System.Drawing.Point(749, 23);
-            this.botonAgregarLinea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonAgregarLinea.Location = new System.Drawing.Point(562, 19);
             this.botonAgregarLinea.Name = "botonAgregarLinea";
-            this.botonAgregarLinea.Size = new System.Drawing.Size(52, 37);
+            this.botonAgregarLinea.Size = new System.Drawing.Size(39, 30);
             this.botonAgregarLinea.TabIndex = 15;
             this.botonAgregarLinea.Text = " + ";
             this.botonAgregarLinea.UseVisualStyleBackColor = true;
@@ -475,10 +454,9 @@ namespace SimpleSDK_Demo
             this.checkAfecto.AutoSize = true;
             this.checkAfecto.Checked = true;
             this.checkAfecto.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkAfecto.Location = new System.Drawing.Point(572, 33);
-            this.checkAfecto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkAfecto.Location = new System.Drawing.Point(429, 27);
             this.checkAfecto.Name = "checkAfecto";
-            this.checkAfecto.Size = new System.Drawing.Size(64, 20);
+            this.checkAfecto.Size = new System.Drawing.Size(57, 17);
             this.checkAfecto.TabIndex = 12;
             this.checkAfecto.Text = "Afecto";
             this.checkAfecto.UseVisualStyleBackColor = true;
@@ -486,15 +464,14 @@ namespace SimpleSDK_Demo
             // numericCantidad
             // 
             this.numericCantidad.DecimalPlaces = 1;
-            this.numericCantidad.Location = new System.Drawing.Point(363, 31);
-            this.numericCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericCantidad.Location = new System.Drawing.Point(272, 25);
             this.numericCantidad.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.numericCantidad.Name = "numericCantidad";
-            this.numericCantidad.Size = new System.Drawing.Size(60, 22);
+            this.numericCantidad.Size = new System.Drawing.Size(45, 20);
             this.numericCantidad.TabIndex = 5;
             this.numericCantidad.Value = new decimal(new int[] {
             1,
@@ -505,39 +482,34 @@ namespace SimpleSDK_Demo
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(285, 34);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(214, 28);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 16);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Cantidad:";
             // 
             // textNombre
             // 
-            this.textNombre.Location = new System.Drawing.Point(79, 31);
-            this.textNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textNombre.Location = new System.Drawing.Point(59, 25);
             this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(197, 22);
+            this.textNombre.Size = new System.Drawing.Size(149, 20);
             this.textNombre.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 34);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(6, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre:";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.gridResultados);
-            this.groupBox1.Location = new System.Drawing.Point(16, 391);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 408);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(809, 209);
+            this.groupBox1.Size = new System.Drawing.Size(607, 170);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Productos";
@@ -548,6 +520,7 @@ namespace SimpleSDK_Demo
             this.gridResultados.AllowUserToDeleteRows = false;
             this.gridResultados.AllowUserToResizeColumns = false;
             this.gridResultados.AllowUserToResizeRows = false;
+            this.gridResultados.ColumnHeadersHeight = 29;
             this.gridResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridResultados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.gridNombreProducto,
@@ -558,12 +531,11 @@ namespace SimpleSDK_Demo
             this.umedida,
             this.gridEliminar});
             this.gridResultados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridResultados.Location = new System.Drawing.Point(4, 19);
-            this.gridResultados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridResultados.Location = new System.Drawing.Point(3, 16);
             this.gridResultados.Name = "gridResultados";
             this.gridResultados.ReadOnly = true;
             this.gridResultados.RowHeadersWidth = 25;
-            this.gridResultados.Size = new System.Drawing.Size(801, 186);
+            this.gridResultados.Size = new System.Drawing.Size(601, 151);
             this.gridResultados.TabIndex = 0;
             this.gridResultados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridResultados_CellClick);
             // 
@@ -571,6 +543,7 @@ namespace SimpleSDK_Demo
             // 
             this.gridNombreProducto.DataPropertyName = "Nombre";
             this.gridNombreProducto.HeaderText = "Nombre";
+            this.gridNombreProducto.MinimumWidth = 6;
             this.gridNombreProducto.Name = "gridNombreProducto";
             this.gridNombreProducto.ReadOnly = true;
             this.gridNombreProducto.Width = 230;
@@ -578,9 +551,10 @@ namespace SimpleSDK_Demo
             // gridCantidadProducto
             // 
             this.gridCantidadProducto.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle1.Format = "N1";
-            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Format = "N1";
+            this.gridCantidadProducto.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridCantidadProducto.HeaderText = "Cantidad";
+            this.gridCantidadProducto.MinimumWidth = 6;
             this.gridCantidadProducto.Name = "gridCantidadProducto";
             this.gridCantidadProducto.ReadOnly = true;
             this.gridCantidadProducto.Width = 55;
@@ -588,9 +562,10 @@ namespace SimpleSDK_Demo
             // gridPrecio
             // 
             this.gridPrecio.DataPropertyName = "Precio";
-            dataGridViewCellStyle2.Format = "N0";
-            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Format = "N0";
+            this.gridPrecio.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridPrecio.HeaderText = "Precio";
+            this.gridPrecio.MinimumWidth = 6;
             this.gridPrecio.Name = "gridPrecio";
             this.gridPrecio.ReadOnly = true;
             this.gridPrecio.Width = 65;
@@ -598,9 +573,10 @@ namespace SimpleSDK_Demo
             // gridTotal
             // 
             this.gridTotal.DataPropertyName = "Total";
-            dataGridViewCellStyle3.Format = "N0";
-            this.gridTotal.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Format = "N0";
+            this.gridTotal.DefaultCellStyle = dataGridViewCellStyle6;
             this.gridTotal.HeaderText = "Total";
+            this.gridTotal.MinimumWidth = 6;
             this.gridTotal.Name = "gridTotal";
             this.gridTotal.ReadOnly = true;
             this.gridTotal.Width = 70;
@@ -609,6 +585,7 @@ namespace SimpleSDK_Demo
             // 
             this.gridAfecto.DataPropertyName = "Afecto";
             this.gridAfecto.HeaderText = "Afecto";
+            this.gridAfecto.MinimumWidth = 6;
             this.gridAfecto.Name = "gridAfecto";
             this.gridAfecto.ReadOnly = true;
             this.gridAfecto.Width = 45;
@@ -617,6 +594,7 @@ namespace SimpleSDK_Demo
             // 
             this.umedida.DataPropertyName = "UnidadMedida";
             this.umedida.HeaderText = "Unidad";
+            this.umedida.MinimumWidth = 6;
             this.umedida.Name = "umedida";
             this.umedida.ReadOnly = true;
             this.umedida.Width = 45;
@@ -624,6 +602,7 @@ namespace SimpleSDK_Demo
             // gridEliminar
             // 
             this.gridEliminar.HeaderText = "Elim.";
+            this.gridEliminar.MinimumWidth = 6;
             this.gridEliminar.Name = "gridEliminar";
             this.gridEliminar.ReadOnly = true;
             this.gridEliminar.Width = 40;
@@ -637,11 +616,9 @@ namespace SimpleSDK_Demo
             this.groupBox6.Controls.Add(this.textPassword);
             this.groupBox6.Controls.Add(this.botonBuscarCertificado);
             this.groupBox6.Controls.Add(this.textRutaCertificado);
-            this.groupBox6.Location = new System.Drawing.Point(16, 693);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Location = new System.Drawing.Point(12, 653);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox6.Size = new System.Drawing.Size(809, 78);
+            this.groupBox6.Size = new System.Drawing.Size(607, 63);
             this.groupBox6.TabIndex = 23;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Certificado Digital";
@@ -649,77 +626,68 @@ namespace SimpleSDK_Demo
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(439, 39);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(329, 32);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(39, 16);
+            this.label21.Size = new System.Drawing.Size(33, 13);
             this.label21.TabIndex = 6;
             this.label21.Text = "RUT:";
             // 
             // textRUTCertificado
             // 
-            this.textRUTCertificado.Location = new System.Drawing.Point(491, 36);
-            this.textRUTCertificado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRUTCertificado.Location = new System.Drawing.Point(368, 29);
             this.textRUTCertificado.Name = "textRUTCertificado";
-            this.textRUTCertificado.Size = new System.Drawing.Size(103, 22);
+            this.textRUTCertificado.Size = new System.Drawing.Size(78, 20);
             this.textRUTCertificado.TabIndex = 5;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(8, 39);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(6, 32);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(38, 16);
+            this.label17.Size = new System.Drawing.Size(33, 13);
             this.label17.TabIndex = 4;
             this.label17.Text = "Ruta:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(603, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(452, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Password:";
             // 
             // textPassword
             // 
-            this.textPassword.Location = new System.Drawing.Point(685, 34);
-            this.textPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textPassword.Location = new System.Drawing.Point(514, 28);
             this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(115, 22);
+            this.textPassword.Size = new System.Drawing.Size(87, 20);
             this.textPassword.TabIndex = 2;
             // 
             // botonBuscarCertificado
             // 
             this.botonBuscarCertificado.Image = global::SimpleSDK_Demo.Properties.Resources.View;
-            this.botonBuscarCertificado.Location = new System.Drawing.Point(387, 32);
-            this.botonBuscarCertificado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonBuscarCertificado.Location = new System.Drawing.Point(290, 26);
             this.botonBuscarCertificado.Name = "botonBuscarCertificado";
-            this.botonBuscarCertificado.Size = new System.Drawing.Size(37, 28);
+            this.botonBuscarCertificado.Size = new System.Drawing.Size(28, 23);
             this.botonBuscarCertificado.TabIndex = 1;
             this.botonBuscarCertificado.UseVisualStyleBackColor = true;
             this.botonBuscarCertificado.Click += new System.EventHandler(this.BotonBuscarCertificado_Click);
             // 
             // textRutaCertificado
             // 
-            this.textRutaCertificado.Location = new System.Drawing.Point(60, 34);
-            this.textRutaCertificado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textRutaCertificado.Location = new System.Drawing.Point(45, 28);
             this.textRutaCertificado.Name = "textRutaCertificado";
-            this.textRutaCertificado.Size = new System.Drawing.Size(324, 22);
+            this.textRutaCertificado.Size = new System.Drawing.Size(244, 20);
             this.textRutaCertificado.TabIndex = 0;
             // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.botonBuscarCAF);
             this.groupBox7.Controls.Add(this.textPathCAF);
-            this.groupBox7.Location = new System.Drawing.Point(16, 608);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Location = new System.Drawing.Point(12, 584);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox7.Size = new System.Drawing.Size(333, 78);
+            this.groupBox7.Size = new System.Drawing.Size(250, 63);
             this.groupBox7.TabIndex = 24;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Archivo CAF";
@@ -727,20 +695,18 @@ namespace SimpleSDK_Demo
             // botonBuscarCAF
             // 
             this.botonBuscarCAF.Image = global::SimpleSDK_Demo.Properties.Resources.View;
-            this.botonBuscarCAF.Location = new System.Drawing.Point(287, 32);
-            this.botonBuscarCAF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonBuscarCAF.Location = new System.Drawing.Point(215, 26);
             this.botonBuscarCAF.Name = "botonBuscarCAF";
-            this.botonBuscarCAF.Size = new System.Drawing.Size(37, 28);
+            this.botonBuscarCAF.Size = new System.Drawing.Size(28, 23);
             this.botonBuscarCAF.TabIndex = 1;
             this.botonBuscarCAF.UseVisualStyleBackColor = true;
             this.botonBuscarCAF.Click += new System.EventHandler(this.BotonBuscarCAF_Click);
             // 
             // textPathCAF
             // 
-            this.textPathCAF.Location = new System.Drawing.Point(12, 34);
-            this.textPathCAF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textPathCAF.Location = new System.Drawing.Point(9, 28);
             this.textPathCAF.Name = "textPathCAF";
-            this.textPathCAF.Size = new System.Drawing.Size(265, 22);
+            this.textPathCAF.Size = new System.Drawing.Size(200, 20);
             this.textPathCAF.TabIndex = 0;
             // 
             // groupBox8
@@ -751,11 +717,9 @@ namespace SimpleSDK_Demo
             this.groupBox8.Controls.Add(this.textIVA);
             this.groupBox8.Controls.Add(this.label18);
             this.groupBox8.Controls.Add(this.textTotal);
-            this.groupBox8.Location = new System.Drawing.Point(357, 608);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Location = new System.Drawing.Point(268, 584);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox8.Size = new System.Drawing.Size(468, 78);
+            this.groupBox8.Size = new System.Drawing.Size(351, 63);
             this.groupBox8.TabIndex = 25;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Totales";
@@ -763,82 +727,197 @@ namespace SimpleSDK_Demo
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(8, 38);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(6, 31);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(39, 16);
+            this.label20.Size = new System.Drawing.Size(33, 13);
             this.label20.TabIndex = 33;
             this.label20.Text = "Neto:";
             // 
             // textNeto
             // 
             this.textNeto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textNeto.Location = new System.Drawing.Point(60, 34);
-            this.textNeto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textNeto.Location = new System.Drawing.Point(45, 28);
             this.textNeto.Name = "textNeto";
             this.textNeto.ReadOnly = true;
-            this.textNeto.Size = new System.Drawing.Size(88, 22);
+            this.textNeto.Size = new System.Drawing.Size(67, 20);
             this.textNeto.TabIndex = 32;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(167, 38);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(125, 31);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(31, 16);
+            this.label19.Size = new System.Drawing.Size(27, 13);
             this.label19.TabIndex = 31;
             this.label19.Text = "IVA:";
             // 
             // textIVA
             // 
             this.textIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textIVA.Location = new System.Drawing.Point(211, 34);
-            this.textIVA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textIVA.Location = new System.Drawing.Point(158, 28);
             this.textIVA.Name = "textIVA";
             this.textIVA.ReadOnly = true;
-            this.textIVA.Size = new System.Drawing.Size(88, 22);
+            this.textIVA.Size = new System.Drawing.Size(67, 20);
             this.textIVA.TabIndex = 30;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(308, 38);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(231, 31);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 16);
+            this.label18.Size = new System.Drawing.Size(34, 13);
             this.label18.TabIndex = 29;
             this.label18.Text = "Total:";
             // 
             // textTotal
             // 
             this.textTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textTotal.Location = new System.Drawing.Point(361, 34);
-            this.textTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textTotal.Location = new System.Drawing.Point(271, 28);
             this.textTotal.Name = "textTotal";
             this.textTotal.ReadOnly = true;
-            this.textTotal.Size = new System.Drawing.Size(97, 22);
+            this.textTotal.Size = new System.Drawing.Size(74, 20);
             this.textTotal.TabIndex = 28;
             // 
             // botonGenerar
             // 
             this.botonGenerar.Image = global::SimpleSDK_Demo.Properties.Resources.Guardar_32;
             this.botonGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botonGenerar.Location = new System.Drawing.Point(704, 778);
-            this.botonGenerar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.botonGenerar.Location = new System.Drawing.Point(528, 722);
             this.botonGenerar.Name = "botonGenerar";
-            this.botonGenerar.Size = new System.Drawing.Size(121, 50);
+            this.botonGenerar.Size = new System.Drawing.Size(91, 41);
             this.botonGenerar.TabIndex = 19;
             this.botonGenerar.Text = "Generar";
             this.botonGenerar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.botonGenerar.UseVisualStyleBackColor = true;
             this.botonGenerar.Click += new System.EventHandler(this.BotonGenerar_Click);
             // 
+            // groupBoxTransporte
+            // 
+            this.groupBoxTransporte.Controls.Add(this.label28);
+            this.groupBoxTransporte.Controls.Add(this.textBoxPatente);
+            this.groupBoxTransporte.Controls.Add(this.comboBoxTipoTraslado);
+            this.groupBoxTransporte.Controls.Add(this.label26);
+            this.groupBoxTransporte.Controls.Add(this.label24);
+            this.groupBoxTransporte.Controls.Add(this.comboBoxTipoDespacho);
+            this.groupBoxTransporte.Controls.Add(this.textBoxNombreChofer);
+            this.groupBoxTransporte.Controls.Add(this.textBoxRutChofer);
+            this.groupBoxTransporte.Controls.Add(this.label22);
+            this.groupBoxTransporte.Controls.Add(this.label23);
+            this.groupBoxTransporte.Controls.Add(this.textBoxRutTranspote);
+            this.groupBoxTransporte.Controls.Add(this.label25);
+            this.groupBoxTransporte.Location = new System.Drawing.Point(12, 253);
+            this.groupBoxTransporte.Name = "groupBoxTransporte";
+            this.groupBoxTransporte.Size = new System.Drawing.Size(607, 86);
+            this.groupBoxTransporte.TabIndex = 28;
+            this.groupBoxTransporte.TabStop = false;
+            this.groupBoxTransporte.Text = "Transporte";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(174, 27);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(75, 13);
+            this.label28.TabIndex = 20;
+            this.label28.Text = "Tipo Traslado:";
+            // 
+            // textBoxPatente
+            // 
+            this.textBoxPatente.Location = new System.Drawing.Point(476, 54);
+            this.textBoxPatente.Name = "textBoxPatente";
+            this.textBoxPatente.Size = new System.Drawing.Size(125, 20);
+            this.textBoxPatente.TabIndex = 18;
+            // 
+            // comboBoxTipoTraslado
+            // 
+            this.comboBoxTipoTraslado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoTraslado.FormattingEnabled = true;
+            this.comboBoxTipoTraslado.Location = new System.Drawing.Point(256, 24);
+            this.comboBoxTipoTraslado.Name = "comboBoxTipoTraslado";
+            this.comboBoxTipoTraslado.Size = new System.Drawing.Size(134, 21);
+            this.comboBoxTipoTraslado.TabIndex = 19;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(393, 27);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(83, 13);
+            this.label26.TabIndex = 18;
+            this.label26.Text = "Tipo Despacho:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(427, 59);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(47, 13);
+            this.label24.TabIndex = 17;
+            this.label24.Text = "Patente:";
+            // 
+            // comboBoxTipoDespacho
+            // 
+            this.comboBoxTipoDespacho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoDespacho.FormattingEnabled = true;
+            this.comboBoxTipoDespacho.Location = new System.Drawing.Point(476, 24);
+            this.comboBoxTipoDespacho.Name = "comboBoxTipoDespacho";
+            this.comboBoxTipoDespacho.Size = new System.Drawing.Size(125, 21);
+            this.comboBoxTipoDespacho.TabIndex = 17;
+            // 
+            // textBoxNombreChofer
+            // 
+            this.textBoxNombreChofer.Location = new System.Drawing.Point(256, 55);
+            this.textBoxNombreChofer.Name = "textBoxNombreChofer";
+            this.textBoxNombreChofer.Size = new System.Drawing.Size(171, 20);
+            this.textBoxNombreChofer.TabIndex = 18;
+            // 
+            // textBoxRutChofer
+            // 
+            this.textBoxRutChofer.Location = new System.Drawing.Point(90, 56);
+            this.textBoxRutChofer.Name = "textBoxRutChofer";
+            this.textBoxRutChofer.Size = new System.Drawing.Size(81, 20);
+            this.textBoxRutChofer.TabIndex = 4;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(175, 59);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(81, 13);
+            this.label22.TabIndex = 17;
+            this.label22.Text = "Nombre Chofer:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 56);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(67, 13);
+            this.label23.TabIndex = 3;
+            this.label23.Text = "RUT Chofer:";
+            // 
+            // textBoxRutTranspote
+            // 
+            this.textBoxRutTranspote.Location = new System.Drawing.Point(90, 24);
+            this.textBoxRutTranspote.Name = "textBoxRutTranspote";
+            this.textBoxRutTranspote.Size = new System.Drawing.Size(81, 20);
+            this.textBoxRutTranspote.TabIndex = 4;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(6, 27);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(78, 13);
+            this.label25.TabIndex = 3;
+            this.label25.Text = "RutTransporte:";
+            // 
             // GenerarDocumentoElectronico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(841, 836);
+            this.ClientSize = new System.Drawing.Size(631, 769);
+            this.Controls.Add(this.groupBoxTransporte);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
@@ -848,7 +927,6 @@ namespace SimpleSDK_Demo
             this.Controls.Add(this.botonGenerar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "GenerarDocumentoElectronico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -873,6 +951,8 @@ namespace SimpleSDK_Demo
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.groupBoxTransporte.ResumeLayout(false);
+            this.groupBoxTransporte.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -944,5 +1024,18 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.TextBox textTotal;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textRUTCertificado;
+        private System.Windows.Forms.GroupBox groupBoxTransporte;
+        private System.Windows.Forms.TextBox textBoxNombreChofer;
+        private System.Windows.Forms.TextBox textBoxRutChofer;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBoxPatente;
+        private System.Windows.Forms.TextBox textBoxRutTranspote;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.ComboBox comboBoxTipoDespacho;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox comboBoxTipoTraslado;
     }
 }

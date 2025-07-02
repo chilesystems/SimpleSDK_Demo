@@ -1,4 +1,6 @@
 ﻿using SimpleSDK.Enum;
+using SimpleSDK.Helpers;
+using SimpleSDK.Models.DTE;
 using SimpleSDK_Demo.Models;
 using System;
 using System.Collections.Generic;
@@ -9,7 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SimpleSDK.Helpers;
 
 namespace SimpleSDK_Demo
 {
@@ -21,6 +22,8 @@ namespace SimpleSDK_Demo
         public GenerarDocumentoElectronico()
         {
             InitializeComponent();
+            this.comboTipo.SelectedIndexChanged += new System.EventHandler(this.comboTipo_SelectedIndexChanged);
+
         }
 
         private void GenerarDocumentoElectronico_Load(object sender, EventArgs e)
@@ -43,9 +46,18 @@ namespace SimpleSDK_Demo
             textComunaReceptor.Text = "Comuna de Cliente";
             textGiroReceptor.Text = "Giro de Cliente";
 
+            textBoxPatente.Text = "LFFR-87";
+            textBoxRutTranspote.Text = "11111111-1";
+            textBoxRutChofer.Text = "11111111-1";
+            textBoxNombreChofer.Text = "Nombre Chofer";
+
             textRutaCertificado.Text = handler.Configuracion.Certificado.Ruta;
             textRUTCertificado.Text = handler.Configuracion.Certificado.Rut;
             textPassword.Text = handler.Configuracion.Certificado.Password;
+
+            groupBoxTransporte.Enabled = false;
+            groupBoxTransporte.Visible = true;
+
         }
 
         private async void BotonGenerar_Click(object sender, EventArgs e)
@@ -75,7 +87,26 @@ namespace SimpleSDK_Demo
                 MessageBox.Show("Se requiere al menos un detalle ingresado en la grilla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            var tipoDte = comboTipo.SelectedIndex == 0 ? TipoDTE.DTEType.BoletaElectronica : TipoDTE.DTEType.FacturaElectronica;
+            TipoDTE.DTEType tipoDte;
+            switch (comboTipo.SelectedIndex)
+            {
+                case 0:
+                    tipoDte = TipoDTE.DTEType.BoletaElectronica;
+                    break;
+                case 1:
+                    tipoDte = TipoDTE.DTEType.FacturaElectronica;
+                    break;
+                case 2:
+                    tipoDte = TipoDTE.DTEType.FacturaElectronicaExenta;
+                    break;
+                case 3:
+                    tipoDte = TipoDTE.DTEType.GuiaDespachoElectronica;
+                    break;
+                default:
+                    tipoDte = TipoDTE.DTEType.BoletaElectronica;
+                    break;
+            }
+
 
             var emisor = new SimpleSDK.Models.DTE.Emisor()
             {
@@ -112,6 +143,35 @@ namespace SimpleSDK_Demo
 
             //Asignación de detalles
             dte.Documento.Detalles = handler.ItemboletaADetalle(items);
+            if (tipoDte == TipoDTE.DTEType.GuiaDespachoElectronica)
+            {
+                var IdentificacionDTE = new SimpleSDK.Models.DTE.IdentificacionDTE()
+                {
+                    TipoDTE = tipoDte,
+                    Folio = (int)numericFolio.Value,
+                    TipoDespacho = (TipoDespacho.TipoDespachoEnum)comboBoxTipoDespacho.SelectedItem,
+                    TipoTraslado = (TipoTraslado.TipoTrasladoEnum)comboBoxTipoTraslado.SelectedItem,
+                    FechaEmision = DateTime.Now,
+                    FechaVencimiento = DateTime.Now,
+                    FormaPago = FormaPago.FormaPagoEnum.Contado,
+                };
+                var transporte = new SimpleSDK.Models.DTE.Transporte()
+                {
+                    Patente = textBoxPatente.Text,
+                    RutTransportista = textBoxRutTranspote.Text,
+                    Chofer = new SimpleSDK.Models.DTE.Chofer()
+                    {
+                        Rut = textBoxRutChofer.Text,
+                        Nombre = textBoxNombreChofer.Text
+                    },
+                    DireccionDestino = "Direccion Test",
+                    CiudadDestino = "Ciudad Test",
+                    ComunaDestino = "Comuna Test"
+                };
+
+                dte.Documento.Encabezado.Transporte = transporte;
+                dte.Documento.Encabezado.IdentificacionDTE = IdentificacionDTE;
+            }
 
             //Si se quiere agregar un descuento en porcentaje o pesos. Se aplica sobre el neto.
             //No se calculan los descuentos globales si es boleta. Se debe aplicar antes de traspasar los valores al DTE (Neto, IVA y Total).
@@ -224,6 +284,39 @@ namespace SimpleSDK_Demo
                 if (result == DialogResult.OK)
                 {
                     textRutaCertificado.Text = openFileDialog.FileName;
+                }
+            }
+        }
+
+        private void comboTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboTipo.SelectedItem != null && comboTipo.SelectedItem.ToString().ToUpper().Contains("GUÍA DE DESPACHO"))
+            {
+                groupBoxTransporte.Enabled = true;
+            }
+            else
+            {
+                groupBoxTransporte.Enabled = false;
+            }
+
+            comboBoxTipoDespacho.Items.Clear();
+            foreach (TipoDespacho.TipoDespachoEnum val in Enum.GetValues(typeof(TipoDespacho.TipoDespachoEnum)))
+            {
+                if (val != TipoDespacho.TipoDespachoEnum.NotSet)
+                    comboBoxTipoDespacho.Items.Add(val);
+                if (comboBoxTipoDespacho.SelectedItem == null)
+                {
+                    comboBoxTipoDespacho.SelectedItem = val;
+                }
+            }
+            comboBoxTipoTraslado.Items.Clear();
+            foreach (TipoTraslado.TipoTrasladoEnum val in Enum.GetValues(typeof(TipoTraslado.TipoTrasladoEnum)))
+            {
+                if (val != TipoTraslado.TipoTrasladoEnum.NotSet)
+                    comboBoxTipoTraslado.Items.Add(val);
+                if (comboBoxTipoTraslado.SelectedItem == null)
+                {
+                    comboBoxTipoTraslado.SelectedItem = val;
                 }
             }
         }
