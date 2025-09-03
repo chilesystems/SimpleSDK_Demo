@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using static SimpleSDK.Enum.TipoImpuesto;
 
 namespace SimpleSDK_Demo.Models
@@ -16,10 +17,22 @@ namespace SimpleSDK_Demo.Models
         /// </summary>
         public double Descuento { get; set; }
         public int _tipoImpuesto;
+        public List<CodigoItem> Codigos { get; set; }
         public TipoImpuestoEnum TipoImpuesto
         {
             get { return _tipoImpuesto != 0 ? (TipoImpuestoEnum)_tipoImpuesto : TipoImpuestoEnum.NotSet; }
             set { _tipoImpuesto = (int)value; }
         }
+
+        public ItemBoleta()
+        {
+            Codigos = new List<CodigoItem>();
+        }
+    }
+
+    public class CodigoItem
+    {
+        public string TipoCodigo { get; set; }
+        public string ValorCodigo { get; set; }
     }
 }
