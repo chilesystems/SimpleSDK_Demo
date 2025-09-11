@@ -47,11 +47,19 @@ namespace SimpleSDK_Demo
                         det.TipoImpuesto
                     };
                 }
+                /*Sólo si requieren ingresarle códigos de productos*/
+                detalle.CodigosItem = new List<SimpleSDK.Models.DTE.CodigoItem>();
+                detalle.CodigosItem.Add(new SimpleSDK.Models.DTE.CodigoItem()
+                {
+                    TipoCodigo = "TIPO",
+                    ValorCodigo = "VALOR"
+                });
                 detalles.Add(detalle);
                 contador++;
             }
             return detalles;
         }
+
         public List<DetalleExportacion> ItemboletaADetalleExportacion(List<ItemBoleta> items)
         {
             List<DetalleExportacion> detalles = new List<DetalleExportacion>();
