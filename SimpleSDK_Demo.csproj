@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0"
-  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -283,12 +282,6 @@
     <Compile Include="GenerarRVD.Designer.cs">
       <DependentUpon>GenerarRVD.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListadoComunas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListadoComunas.Designer.cs">
-      <DependentUpon>ListadoComunas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\Helper.cs" />
     <Compile Include="ListadoAnualBoletas.cs">
       <SubType>Form</SubType>
@@ -397,9 +390,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoAnualBoletas.resx">
       <DependentUpon>ListadoAnualBoletas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListadoComunas.resx">
-      <DependentUpon>ListadoComunas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoMensualBoletas.resx">
       <DependentUpon>ListadoMensualBoletas.cs</DependentUpon>
