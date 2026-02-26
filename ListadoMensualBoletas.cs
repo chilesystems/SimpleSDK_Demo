@@ -44,17 +44,27 @@ namespace SimpleSDK_Demo
                     RazonSocialReceptorColumn.Visible = RutReceptorColumn.Visible = true;
                     tipo = "emitidas";
                 }
-                var rutUsuario = RutEmisorTextbox.Text;
-                var password = handler.Configuracion.UsuarioSII.PasswordSII;
+                //var rutUsuario = RutEmisorTextbox.Text;
+                //var password = handler.Configuracion.UsuarioSII.PasswordSII;
                 var apikey = handler.Configuracion.APIKey;
                 var mes = (int)numericMes.Value;
                 var anio = (int) numericAnio.Value;
+                var rutaCertificado = handler.Configuracion.Certificado.Ruta;
+                var rutCertificado = handler.Configuracion.Certificado.Rut;
+                var passwordCertificado = handler.Configuracion.Certificado.Password;
+
+                byte[] certBytes = System.IO.File.ReadAllBytes(rutaCertificado);
+                string nombreCertificado = System.IO.Path.GetFileName(rutaCertificado);
                 var basicData = new BHData
                 {
-                    RutUsuario =  rutUsuario,
-                    PasswordSII = password
+                    //RutUsuario =  rutUsuario,
+                    //PasswordSII = password
+                    CertificadoB64 = certBytes,
+                    Password = passwordCertificado,
+                    RutCertificado = rutCertificado,
+
                 };
-                var resumenMensual = await BHHelper.ObtenerListadoMensualAsync(basicData, tipo, anio, mes, apikey);
+                var resumenMensual = await BHHelper.ObtenerListadoMensualAsync(basicData, tipo, anio, mes, apikey, nombreCertificado);
                 gridResultados.AutoGenerateColumns = false;
                 gridResultados.DataSource = null;
                 gridResultados.DataSource = resumenMensual.Boletas;

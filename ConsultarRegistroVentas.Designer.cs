@@ -38,7 +38,7 @@ namespace SimpleSDK_Demo
             this.radioCertificacion = new System.Windows.Forms.RadioButton();
             this.DatosConsultaGroupBox = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.RutUsuarioTextBox = new System.Windows.Forms.TextBox();
+            //this.RutUsuarioTextBox = new System.Windows.Forms.TextBox();
             this.RutEmpresaTextBox = new System.Windows.Forms.TextBox();
             this.RutEmpresaLabel = new System.Windows.Forms.Label();
             this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -113,7 +113,7 @@ namespace SimpleSDK_Demo
             // DatosConsultaGroupBox
             // 
             this.DatosConsultaGroupBox.Controls.Add(this.label1);
-            this.DatosConsultaGroupBox.Controls.Add(this.RutUsuarioTextBox);
+            //this.DatosConsultaGroupBox.Controls.Add(this.RutUsuarioTextBox);
             this.DatosConsultaGroupBox.Controls.Add(this.RutEmpresaTextBox);
             this.DatosConsultaGroupBox.Controls.Add(this.RutEmpresaLabel);
             this.DatosConsultaGroupBox.Controls.Add(this.FechaDateTimePicker);
@@ -130,21 +130,21 @@ namespace SimpleSDK_Demo
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            /*this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(154, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 18;
-            this.label1.Text = "RUT Usuario:";
+            this.label1.Text = "RUT Usuario:";*/
             // 
             // RutUsuarioTextBox
             // 
-            this.RutUsuarioTextBox.Location = new System.Drawing.Point(230, 26);
+            /*this.RutUsuarioTextBox.Location = new System.Drawing.Point(230, 26);
             this.RutUsuarioTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RutUsuarioTextBox.Name = "RutUsuarioTextBox";
             this.RutUsuarioTextBox.Size = new System.Drawing.Size(68, 20);
-            this.RutUsuarioTextBox.TabIndex = 16;
+            this.RutUsuarioTextBox.TabIndex = 16;*/
             // 
             // RutEmpresaTextBox
             // 
@@ -240,7 +240,7 @@ namespace SimpleSDK_Demo
         private System.Windows.Forms.RadioButton radioCertificacion;
         private System.Windows.Forms.GroupBox DatosConsultaGroupBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox RutUsuarioTextBox;
+        //private System.Windows.Forms.TextBox RutUsuarioTextBox;
         private System.Windows.Forms.TextBox RutEmpresaTextBox;
         private System.Windows.Forms.Label RutEmpresaLabel;
         private System.Windows.Forms.DateTimePicker FechaDateTimePicker;

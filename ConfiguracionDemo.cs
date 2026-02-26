@@ -42,8 +42,8 @@ namespace SimpleSDK_Demo
                 gridResultados.DataSource = null;
                 gridResultados.DataSource = configuracion.Empresa.CodigosActividades;
 
-                textRutUsuario.Text = configuracion.UsuarioSII.RutUsuario;
-                textPasswordSII.Text = configuracion.UsuarioSII.PasswordSII;
+                //textRutUsuario.Text = configuracion.UsuarioSII.RutUsuario;
+                //textPasswordSII.Text = configuracion.UsuarioSII.PasswordSII;
             }
             catch { }
         }
@@ -63,8 +63,8 @@ namespace SimpleSDK_Demo
             configuracion.Certificado.Ruta = textRutaCertificado.Text;
             configuracion.Certificado.Password = textPassword.Text;
 
-            configuracion.UsuarioSII.RutUsuario = textRutUsuario.Text;
-            configuracion.UsuarioSII.PasswordSII = textPasswordSII.Text;
+            //configuracion.UsuarioSII.RutUsuario = textRutUsuario.Text;
+            //configuracion.UsuarioSII.PasswordSII = textPasswordSII.Text;
 
             configuracion.GenerarArchivo();
 

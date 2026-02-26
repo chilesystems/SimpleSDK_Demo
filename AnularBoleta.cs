@@ -37,15 +37,24 @@ namespace SimpleSDK_Demo
                 else if (CausaAnulacionServicioNoPagadoRadioButton.Checked)
                     causaAnulacionBh = CausaAnulacionBHEnum.ServicioNoPagado;
 
-                var rutUsuario = textRutUsuario.Text;
-                var password = handler.Configuracion.UsuarioSII.PasswordSII;
+               // var rutUsuario = textRutUsuario.Text;
+                //var password = handler.Configuracion.UsuarioSII.PasswordSII;
                 var apikey = handler.Configuracion.APIKey;
+                var rutaCertificado = handler.Configuracion.Certificado.Ruta;
+                var rutCertificado = handler.Configuracion.Certificado.Rut;
+                var passwordCertificado = handler.Configuracion.Certificado.Password;
+
+                byte[] certBytes = System.IO.File.ReadAllBytes(rutaCertificado);
+                string nombreCertificado = System.IO.Path.GetFileName(rutaCertificado);
                 var input = new BasicData()
                 {
-                    RutUsuario =  rutUsuario,
-                    PasswordSII = password
+                    //RutUsuario =  rutUsuario,
+                    //PasswordSII = password,
+                    CertificadoB64 = certBytes,
+                    Password = passwordCertificado,
+                    RutCertificado = rutCertificado,
                 };
-                var (anulacionExitosa, message) = await BHHelper.AnularAsync(input, folio, causaAnulacionBh, apikey);
+                var (anulacionExitosa, message) = await BHHelper.AnularAsync(input, folio, causaAnulacionBh, apikey, nombreCertificado);
                 if (anulacionExitosa)
                 {
                     var buttons = MessageBoxButtons.OK;

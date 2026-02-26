@@ -24,7 +24,7 @@ namespace SimpleSDK_Demo
             handler.Configuracion = new Configuracion();
             handler.Configuracion.LeerArchivo();
             RutEmpresaTextBox.Text = handler.Configuracion.Empresa.RutEmpresa;
-            RutUsuarioTextBox.Text = handler.Configuracion.UsuarioSII.RutUsuario;
+            //RutUsuarioTextBox.Text = handler.Configuracion.UsuarioSII.RutUsuario;
             MensualCheckBox.Checked = true;
         }
 
@@ -36,20 +36,29 @@ namespace SimpleSDK_Demo
             {
                 var fecha = FechaDateTimePicker.Value;
                 var mensual = MensualCheckBox.Checked;
-                var rutUsuario = RutUsuarioTextBox.Text;
-                var password = handler.Configuracion.UsuarioSII.PasswordSII;
+               //var rutUsuario = RutUsuarioTextBox.Text;
+                //var password = handler.Configuracion.UsuarioSII.PasswordSII;
                 var rutEmpresa = RutEmpresaTextBox.Text;
                 var apikey = handler.Configuracion.APIKey;
-            
-                RCVData basicData = new RCVData
+                var rutaCertificado = handler.Configuracion.Certificado.Ruta;
+                var rutCertificado = handler.Configuracion.Certificado.Rut;
+                var passwordCertificado = handler.Configuracion.Certificado.Password;
+
+                byte[] certBytes = System.IO.File.ReadAllBytes(rutaCertificado);
+                string nombreCertificado = System.IO.Path.GetFileName(rutaCertificado);
+
+                BasicData basicData = new BasicData
                 {
-                    RutUsuario =  rutUsuario,
-                    PasswordSII = password,
+                    // RutUsuario =  rutUsuario,
+                    //PasswordSII = password,
+                    CertificadoB64 = certBytes,
+                    Password = passwordCertificado,
+                    RutCertificado = rutCertificado,
                     RutEmpresa = rutEmpresa,
                     Ambiente = radioCertificacion.Checked ? 0 : 1,
                     Detallado = checkDetallado.Checked
                 };
-                var (exito, registro) = await RCVHelper.ConsultaRegistroComprasAsync(fecha, mensual, basicData, apikey);
+                var (exito, registro) = await RCVHelper.ConsultaRegistroComprasAsync(fecha, mensual, basicData, apikey, nombreCertificado);
                 if (exito)
                 {
                     var compras = registro.Compras.DetalleCompras;
