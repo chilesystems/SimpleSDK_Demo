@@ -43,17 +43,23 @@ namespace SimpleSDK_Demo
 
                 var rutEmisor = textRutEmisor.Text;
                 var rutReceptor = textRutReceptor.Text;
-                var password = handler.Configuracion.UsuarioSII.PasswordSII;
+                //var password = handler.Configuracion.UsuarioSII.PasswordSII;
                 TipoRetencionEnum tipoRetencion = RetencionContribuyenteRadioButton.Checked
                     ? TipoRetencionEnum.Contribuyente
                     : TipoRetencionEnum.Receptor;
                 var apikey = handler.Configuracion.APIKey;
+                var rutaCertificado = handler.Configuracion.Certificado.Ruta;
+                var rutCertificado = handler.Configuracion.Certificado.Rut;
+                var passwordCertificado = handler.Configuracion.Certificado.Password;
+
+                byte[] certBytes = System.IO.File.ReadAllBytes(rutaCertificado);
+                string nombreCertificado = System.IO.Path.GetFileName(rutaCertificado);
 
                 // todo detalles
                 var input = new BHData
                 {
-                    RutUsuario = handler.Configuracion.UsuarioSII.RutUsuario,
-                    PasswordSII = password,
+                    //RutUsuario = handler.Configuracion.UsuarioSII.RutUsuario,
+                    //PasswordSII = password,
                     Retencion = tipoRetencion,
                     FechaEmision = DateTime.Today,
                     Receptor = new Receptor()
@@ -64,7 +70,10 @@ namespace SimpleSDK_Demo
                         Region = (int)numericRegion.Value,
                         Rut = textRutReceptor.Text
                     },
-                    Emisor = new Emisor()
+                    Emisor = new Emisor(),
+                    CertificadoB64 = certBytes,
+                    Password = passwordCertificado,
+                    RutCertificado = rutCertificado
                 };
 
                 if (domicilioIndex > 0) input.Emisor.Direccion = domicilioIndex;
@@ -78,7 +87,7 @@ namespace SimpleSDK_Demo
                     input.Emisor.Rut = textRutEmisor.Text;
                 }
 
-                var (emisionExitosa, message, retorno) = await BHHelper.EmitirAsync(input, checkBoxTerceros.Checked, apikey);
+                var (emisionExitosa, message, retorno) = await BHHelper.EmitirAsync(input, checkBoxTerceros.Checked, apikey, nombreCertificado);
                 if (emisionExitosa)
                 {
                     SaveFileDialog saveFileDialog = new SaveFileDialog();

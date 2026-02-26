@@ -38,9 +38,15 @@ namespace SimpleSDK_Demo
                 var password = handler.Configuracion.UsuarioSII.PasswordSII;
                 var anio = int.Parse(AnioTextbox.Text);
                 var apikey = handler.Configuracion.APIKey;
+                /*var rutaCertificado = handler.Configuracion.Certificado.Ruta;
+                var rutCertificado = handler.Configuracion.Certificado.Rut;
+                var passwordCertificado = handler.Configuracion.Certificado.Password;
+
+                byte[] certBytes = System.IO.File.ReadAllBytes(rutaCertificado);
+                string nombreCertificado = System.IO.Path.GetFileName(rutaCertificado);*/
                 var input = new BHData
                 {
-                    RutUsuario =  rutUsuario,
+                    RutUsuario = rutUsuario,
                     PasswordSII = password,
                     RutEmisor = rutEmisor,
                 };

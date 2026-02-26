@@ -27,18 +27,27 @@ namespace SimpleSDK_Demo
             try
             {
                 var folio = int.Parse(FolioTextbox.Text);
-                var rutUsuario = RutEmisorTextbox.Text;
-                var password = handler.Configuracion.UsuarioSII.PasswordSII;
+               // var rutUsuario = RutEmisorTextbox.Text;
+                //var password = handler.Configuracion.UsuarioSII.PasswordSII;
                 var apikey = handler.Configuracion.APIKey;
                 var correo = CorreoTextBox.Text;
                 var anio = int.Parse(AnioTextbox.Text);
+                var rutaCertificado = handler.Configuracion.Certificado.Ruta;
+                var rutCertificado = handler.Configuracion.Certificado.Rut;
+                var passwordCertificado = handler.Configuracion.Certificado.Password;
+
+                byte[] certBytes = System.IO.File.ReadAllBytes(rutaCertificado);
+                string nombreCertificado = System.IO.Path.GetFileName(rutaCertificado);
                 var input = new BHData
                 {
-                    RutUsuario =  rutUsuario,
-                    PasswordSII = password,
-                    Correo = correo
+                    //RutUsuario =  rutUsuario,
+                    //PasswordSII = password,
+                    Correo = correo,
+                    CertificadoB64 = certBytes,
+                    Password = passwordCertificado,
+                    RutCertificado = rutCertificado,
                 };
-                var (boletaEnviada, message) = await BHHelper.EnviarEmail(input, folio, apikey, anio);
+                var (boletaEnviada, message) = await BHHelper.EnviarEmail(input, folio, apikey, nombreCertificado, anio);
                 if (boletaEnviada)
                 {
                     var buttons = MessageBoxButtons.OK;
