@@ -47,7 +47,7 @@ namespace SimpleSDK_Demo
                     Password = passwordCertificado,
                     RutCertificado = rutCertificado,
                 };
-                var (boletaEnviada, message) = await BHHelper.EnviarEmail(input, folio, apikey, anio, nombreCertificado);
+                var (boletaEnviada, message) = await BHHelper.EnviarEmail(input, folio, apikey, nombreCertificado, anio);
                 if (boletaEnviada)
                 {
                     var buttons = MessageBoxButtons.OK;
